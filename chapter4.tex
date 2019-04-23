@@ -1,0 +1,101 @@
+\chapter{How Much Data Needed to Make a Reliable APWP}\label{chap:DatNeed}
+\textit{This chapter mainly describes how the mean poles with their raw VGPs
+at random reduced densities can make a reliable APWP\@. Further we will see how
+much data (raw VGPs) are needed on earth to make a reliable APWP, and how the
+``bad'' poles influence the final result when we have less data. Are those
+rules we obtained in the last chapter are still true for less data (test if APP
+is still better, and weighting is still not affecting)? As we all know, in the
+past, especially in deep time, the data density and quality are lower, compared
+with younger geological times. Reducing the data density can help see if our
+methodology is still able to reliably give reasonable results from data aged in
+deep times. Are we be able to make a final determination of best number of VGPs
+in each sliding window in average for moving-averaging out an APWP? (No,
+different situations for difference continents.)}
+\vfill
+\minitoc\newpage
+
+\section{Reference Path}
+
+The fixed hotspot model and related plate circuit predicted APWPs are used as
+references.
+
+\section{Extration Fraction}
+
+The raw VGPs are extracted before being moving-averaged (i.e.\ picking and weighting;
+see the last chapter).
+
+\subsection{80\%}
+20 percent of raw VGPs are removed.
+
+\subsection{60\%}
+Now it is changed to 40 percent removal.
+
+\subsection{40\%}
+Now it is changed to 60 percent removal.
+
+\subsection{20\%}
+Now it is changed to 80 percent removal.
+
+\begin{figure}
+    \centering
+        \includegraphics[width=0.88\textwidth]{fig/Fay18_10_5.pdf}
+    \captionsetup{width=.95\textwidth}
+    \caption{Random VGP samplings (30 times) for the best and worst results for
+	the 10 Myr window and 5 Myr step paleomagnetic APWPs vs FHM \& plate circuit
+	predicted APWP\@. The lower and upper bound lines connect the 1st and 3th
+	quantiles of the 30 samples. The bold line connects their means. The
+	numbers in small parentheses are actual quantity of VGPs after filtered by
+	the corresponding picking methods for the case with no data
+	removal.}\label{Fig:Fay18_10_5bw}
+\end{figure}
+
+\begin{figure}
+    \centering
+        \includegraphics[width=0.88\textwidth]{fig/Fay18_10_5to101bw.pdf}
+    \captionsetup{width=.95\textwidth}
+    \caption{Comparisons of results from the best and worst methods for North
+	America, applied on all the three continents.}\label{Fig:Fay18_10_5to101bw}
+\end{figure}
+
+\begin{figure}
+    \centering
+        \includegraphics[width=0.88\textwidth]{fig/Fay18_10_5to501bw.pdf}
+    \captionsetup{width=.95\textwidth}
+    \caption{Comparisons of results from the best and worst methods for India,
+	applied on all the three continents.}\label{Fig:Fay18_10_5to501bw}
+\end{figure}
+
+\begin{figure}
+    \centering
+        \includegraphics[width=0.88\textwidth]{fig/Fay18_10_5to801bw.pdf}
+    \captionsetup{width=.95\textwidth}
+    \caption{Comparisons of results from the best and worst methods for
+	Australia, applied on all the three continents.}\label{Fig:Fay18_10_5to801bw}
+\end{figure}
+
+We can see that the best picking and weighting methods are statistically always
+better than the worst ones no matter how much data we have to compose the APWPs
+(Fig.~\ref{Fig:Fay18_10_5bw}) for the three continents.
+
+\subsection{Number of Samples}
+Here because the thousands of times of testing for each percentage of data
+removal and each picking and weighting method is rather expensive, 30 samples
+(a rule of thumb; e.g.~\cite{H19} says ``greater than 25 or 30'') are obtained.
+In fact, the 25th percentiles ($Q_1$), 75th percentiles ($Q_3$) and the means of
+30, 60, 100, 200 and 1000 samples are not quite different
+(Fig.~\ref{Fig:Fay18_10_5_0_0}), although 200 seems a better and relatively
+cheaper option.
+
+\begin{figure}
+    \centering
+        \includegraphics[width=0.88\textwidth]{fig/Fay18_10_5_0_0.pdf}
+    \captionsetup{width=.95\textwidth}
+    \caption{Testing differences of results from different numbers of samples.
+	See Fig.~\ref{Fig:Fay18_10_5bw} for more details.}\label{Fig:Fay18_10_5_0_0}
+\end{figure}
+
+Describe the function fill-df-a95nan in ma.py:
+Situation 1: Note that because of reducing of pole quantity in sliding windows,
+in some window there could be only one VGP which does not have given ED95, DM
+and DP, then we use $140/\sqrt{kN}$~\cite{T91,T19} to calculate a ED95 for this
+VGP as its A95.

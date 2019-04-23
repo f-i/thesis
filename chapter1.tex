@@ -1,0 +1,514 @@
+\chapter{Introduction}\label{chap:Intro}
+\textit{The first chapter introduces paleomagnetism-based paleogeographic
+reconstruction technique and highlights the motivation of the research conducted
+in the dissertation}
+\vfill
+\minitoc\newpage
+
+\section{Background and Motivation}
+
+Reconstructing past paleogeographies, especially the motion of plates and their
+interactions through time, is a key component of understanding the Earth's
+geological history, including deciphering tectonics (e.g.\ supercontinent
+reconstruction), paleo-climate history, and the evolution of life. Since the
+advent of plate tectonics, it has been the background for nearly all geologic
+events. In addition, plate reconstructions form the basis of global or regional
+geodynamic models.
+
+\subsection{Techniques Used in Relative and Absolute Plate Motion Studies}
+
+The earliest quantitative effort to model plate kinematics was fitting conjugate
+passive margins of the Atlantic~\cite{B65,W07}. They showed that the Atlantic
+could be closed using a single Euler pole (using Euler's theorem on rotation).
+Then it became fitting conjugate isochrons based on best-fitting marine magnetic
+anomaly and fracture zone data~\cite{M71}, which minimizes the misfit area
+between two isochrons. The \emph{Hellinger} method~\cite{H81} is a more advanced
+and generalised method which also fits conjugate isochrons based on best-fitting
+marine magnetic anomaly and fracture zone data, which however minimizes the sum
+of the misfits of conjugate data points that belong to a common isochron
+segment~\cite{W07} instead. These techniques mainly through fitting conjugate
+lines mentioned above are relatively accurate for quantitative analysis. However
+they give relative, not absolute, motions between plates, because plate motions
+can't be tied into absolute location on Earth's surface, since both plates are
+likely moving. In addition, they are limited to survey data from the seafloor,
+with a maximum age of no more than c. 200 Ma~\cite{M08}.
+
+Reference frames are a means of describing the motion of geologic features
+(e.g.\ tectonic plates) on the surface of the Earth, relative to a common point
+or ``frame''~\cite{Sh12}. An absolute reference frame is a frame that can be
+treated as fixed relative to the Earth's geographic reference frame. In reality,
+it's impossible to find a truly absolute reference frame, so we are actually
+looking for a frame that has limited (and hopefully known) motion, which
+approximates as ``fixed'' over geologically useful timescales and provides the
+most complete descriptions of plate motions. A commonly used absolute reference
+frame is the ``Fixed hotspot model''~\cite{M93,M99}, covering ages from about
+132 Ma to present-day, which assumes that the linear volcanic chains found on
+most oceanic plates are artifacts of absolute plate motions over a upwelling
+plume from the deep mantle, which is assumed to be relatively fixed. The
+advantage of this ``Fixed hotspot model'' is that it is fairly straightforward
+if the assumption of fixed hotspots is correct. However, this model is limited
+to plates with well-dated volcanic hotspot chains (e.g.\ the Ninetyeast Ridge
+and the Walvis Ridge;~\cite{O05}) and dating can be difficult (e.g.\ diffuse
+volcanic centers possibly related to large diameter plume conduits could cause
+the existence of time reversals;~\cite{O05}). As for not well-dated hotspot
+tracks, for example, only about 5\textperthousand\ of the seamounts (thought to
+be volcanic) in the Pacific are thought be be related to hotspot volcanism and
+radiometrically dated (39 per cent of these ages are less than 10
+Ma;~\cite{H07}). In addition, the fixed hotspot model is mostly confined to
+existing oceanic or thin continental crust because older oceanic lithosphere
+has been largely destroyed by subduction and old, thick continental crust mostly
+removed by erosion~\cite{C13}. Last, but not least, hotspots can be susceptible
+to drift that may be caused by changes in sub-lithospheric mantle
+flow~\cite{T09}. Generally, however, the drift rate is considered to be an order
+of magnitude less than the rate of plate motions, so only becomes significant
+over timescales of c. 50 Myr or more~\cite{O05,T07}. To overcome this source of
+error, the ``Moving hotspot model''~\cite{O05} uses mantle convection modeling
+to predict hotspot drift. Some are apparent success, e.g.\ by getting motions in
+the Indo-Atlantic and Pacific hotspot clusters to agree with each other, but
+it's very dependent on the mantle model. Hybrid models attempt to overcome the
+shortcomings of each reference frame by combining them, e.g.\ combining a fixed
+hotspot frame from 100 Ma to 0 Ma~\cite{M93} with a moving hotspot frame from c.
+132\textendash100 Ma~\cite{O05} (Hybrid hotspot model~\cite{Sh12}), combining a
+moving hotspot frame from 100\textendash0 Ma~\cite{O05} with a paleomagnetic
+model (reflect plate motion relative to the magnetic dipole axis but cannot
+provide paleolongitudes because of the axial symmetry of the Earth's magnetic
+dipole field)~\cite{T08} from 140\textendash100 Ma (Hybrid paleomagnetic
+model~\cite{Sh12}), and combining a moving hotspot frame from 120\textendash100
+Ma~\cite{O05} with a True Polar Wander (TPW) corrected paleomagnetic
+model~\cite{S08} from 100\textendash0 Ma (Hybrid TPW-corrected
+model~\cite{Sh12}).
+
+Recently another absolute reference frame ``Subduction reference
+model''~\cite{v10} tries to connect orogenies/sutures/subduction complexes' on
+the Earth surface with their corresponding subducted slabs in the mantle.
+Assuming that these remnants sank vertically through the mantle, the absolute
+location at which they were subducted can be reconstructed. In this way, this
+model mainly imposes a longitude correction on the above mentioned ``Hybrid
+TPW-corrected model'', and can theoretically give past absolute locations of
+plates back to about 260 Ma based on the estimated age of the oldest slab
+remnants that can be reliably located in the mantle. While the ``Subduction
+reference model'' allows for reconstructions between about 260 Ma and 140 Ma,
+older than the other absolute models can predict, the model is strongly
+dependent on the vertical subduction assumption and resolution of seismic
+tomography models, so its uncertainty is high. Above all, importantly, if we can
+describe the absolute motion of one or a few key plates, the techniques for
+establishing the relative plate motions described in the second paragraph above
+can be used to construct plate circuits that allow a full kinematic description
+of plate tectonics to be developed.
+
+As we can see, all of these above reconstruction methods are limited to recent
+geological history. For most of Earth history, concretely for times before c.
+170 Ma, the age of the oldest magnetic anomaly identification, paleomagnetism
+is the only accepted quantitative method for reconstructing plate motions and
+past paleogeographies.
+
+\subsection{Application of Paleomagnetism to Plate Tectonics}
+
+\begin{figure}
+    \centering
+        \includegraphics[width=0.88\textwidth]{../sphinx/source/I/fig/dipole.jpg}
+    \captionsetup{width=.95\textwidth}
+    \caption{GAD model: Inclination (angle I) of the Earth's magnetic field and how it
+    varies with latitude~\cite{B98,T19,T08}. Magnetic dipole M is placed at the
+	center of the Earth and aligned with the rotation axis; the geographic
+	latitude is $\lambda$, colatitude is $\theta$.}\label{Fig:chap_intro_gad}
+\end{figure}
+
+The geomagnetic field is generated by the convective flow of a liquid
+iron-nickel alloy in the outer core of the Earth. It is largely dipolar and can
+be represented by a dipole that points from the north magnetic pole to the south
+pole. However, the geomagnetic field varies in strength and direction over
+decadal\textendash{}millennial timescales due to quadropole and octopole
+components of the field. The most spectacular variations in direction are
+occasional polarity reversals (normal polarity: the same as the present
+direction of the field; or the opposite, i.e.\ reverse polarity). Over a period
+of a few thousand years, the magnetic axis slowly rotates/precesses around the
+geographic axis and the Earth's rotation axis (secular variation), but when
+averaged over 10,000 year timescales, higher order components of the field are
+thought to largely cancel out and the position of the magnetic poles aligns with
+the geographic poles. This is the geocentric axial dipole (GAD) hypothesis. In a
+GAD field, at the north magnetic pole the inclination (angle with respect to the
+local horizontal plane, see Fig.~\ref{Fig:chap_intro_gad}) of the field is
++90\degree\ (straight down), at the Equator the field inclination is 0\degree\
+(horizontal) pointing north and at the south magnetic pole the inclination is
+-90\degree\ (straight up) (Fig.~\ref{Fig:chap_intro_gad}). Another direction
+parameter of the Earth's magnetic field is declination. It is the angle with
+respect to the geographic meridian, which is 0\degree\ everywhere in a
+time-averaged GAD field.
+
+Magnetic remanence is the magnetization left behind in a ferromagnetic substance
+in the absence of an external magnetic field~\cite{T19}. The remanent
+magnetisation of rocks can preserve the direction and intensity of the
+geomagnetic field when the rock was formed, e.g.\ in the process of cooling,
+ferromagnetic materials in the lava flow are magnetized in the direction of the
+Earth's magnetic field, so the local direction of the field vector is locked in
+solidified lava. We are often interested in whether the geomagnetic pole has
+changed, or whether a particular plate/terrane has rotated with respect to the
+geomagnetic pole~\cite{T19}. By measuring the direction of the remanent
+magnetisation, we can calculate a virtual geomagnetic pole (VGP) to represent
+the geomagnetic pole of an imaginary geocentric dipole which would give rise to
+the observed remanent declination and inclination. A VGP that plots away from
+the present geographic poles is assumed to be due to plate motions since the
+lava was solidified, which causes the VGP to move with the plate~\cite{T08}. If
+a number of VGPs are averaged together, the average pole position is called a
+``paleomagnetic pole''. Based on measurements of the remanent inclination, the
+ancient latitude for a plate can be calculated when the rock formed from the
+dipole formula $\tan(I) = 2 *\tan(latitude)$. In addition, the remanent
+declination provides information about the rotation of a plate. Ideally, as a
+time average, a paleomagnetic pole (which can be calculated from declination,
+inclination and the current geographic location of the sampling site) for a
+newly formed rock will correspond with the geographic north or south pole. To
+perform a reconstruction with paleomagnetic poles we therefore have to calculate
+the rotation (Euler) pole and angle which will bring the paleomagnetic pole back
+to the geographic north or south pole, and then rotate the plate by the same
+amount of angle using the same Euler pole. This is how paleomagnetism can be
+used to reconstruct past positions of a plate. In our example
+(Fig.~\ref{Fig:chap_intro_reconstructpole}), a c. 155 Ma paleomagnetic pole
+(latitude=52.59\degree{}N, longitude=91.45\degree{}W) will be restored to the
+geographic pole by an Euler rotation of pole (0\degree, 178.55\degree{}E) with
+angle 37.41\degree, which rotates the sampling site from its present position of
+(0\degree, 25\degree{}E) to the Africa paleo-continent at (15.6998\degree{}S,
+20.1121\degree{}E). So Africa must have drifted northwards since the Late
+Jurassic.
+
+\begin{figure}
+  \centering
+    \includegraphics[width=0.88\textwidth]{../sphinx/source/I/fig/af.pdf}
+  \captionsetup{width=.95\textwidth}
+  \caption{Reconstruction of Africa with its c. 155 Ma paleomagnetic pole. The
+  red polygon is today's position of Africa, while the blue and green ones shows
+  its reconstructed position at c. 155 Ma, if the pole was North and South pole,
+  respectively. Dashed green polygon illustrates the ambiguity of paleolongitude
+  from paleomagnetic data alone (sites at same latitude but different longitudes
+  record the same Declination and Inclination in a GAD
+  field).}\label{Fig:chap_intro_reconstructpole}
+\end{figure}
+
+However, there are 2 problems with using paleomagnetic poles for constraining
+finite rotations~\cite{T19}. First, if only one paleomagnetic pole is
+given alone without any geologic context, its polarity can be ambiguous, i.e.\
+an upward inclination may be due to being located in the southern hemisphere
+during a normal polarity chron, or in the northern hemisphere during a reversed
+polarity chron (cf.\ the solid blue and solid green Africa in Fig.~\ref{Fig:chap_intro_reconstructpole}). In other words, we can't know if it's North pole
+or South pole, especially for paleomagnetic data with the Precambrian and early
+Paleozoic ages. Returning to the example above, if the c. 155 Ma paleomagnetic
+pole (52.59\degree{}N, 91.45\degree{}W) was formed during a period of reversed polarity, then
+it needs to be rotated to the South pole rather than the North pole. The
+necessary Euler rotation of pole (0\degree, 1.45\degree{}W) and angle
+142.59\degree\ rotates the sampling site (0\degree, 25\degree{}E) on Africa to
+(15.6998\degree{}N, 23.0121\degree{}W) indicating
+southward motion since the Late Jurassic. Second, because in a GAD field the
+declination equals zero everywhere (Fig.~\ref{Fig:chap_intro_reconstructpole}),
+paleomagnetic data doesn't register longitudinal motions of plates (the Euler
+pole for a plate moving purely to the east or west is at the geographic poles,
+so preserved paleomagnetic poles will experience zero rotation), which means we
+can position a plate at any longitude we wish subject to other geological
+constraints (cf.\ the solid and dashed green Africa in Fig.~\ref{Fig:chap_intro_reconstructpole}).
+
+The data source used in this dissertation is \emph{Global Paleomagnetic
+Database} (GPMDB) Version 4.6b~\cite{P05}, which includes 9514 paleopoles for
+ages of 3,500 Ma to the present published from 1925 to 2016. GPMDB has been
+published in two ways: (1) IAGA GPMDB 4.6 online query:
+\emph{http://www.ngu.no/geodynamics/gpmdb/}, which is now closed; (2) Microsoft
+Access system in \emph{.mdb} format at NOAA's National Geophysical Data Center
+\emph{https://www.ngdc.noaa.gov/geomag/paleo.shtml}~\cite{P03}
+and CESRE's Paleomagnetism and Rock Magnetism project
+\emph{https://wiki.csiro.au/display/cmfr/Palaeomagnetism+and+Rock+Magnetism},
+which is later updated by Ivar Giaever Geomagnetic Laboratory
+\emph{http://www.iggl.no/resources.html\#data}.
+
+\begin{figure}
+    \centering
+        \includegraphics[width=0.88\textwidth]{../sphinx/source/I/fig/gs13101.png}
+    \captionsetup{width=.95\textwidth}
+    \caption{Much paleomagnetic data has been collected from the North American Craton.
+    For younger geologic times, do we really need so much data to reconstruct
+    accurately just like modern-day plate motions? The image shows distribution
+    of all published (before Dec 2004) paleomagnetic poles of the NAC over
+	time.}\label{Fig:chap_intro_nacpole}
+\end{figure}
+
+An apparent polar wander path (APWP) is composed of poles of different ages
+from different sampling sites on the same stable (non-deforming) continent,
+chained together to form a record of motion relative to the fixed magnetic pole
+over geological time. It represents a convenient way of summarizing
+paleomagnetic data for a plate instead of producing paleogeographic maps at
+each geological period~\cite{T08}. As a preliminary study, the \emph{North
+American Craton} (NAC) is chosen as a research object to develop techniques we
+want to think about. The NAC is one of best studied cratons in paleomagnetism
+with the GPMDB containing 2160 poles published since 1948
+(Fig.~\ref{Fig:chap_intro_nacpole}). If we observe the latitudes, longitudes and
+age distribution of the NAC poles (Fig.~\ref{Fig:chap_intro_nacpole}), we
+actually can identify the general trend of its APWP\@. However, converting this
+data into a reliable, well-defined APWP can be challenging, due to the following
+issues:
+
+\subsection{Fact 1: Not All Regions on the Earth Surface Are Solid}
+
+If we consider the modern North America continent, the region west of the
+Rockies is actively deforming. Paleomagnetic data from such areas are likely to
+reflect local tectonic processes such as block rotation rather than rigid plate
+motions, and should be excluded. For example, the Rockies Mountain area was not
+included as my data selecting polygon (the transparent yellow area in
+Fig.~\ref{Fig:chap_intro_nacpole}). In order to investigate a specific craton or
+terrane or block's past paleogeographic motion, choosing an appropriate
+subregion without active tectonic activities, e.g.\ rotation or uplifting or
+rifting, to select data is often required. Such tectonics-free regions are
+usually called rigid. However, the difficulty of defining such tectonic
+boundaries makes appropriate spatial and temporal choices very difficult,
+particularly further in the geological past when cratonic configurations and
+active plate boundaries were very different to today. This leads to a question:
+What is the best way to constrain the data for a specific plate or block? My
+present solution is described in Chapter 2.
+
+\subsection{Fact 2: Not All Data Are Created Equal}
+
+APWPs are generated by combining paleomagnetic poles for a particular rigid
+block over the desired age range to produce a smoothed path. However, the NAC
+dataset illustrates that uncertainties in the age and location of paleomagnetic
+poles in the GPMDB can vary greatly for different poles.
+
+\subsubsection{Age Error}
+
+Although remanent magnetizations are generally assumed to be primary, many
+events can cause remagnetisation (in which case the derived pole is `younger'
+than the rock). If an event that has occurred since the rock's formation that
+should affect the magnetisation (e.g.\ folding, thermal overprinting due to
+intrusion) can be shown to have affected it, then it constrains the
+magnetisation to have been acquired before that event. Recognising or ruling
+out remagnetisations depends on these field tests, which are not always
+performed or possible. Even a passed field test may not be useful if field test
+shows magnetisation acquired prior to a folding event tens of millions of years
+after initial rock formation.
+
+The most obvious characteristic we can observe from NAC paleomagnetic data
+(Fig.~\ref{Fig:chap_intro_nacpole}) is that some poles have very large age
+ranges, e.g.\ more than 100 Myr. The magnetization age should be some time
+between the information of the rock and folding events. There are also others
+where we have similar position but the age constraint is much narrower, e.g.\ 10
+Myr window or less. Obviously the latter kind of data is more valuable than the
+one with large age range.
+
+\subsubsection{Position Error}
+
+The errors of pole latitudes and longitudes are plotted as 95\% confidence
+ellipses (Fig.~\ref{Fig:chap_intro_nacpole}), which also vary greatly in magnitude.
+All paleomagnetic poles have some associated uncertainties due to measurement
+error and the nature of the geomagnetic field. More uncertainties can be added
+by too few samples, sampling spanning too short a time range to approximate a
+GAD field, failure to remove overprints during demagnetisation, etc.
+
+\subsubsection{Data Consistency}
+
+Paleomagnetic poles of a rigid plate or block should be continuous time series.
+For a rigid plate, two poles with similar ages shouldn't be dramatically
+different in location. We want to look at the consistency of NAC's data over
+smaller time periods, so the data is binned over a small time interval (2 or 1
+m.y.) to see whether the VGPs in each time interval overlap within their error
+ellipses, as they should. Sometimes, this is the case
+(Fig.~\ref{Fig:chap_intro_nac5052agemean}). Sometimes we have further separated
+poles with close ages (Fig.~\ref{Fig:chap_intro_nac2830agemean}).
+
+\begin{figure*}[tbp]
+  \captionsetup[subfigure]{labelformat=empty,aboveskip=-6pt,belowskip=-6pt}
+  \centering
+  \begin{subfigure}[htbp]{.49\textwidth}
+    \centering
+    \includegraphics[width=1.01\linewidth]{../sphinx/source/I/fig/nac5052.pdf}
+    \caption{52 Ma to 50 Ma (mean age).}\label{Fig:chap_intro_nac5052agemean}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{.49\textwidth}
+    \centering
+    \includegraphics[width=1.01\linewidth]{../sphinx/source/I/fig/nac2830.pdf}
+    \caption{30 Ma to 28 Ma (mean age).}\label{Fig:chap_intro_nac2830agemean}
+  \end{subfigure}
+  \caption[Example of AMP Moving Averaging Effects]{Overlapping and further
+  separated paleomagnetic poles of NAC\@. The purple
+  ellipses are 95\% confidence errors.}\phantomsection\label{Fig:chap_intro_ma-amp}
+\end{figure*}
+
+There are a number of possible causes for these outliers, including:
+
+\paragraph{Lithology}
+
+For this poor consistency of data (Fig.~\ref{Fig:chap_intro_nac2830agemean}), it
+is potentially because of different inclinations or declinations. The first
+thing we should consider about is their lithology. We want to check if the
+sample rock are igneous or sedimentary, because sediment compaction can result
+in anomalously shallow inclinations~\cite{T19}. In addition, we also
+can check if the rock are redbeds or non-redbeds. Although whether redbeds
+record a detrital signal or a later chemical remanent magnetization (CRM) is
+still somewhat controversial, both sedimentary rocks and redbeds could lead to
+inconsistency in direction compared to igneous rocks. However, unfortunately,
+for this case all three poles (Fig.~\ref{Fig:chap_intro_nac2830agemean}) are from
+igneous rocks. The pole in the Far East is from intrusives~\cite{G92},
+and the one in Arctic Ocean is from extrusives, ignimbrites~\cite{M92},
+while the one in the northern Atlantic Ocean is from extrusives, latites,
+basalts and rhyolites~\cite{S92}.
+
+\paragraph{Local Rotations}
+
+As discussed previously, local deformation between two paleomagnetic localities
+invalidates the rigid plate assumption and could lead to inconsistent VGP
+directions. All the three poles (Fig.~\ref{Fig:chap_intro_nac2830agemean})
+contain signals of local rotations, e.g.\ the third pole has a signal which
+indicates Tertiary rotation in west Texas~\cite{S92}, and therefore do
+not reflect motions of the whole rigid plate in this case. So the discordance
+is likely due to local deformation (Fig.~\ref{Fig:chap_intro_nac2830agemean}),
+and we would ideally want to exclude such poles from our APWP calculation.
+
+\paragraph{Other Factors}
+
+In Fig.~\ref{Fig:chap_intro_ma-amp}, mean pole age (centre of age error) has just
+been binned. If any of the poles have large age errors, they could be different
+ages from each other and sample entirely different parts of the APWP\@.
+Conversely, if any of the poles have too few samples, or were not sampled over
+enough time to average to a GAD field, a discordant pole may be due to
+unreduced secular variation.
+
+\subsubsection{Data Density}
+
+As we go back in time, we have lower quality and lower density (or quantity) of
+data, for example, the Precambrian or Early Paleozoic paleomagnetic data are
+relatively fewer than Middle-Late Phanerozoic ones, and most of them are not
+high-quality, e.g.\ larger errors in both age and location
+(Fig.~\ref{Fig:chap_intro_nacpole}). The combination of lower data quality with lower data
+density means that a single `bad' pole (with large errors in age and/or
+location) can much more easily distort the reconstructed APWP, because there
+are few or no `good' poles to counteract its influence.
+
+Data density also varies between different plates. E.g.\ we have a relatively
+high density of paleomagnetic data for NAC, but few poles exist for Greenland
+and Arabia. Based on mean age (mean of lower and upper magnetic ages), for
+100\textendash0 Ma, GPMDB 4.6b has 198 NAC poles, but only 17 for Greenland and
+24 for Arabia.
+
+\subsubsection{Publication Year}
+
+The time when the data was published should also be considered, because
+magnetism measuring methodology, technology and equipments have been improved
+since the early 20th century. For example, stepwise demagnetisation, which is
+the most reliable method of detecting and removing secondary overprints, has
+only been in common use since the mid 1980s.
+
+In summary, not all paleomagnetic poles are created equal, which leads to an
+important question: how to best combine poles of varying quality into a
+coherent and accurate APWP\@? Paleomagnetists have proposed a variety of methods
+to filter so-called ``bad'' data, or give lower weights to those ``bad'' data
+before generating an APWP, e.g.\ two widely used methods: the V90 reliability
+criteria~\cite{v90} and the BC02 selection criteria~\cite{B02}.
+Briefly, the V90 criteria for paleomagnetic results includes seven criteria:
+(1) Well determined age; (2) At least 25 samples with Fisher~\cite{F53}
+precision $\kappa$ greater than 10 and $\alpha$95 less than 16\degree; (3) Detailed
+demagnetisation results reported; (4) Passed field tests; (5) Tectonic
+coherence with continent and good structural control; (6) Identified antipodal
+reversals; (7) Lack of similarity with younger poles~\cite{T92}.
+Compared with V90, the BC02 criteria suggests stricter filtering, e.g.\ using
+only poles with at least 6 sampling sites and 36 samples, each site having
+$\alpha$95 less than 10\degree\ in the Cenozoic and 15\degree\ in the Mesozoic. But there has been
+limited study of how effective these filtering methods are at reconstructing a
+`true' APWP, and for most studies after a basic filtering of `low quality'
+poles, the remaining poles are, in fact, treated equally.
+
+\section{Objectives}
+
+Our overarching aims are to develop rigorous, consistent and well-documented
+methods of reconstructing plate motions using paleomagnetic data, and to
+investigate the limits of paleomagnetic data on reconstructing individual plate
+motions, supercontinents, and global tectonic parameters like average rate of
+plate motion.
+
+\subsection{Motivation and General Approach}
+
+How has plate tectonics evolved over geologic history, in terms of average plate
+velocities, numbers of plates and so on? The only quantitative data we have
+prior to about 170 Ma are paleomagnetic data. We know there are limitations,
+because we can't constrain the longitudes of paleo-plates very well. When we
+look back through geologic history, how much good paleomagnetic data do we have,
+and how well does it reconstruct `true' plate motions? We don't know well the
+effects of data quality and density, which generally degrades further back in
+geologic history, on producing reliable APWPs. For the past c. 130\textendash200
+Myr we have the highest density of paleomagnetic data and also independent plate
+motion data from reconstructions of ocean spreading combined with hotspot
+reference frames. This allows us to ask the question: How much paleomagnetic
+data do we need actually to reconstruct accurately known modern-day plate
+motions? If we can handle that, we can go back in time. For a certain density of
+paleomagnetic data that we have, how reliably can we talk about what's going on
+in the past given the much lower data distribution? It might turn out we don't
+need very much data to say something reasonably and reliably. We can test this
+by looking at the last 0\textendash120 Ma where we can compare paleomagnetically
+derived plate motions with other methods of paleogeographic reconstruction. This
+does not only include the work of developing tools and algorithms to generate
+those paleomagnetically derived plate motions (to use paleomagnetic data to
+reconstruct APWP parameters that are known from other sources like ocean basins
+and hotspots), but also need us to know how good these tools are or which one is
+the best algorithm (to compare paleomagnetic APWPs with the known data sources
+predicted APWP). This can give insights into how well we can `know' plate
+motions back in the past, and what data quality and density are necessary to
+reliably reconstruct a `true' APWP\@.
+
+As a preliminary analysis, some algorithms were made to separate/calculate out
+so-called good paleomagnetic data (at any particular time period for a
+particular craton, like here from 100 Ma to the present day for NAC). We are
+interested in what makes `good' data, how we can identify it and filter it from
+the database, and how sometimes `bad' data is only bad in the sense that it is
+poorly constrained in age or position or any other parameter, in which cases it
+might be possible to include it by e.g., weighting.
+
+\subsection{Research Questions or Hypotheses}
+
+Questions 1\textendash4 focus on method development, whereas 5 and 6 start
+using them for plate tectonic research, especially in deep times.
+
+\subsubsection{Question 1}
+
+What is the best way to turn a collection of individual poles, with different
+age constraints and uncertainties, into a smoothed APW path? This question, in
+fact, is about how to (1) choose a data-constraining polygon that represents a
+solid continent during a certain period; (2) pick (or bin) data within a certain
+window for Fisher statistical~\cite{F53} calculation; (3) do weighting for
+picked data according to different uncertainties or other kinds of standards of
+qualifications; (4) if the derived APWP is still not smoothed enough when
+compared with a reference path, is further smoothing necessary? Our goal here
+actually is to get a reliable result, i.e.\ a path generated to approximate the
+`real' APWP with appropriate uncertainties.
+
+\subsubsection{Question 2}
+
+Based on the consequences from the algorithms we developed, we can do research
+on why some algorithms are good, others bad for all plates? Why some algorithm
+performs well for a plate or two but not others?
+
+\subsubsection{Question 3}
+
+How much paleomagnetic data do we need actually to accurately reconstruct known
+modern known plate motions? What insights does this give us into the
+reliability of reconstructions from earlier in geologic history?
+
+\subsubsection{Question 4}
+
+Based on our analysis above, can we develop algorithms that look for matching
+segments of APWPs from different cratons, that might indicate they were part of
+the same continent or supercontinent?
+
+\subsubsection{Question 5}
+
+What kind of dataset (in terms of data density and quality) is needed to
+accurately reconstruct a known APWP, or a shared APWP between two cratons? If
+we can establish some criteria for this, does it provide any insights into past
+reconstructions of plate motions (e.g., Rodinia)?
+
+\subsubsection{Question 6}
+
+Can we develop algorithms that use APWPs from multiple continents to estimate
+global average plate motion rates? Can we get a good sense of how much
+information is lost due to lack of data on longitudinal motions? Can we use
+this to draw any conclusions about long term trends (or lack thereof) in the
+style and vigour of global plate tectonics? (Possible further question: can
+data on relative continental motion acquired from matching APWP curves be
+incorporated to improve these estimates?)
+
+In summary, this dissertation will not be able to help answer all the above
+questions. However, in the end the completion of this dissertation and solving
+the first three questions are hoped to be helpful solving the later questions in
+the future.
