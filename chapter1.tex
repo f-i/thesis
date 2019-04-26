@@ -303,10 +303,10 @@ GAD field, failure to remove overprints during demagnetisation, etc.
 
 Paleomagnetic poles of a rigid plate or block should be continuous time series.
 For a rigid plate, two poles with similar ages shouldn't be dramatically
-different in location. We want to look at the consistency of NAC's data over
-smaller time periods, so the data is binned over a small time interval (2 or 1
-m.y.) to see whether the VGPs in each time interval overlap within their error
-ellipses, as they should. Sometimes, this is the case
+different in location. We want to look at the consistency of NAC and India's
+data over smaller time periods, so the data is binned over a small time interval
+(e.g.\ 2 Myr) to see whether the VGPs in each time interval overlap within their
+error ellipses, as they should. Sometimes, this is the case
 (Fig.~\ref{Fig:chap_intro_nac5052agemean}). Sometimes we have further separated
 poles with close ages (Fig.~\ref{Fig:chap_intro_nac2830agemean}).
 
@@ -316,18 +316,19 @@ poles with close ages (Fig.~\ref{Fig:chap_intro_nac2830agemean}).
   \begin{subfigure}[htbp]{.49\textwidth}
     \captionsetup{skip=0pt}  % local setting for this subfigure
     \centering
-    \includegraphics[width=1.01\linewidth]{../sphinx/source/I/fig/nac5052.pdf}
-    \caption{52 Ma to 50 Ma (mean age).}\label{Fig:chap_intro_nac5052agemean}
+    \includegraphics[width=1.01\linewidth]{../sphinx/source/I/fig/na6462.pdf}
+    \caption{North America: 64\textendash62 Ma (mean age)}\label{Fig:chap_intro_nac5052agemean}
   \end{subfigure}
   \begin{subfigure}[htbp]{.49\textwidth}
     \captionsetup{skip=0pt}
     \centering
-    \includegraphics[width=1.01\linewidth]{../sphinx/source/I/fig/nac2830.pdf}
-    \caption{30 Ma to 28 Ma (mean age).}\label{Fig:chap_intro_nac2830agemean}
+    \includegraphics[width=1.01\linewidth]{../sphinx/source/I/fig/in97.pdf}
+    \caption{India: 9\textendash7 Ma (mean age)}\label{Fig:chap_intro_nac2830agemean}
   \end{subfigure}
   \caption[Example of AMP Moving Averaging Effects]{Overlapping and further
-  separated paleomagnetic poles of NAC\@. The purple
-  ellipses are 95\% confidence errors.}\phantomsection\label{Fig:chap_intro_ma-amp}
+  separated paleomagnetic poles of NAC\@ and India. The oval ellipses are their
+  95\% confidence errors. The labels are their result number given in GPMDB
+  4.6b.}\phantomsection\label{Fig:chap_intro_ma-amp}
 \end{figure*}
 
 There are a number of possible causes for these outliers, including:
@@ -342,23 +343,25 @@ in anomalously shallow inclinations~\cite{T19}. In addition, we also
 can check if the rock are redbeds or non-redbeds. Although whether redbeds
 record a detrital signal or a later chemical remanent magnetization (CRM) is
 still somewhat controversial, both sedimentary rocks and redbeds could lead to
-inconsistency in direction compared to igneous rocks. However, unfortunately,
-for this case all three poles (Fig.~\ref{Fig:chap_intro_nac2830agemean}) are from
-igneous rocks. The pole in the Far East is from intrusives~\cite{G92},
-and the one in Arctic Ocean is from extrusives, ignimbrites~\cite{M92},
-while the one in the northern Atlantic Ocean is from extrusives, latites,
-basalts and rhyolites~\cite{S92}.
+inconsistency in direction compared to igneous rocks. For this case, all the
+three poles (Fig.~\ref{Fig:chap_intro_nac2830agemean}) are from sedimentary
+rocks. In addition, pole 1136 and 1137 (Result Number in GPMDB 4.6b)'s source
+rocks also contain redbeds~\cite{O82}, although the authors did not mention
+about the potential inclination shallowing. For pole 7095, although the source
+rocks do not contain redbeds, the authors did mention about possible inclination
+shallowing due to haematite grains~\cite{G94}.
 
 \paragraph{Local Rotations}
 
 As discussed previously, local deformation between two paleomagnetic localities
 invalidates the rigid plate assumption and could lead to inconsistent VGP
 directions. All the three poles (Fig.~\ref{Fig:chap_intro_nac2830agemean})
-contain signals of local rotations, e.g.\ the third pole has a signal which
-indicates Tertiary rotation in west Texas~\cite{S92}, and therefore do
-not reflect motions of the whole rigid plate in this case. So the discordance
-is likely due to local deformation (Fig.~\ref{Fig:chap_intro_nac2830agemean}),
-and we would ideally want to exclude such poles from our APWP calculation.
+contain signals of local rotations~\cite{O82,G94}, e.g.\ pole 7095 has a signal
+which suggests the presence of a counter-clockwise local rotation of the Tinau
+Khola section~\cite{G94}, and therefore do not reflect motions of the whole
+rigid India plate in this case. So the discordance is likely due to local
+deformation (Fig.~\ref{Fig:chap_intro_nac2830agemean}), and we would ideally
+want to exclude or correct such poles from our APWP calculation.
 
 \paragraph{Other Factors}
 
