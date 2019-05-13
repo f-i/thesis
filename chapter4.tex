@@ -2,17 +2,17 @@
 \textit{This chapter mainly describes how the mean poles with their raw VGPs
 at random reduced densities can make a reliable APWP\@. Further we will see how
 much data (raw VGPs) are needed on earth to make a reliable APWP, and how the
-``bad'' poles influence the final result when we have less data. Are those
-rules we obtained in the last chapter are still true for less data (test if APP
-is still better, and weighting is still not affecting)? As we all know, in the
-past, especially in deep time, the data density and quality are lower, compared
-with younger geological times. Reducing the data density can help see if our
-methodology is still able to reliably give reasonable results from data aged in
-deep times. Are we be able to make a final determination of best number of VGPs
-in each sliding window in average for moving-averaging out an APWP? (No,
-different situations for different continents.)}
+``bad'' poles influence the final result when we have less data. Are we be able
+to make a final determination of best number of VGPs in each sliding window in
+average for moving-averaging out an APWP? (No, different situations for
+different continents.)}
 \vfill
 \minitoc\newpage
+
+In the past, especially in deep time, the density and quality of paleomagnetic
+data are lower, compared with younger geological times. Reducing the data
+density can help see if our methodology is still able to reliably give
+reasonable results from data aged in deep times.
 
 \section{Reference Path}
 
@@ -22,20 +22,11 @@ not make much difference at all.
 
 \section{Extration Fraction}
 
-The raw VGPs are extracted before being moving-averaged (i.e.\ picking and weighting;
-see the last chapter).
+The raw VGPs are extracted before being moving-averaged (i.e.\ picking and
+weighting; see the last chapter for more details).
 
-\subsection{80\%}
-20 percent of raw VGPs are removed.
-
-\subsection{60\%}
-Now it is changed to 40 percent removal.
-
-\subsection{40\%}
-Now it is changed to 60 percent removal.
-
-\subsection{20\%}
-Now it is changed to 80 percent removal.
+80\%, 60\%, 40\% and 20\% mean 20, 40, 60 and 80 percent of raw VGPs are
+removed.
 
 \begin{figure}
     \centering
@@ -76,7 +67,13 @@ Now it is changed to 80 percent removal.
 
 We can see that the best picking and weighting methods are statistically always
 better than the worst ones no matter how much data we have to compose the APWPs
-(Fig.~\ref{Fig:Fay18_10_5bw}) for the three continents.
+(Fig.~\ref{Fig:Fay18_10_5bw}) for the three continents. For the worst methods
+applied onto Indian and Australian data, The equal-weight $\mathcal{CPD}$
+surprisingly decreases when the percentage of extracted data decrease. This is
+because the extracted data are not always enough to cover all the time range of
+120\textendash0 Ma but only part, or even though the 120 and 0 Ma mean poles
+exist, the number of mean poles between 120 Ma and 0 Ma is much less than the
+APWP from data without reducing density.
 
 \subsection{Number of Samples}
 Here because the thousands of times of testing for each percentage of data
@@ -100,3 +97,29 @@ Situation 1: Note that because of reducing of pole quantity in sliding windows,
 in some window there could be only one VGP which does not have given ED95, DM
 and DP, then we use $140/\sqrt{kN}$~\cite{T91,T19} to calculate a ED95 for this
 VGP as its A95.
+
+\section{Are The Rules we obtained in the last chapter are still true for less
+data?}
+
+First, that if APP is still better, and weighting is still not affecting for
+less dense paleomagnetic data, is needed to be tested.
+
+\begin{figure}
+    \centering
+        \includegraphics[width=1\textwidth]{fig/Fay18_10_5_101appamp.pdf}
+    \captionsetup{width=1\textwidth}
+    \caption{Comparisons of results from Picking No. 1 (APP) and Picking No. 0
+	(AMP) with all the listed weighting methods for the three
+	continents.}\label{Fig:Fay18_10_5_101appamp}
+\end{figure}
+
+From the perspective of checking if the $Q_1$\textendash$Q_3$ intervals overlap,
+APP is indeed still better than AMP and weighting is indeed still not affecting
+for more than 15 VGPs making a 10/5 Myr bin/step APWP (ideally composed of 25
+mean poles for 120\textendash0 Ma). For the 20\% Indian data case, which
+contains not more than 15 VGPs making a 120\textendash0 Ma APWP, there is
+overlapping between APP's Mean\textendash$Q_3$ interval and AMP's
+$Q_1$\textendash{}Mean interval for weighted cases (i.e.\ for Weighting No.
+1\textendash5). Even so, APP's means are still lower than AMP's for this
+no-more-than-15-VGPs case (Fig.~\ref{Fig:Fay18_10_5_101appamp}). So here is the
+question: is 15 the threshold?
