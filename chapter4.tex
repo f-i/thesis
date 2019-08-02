@@ -1,11 +1,11 @@
 \chapter{How Much Data Needed to Make a Reliable APWP}\label{chap:DatNeed}
-\textit{This chapter mainly describes how the mean poles with their raw VGPs
-at random reduced densities can make a reliable APWP\@. Further we will see how
-much data (raw VGPs) are needed on earth to make a reliable APWP, and how the
-``bad'' poles influence the final result when we have less data. Are we be able
-to make a final determination of best number of VGPs in each sliding window in
-average for moving-averaging out an APWP? (No, different situations for
-different continents.)}
+\textit{This chapter mainly describes how the mean poles with their original
+paleopoles at random reduced densities can make a reliable APWP\@. Further we
+will see how much data (raw paleopoles) are needed on earth to make a reliable
+APWP, and how the ``bad'' paleopoles influence the final result when we have
+less data. Are we be able to make a final determination of best number of
+paleopoles in each sliding window in average for moving-averaging out an APWP?
+(No, different situations for different continents.)}
 \vfill
 \minitoc\newpage
 
@@ -22,26 +22,26 @@ not make much difference at all.
 
 \section{Extration Fraction}
 
-The raw VGPs are extracted before being moving-averaged (i.e.\ picking and
+The raw paleopoles are extracted before being moving-averaged (i.e.\ picking and
 weighting; see the last chapter for more details).
 
-80\%, 60\%, 40\% and 20\% mean 20, 40, 60 and 80 percent of raw VGPs are
+80\%, 60\%, 40\% and 20\% mean 20, 40, 60 and 80 percent of raw paleopoles are
 removed.
 
 \begin{figure}
     \centering
         \includegraphics[width=0.88\textwidth]{fig/Fay18_10_5.pdf}
     \captionsetup{width=.95\textwidth}
-    \caption{Random VGP samplings (30 times) for the best and worst results for
-	the 10 Myr window and 5 Myr step paleomagnetic APWPs vs FHM \& plate circuit
-	predicted APWP\@. The lower and upper bound lines connect the 1st and 3th
-	quantiles ($Q_1$ and $Q_3$) of the 30 samples. The bold line connects their
-	means. The numbers in small parentheses are actual quantity of VGPs after
-	filtered by the corresponding picking methods for the case with no data
-	removal. The $Q_1$\textendash$Q_3$ interquartile range from best method is
-	also shown (shadowed) in the plot of the worst method for clarity. Green
-	dots are the lowest value for each method; dark green dots are the lowest
-	for the 20\% case.}\label{Fig:Fay18_10_5bw}
+    \caption{Random paleopole samplings (30 times) for the best and worst
+	results for the 10 Myr window and 5 Myr step paleomagnetic APWPs vs FHM \&
+	plate circuit predicted APWP\@. The lower and upper bound lines connect the
+	1st and 3th quantiles ($Q_1$ and $Q_3$) of the 30 samples. The bold line
+	connects their means. The numbers in small parentheses are actual quantity
+	of paleopoles after filtered by the corresponding picking methods for the
+	case with no data removal. The $Q_1$\textendash$Q_3$ interquartile range
+	from best method is also shown (shadowed) in the plot of the worst method
+	for clarity. Green dots are the lowest value for each method; dark green
+	dots are the lowest for the 20\% case.}\label{Fig:Fay18_10_5bw}
 \end{figure}
 
 \begin{figure}
@@ -106,9 +106,9 @@ cheaper option.
 
 Describe the function fill-df-a95nan in ma.py:
 Situation 1: Note that because of reducing of pole quantity in sliding windows,
-in some window there could be only one VGP which does not have given ED95, DM
-and DP, then we use $140/\sqrt{kN}$~\cite{T91,T19} to calculate a ED95 for this
-VGP as its A95.
+in some window there could be only one paleopole which does not have given ED95,
+DM and DP, then we use $140/\sqrt{kN}$~\cite{T91,T19} to calculate a ED95 for
+this paleopole as its A95.
 
 \subsection{Extreme Value Study}
 
@@ -363,11 +363,11 @@ less dense paleomagnetic data, is needed to be tested.
 
 From the perspective of checking if the $Q_1$\textendash$Q_3$ intervals overlap,
 APP is indeed still better than AMP and weighting is indeed still not affecting
-for more than 15 VGPs making a 10/5 Myr bin/step APWP (ideally composed of 25
-mean poles for 120\textendash0 Ma). For the 20\% Indian data case, which
-contains not more than 15 VGPs making a 120\textendash0 Ma APWP, there is
+for more than 15 paleopoles making a 10/5 Myr bin/step APWP (ideally composed of
+25 mean poles for 120\textendash0 Ma). For the 20\% Indian data case, which
+contains not more than 15 paleopoles making a 120\textendash0 Ma APWP, there is
 overlapping between APP's Mean\textendash$Q_3$ interval and AMP's
 $Q_1$\textendash{}Mean interval for weighted cases (i.e.\ for Weighting No.
 1\textendash5). Even so, APP's means are still lower than AMP's for this
-no-more-than-15-VGPs case (Fig.~\ref{Fig:Fay18_10_5_101appamp}). So here is the
-question: is 15 the threshold?
+no-more-than-15-paleopoles case (Fig.~\ref{Fig:Fay18_10_5_101appamp}). So here
+is the question: is 15 the threshold?
