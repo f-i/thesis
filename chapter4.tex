@@ -22,11 +22,14 @@ not make much difference at all.
 
 \section{Extration Fraction}
 
-The raw paleopoles are extracted before being moving-averaged (i.e.\ picking and
-weighting; see the last chapter for more details).
-
-80\%, 60\%, 40\% and 20\% mean 20, 40, 60 and 80 percent of raw paleopoles are
-removed.
+Sub-sampling (extracting part of raw paleopoles) is implemented before
+moving-averaging with filtering/correcting and weighting at four percentages,
+80\%, 60\%, 40\% and 20\%, which mean 20, 40, 60 and 80 per cent of raw
+paleopoles are removed. This means not all sub-samples at, for example, 80\%
+are going to be generating a path from the same number of paleopoles after
+filtering. In some cases a large number might be removed, in others much less,
+depending on the properties of the sub-sampled population. This is definitely an
+additional factor that would affect the difference score.
 
 \begin{figure}
     \centering
@@ -40,8 +43,8 @@ removed.
 	of paleopoles after filtered by the corresponding picking methods for the
 	case with no data removal. The $Q_1$\textendash$Q_3$ interquartile range
 	from best method is also shown (shadowed) in the plot of the worst method
-	for clarity. Green dots are the lowest value for each method; dark green
-	dots are the lowest for the 20\% case.}\label{Fig:Fay18_10_5bw}
+	for clarity. Black rings are the lowest value for each method or the lowest
+	for the 20\% case.}\label{Fig:Fay18_10_5bw}
 \end{figure}
 
 \begin{figure}
@@ -104,11 +107,6 @@ cheaper option.
 	See Fig.~\ref{Fig:Fay18_10_5bw} for more details.}\label{Fig:Fay18_10_5_0_0}
 \end{figure}
 
-Describe the function fill-df-a95nan in ma.py:
-Situation 1: Note that because of reducing of pole quantity in sliding windows,
-in some window there could be only one paleopole which does not have given ED95,
-DM and DP, then we use $140/\sqrt{kN}$~\cite{T91,T19} to calculate a ED95 for
-this paleopole as its A95.
 
 \subsection{Extreme Value Study}
 
@@ -117,7 +115,7 @@ between paleomagnetic APWPs and the reference path. However, it is noticeable
 that even though the data density is tremendously reduced (e.g.\ by 80\%), it is
 still possible to have a better similarity for paleomagnetic APWPs and the
 reference, even better than for the paleomagnetic APWP with all original
-datasets (e.g.\ the green dots in Fig.~\ref{Fig:Fay18_10_5bw}). For example,
+datasets (e.g.\ the black rings in Fig.~\ref{Fig:Fay18_10_5bw}). For example,
 for the case (a) (Fig.~\ref{Fig:Fay18_10_5bw}), even though 60\% of the
 paleopoles are removed, we still can get a better similarity using the
 paleomagnetic APWP composed of the left 40\% of the paleopoles than the
@@ -125,14 +123,16 @@ original. Although this 40\% data generated paleomagnetic APWP owns the same
 number of mean poles as the 100\% data generated paleomagnetic APWP, the
 number of paleopoles for each mean pole is actually much less. The main reason
 why this 40\% data generated paleomagnetic APWP is more similar to the
-reference path is that this APWP's spacial errors are much larger than those of
-the 100\% data generated paleomagnetic APWP
+reference path is that this APWP's spatial uncertainties (FQ: C-B) are much
+larger than those (FQ: B-B) of the 100\% data generated paleomagnetic APWP
 (Fig.~\ref{Fig:Fay18_10_5b101l40p_vs_100p}). Even only 20\% of the paleopoles
-could also give a better similarity (the dark green dot in
-Fig.~\ref{Fig:Fay18_10_5bw} (a)). The reason why this 20\% data generated
-paleomagnetic APWP is more similar to the reference path is the same as for the
-40\% data generated path. It's the same for the lowest difference given by the
-60\% Australian paleomagnetic data (the green dot in Fig.~\ref{Fig:Fay18_10_5bw}
+could also give a better similarity (the lowest red dot in
+Fig.~\ref{Fig:Fay18_10_5bw} (a)). Unfortunately, the reason why this 20\% data
+generated paleomagnetic APWP is more similar to the reference path is the same
+as for the 40\% data generated path: extremely large spatial uncertainties (FQ:
+D-B). So we need to be cautious about the similarity score when we have less
+data. It's the same for the lowest difference given by the 60\% Australian
+paleomagnetic data (the lowest green dot in Fig.~\ref{Fig:Fay18_10_5bw}
 (e)).
 
 \begin{figure*}[tbp]
@@ -142,26 +142,27 @@ paleomagnetic APWP is more similar to the reference path is the same as for the
     \captionsetup{skip=0pt}  % local setting for this subfigure
     \centering
     \includegraphics[width=1.01\linewidth]{/home/g/Desktop/git/paper/tex/GeophysJInt/figures/ay18_101comb_10_5_11_0.pdf}
-	\caption{100\% data; Fig.~\ref{Fig:Fay18_10_5bw}
+	\caption{100\% data, FQ B-B; Fig.~\ref{Fig:Fay18_10_5bw}
 	(a)}\label{Fig:Fay18_10_5b101}
   \end{subfigure}
   \begin{subfigure}[htbp]{.49\textwidth}
     \captionsetup{skip=0pt}
     \centering
     \includegraphics[width=1.01\linewidth]{fig/ay18_101comb_10_5_11_0_40perc_Best.pdf}
-    \caption{The lowest for 40\% data;
+    \caption{The lowest for 40\% data, FQ C-B;
 	Fig.~\ref{Fig:Fay18_10_5bw} (a)}\label{Fig:Fay18_10_5b101l40p}
   \end{subfigure}
   \caption[Less data, better similarity?]{Comparing the 100\% North American
   120\textendash0 Ma paleomagnetic data derived result with the best of the only
-  40\% data (giving even better similarity) derived results (the green dot in
-  Fig.~\ref{Fig:Fay18_10_5bw} (a)).}\phantomsection\label{Fig:Fay18_10_5b101l40p_vs_100p}
+  40\% data (giving even better similarity) derived results (the lowest yellow
+  dot in Fig.~\ref{Fig:Fay18_10_5bw} (a)).}\phantomsection\label{Fig:Fay18_10_5b101l40p_vs_100p}
 \end{figure*}
 
-For the case (b) (Fig.~\ref{Fig:Fay18_10_5bw}), the reason why the only 20\%
-data could give better result than the 100\% data does is that not only the
-20\% data gives less mean poles, but also the 20\% data gives larger spacial
-errors (Fig.~\ref{Fig:Fay18_10_5w101l20p_vs_100p}).
+For the case (b) (Fig.~\ref{Fig:Fay18_10_5bw}), the main reason why the only
+20\% data could give better result than the 100\% data does is that not only,
+for example, for the lowest cyan dot the 20\% data gives less mean poles, but
+also a few larger spatial uncertainties appear for this 20\% case
+(Fig.~\ref{Fig:Fay18_10_5w101l20p_vs_100p}).
 
 \begin{figure*}[tbp]
   \captionsetup[subfigure]{labelformat=empty,aboveskip=-6pt,belowskip=-6pt}
@@ -191,8 +192,8 @@ able to give better result than the 100\% data does is that the 10 Ma mean pole
 of the 80\% data derived path is a bit closer to reference, because both the 10
 Ma pole pair in Fig.~\ref{Fig:Fay18_10_5b501l80p_vs_100p} are distinguishable.
 Although the 80\% data derived paleomagnetic APWP
-(Fig.~\ref{Fig:Fay18_10_5b501l80p}) generally owns relatively larger spacial
-errors, the related pole pairs are distinguishable for both path pairs in
+(Fig.~\ref{Fig:Fay18_10_5b501l80p}) generally owns relatively larger spatial
+uncertainties, the related pole pairs are distinguishable for both path pairs in
 Fig.~\ref{Fig:Fay18_10_5b501l80p_vs_100p}.
 
 \begin{figure*}[tbp]
@@ -356,7 +357,7 @@ less dense paleomagnetic data, is needed to be tested.
         \includegraphics[width=1\textwidth]{fig/Fay18_10_5_101appamp.pdf}
     \captionsetup{width=1\textwidth}
     \caption{Comparisons of results from Picking No. 1 (APP) and Picking No. 0
-	(AMP) with all the listed weighting methods for the three continents. The
+	(AMP) with all the listed weighting methods for three continents. The
 	$Q_1$\textendash$Q_3$ interquartile range from Picking No. 1 is also shown
 	(shadowed) in the plot of Picking No. 0 for clarity.}\label{Fig:Fay18_10_5_101appamp}
 \end{figure}
