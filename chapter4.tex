@@ -53,7 +53,7 @@ additional factor that would affect the difference score.
     \captionsetup{width=.95\textwidth}
     \caption{Comparisons of results from the best and worst methods for North
 	America (101), also applied on the other two continents (501 and 801). The
-	$Q_1$\textendash$Q_3$ interquartile range from Picking No. 11 is also shown
+	$Q_1$\textendash$Q_3$ interquartile range from Picking No. 25 is also shown
 	(shadowed) in the plot of Picking No. 16 for clarity.}\label{Fig:Fay18_10_5to101bw}
 \end{figure}
 
@@ -73,8 +73,8 @@ additional factor that would affect the difference score.
     \captionsetup{width=.95\textwidth}
     \caption{Comparisons of results from the best and worst methods for
 	Australia (801), also applied on the other two continents (101 and 501). The
-	$Q_1$\textendash$Q_3$ interquartile range from Picking No. 17 is also shown
-	(shadowed) in the plot of Picking No. 22 for clarity.}\label{Fig:Fay18_10_5to801bw}
+	$Q_1$\textendash$Q_3$ interquartile range from Picking No. 11 is also shown
+	(shadowed) in the plot of Picking No. 26 for clarity.}\label{Fig:Fay18_10_5to801bw}
 \end{figure}
 
 We can see that the best picking and weighting methods are statistically always
@@ -108,7 +108,8 @@ cheaper option.
 \end{figure}
 
 
-\subsection{Extreme Value Study}
+\subsection{Extreme Value Study: Suggestions on Algorithm, especially on large
+uncertainties}
 
 It is easy for us to think that less paleomagnetic data means poorer similarity
 between paleomagnetic APWPs and the reference path. However, it is noticeable
@@ -131,7 +132,8 @@ Fig.~\ref{Fig:Fay18_10_5bw} (a)). Unfortunately, the reason why this 20\% data
 generated paleomagnetic APWP is more similar to the reference path is the same
 as for the 40\% data generated path: extremely large spatial uncertainties (FQ:
 D-A). So we need to be cautious about the similarity score when we do not have
-enough paleomagnetic data for making an APWP\@. It's the same for the lowest
+enough paleomagnetic data for making an APWP, which tends to generate large
+spatial uncertainties for mean poles. The situation is the same for the lowest
 difference given by the 60\% Australian paleomagnetic data (the lowest green dot
 in Fig.~\ref{Fig:Fay18_10_5bw}(e)).
 
