@@ -14,13 +14,13 @@ data are lower, compared with younger geological times. Reducing the data
 density for relatively younger geological times (for example, about
 120\textendash0 Ma) can help see if our methodology is still able to reliably
 give reasonable results from data aged in deep times (for example, geological
-times that are older than about 120 Ma, even to Precambrian times or older).
+times that are older than about 120 Ma, even to the Precambrian times or older).
 
 \section{Reference Path}
 
-The fixed hotspot model and related plate circuit predicted APWPs are used as
-references. In fact, as mentioned in the last chapter, choosing FHM or MHM does
-not make much difference at all.
+The fixed hotspot model (FHM) and related plate circuit predicted APWPs are used
+as references. In fact, as mentioned in the last chapter, whether we choose FHM
+or whether we pick MHM as reference, they do not make much difference at all.
 
 \section{Extration Fraction}
 
@@ -89,8 +89,9 @@ resolution of pole pairs with the path comparisons.}\label{Fig:Fay18_10_5bw_res}
 
 We can see that the best picking and weighting methods are statistically always
 better than the worst ones even if only 20 percent of thei 120\textendash0 Ma
-paleopoles are used to compose the APWPs (Fig.~\ref{Fig:Fay18_10_5bw}) for the
-three continents, North America, India and Australia.
+paleopoles are used to compose the APWPs (Fig.~\ref{Fig:Fay18_10_5bw} and
+Fig.~\ref{Fig:Fay18_10_5bw_res}) for the three continents, North America, India
+and Australia.
 
 For the worst methods applied onto Indian and Australian data, the equal-weight
 $\mathcal{CPD}$ surprisingly decreases when the percentage of extracted data
@@ -98,13 +99,15 @@ decreases (Fig.~\ref{Fig:Fay18_10_5bw}). This is because after the data density
 is reduced the left data are not always enough to cover all the time range of
 120\textendash0 Ma but only part, or even though the 120 and 0 Ma mean poles
 (two ends) exist, the number of intermediate mean poles between 120 Ma and 0 Ma
-is much less than the APWP from data without reducing density.
+is much less than the APWP from data without reducing density
+(Fig.~\ref{Fig:Fay18_10_5bw_res}).
 
 \subsection{Number of Samples}
-Here because the thousands of times of testing for each percentage of data
-removal and each picking and weighting method is rather expensive, 30 samples
-(a rule of thumb; e.g.~\cite{H19} says ``greater than 25 or 30'') are obtained.
-In fact, the 25th percentiles ($Q_1$), 75th percentiles ($Q_3$) and the means of
+Here because the thousands of times of testing for each representative
+percentage of data removal and also even further for each picking and weighting
+method is rather expensive, only 30 samples (a rule of thumb; e.g.~\cite{H19}
+says ``greater than 25 or 30'') are obtained for each percentage and method. In
+fact, the 25th percentiles ($Q_1$), 75th percentiles ($Q_3$) and the means of
 30, 60, 100, 200 and 1000 samples are not quite different
 (Fig.~\ref{Fig:Fay18_10_5_0_0}), although 200 seems a better and relatively
 cheaper option.
@@ -121,31 +124,32 @@ cheaper option.
 \subsection{Extreme Value Study: Suggestions on Algorithm, especially on large
 uncertainties}
 
-It is easy for us to think that less paleomagnetic data means poorer similarity
-between paleomagnetic APWPs and the reference path. However, it is noticeable
-that even though the data density is tremendously reduced (e.g.\ by 80\%), it
-seems still possible to have a better similarity for paleomagnetic APWPs and the
-reference, even better than for the paleomagnetic APWP with all original
-datasets (e.g.\ the black rings in Fig.~\ref{Fig:Fay18_10_5bw}). For example,
-for the case (a) (Fig.~\ref{Fig:Fay18_10_5bw}), even though 60\% of the
-paleopoles are removed, we still can get a better similarity using the
+It seems rational for us to agree on that less paleomagnetic data tends to bring
+poorer similarity between paleomagnetic APWPs and the reference path. However,
+it is noticeable that even though the data density is tremendously reduced
+(e.g.\ by 80\%), it seems still possible to have a better similarity score for
+paleomagnetic APWPs and the reference, sometimes even better than for the
+paleomagnetic APWP with all original number of datasets (e.g.\ the
+black-outlined rings in Fig.~\ref{Fig:Fay18_10_5bw}). For example, for the case
+(a) (Fig.~\ref{Fig:Fay18_10_5bw}), even though 60\% of the paleopoles are
+removed, we still can get a better similarity score (here, 0) using the
 paleomagnetic APWP composed of the left 40\% of the paleopoles than the
 original. Although this 40\% data generated paleomagnetic APWP owns the same
-number of mean poles as the 100\% data generated paleomagnetic APWP, the
-number of paleopoles for each mean pole is actually much less. The main reason
-why this 40\% data generated paleomagnetic APWP is more similar to the
-reference path is that this APWP's spatial uncertainties (FQ: C-A) are much
-larger than those (FQ: B-A) of the 100\% data generated paleomagnetic APWP
+number of mean poles as the 100\% data generated paleomagnetic APWP, the average
+number of paleopoles for each mean pole is obviously much less. The main reason
+why this 40\% data generated paleomagnetic APWP is more similar to the reference
+path is that this APWP's spatial uncertainties (FQ: C-A) are much larger than
+those (FQ: B-A) of the 100\% data generated paleomagnetic APWP
 (Fig.~\ref{Fig:Fay18_10_5b101l40p_vs_100p}). Even only 20\% of the paleopoles
-could also give a better similarity (the lowest red dot in
+could also give a better similarity (the lowest yellow dot in
 Fig.~\ref{Fig:Fay18_10_5bw} (a)). Unfortunately, the reason why this 20\% data
 generated paleomagnetic APWP is more similar to the reference path is the same
 as for the 40\% data generated path: extremely large spatial uncertainties (FQ:
-D-A). So we need to be cautious about the similarity score when we do not have
+C-A). So we need to be cautious about the similarity score when we do not have
 enough paleomagnetic data for making an APWP, which tends to generate large
 spatial uncertainties for mean poles. The situation is the same for the lowest
-difference given by the 60\% Australian paleomagnetic data (the lowest green dot
-in Fig.~\ref{Fig:Fay18_10_5bw}(e)).
+difference given by the 20\% North American paleomagnetic data with the worst
+method 16(2) applied (the lowest yellow dot in Fig.~\ref{Fig:Fay18_10_5bw}(b)).
 
 \begin{figure*}[tbp]
   \captionsetup[subfigure]{labelformat=empty,aboveskip=-6pt,belowskip=-6pt}
@@ -170,11 +174,11 @@ in Fig.~\ref{Fig:Fay18_10_5bw}(e)).
   dot in Fig.~\ref{Fig:Fay18_10_5bw} (a)).}\phantomsection\label{Fig:Fay18_10_5b101l40p_vs_100p}
 \end{figure*}
 
-For the case (b) (Fig.~\ref{Fig:Fay18_10_5bw}), the main reason why the only
-20\% data could give better result than the 100\% data does is that not only,
-for example, for the lowest cyan dot the 20\% data gives less mean poles, but
-also a few larger spatial uncertainties appear for this 20\% case
-(Fig.~\ref{Fig:Fay18_10_5w101l20p_vs_100p}).
+Further for the case (b) (Fig.~\ref{Fig:Fay18_10_5bw}), the main reason why the
+only 20\% data could give a better result than the 100\% data does is that not
+only, for example, for the lowest yellow dot the 20\% data gives less mean
+poles, but also a few extremely large spatial uncertainties appear for this
+20\% case (Fig.~\ref{Fig:Fay18_10_5w101l20p_vs_100p}).
 
 \begin{figure*}[tbp]
   \captionsetup[subfigure]{labelformat=empty,aboveskip=-6pt,belowskip=-6pt}
