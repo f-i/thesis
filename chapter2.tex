@@ -125,3 +125,107 @@ parameters from~\cite{To16}.}\label{fig:nambal_same_geometry}
   statistically indistinguishable from the reference path. Azimuthal
   Orthographic projection.}\phantomsection\label{fig:GCDbadIndex}
 \end{figure*}
+
+We have developed an improved quantitative method of calculating the similarity
+between two APWPs, or coeval segments of APWPs, in the form of a composite
+difference score that compares both their spatial overlap and geometry. Our
+method incorporates statistical significance testing, allowing paths with
+associated spatial uncertainties to be rigorously compared to each other. The
+validity and effectiveness of this method, and its superior discrimination
+compared to a mean GCD score, are demonstrated by comparing the published APWP
+of the North America Plate to seven derivative paths with different degrees of
+spatial and geometric noise applied (Fig.~\ref{fig:2traj}).
+
+We also test our algorithm on real paleomagnetic data, demonstrating that this
+tool can be used to quantitatively assess the effects of different corrections
+(in this case, bulk corrections for inclination shallowing in sediments) on the
+similarity between APWPs from different continents.
+
+\section{Methods}
+
+\subsection{Comparing Apparent Polar Wander Paths}
+
+An APWP consists of a sequence of ($\mathbf{n}$) mean poles,
+$\mathbf{P_1,P_2,\ldots,P_n}$, which average the published paleopoles from a
+particular continent for a particular time interval. Each mean pole has
+associated longitude ($\phi$), latitude ($\lambda$), and age ($\mathbf{t}$).
+Spatial uncertainty is represented by a 95\% confidence ellipse described by
+semi-major axis $\mathbf{dm}$ with azimuth $\beta$ (angle east of north) and
+perpendicular semi-minor axis $\mathbf{dp}$ (e.g. Fig.~\ref{fig:2traj}).
+
+\begin{figure*}[tbp]
+  \captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
+  \centering
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:2traj1}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/pairA.pdf}
+  \end{subfigure}
+  \vspace{.5em}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:2traj2}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/pairB.pdf}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:2traj3}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/pairC.pdf}
+  \end{subfigure}
+  \vspace{.5em}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:2traj4}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/pairD.pdf}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:2traj5}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/pairH.pdf}
+  \end{subfigure}
+  \vspace{.5em}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:2traj6}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/pairE.pdf}
+  \end{subfigure}
+\end{figure*}%
+\begin{figure*}[tbp]\ContinuedFloat
+  \captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
+  \centering
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:2traj7}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/pairF.pdf}
+  \end{subfigure}
+  \caption[Eight examples of APWP comparisons]{APWP pairs used to validate new
+path comparison method. In each case the Phanerozoic APWP for Laurentia/North
+America (squares, bold line) at 10 million-year (Myr) timesteps~\cite[``RM''
+column of its Table 3]{T12}, is compared to a transformed copy (circles, dashed
+line): (a) 1\degree\ finite rotation applied to all the mean poles and their 95\%
+uncertainty ellipses around an Euler pole at (125\degree E, 88.5\degree S); (b)
+as (a), but 15\degree\ rotation around same Euler pole; (c) after rotation as in
+(b), the orientation of each APWP segment is randomised whilst keeping their GCD
+length and the coeval poles' GCD fixed; (d) after rotation as in (b), the
+bearing between coeval poles is randommised whilst keeping their GCD spacing
+fixed; (e) as (c), but with randomly varied and relatively smaller associated
+spatial uncertainty; (f) as (a), but 45\degree\ rotation around same Euler pole;
+(g) as (f), but with zero associated spatial uncertainty. Azimuthal Orthographic
+projection.}\phantomsection\label{fig:2traj}
+\end{figure*}
+
+For two continents that were once part of a supercontinent, their APWPs for the
+period should perfectly overlap when rotated into a common reference frame
+(Fig.~\ref{fig:nambal_same_geometry}). However, due to (i) the spatial
+uncertainty associated with the mean poles that form an APWP, (ii) differences
+in the density and quality of data available to calculate paleopoles for
+different continents in coeval time periods, and (iii) uncertainties and
+possible errors in the rotations used to represent past plate motions, a perfect
+match will not be obtained. Instead, two `matching' paths should share a
+generally similar geometry, and largely overlap with each other when rotated
+into a common reference frame. A quantitative measure of the spatial and
+geometric similarity between these two paths should ideally allow us to
+distinguish between non-identical paths that are similar within the associated
+uncertainties, and non-identical paths that are actually different, due to
+differential motion between the two continents or a poorly constrained
+reconstruction.
