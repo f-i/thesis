@@ -1,9 +1,127 @@
 \chapter{Methodologies}\label{chap:Metho}
 \textit{This chapter mainly describes the development of a new APW path
-similarity measuring tool used throughout the dissertation}
+similarity measuring tool used throughout the dissertation.
+Apparent polar wander paths (APWPs) based on paleomagnetic data are the
+principal means of describing plate motions through most of Earth history.
+Comparing the spatio-temporal patterns and trends of APWPs between different
+tectonic plates is important for testing proposed paleogeographic
+reconstructions of past supercontinents. However, thus far there is no clearly
+defined quantitative approach to determine the degree of similarity between
+APWPs. This paper proposes a new method of determining the degree of similarity
+between two APWPs that combines three separate difference metrics that assess
+both spatial separation of coeval poles, and similarities in the bearing and
+length of coeval segments using a weighted linear summation. Bootstrap tests are
+used to determine whether the differences between coeval poles and segments are
+significant for the given spatial uncertainties in pole positions. The Fit
+Quality is used to discriminate between low significance scores caused by
+comparing poorly constrained paths with large spatial uncertainties from those
+caused by a close fit between well-constrained paths. The individual and
+combined metrics are demonstrated using tests on synthetic pairs of APWPs with
+varying degrees of spatial and geometric difference. In a test on real
+paleomagnetic data, we show that these metrics can quantify the effects of
+correction for inclination shallowing in sedimentary rocks on Gondwana and
+Laurussia's 320\textendash0 Ma APWPs. For an APWP pair, when one APWP's three
+individual metrics are all greater than or equal to, or less than or equal to
+the other one's, weighting is dispensable because the similarity ranking order
+becomes straightforward; otherwise assigning equal weights is recommended,
+although then decision makers are allowed to arbitrarily change weights
+according to their preferences.}
 \vfill
 \minitoc\newpage
 
-(This chapter is appended as a paper draft with its supplementary material
-after the Bibliography. It is also openly accessible from
-\emph{https://github.com/f-i/APWP\_similarity}.)
+(This chapter is also openly accessible from
+\emph{https://github.com/f-i/APWP\_similarity}. Text:
+\emph{https://github.com/f-i/APWP\_similarity/blob/master/2.pdf}; Figures:
+\emph{https://github.com/f-i/APWP\_similarity/blob/master/2\_figures.pdf};
+Supplementary:
+\emph{https://github.com/f-i/APWP\_similarity/blob/master/2Supp.pdf})
+
+
+\section{Introduction}
+
+Paleomagnetism is an important source of information on the past motions of the
+Earth's tectonic plates. The orientation of remanent magnetisations acquired by
+rocks during their formation record the past position of the Earth's magnetic
+poles. In older rocks, these virtual geomagnetic poles often appear to be
+increasingly offset from the modern day geographic poles. Because the Earth's
+geomagnetic field appears to have remained largely dipolar and centered on the
+spin axis for at least the last 2 billion years~\cite{E06}, this divergence is
+interpreted as recording the translation and rotation of a continent by the
+motion of tectonic plates in the time since the rock formed. An Apparent Polar
+Wander Path (APWP) is a time sequence of paleomagnetic poles (or, more commonly,
+mean poles that average all regional paleopoles of similar age) that traces
+the cumulative motion of a continental fragment relative to the Earth's spin
+axis.
+
+Investigations of the Earth's past tectonic evolution and paleogeography often
+involve comparing APWPs. For example, if two now separated continental fragments
+were once part of the same supercontinent, their APWPs should share the same
+geometry during the interval that this supercontinent existed. If the
+supercontinent has been correctly reconstructed, the APWPs should also overlap
+during this interval (Fig.~\ref{fig:nambal_same_geometry}). APWP comparisons can
+be used to assess plate motion models generated using different datasets and/or
+fitting techniques~\cite[for example]{B02,B07,S07,T08,D11}; significant deviations
+from the known APWP for a continent can also be used to identify local tectonic
+rotations~\cite[for example]{G10,Ch13}. Despite the clear importance of measuring
+APWP similarity, these comparisons remain largely qualitative in nature,
+involving visual comparisons of specific APWP segments and checking if they have
+overlapping 95\% confidence limits~\cite[for example]{B02,B07,G10,D11}. Where
+quantitative measures are used, the mean great circle distance (GCD) between
+coeval poles on the APWP pair has been commonly used as a generalised difference
+metric for a pair of APWPs, with a lower score indicating that they are more
+similar~\cite[for example]{S07,T08}. However, because GCD is simply a measure of
+spatial separation and does not incorporate geometric information about the two
+paths being compared, it is possible for pairs with clearly different
+similarities to have similar mean GCD scores
+(Fig.~\ref{fig:QualitativelyDifferentSameGCD}). Due to the inherent time
+variability of the geomagnetic field, uncertainties arising from the sampling
+and measurement of remanent magnetisations, and uncertainties in the
+magnetization age, the mean paleopoles that make up an APWP also have associated
+spatial uncertainties. The significance of a GCD score is therefore not
+immediately obvious. A score that indicates a relatively large difference
+between two paths may not be significant if the spatial uncertainties are large;
+a small difference could be significant if the spatial uncertainties are small
+(Fig.~\ref{fig:GCDlargeButIndistinguishable}).
+
+
+\begin{figure*}[tbp]
+\centering
+\includegraphics[width=1.01\textwidth]{../../paper/tex/ComputGeosci/figures/nambal_same_geometry.pdf}
+\caption[Parts of APWPs of supercontinent fragments share the same
+geometry]{(a) The APWPs for North America (black) and Baltica (grey) are
+spatially distinct, but their Late Paleozoic\textendash{}Early Mesozoic sections
+are geometrically similar due to them both being part of the supercontinent
+Pangaea. (b) Reversing the opening of the Atlantic Ocean by rotation around a
+reconstruction pole (blue star) results in the overlap of these two APWPs
+between 390 million years ago (Ma) and 220 Ma, validating the proposed
+paleogeography. The effects of this rotation on Baltica and its APWP (BAL) are
+illustrated by the motion of the circle marker (before: blank center; after:
+dark center), respectively. General Perspective projection. APWPs and rotation
+parameters from~\cite{To16}.}\label{fig:nambal_same_geometry}
+\end{figure*}
+
+\begin{figure*}[tbp]
+  \captionsetup[subfigure]{labelformat=empty,aboveskip=-6pt,belowskip=-6pt}
+  \centering
+  \begin{subfigure}[htbp]{1.01\textwidth}
+    \centering
+    \includegraphics[width=1.01\linewidth]{../../paper/tex/ComputGeosci/figures/QualitativelyDifferentSameGCD.pdf}
+    \caption{}\label{fig:QualitativelyDifferentSameGCD}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{1.01\textwidth}
+    \centering
+    \includegraphics[width=1.01\linewidth]{../../paper/tex/ComputGeosci/figures/GCDlargeButIndistinguishable.pdf}
+    \caption{}\label{fig:GCDlargeButIndistinguishable}
+  \end{subfigure}
+  \caption[Examples showing GCD is a bad index of similarity]{(a) How the
+  average GCD similarity metric ignores path geometry: \emph{Pair}\textbf{1}
+  (circles and squares, left) is clearly more similar than \emph{Pair}\textbf{2}
+  (circles and triangles, right), but for both pairs each GCD remains constant.
+  (b) How GCD also ignores spatial uncertainties. The average GCD separation
+  between coeval points is smaller for \emph{Pair}\textbf{1} (circles and
+  squares, left) than \emph{Pair}\textbf{2} (circles and triangles, right). But
+  if spatial uncertainties (plotted as 95\% confidence ellipses) are considered,
+  this ranking is not trustworthy: it is \emph{Pair}\textbf{2} that is
+  statistically indistinguishable from the reference path. Azimuthal
+  Orthographic projection.}\phantomsection\label{fig:GCDbadIndex}
+\end{figure*}
