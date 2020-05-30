@@ -469,3 +469,628 @@ other words, an A grade indicates that most poles are well-constrained and so it
 is fairly hard to have an indistinguishable path and a low difference score. A D
 grade indicates that most poles have large uncertainties so it is much easier to
 have a low difference score.
+
+In addition, a short APWP segment tends to result in overlap of its two end
+poles' spatial uncertainties. For example, if an APWP is generated at intervals
+of 10 Myr, the longest realistic segment-length would be about
+27\degree~\cite[the maximum rate of plate movement is about 30 cm/yr]{S09,K14}.
+So the uncertainty size needs be less than about 13.5\degree\ on average to make
+the segment length trustworthy. Therefore, to a certain extent, the ``Fit
+Quality'' also reflects the quality of the length metric if we give each path a
+grade for an APWP pair, e.g. A-A. The angular metric’s quality is related to
+both coeval mean poles and successive mean poles, so it has already been
+involved in the spatial and length quality. Moreover, given the fact that
+usually the mean significant length and angular differences are much lower than
+the mean significant spatial difference (e.g.,
+Figs.~\ref{fig:sd2ni},~\ref{fig:ld2ni},~\ref{fig:ad2ni} and
+Figs.~\ref{fig:LGsS},~\ref{fig:LGlS},~\ref{fig:LGaS}), the ``Fit Quality'' is
+capable to manifest the overall quality of all the three metrics and we should
+trust the difference scores if we get a B-B grade at least.
+
+\begin{figure}[tbp]
+\includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/expect.pdf}
+\caption[]{Difference scores from APWPs with large uncertainties are less
+trustworthy.}\label{fig:FitQ}
+\end{figure}
+
+For example, \emph{Pairs}~\textbf{\subref{fig:2traj1}},
+\textbf{\subref{fig:2traj2}}, \textbf{\subref{fig:2traj3}},
+\textbf{\subref{fig:2traj4}} and~\textbf{\subref{fig:2traj6}}'s fit quality
+score is all 1.809\textendash1.809, so their fit quality is B\textendash{}B,
+which means that the mean poles in these APWP pairs have intermediate
+uncertainties on average so it is relatively hard to have a low difference
+score. \emph{Pair}~\textbf{\subref{fig:2traj5}}'s fit quality is B\textendash{}A
+(1.809\textendash1.085). \emph{Pair}~\textbf{\subref{fig:2traj7}}'s fit quality
+is A\textendash{}A (0\textendash0).
+
+\section{Results and Discussion}
+
+\subsection{Discrimination of Difference Metrics}
+
+The performance of the individual metrics were tested by generating and ranking
+scores for each pair in Fig.~\ref{fig:2traj}. Scores for comparisons of the full
+530 Myr paths, and sequential 100-130 Myr subsections were calculated for path
+pairs with (Fig.~\ref{fig:ssperc}) and without (Fig.~\ref{fig:sspercni}) poles
+with zero spatial uncertainties at 350 Ma, 360 Ma, 380 Ma, 390 Ma, 450 Ma, 460
+Ma and 520 Ma calculated using linear interpolation by~\cite{T12}.
+
+\subsubsection{$d_s$}
+
+If ordered only in terms of spatial similarity, the desired order for the seven
+APWP pairs (Fig.~\ref{fig:2traj}), from most similar (lowest $d_s$) to least
+similar (highest $d_s$) is
+%
+\begin{equation}
+\emph{Pair}~\textbf{\subref{fig:2traj1}} <
+\emph{Pair}~\textbf{\subref{fig:2traj2}} \approx
+\emph{Pair}~\textbf{\subref{fig:2traj3}} \approx
+\emph{Pair}~\textbf{\subref{fig:2traj4}} <
+\emph{Pair}~\textbf{\subref{fig:2traj5}} <
+\emph{Pair}~\textbf{\subref{fig:2traj6}} <
+\emph{Pair}~\textbf{\subref{fig:2traj7}}.
+\label{eq:expOrds}
+\end{equation}
+
+This ordering is based largely on the mean GCD separations of each pair
+(Fig.~\ref{fig:2traj}), but also takes uncertainties into account: the
+relatively smaller uncertainty ellipses of
+\emph{Pair}~\textbf{\subref{fig:2traj5}} and
+\emph{Pair}~\textbf{\subref{fig:2traj7}} should lead to a higher $d_s$ than
+\emph{Pairs}~\textbf{\subref{fig:2traj2}}-\textbf{\subref{fig:2traj4}} and
+\emph{Pair}~\textbf{\subref{fig:2traj6}}, respectively. Without significance
+testing, $d_s$ is directly proportional to mean GCD (Fig.~\ref{fig:sd1}), which
+does not result in unique $d_s$ for \emph{Pair}~\textbf{\subref{fig:2traj5}} and
+\emph{Pair}~\textbf{\subref{fig:2traj7}}. Significance testing reproduces the
+desired order (Fig.~\ref{fig:sd2}).
+
+Most $d_s$ scores are also reduced with significance testing, with the largest
+reductions occurring where the path separations are low and 95\% confidence
+ellipses for coeval poles are more likely to overlap (e.g., $d_s$ for
+\emph{Pair}~\textbf{\subref{fig:2traj1}} is reduced by 85\%, $d_s$ for
+\emph{Pair}~\textbf{\subref{fig:2traj6}} is reduced by $<$2\%). $d_s$ that
+approach 0 for the 0\textendash100 Ma and 100\textendash200 Ma sub-paths, which
+are located close to the Euler pole used to separate the pairs and therefore
+remain in close proximity even after large rotations, also illustrate this
+effect. With significance testing, the 0\textendash100 and 100\textendash200 Ma
+sub-paths of \emph{Pair}~\textbf{\subref{fig:2traj6}} and
+\emph{Pair}~\textbf{\subref{fig:2traj7}} can still be distinguished
+(Fig.~\ref{fig:sd2ni} and also Fig.~\ref{fig:sd2}), due to no spatial
+uncertainty assigned to \emph{Pair}~\textbf{\subref{fig:2traj7}}. In contrast,
+the older 300\textendash400 Ma and 400\textendash530 Ma sub-paths have a larger
+$d_s$ than the whole path. This is because the 350 Ma, 360 Ma, 380 Ma, 390 Ma,
+450 Ma, 460 Ma and 520 Ma pole coordinates are interpolated~\cite{T12}, and
+thus have no assigned spatial uncertainty on any of the test paths. Without the
+interpolated poles, $d_s$ is always zero for
+\emph{Pair}~\textbf{\subref{fig:2traj1}} and any of its sub-paths
+(Fig.~\ref{fig:sd2ni}), which is expected.
+
+Even with significance testing, $d_s$ for
+\emph{Pairs}~\textbf{\subref{fig:2traj2}}-\textbf{\subref{fig:2traj4}} are the
+same (Fig.~\ref{fig:sd1} and Fig.~\ref{fig:sd2}) despite their different
+geometries (Fig.~\ref{fig:2traj2}, Fig.~\ref{fig:2traj3} and
+Fig.~\ref{fig:2traj4}), because GCDs between coeval poles and their
+uncertainties are the same. This result emphasises that a spatial difference
+metric alone cannot discriminate these pairs from each other. The comparison of
+\emph{Pairs}~\textbf{\subref{fig:2traj3}} and \textbf{\subref{fig:2traj5}}
+indicates that well-constrained mean poles with lower uncertainties make it
+relatively harder to have an indistinguishable APWP and a low difference score.
+
+\begin{figure*}[tbp]
+  \captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
+  \centering
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:sd1}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/mean_s_dif.pdf}
+  \end{subfigure}
+  \vspace{.5em}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:sd2}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/ds.pdf}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:ld1}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/mean_l_dif.pdf}
+  \end{subfigure}
+  \vspace{.5em}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:ld2}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/dl.pdf}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:ad1}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/mean_a_dif.pdf}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:ad2}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/da.pdf}
+  \end{subfigure}
+\caption[Mean spatial, length, angular differences]{Mean spatial, length and
+angular differences between two paths of the seven APWP pairs shown in
+Fig.~\ref{fig:2traj}. Left column: results without significance testing imposed
+in the metric; Right column: results with significance testing. Note that the
+spatial difference results of
+\emph{Pairs}~\textbf{\subref{fig:2traj2}},~\textbf{\subref{fig:2traj3}}
+and~\textbf{\subref{fig:2traj4}} are always the same for both the untested case
+(a) and the tested case (b). In addition, for those segments that do not begin
+from 0 Ma, their beginning segments are different from the 0\textendash100 Ma
+sub-path's and the full path's. For example, for the 200\textendash300 Ma
+sub-path, its beginning segment is the 200\textendash210 Ma
+one.}\label{fig:ssperc}
+\end{figure*}
+
+\begin{figure*}[tbp]
+  \captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
+  \centering
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:sd1ni}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/mean_s_difni.pdf}
+  \end{subfigure}
+  \vspace{.5em}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:sd2ni}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/dsni.pdf}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:ld1ni}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/mean_l_difni.pdf}
+  \end{subfigure}
+  \vspace{.5em}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:ld2ni}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/dlni.pdf}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:ad1ni}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/mean_a_difni.pdf}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:ad2ni}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/dani.pdf}
+  \end{subfigure}
+\caption[Mean spatial, length, angular differences (without
+interpolations)]{Mean spatial, length and angular differences between two paths
+of the seven APWP pairs with no interpolated poles shown in
+Fig.~\ref{fig:2traj}. Left column: results without significance testing imposed
+in the metric; Right column: results with significance testing. See explanation
+of Fig.~\ref{fig:ssperc}.}\label{fig:sspercni}
+\end{figure*}
+
+In summary, as Fig.~\ref{fig:sd2ni} and also Fig.~\ref{fig:sd2} illustrate,
+$d_s$, scaling with mean significant GCD, reproduces the expected order of
+spatial similarity (Order (\ref{eq:expOrds})) for the full path. It also
+compensates for the deficiency of the algorithm without statistical test
+(Fig.~\ref{fig:sd1ni} and Fig.~\ref{fig:sd1}) in differentiating
+\emph{Pair}~\textbf{\subref{fig:2traj6}} and
+\emph{Pair}~\textbf{\subref{fig:2traj7}}. Although our algorithm also works for
+APWPs with interpolations (e.g., Fig.~\ref{fig:ssperc}; see how we do
+significance testing on the interpolated mean poles in the Supplementary
+Information), a meaningful and valid analysis should be based on the results
+with uninterpolated paleomagnetic APWPs (e.g., Fig.~\ref{fig:sspercni}).
+
+\subsubsection{$d_l$}
+
+When ordered only according to the length similarity $d_l$ the expected order is
+%
+\begin{equation}
+0 = \emph{Pair}~\textbf{\subref{fig:2traj1}} =
+\emph{Pair}~\textbf{\subref{fig:2traj2}} =
+\emph{Pair}~\textbf{\subref{fig:2traj3}} =
+\emph{Pair}~\textbf{\subref{fig:2traj5}} =
+\emph{Pair}~\textbf{\subref{fig:2traj6}} =
+\emph{Pair}~\textbf{\subref{fig:2traj7}} <
+\emph{Pair}~\textbf{\subref{fig:2traj4}}
+\label{eq:expOrdl}
+\end{equation}
+
+Because only the path generated for \emph{Pair}~\textbf{\subref{fig:2traj4}}
+allowed the length of coeval segments to vary, it is expected that other five
+pairs of APWPs have zero $d_l$ for both the full-path and the five specified
+sub-paths even prior to significance testing (Fig.~\ref{fig:ld1ni} and
+Fig.~\ref{fig:ld2ni}), and this expected order is trivially reproduced. The
+effect of significance testing (Fig.~\ref{fig:ld2ni}) is to substantially reduce
+$d_l$. Many segment length differences do not pass the significance test because
+the angular uncertainties of the poles that define individual segments are large
+compared to the length of those segments.
+
+\subsubsection{$d_a$}
+
+If ordered only according to angular similarity $d_a$, the expected order is
+%
+\begin{equation}
+0 = \emph{Pair}~\textbf{\subref{fig:2traj1}} =
+\emph{Pair}~\textbf{\subref{fig:2traj2}} =
+\emph{Pair}~\textbf{\subref{fig:2traj6}} =
+\emph{Pair}~\textbf{\subref{fig:2traj7}} \leq
+\emph{Pair}~\textbf{\subref{fig:2traj3}} \leq
+\emph{Pair}~\textbf{\subref{fig:2traj4}} \stackrel{?}{<}
+\emph{Pair}~\textbf{\subref{fig:2traj5}}
+\label{eq:expOrda}
+\end{equation}
+
+Because path geometries are not altered by a simple Euler rotation, only
+\emph{Pairs}~\textbf{\subref{fig:2traj3}}, \textbf{\subref{fig:2traj4}} and
+\textbf{\subref{fig:2traj5}} are expected to have a non-zero $d_a$. $d_a$ for
+\emph{Pair}~\textbf{\subref{fig:2traj4}} and
+\emph{Pair}~\textbf{\subref{fig:2traj5}} should be larger than
+\emph{Pair}~\textbf{\subref{fig:2traj3}}'s due to more geometric variation and
+lower spatial uncertainties, respectively, although the expected ordering of
+\emph{Pair}~\textbf{\subref{fig:2traj4}} and
+\emph{Pair}~\textbf{\subref{fig:2traj5}} is less immediately obvious from visual
+inspection.
+
+Without significance testing, non-zero $d_a$ for
+\emph{Pairs}~\textbf{\subref{fig:2traj3}}, \textbf{\subref{fig:2traj4}} and
+\textbf{\subref{fig:2traj5}} are consistently generated for both the full path
+and sub-paths (Fig.~\ref{fig:ad1ni}). $d_a$ for
+\emph{Pair}~\textbf{\subref{fig:2traj4}} is usually higher
+(Fig.~\ref{fig:ad1ni}), but there is no discrimination between
+\emph{Pairs}~\textbf{\subref{fig:2traj3}} and \textbf{\subref{fig:2traj5}},
+which have the same score because geometrically they are identical. When
+significance testing is applied $d_a$ is markedly reduced (Fig.~\ref{fig:ad2ni}
+vs Fig.~\ref{fig:ad1ni}), and is actually reduced to 0 for the two youngest and
+oldest sub-paths in all cases. This is somewhat expected because the segment
+lengths of the APWPs being tested are often of the same order as the angular
+uncertainty in their spatial position. As a result, a large
+range of different path geometries are possible within the specified uncertainty
+bounds, and the bearing of coeval segments has to be very large for the
+difference to be significant.
+
+For the full paths and the 200\textendash300 and 300\textendash400 Ma sub-paths
+where $d_a$ after significance testing is non-zero for
+\emph{Pairs}~\textbf{\subref{fig:2traj4}}, \textbf{\subref{fig:2traj5}} and
+(usually) \textbf{\subref{fig:2traj3}}, \emph{Pair}~\textbf{\subref{fig:2traj5}}
+can now be discriminated from \emph{Pair}~\textbf{\subref{fig:2traj3}}, and
+consistently has the highest $d_a$ of the 3 pairs.
+
+In summary, our angular difference algorithm with statistical test
+(Fig.~\ref{fig:ad2ni}) reproduces the expected order of angular similarity
+(Order (\ref{eq:expOrda})).
+
+\subsubsection{$\mathcal{CPD}$}
+
+When the seven different APWP pairs (Fig.~\ref{fig:2traj}) are rank-ordered in
+terms of the three criteria combined, their expected order is
+%
+\begin{equation}
+  \emph{Pair}~\textbf{\subref{fig:2traj1}} <
+  \emph{Pair}~\textbf{\subref{fig:2traj2}} \leq
+  \emph{Pair}~\textbf{\subref{fig:2traj3}} <
+  \emph{Pair}~\textbf{\subref{fig:2traj4}} \stackrel{?}{<}
+  \emph{Pair}~\textbf{\subref{fig:2traj5}} \stackrel{?}{<}
+  \emph{Pair}~\textbf{\subref{fig:2traj6}} <
+  \emph{Pair}~\textbf{\subref{fig:2traj7}}
+\label{eq:expOrd}
+\end{equation}
+
+In order to be useful, a path difference metric needs to reproduce this order.
+Note that a question mark is put on top of the ``less than'' symbols between
+\emph{Pairs}~\textbf{\subref{fig:2traj4}} and~\textbf{\subref{fig:2traj5}}, and
+\emph{Pairs}~\textbf{\subref{fig:2traj5}} and~\textbf{\subref{fig:2traj6}}
+because when comparing pairs with different spatial separation, geometric
+difference, and relative spatial uncertainty, it can be hard to objectively
+define which ``should'' have the highest similarity, and the ordering will
+depend on the relative weighting of $d_s$, $d_l$ and $d_a$. If the weightings
+are equal (i.e, $W_s=W_l=W_a=\frac{1}{3}$), significant CPD scores for paths
+without interpolated poles (i.e., using scores from Fig.~\ref{fig:sspercni})
+reproduce the expected order:
+%
+\begin{equation*}
+  \textbf{\subref{fig:2traj1}} (0) < \textbf{\subref{fig:2traj2}} (0.036) <
+  \textbf{\subref{fig:2traj3}} (0.043) < \textbf{\subref{fig:2traj4}} (0.067)
+  \approx \textbf{\subref{fig:2traj5}} (0.067) <
+  \textbf{\subref{fig:2traj6}} (0.174) < \textbf{\subref{fig:2traj7}} (0.177),
+\end{equation*}
+%
+however \emph{Pairs}~\textbf{\subref{fig:2traj4}}
+and~\textbf{\subref{fig:2traj5}} have almost identical scores and are not
+discriminated. However, their fit quality (B-B for
+\emph{Pair}~\textbf{\subref{fig:2traj4}} and B-A for
+\emph{Pair}~\textbf{\subref{fig:2traj5}}; Fig.~\ref{fig:sd2ni},
+Fig.~\ref{fig:ld2ni} and Fig.~\ref{fig:ad2ni}) indicates that
+\emph{Pair}~\textbf{\subref{fig:2traj5}}'s $\mathcal{CPD}$ is relatively more
+trustworthy. This order might also not be preserved with different applied
+weights. The impact of weighting will be discussed in the following section.
+
+\subsection{A Discussion on Weights}\label{sec:wDis}
+
+Although $W_s$, $W_a$ and $W_l$ can be defined by user, this is subjective.
+
+However, we do explicitly know that: when comparing two APWP pairs, our aim is
+to find the one whose similarity ranks higher. A simple subtraction between
+unsolved (because of unknown weights) $\mathcal{CPD}s$ can help determine
+which pair's similarity ranks higher. If a positive difference is obtained, no
+matter what $W_s$, $W_a$ and $W_l$ values are assigned, the subtrahend pair's
+similarity ranks higher; if the difference is always negative, the minuend
+pair's similarity is always higher. In addition, the difference could be always
+zero. Interpretation is straightforward in these three scenarios. However, for
+some pairs, a positive, zero or negative CPD difference could result depending
+on the chosen weightings.
+
+For example, for the full (i.e., 0\textendash530 Ma) path with no interpolated
+poles, the mean significant spatial, length and angular differences $d_s$, $d_l$
+and $d_a$ are known (Fig.~\ref{fig:sd2ni}, Fig.~\ref{fig:ld2ni} and
+Fig.~\ref{fig:ad2ni}). Also we know $W_l=1-W_s-W_a$. Then we do subtractions of
+$\mathcal{CPD}s$ from each two APWP pairs:
+%
+\setcounter{equation}{0} %reset the equation counter
+\begin{equation}
+\left\{
+\begin{array}{lllllllllllllll}
+D_{full}^{b-a} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj2}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj1}}}
+= 0.109 W_s \\
+D_{full}^{c-a} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj3}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj1}}}
+= 0.109 W_s + 0.02 W_a \\
+D_{full}^{d-a} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj4}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj1}}}
+= 0.038 W_s - 0.029 W_a + 0.061 \\
+D_{full}^{e-a} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj5}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj1}}}
+= 0.153 W_s + 0.047 W_a \\
+D_{full}^{f-a} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj6}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj1}}}
+= 0.522 W_s \\
+D_{full}^{g-a} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj7}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj1}}}
+= 0.532 W_s \\
+D_{full}^{c-b} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj3}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj2}}}
+= 0.02 W_a \\
+D_{full}^{d-b} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj4}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj2}}}
+= -0.061 W_s - 0.029 W_a + 0.061 \\
+D_{full}^{e-b} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj5}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj2}}}
+= 0.044 W_s + 0.047 W_a \\
+D_{full}^{f-b} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj6}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj2}}}
+= 0.413 W_s \\
+D_{full}^{g-b} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj7}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj2}}}
+= 0.423 W_s \\
+D_{full}^{d-c} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj4}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj3}}}
+= -0.061 W_s - 0.049 W_a + 0.061 \\
+D_{full}^{e-c} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj5}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj3}}}
+= 0.044 W_s + 0.027 W_a \\
+D_{full}^{f-c} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj6}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj3}}}
+= 0.413 W_s - 0.02 W_a \\
+D_{full}^{g-c} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj7}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj3}}}
+= 0.423 W_s - 0.02 W_a \\
+D_{full}^{e-d} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj5}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj4}}}
+= 0.105 W_s + 0.076 W_a - 0.061 \\
+D_{full}^{f-d} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj6}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj4}}}
+= 0.474 W_s + 0.029 W_a - 0.061 \\
+D_{full}^{g-d} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj7}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj4}}}
+= 0.484 W_s + 0.029 W_a - 0.061 \\
+D_{full}^{f-e} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj6}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj5}}}
+= 0.369 W_s - 0.047 W_a \\
+D_{full}^{g-e} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj7}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj5}}}
+= 0.379 W_s - 0.047 W_a \\
+D_{full}^{g-f} = \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj7}}} - \mathcal{CPD}_{full}^{\textbf{\subref{fig:2traj6}}}
+= 0.01 W_s,
+\end{array}
+\right.\label{eq:equationSet}
+\end{equation}
+%
+and we also have the following constraints of feasible regions
+%
+\begin{equation}
+\left\{
+\begin{array}{lll}
+0 < W_s < 1 \\
+0 < W_a < 1 \\
+0 < W_s + W_a < 1.
+\end{array}
+\right.\label{eq:equationSet2}
+\end{equation}
+
+The linear equations (\ref{eq:equationSet}) subject to (\ref{eq:equationSet2})
+can be graphed in the three-variable ($W_s\textrm{--}W_a\textrm{--}D$)
+coordinate system (Fig.~\ref{fig:pair-cmp}). For all possible combinations of
+$W_s$ and $W_a$, there is a consistent ordering of CPD scores such that
+\textbf{\subref{fig:2traj1}} $<$ \textbf{\subref{fig:2traj2}} $<$
+\textbf{\subref{fig:2traj3}} $<$ \textbf{\subref{fig:2traj4}},
+\textbf{\subref{fig:2traj1}} $<$ \textbf{\subref{fig:2traj2}} $<$
+\textbf{\subref{fig:2traj3}} $<$ \textbf{\subref{fig:2traj5}}, and
+\textbf{\subref{fig:2traj1}} $<$ \textbf{\subref{fig:2traj2}} $<$
+\textbf{\subref{fig:2traj6}} $<$ \textbf{\subref{fig:2traj7}}
+(Fig.~\ref{fig:pair-cmp}). However, the ranking for
+\emph{Pairs}~\textbf{\subref{fig:2traj6}},~\textbf{\subref{fig:2traj7}} and
+\emph{Pairs}~\textbf{\subref{fig:2traj3}},~\textbf{\subref{fig:2traj4}},~\textbf{\subref{fig:2traj5}},
+or \emph{Pair}~\textbf{\subref{fig:2traj4}} and
+\emph{Pair}~\textbf{\subref{fig:2traj5}} has multiple possibilities, because
+their differences can be positive, negative or zero (Fig.~\ref{fig:pair-cmp}).
+For this situation, assigning equal weights is recommended (giving centroid of
+all possible $D$s, Fig.~\ref{fig:pair-cmp}; see also Supplementary Information
+for testing equally likely random weights) for deciding the rank order. With
+equal weights used, the order from most similar pair to least similar pair is
+\textbf{\subref{fig:2traj1}} $<$ \textbf{\subref{fig:2traj2}} $<$
+\textbf{\subref{fig:2traj3}} $<$ \textbf{\subref{fig:2traj4}} $\approx$
+\textbf{\subref{fig:2traj5}} $<$ \textbf{\subref{fig:2traj6}} $<$
+\textbf{\subref{fig:2traj7}}.
+These conclusions do not contradict the expected Order (\ref{eq:expOrd}).
+
+\begin{figure}[tbp]
+\includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/xyz1.pdf}
+\caption[criteria of pair comparisons]{Graphical depiction of $\mathcal{CPD}$
+differences ($D$) between the seven APWP pairs for full-path (0\textendash530
+Ma) comparisons. If the planes derived from the equations intersect the $D=0$
+plane at a point or in a straight line, that point or the infinite number of
+points (i.e., sets of $W_s$, $W_a$ values) on the line of intersection represent
+that the similarities of the minuend pair and the subtrahend pair are equal to
+each other. If $D>0$ or $D<0$ on the planes of the equations, the subtrahend
+pair or the minuend pair respectively owns higher similarities. The square dot
+locates the result when $W_s=W_a=W_l=\frac{1}{3}$.}\label{fig:pair-cmp}
+\end{figure}
+
+In summary, as Fig.~\ref{fig:2traj} illustrates, mean GCD has trouble
+discriminating between \emph{Pairs}~\textbf{\subref{fig:2traj6}}
+and~\textbf{\subref{fig:2traj7}}, and \emph{Pairs}~\textbf{\subref{fig:2traj3}}
+and~\textbf{\subref{fig:2traj5}}, and also between intermediate
+similarities where the differences are mainly in path geometry
+(\emph{Pairs}~\textbf{\subref{fig:2traj2}},~\textbf{\subref{fig:2traj3}},~\textbf{\subref{fig:2traj4}}).
+Our algorithm provides an improved solution for this problem. Obtaining
+similarity order can be straightforward, such as for
+\emph{Pairs}~\textbf{\subref{fig:2traj1}}, \textbf{\subref{fig:2traj2}},
+\textbf{\subref{fig:2traj3}}, and \textbf{\subref{fig:2traj4}},
+\emph{Pairs}~\textbf{\subref{fig:2traj1}}, \textbf{\subref{fig:2traj2}},
+\textbf{\subref{fig:2traj3}}, and \textbf{\subref{fig:2traj5}}, or
+\emph{Pairs}~\textbf{\subref{fig:2traj1}}, \textbf{\subref{fig:2traj2}},
+\textbf{\subref{fig:2traj6}}, and \textbf{\subref{fig:2traj7}}. In other words,
+when one APWP's three individual metrics are all greater than or equal to, or
+less than or equal to the other one's, weighting is irrelevant. However, when
+the ranking of individual metrics for a pair are not consistent (e.g.,
+\emph{Pair}~\textbf{\subref{fig:2traj6}} and
+\emph{Pair}~\textbf{\subref{fig:2traj3}}; Fig.~\ref{fig:pair-cmp}), obtaining
+similarity order is less straightforward. When this occurs, equally weighting is
+recommended for concluding the final rank order.
+
+\subsection{Application to Real Paleomagnetic Data}
+
+To illustrate how these metrics might be useful when applied to real
+paleomagnetic data, we compare 320\textendash0 Ma APWPs for Gondwana and
+Laurussia calculated using a running mean method by~\cite{T12}, with paleopoles
+from sedimentary rocks both uncorrected (Fig.~\ref{fig:T12Fig13a}a) and bulk
+corrected for inclination shallowing (f=0.6; Fig.~\ref{fig:T12Fig13a}b).
+
+\begin{figure}[tbp]
+\includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/not_rot_yet3.pdf}
+\caption[Reproducing Torsvik et al. 2012 Fig.13a]{(a) 320\textendash0 Ma APWPs
+(10 Myr step) for Gondwana and Laurussia~\cite[rotated to Southern Africa frame
+using the rotations from]{T12}; (b) as (a). but both paths corrected for
+inclination shallowing; (c) and (d) as (a). but only Laurussia path and only
+Gondwana path respectively corrected for inclination shallowing. Note that all
+the paleomagnetic APWPs are reproduced using the same moving average method and
+same paleopoles for the APWPs in Figure 13(a) of~\cite{T12}. Azimuthal
+Orthographic projection.}\label{fig:T12Fig13a}
+\end{figure}
+
+\begin{figure*}[tbp]
+  \captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
+  \centering
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+	\caption{}\label{fig:LGs}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/LauruGond320s.pdf}
+  \end{subfigure}
+  \vspace{.5em}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:LGsS}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/LauruGond320sSig.pdf}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:LGl}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/LauruGond320l.pdf}
+  \end{subfigure}
+  \vspace{.5em}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:LGlS}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/LauruGond320lSig.pdf}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:LGa}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/LauruGond320a.pdf}
+  \end{subfigure}
+  \begin{subfigure}[htbp]{.495\textwidth}
+    \centering
+    \caption{}\label{fig:LGaS}
+    \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/LauruGond320aSig.pdf}
+  \end{subfigure}
+\caption[]{Mean spatial, length and angular differences between two paths of the
+four APWP pairs shown in Fig.~\ref{fig:T12Fig13a}. Left column: results without
+significance testing imposed in the metric; Right column: results with testing.
+Note that Pair~\ref{fig:T12Fig13a}b with both APWPs corrected for inclination
+shallowing is not the most similar pair according to both the untested (left
+column) and tested (right column) results.}\label{fig:LauruG}
+\end{figure*}
+
+When comparing the 320\textendash0 Ma paths~\cite[in their Fig. 13a]{T12}
+observed that a bulk correction for inclination shallowing applied to poles from
+sedimentary rocks reduced the mean GCD separation between poles, particularly in
+the Permian section of the path.
+
+The full-path (320\textendash0 Ma) $d_s$ scores of
+\emph{Pair}~\ref{fig:T12Fig13a}a and \emph{Pair}~\ref{fig:T12Fig13a}b
+(Fig.~\ref{fig:LauruG}) confirm that the corrected Gondwana and Laurussia
+APWPs (\emph{Pair}~\ref{fig:T12Fig13a}b) are more similar than the uncorrected
+pair (\emph{Pair}~\ref{fig:T12Fig13a}a). This difference is significant
+(Fig.~\ref{fig:LGsS}), and it is principally the result of an improved fit
+(lower $d_s$) in the Permian (300\textendash250 Ma) and Carboniferous to
+Triassic (320\textendash200 Ma) sections. When geometry is considered, $d_l$
+and $d_a$ scores without significance testing (Fig.~\ref{fig:LGl} and
+Fig.~\ref{fig:LGa}) are actually higher for corrected
+(\emph{Pair}~\ref{fig:T12Fig13a}b) than uncorrected pair
+(\emph{Pair}~\ref{fig:T12Fig13a}a), particularly in the same Permo-Triassic
+segment; however, none of these differences are statistically significant
+(Fig.~\ref{fig:LGlS} and Fig.~\ref{fig:LGaS}). Therefore, the equally weighted
+CPD score is actually worse for corrected pair
+(\emph{Pair}~\ref{fig:T12Fig13a}b) (0.213 vs 0.1998 for
+\emph{Pair}~\ref{fig:T12Fig13a}a), whereas with significance testing applied the
+CPD of the corrected pair is a clear improvement (0.0147 vs 0.0218). This
+emphasises the importance of significance testing for the geometric scores,
+particularly where the spatial uncertainties are relatively large compared to
+the step length, as is indicated by the fit quality score (B-A,
+Gondwana-Laurussia).
+
+Furthermore, if this analysis is extended to compare an Laurussia APWP corrected
+for inclination flattening with a Gondwana APWP that has not 
+(\emph{Pair}~\ref{fig:T12Fig13a}c), and vice versa
+(\emph{Pair}~\ref{fig:T12Fig13a}d), removing the blanket correction from
+Gondwana poles has only a minor effect on the overall $d_s$, whilst removing it
+from the Laurussia poles actually improves $d_s$ after significance testing
+(Fig.~\ref{fig:LGs} and Fig.~\ref{fig:LGsS}). Comparison of the changes in
+sub-path scores for \emph{Pairs}~\ref{fig:T12Fig13a}b,~\ref{fig:T12Fig13a}c
+and~\ref{fig:T12Fig13a}d) suggests that the effect of the bulk flattening
+correction is sometimes positive and sometimes negative for different time
+periods, supporting arguments that flattening corrections need to be more
+judiciously applied~\cite[for example]{B10,B16}. A more detailed study might further
+constrain the regions, continents and/or time periods where a correction is
+appropriate, and those where it is not. But for the purposes of this paper, this
+overview is sufficient to demonstrate the potential usefulness of our difference
+metrics when considering the effect of different techniques and corrections used
+to generate an APWP.
+
+\section{Conclusions}
+A new synthetic evaluation method is proposed in this paper to serve as a
+numerical tool for the purpose of quantitatively matching paleomagnetic APWPs.
+Multidimensional information tested by bootstrapping, such as overlap of coeval
+poles and shape of paths, are taken into account in the algorithm. This method
+can also be utilized to detect APWP subsections' degree of similarity by
+changing trajectory beginning and end poles. As an example of how this method
+can be applied, we confirm a previously published suggestion that applying a
+blanket correction for inclination shallowing in sedimentary rocks does
+significantly improve the fit between Carboniferous to Recent APWPs for Gondwana
+and Laurussia. However a more detailed analysis also indicates that such blanket
+inclination corrections are unlikely to produce the best possible fit.
+
+
+\section*{Acknowledgments}
+The similarity measuring tool depends on the open-source softwares
+PmagPy~\cite{T16} and GMT~\cite{W13}. All images are produced using
+GMT~\cite{W13}. We thank 3 anonymous reviewers for suggestions that greatly
+improved a previous version of this manuscript.
+
+\section*{Computer Code Availability}
+\paragraph{Name of Code} Spherical Path Comparison (spComparison)
+\paragraph{Developer} Chenjian Fu and Christopher J. Rowan
+\paragraph{Contact Address} 221 McGilvrey Hall, 325 S Lincoln St, Kent, OH 44242 USA
+\paragraph{Telephone Number} 4408479166
+\paragraph{E-mail} cfu3@kent.edu
+\paragraph{Year First Available} 2019
+\paragraph{Hardware Required} Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz or higher;
+8 GB DDR3 RAM or higher
+\paragraph{Software Required} GMT5 or higher; Python 3.6 or higher; Bash 4.4.23
+or higher; Linux as the best platform, macOS also fine, for Windows further
+setup needed
+\paragraph{Program Language} Python 3 and Shell Scripting (Bash)
+\paragraph{Program Size} 75 KB
+\paragraph{Details on How to Access the Source Code} The source code can be
+accessed from \url{https://github.com/f-i/Spherical_Path_Comparison}. Please use
+the provided Jupyter Notebook file ``demo.ipynb'' to reproduce some calculations
+shown in the paper.
