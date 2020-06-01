@@ -1,0 +1,103 @@
+\section*{Supplementary Materials for Chapter 3: Constrain Paleopoles For A
+Certain Tectonic Plate}
+
+A polygon can be drawn around a set of paleomagnetic data, whose sampling sites
+we believe belong to a specific plate or rigid block. Then the {\em Spatial
+Join\/} technique~\cite{J07} helps join attributes from the polygon to the
+paleomagnetic data based on the spatial relationship allowing data within this
+polygon to be extracted from the whole raw large dataset without splitting a
+subset just for a specific plate. That allows us to quickly select subsets of
+the database based on geographic constraints just as easily as for age. Of
+course, the boundary of this polygon must be reasonably along a tectonic
+boundary. Regions like those close to the plate boundaries are usually
+tectonically active (e.g.\ local rotations), so we should also be careful when
+we deal with the paleopoles derived from this type of locations.
+
+\subsection{120\textendash0 Ma North America}
+
+The data-constraining polygons are from the recently published plate
+model~\cite{Y18} (Fig.~\ref{fig_NAfinal}). Plate ID 101 polygon in the
+recently published Plate Model~\cite{Y18}, including its children 108
+(Avalon/Acadia block) and 109 (Piedmont block) polygons for 120\textendash0 Ma,
+is used to select the sampling sites of the paleopoles for North America.
+According to the plate model rotation data~\cite{Y18}, 108 is fixed to 101
+during the geologic period from Cretaceous to the present day. 109 is also fixed
+to 101 since about 300 Ma~\cite{C14}. Then in order to be compared with the FHM
+(120\textendash0 Ma)~\cite{M93,M99}, the paleopoles with age ranging
+120\textendash0 Ma are further selected through constraining the lower magnetic
+age ``LOMAGAGE $<=$ 135'' (here it is not 120 but 135, because for the lower
+resolution case when the window length is 30 Myr, the Age Position Picking
+method will include those data with their lower magnetic age between 120 Ma and
+135 Ma). In addition, the RESULTNO=6007 dataset should also be included
+according to a published plate kinematic model~\cite{Mc06}
+with a relatively higher resolution of polygons and
+rotations, although the dataset is in the PlateID=178 polygon. In the end, 193
+datasets in total are extracted (both white circles and red
+triangle-inside-circles in Fig.~\ref{fig_NAfinal}).
+
+Also based on this model of southwestern North America since 36 Ma~\cite{Mc06},
+part of the paleopoles constrained by the four small western terranes whose
+Plate IDs are also 101 (white circles in Fig.~\ref{fig_NAfinal}) in fact had gone through regional
+rotations and here are removed. However, the poles with age younger than 10 Ma
+located within the largest western 101 terrane (on the south of the smallest
+western 101 terrane; corresponding to the RANGE\_ID=74 polygon in the
+model~\cite{Mc06}) should be included. So finally 135 of the 193 datasets remain
+(Fig.~\ref{fig_NAfinal}). Spatially North American paleomagnetic data are mainly
+from the western and eastern margins of the plate.
+
+\begin{figure}
+\includegraphics[scale=.4]{../../paper/tex/GeophysJInt/figures/Appendix/101.pdf}
+\caption{The final filtered datasets (red triangle-inside-circles) for later
+analysis on 120\textendash0 Ma North America. Those poles that had been
+influenced by local tectonic rotations are shown as white
+circles.}\label{fig_NAfinal}
+\end{figure}
+
+\subsection{120\textendash0 Ma India}
+
+Plate ID 501 polygons in the recently published Plate Model~\cite{Y18} also
+include the two small polygons of the northern ``Lesser Himalayan passive
+margin of Greater Indian Basin'' and ``Tethyan Himalayan microcontinent of
+Greater India'' (Fig.~\ref{fig_INfinal}). The polygons are used to select the
+sampling sites of the paleopoles for India (Fig.~\ref{fig_INfinal}).
+
+\begin{figure}
+\includegraphics[scale=.4]{../../paper/tex/GeophysJInt/figures/Appendix/501.pdf}
+\caption{The final filtered datasets (red triangle-inside-circles) for later
+analysis on 120\textendash0 Ma India. Those poles that had been influenced by
+local tectonic rotations are shown as white circles. The rifts, faults and
+detachments (red lines) around India are used to filter out those data that
+are influenced by local tectonic rotations.}\label{fig_INfinal}
+\end{figure}
+
+Based on the model of the tectonic interactions between India, Arabia and Asia
+since the Jurassic~\cite{G15} (Fig.~\ref{fig_INfinal}), part of the paleopoles
+constrained by the north two small terranes whose Plate IDs are also 501 in fact
+had gone through regional rotations and here are removed. So finally 75 datasets
+are left (Fig.~\ref{fig_INfinal}). Spatially Indian paleomagnetic data are more
+evenly distributed on the India plate than North American and Australian poles.
+
+\subsection{120\textendash0 Ma Australia}
+
+Plate ID 801 polygon in the recently published Plate Model~\cite{Y18}, including
+its children 675 (Sumba block) and 684 (Timor block) polygons for
+120\textendash0 Ma (Fig.~\ref{fig_AUfinal}), is used to select the sampling
+sites of the paleopoles for Australia. According to the plate model rotation
+data~\cite{Y18}, 675 and 684 are fixed to 801 during the geologic period from
+c.145 Ma to the present.
+
+On the southeast of the main Australia plate (the blue polygon in
+Fig.~\ref{fig_AUfinal}), there is a triangle-shaped small polygon 850
+(Tasmania block) which is fixed to 801 since c.100 Ma according to
+the~\cite{Y18} rotation data. With that attribute, 805 contributes more data
+younger than c.100Ma for the later analysis. Ultimately the final 99 extracted
+datasets is shown in Fig.~\ref{fig_AUfinal}.
+
+\begin{figure}
+\includegraphics[scale=.4]{../../paper/tex/GeophysJInt/figures/Appendix/801.pdf}
+\caption{The final filtered datasets (red triangle-inside-circles) for later
+analysis on 120\textendash0 Ma Australia. Those poles that had been influenced
+by local tectonic rotations are shown as white circles. The Plate ID 850 helps
+increase the amount of qualified datasets for 100\textendash0
+Ma.}\label{fig_AUfinal}
+\end{figure}
