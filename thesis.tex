@@ -14,6 +14,7 @@
 \usepackage{tablefootnote}
 \usepackage[utf8x]{inputenc}
 \usepackage[xcdraw]{xcolor}  %colorful words in tables
+\usepackage[round]{natbib}  %note that when you use this package, \bibliographystyle{} needs the corresponding styles, see more at https://www.overleaf.com/learn/latex/Natbib_bibliography_styles; learn more about natbib at https://journals.aas.org/natbib/
 
 \usepackage[normalem]{ulem}
 \useunder{\uline}{\ul}{}
@@ -30,7 +31,7 @@ Improved Methods of Reconstructing Plate Motions Using Paleomagnetic Data}   %no
 
 %\renewcommand{\submittedtext}{change the default text here if needed}
 \degreen{Doctor of Philosophy}     %the degree
-\degreedate{Someday 2019}         %the degree date
+\degreedate{Someday 2020}         %the degree date
 
 \providecommand\phantomsection{}
 
@@ -73,6 +74,6 @@ Improved Methods of Reconstructing Plate Motions Using Paleomagnetic Data}   %no
 %uncomment next line to change bibliography name to references
 %\renewcommand{\bibname}{References}
 \bibliography{../../doc_template_config/tex/refs}        %use a bibtex bibliography file refs.bib
-\bibliographystyle{plain}  %use the plain bibliography style
+\bibliographystyle{plainnat}  %use the plain bibliography style if we don't use natbib
 
 \end{document}

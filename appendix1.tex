@@ -4,19 +4,19 @@
 Whether a pair of coeval mean poles are statistically distinguishable from each
 other is investigated, as it can be determined by checking if the confidence
 intervals of their bootstrap means (based on two poles' uncertainty attributes)
-overlap~\cite{T91}. The 95\% confidence bounds of the Cartesian coordinates of
+overlap~\citep{T91}. The 95\% confidence bounds of the Cartesian coordinates of
 the bootstrap means are determined and compared. If the poles are
 distinguishable, the confidence bounds along at least one coordinate axis do not
 overlap. Otherwise, if the confidence bounds along all the three coordinate axes
-overlap, the poles are indistinguishable~\cite{T91}. The actual test used is
+overlap, the poles are indistinguishable~\citep{T91}. The actual test used is
 dependent on the number of paleopoles ($\mathbf{N}$) used to calculate the mean
 pole in the APWP$\colon$
 
 \begin{itemize}
-\item when $\mathbf{N}>25$ a simple bootstrap~\cite{T91} generates a
+\item when $\mathbf{N}>25$ a simple bootstrap~\citep{T91} generates a
 pseudo-mean pole from $\mathbf{N}$ directions drawn randomly from the original
 set of paleopoles. 1000 such simple Bootstraps are implemented here.
-\item when $1<\mathbf{N}\leq25$ a parametric bootstrap~\cite{T91} generates a
+\item when $1<\mathbf{N}\leq25$ a parametric bootstrap~\citep{T91} generates a
 pseudo-mean from $\mathbf{N}$ directions drawn from a Fisher distribution with
 the same $\mathbf{K}$ and $\mathbf{N}$ as the mean pole. 1000 such parametric
 Bootstraps are implemented here.
@@ -66,16 +66,16 @@ coordinates of those random samples to see if the confidence intervals overlap.
 
 However, here the scenario is not a two dimensional (2D) domain, but rather a
 spherical surface. Directly simulating random points for an ellipse on a
-sphere is a complicated problem~\cite{K82}. An analogue approach is proposed
+sphere is a complicated problem~\citep{K82}. An analogue approach is proposed
 here as follows. First, random points of a 2D bivariate normal distribution are
 generated with NumPy's random sampling routine
-``multivariate\_normal''~\cite{W11}. The lengths of the uncertainty ellipse's
+``multivariate\_normal''~\citep{W11}. The lengths of the uncertainty ellipse's
 semi-major and semi-minor axes are used as about 1.96 standard deviations of the
 bivariate normal distribution. The center of the ellipse is located at the
 intersection of the equator (0\degree\ latitude) and the prime meridian
 (0\degree\ longitude) with its major axis lying equator-ward (blue point cloud in
 Fig.~\ref{fig:ellip_sim}). Then according to the actual pole coordinates (red
-star in Fig.~\ref{fig:ellip_sim}), an Euler rotation~\cite{G99} (black star and
+star in Fig.~\ref{fig:ellip_sim}), an Euler rotation~\citep{G99} (black star and
 blue angle arc) can be calculated along the great circle (progressing from blue
 to red) from the location (0\degree, 0\degree) to the actual pole location. After
 those random points (blue points) are rotated using the same Euler rotation to

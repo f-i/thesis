@@ -67,7 +67,7 @@ For poor consistency of data, it is potentially because of different
 inclinations or declinations. The first thing we should consider about is their
 lithology. We want to check if the sample rock are igneous or sedimentary,
 because sediment compaction can result in anomalously shallow
-inclinations~\cite{T19}. In addition, we also can check if the rock are redbeds
+inclinations~\citep{T19}. In addition, we also can check if the rock are redbeds
 or non-redbeds. Although whether redbeds record a detrital signal or a later
 Chemical Remanent Magnetization (CRM) is still somewhat controversial, both
 sedimentary rocks and redbeds could lead to inconsistency in direction compared
@@ -123,19 +123,19 @@ accurate APWP\@?
 
 Paleomagnetists have proposed a variety of methods to filter so-called ``bad''
 data, or give lower weights to those ``bad'' data before generating an APWP,
-e.g., two widely used methods: the V90 reliability criteria~\cite{v90} and the
-BC02 selection criteria~\cite{B02}.
+e.g., two widely used methods: the V90 reliability criteria~\citep{v90} and the
+BC02 selection criteria~\citep{B02}.
 Briefly, the V90 criteria for paleomagnetic results includes seven criteria: (1)
-Well determined age; (2) At least 25 samples with Fisher~\cite{F53} precision
+Well determined age; (2) At least 25 samples with Fisher~\citep{F53} precision
 $\kappa$ greater than 10 and $\alpha95$ less than 16\degree; (3) Detailed
 demagnetisation results reported; (4) Passed field tests; (5) Tectonic coherence
 with continent and good structural control; (6) Identified antipodal reversals;
-(7) Lack of similarity with younger poles~\cite{T92}. The total criteria
+(7) Lack of similarity with younger poles~\citep{T92}. The total criteria
 satisfied (0\textendash7) is then used as a measure of a paleomagnetic result's
-overall reliability, which is known as Q (quality) factor~\cite{T92}. Q factor
+overall reliability, which is known as Q (quality) factor~\citep{T92}. Q factor
 is indeed a very straightforward way to get a quantitalized reliability score.
 Also it then can be conveniently used in the later calculations of
-APWPs~\cite{T92}. But at the same time this is a fairly basic filter that lumps
+APWPs~\citep{T92}. But at the same time this is a fairly basic filter that lumps
 together criteria that may not be equally important. Compared with V90, the BC02
 criteria suggests stricter filtering, e.g., using only poles with at least 6
 sampling sites and 36 samples, each site having $\alpha95$ less than 10\degree\
@@ -200,15 +200,15 @@ North American (Plate ID 101), the Indian (ID 501) and Australian (ID 801)
 plates, were extracted from the GPMDB\@. In order to include valid paleopoles
 from blocks that moved independently prior to 120 Ma, which therefore have
 different assigned plate codes in the GPMDB, the spatial join
-technique~\cite{J07} was used to find all poles within the geographic region
+technique~\citep{J07} was used to find all poles within the geographic region
 that defines the rigid plate within the period of interest (see also Appendix
 A):
 
 \subparagraph{For North America,}
 the search region was defined by the North American (ID 101), Avalon/Acadia (ID
 108) and Piedmont (ID 109) blocks, as defined by the recently published plate
-model of~\cite{Y18}. Following extraction, 58 poles from southwestern North
-America that have been affected by regional rotations since 36 Ma~\cite{Mc06},
+model of~\citet{Y18}. Following extraction, 58 poles from southwestern North
+America that have been affected by regional rotations since 36 Ma~\citep{Mc06},
 were removed. The final dataset consists of 135 paleopoles
 (Fig.~\ref{fig-120NAhist}), with 76 of them (about 56.3\%; average age
 uncertainty 14.1974 Myr, average EP95 9.2627\degree) sampled from dominantly
@@ -219,9 +219,9 @@ principal features of the age distribution are a larger number of young ($<$5
 Ma) poles, and relatively fewer poles in the Late Cretaceous and Miocene.
 
 \subparagraph{For India,}
-the Indian block (ID 501) as defined by~\cite{Y18} was used, but following
+the Indian block (ID 501) as defined by~\citet{Y18} was used, but following
 extraction 31 paleopoles associated with parts of the northern margin that
-have undergone regional rotations since the Jurassic~\cite{G15} were removed.
+have undergone regional rotations since the Jurassic~\citep{G15} were removed.
 The final dataset consists of 75 paleopoles (Fig.~\ref{fig-120INhist}), with
 39 of them (52\%; average age uncertainty 5.2308 Myr, average EP95
 7.7079\degree) sampled from dominantly igneous sequences and 36 (48\%; average
@@ -233,9 +233,9 @@ intervals, there are fewer, mostly sedimentary poles.
 
 \subparagraph{For Australia,}
 the Australia (ID 801), Sumba (ID 675), and Timor (ID 684) blocks as defined
-by~\cite{Y18} were used, in combination with data from the Tasmania block (ID
+by~\citet{Y18} were used, in combination with data from the Tasmania block (ID
 805) younger than c. 100 Ma (with a maximum age (HIMAGAGE) $\leq$100 Ma), prior
-to which it was not fixed with respect to Australia~\cite{Y18}. The final
+to which it was not fixed with respect to Australia~\citep{Y18}. The final
 dataset consists of 99 paleopoles (Fig.~\ref{fig-120AUhist}), with 61 of them
 (61.6\%; average age uncertainty 23.4918 Myr, average EP95 10.9158\degree)
 sampled from dominantly igneous sequences, and 38 (38.4\%; average age
@@ -307,7 +307,7 @@ with its neighbours.
 poor data quality, or lacking characteristics thought to correspond to good
 data quality, were discarded (or in some cases, corrected).
 
-\subparagraph{Weighting.} Calculation of a weighted Fisher mean~\cite{F53} of
+\subparagraph{Weighting.} Calculation of a weighted Fisher mean~\citep{F53} of
 the remaining poles within each window, using weighting functions intended to
 increase the influence of higher quality poles relative to lower quality ones.
 
@@ -320,7 +320,7 @@ examined.
 \subsubsection{Picking/Binning}
 
 In studies where the moving window method is used to calculate an
-APWP~\cite{T99,T08}, a paleopole is generally considered to fall in the
+APWP~\citep{T99,T08}, a paleopole is generally considered to fall in the
 current window only if the mid-point of its age limits fall within that window.
 If paleopole has a large age uncertainty compared to the size of the moving
 window, it will not be included in the moving windows close to the beginning and
@@ -411,7 +411,7 @@ No. & Picking Algorithm \\ \midrule
 26 & AMP (comb of 22 and 24) \\
 27 & APP (comb of 23 and 25) \\ \bottomrule
 \end{tabular}
-\raggedright{Notes: SS05,~\cite{S05}}
+\raggedright{Notes: SS05,~\citet{S05}}
 \end{table}
 
 \subparagraph{No modification (method 0/1).}
@@ -438,14 +438,14 @@ method 4, and method 7 includes poles from method 5.
 \subparagraph{Correct sedimentary poles for inclination shallowing (method
 8/9).} Rather than excluding paleopoles from sedimentary rocks, paleopoles coded
 as sedimentary or redbeds were instead corrected for inclination flattening
-using the flattening function $\tan I_o = f \tan I_f$~\cite{K55}, where $I_o$ is
+using the flattening function $\tan I_o = f \tan I_f$~\citep{K55}, where $I_o$ is
 the observed inclination, $I_f$ is the unflattened inclination, and $f$ is the
 flattening factor (also known as shallowing coefficient; 1=no flattening,
 0=completely flattened). Here $f=0.6$ is used in all cases,
-following~\cite{T12}, unless when the rock type (ROCKTYPE field in the database)
+following~\citet{T12}, unless when the rock type (ROCKTYPE field in the database)
 is not sedimentary dominated but contains sedimentary, $f=0.8$ is used instead,
 following the minimum anisotropy-of-thermal-remanence determined
-f-correction~\cite{D11,Do11}.
+f-correction~\citep{D11,Do11}.
 
 \subparagraph{Remove redbeds (method 10/11) or correct them for inclination
 shallowing (method 12/13).} Bias toward shallow inclinations is also observed
@@ -483,7 +483,7 @@ them; method 20/21 retains these paleopoles after applying the suggested
 correction.
 
 \subparagraph{SS05 quality criteria (methods 22/23).} As with method 2/3,
-SS05~\cite{S05} removes paleopoles with high spatial ($\alpha$95 $>15\degree$)
+SS05~\citep{S05} removes paleopoles with high spatial ($\alpha$95 $>15\degree$)
 and temporal (age range $>$ 40 Myr) uncertainty, but additionally remove
 paleopoles where samples had poor sampling coverage (sampling sites' quantity
 [B] of $<4$, samples' quantity [N] of $<4$ times of the sites [B]) and were not
@@ -566,7 +566,7 @@ No. & Weighting Algorithm \\ \midrule
 \subparagraph{Weighting by sample and site number (Weighting 1).} Paleopoles
 derived from more individually oriented samples (observations; N) collected from
 more sampling levels/sites (B) are more likely to average out secular variation
-and accurately sample the GAD field~\cite{T19,v90,B02}, and are given a
+and accurately sample the GAD field~\citep{T19,v90,B02}, and are given a
 weighting closer to 1. Unfortunately, in the GPMDB, not all paleopoles' B or N
 are given. There are datasets with only number of sampling sites (B; at least
 greater than 1) given, but no number of samples (N) or only one sample given, so
@@ -584,7 +584,7 @@ Table~\ref{tab-weit}).
 range that represents a well-constrained age, defined as half of each geological
 period in the Phanerozoic Eon (e.g., Quaternary, Neogene; here the geological
 period that the middle point of the paleopole's age range falls within is
-assigned)~\cite{v90,T19} or 15 Myr (the halves of the Paleogene, Cretaceous, and
+assigned)~\citep{v90,T19} or 15 Myr (the halves of the Paleogene, Cretaceous, and
 Jurassic periods are all at least 20 Myr, which is large for these relatively
 young geologic periods), whichever is smaller, paleopoles are given an
 increasingly small weight as the age uncertainty (the high magnetic age $-$ the
@@ -628,12 +628,13 @@ generated by weighting methods 3 and 4.
 
 The weight values obtained from the six different weight functions
 (Table~\ref{tab-weit}) introduced above are then integrated into Fisher mean
-function~\cite{F53} to calculate a weighted Fisher mean. In fact, the weights
+function~\citep{F53} to calculate a weighted Fisher mean. In fact, the weights
 are integrated into Cartesian x, y and z components of each individual moment
 directions (here each individual paleopole location). Then these individual
-moment directions are combined through Fisher resultant vector $R$ function (See
-Chapter 11 of~\cite{T19}). So the mean pole location, its spatial uncertainty
-$\alpha$95, and precision parameter $k$ are all weighted along with $R$.
+moment directions are combined through Fisher resultant vector $R$
+function~\citet[See Chapter 11 of][]{T19}. So the mean pole location, its
+spatial uncertainty $\alpha$95, and precision parameter $k$ are all weighted
+along with $R$.
 
 Traditionally, weights are directly integrated by being multiplied with the
 variable we would like to do weighting to. For example, here weights can be
@@ -687,32 +688,32 @@ and 19 are related to the V90 criteria 7.
 A prediction of the expected APWP for any plate can be generated using a plate
 kinematic model (e.g.\ the last c. 180\textendash200 Myr plate motions
 reconstructed from spreading ridges in ocean basins) that is tied in to an
-absolute reference frame. Here, we use the rotations of~\cite{O05}, which
+absolute reference frame. Here, we use the rotations of~\citet{O05}, which
 describe motion of Nubia (plate ID 701) relative to the Indo-Atlantic hotspots.
 Such an absolute frame of reference based on hot spots has been extended back to
-120 Ma~\cite{O05}. North America is linked to this reference frame across the
-Mid-Atlantic ridge, using North America-Nubia rotations from~\cite{D10} to
-C-Sequence chron C1no (0.78 Ma), from~\cite{S12} to chron C2An.2n (2.7 Ma),
-from~\cite{M99} to chron C5n.1ny (9.74 Ma), from~\cite{G13} to chron C5n.2o
-(10.949 Ma), from~\cite{M99} to chron C6ny (19.05 Ma), from~\cite{G13} to chron
-C6no (20.131 Ma), from~\cite{M99} to chron C34ny (83.5 Ma), from C34ny to about
-118.1 Ma~\cite{S12}, and to closure at C34no (120.6 Ma)~\cite{G13}. India is
+120 Ma~\citep{O05}. North America is linked to this reference frame across the
+Mid-Atlantic ridge, using North America-Nubia rotations from~\citet{D10} to
+C-Sequence chron C1no (0.78 Ma), from~\citet{S12} to chron C2An.2n (2.7 Ma),
+from~\citet{M99} to chron C5n.1ny (9.74 Ma), from~\citet{G13} to chron C5n.2o
+(10.949 Ma), from~\citet{M99} to chron C6ny (19.05 Ma), from~\citet{G13} to chron
+C6no (20.131 Ma), from~\citet{M99} to chron C34ny (83.5 Ma), from C34ny to about
+118.1 Ma~\citep{S12}, and to closure at C34no (120.6 Ma)~\citep{G13}. India is
 linked via the East African Rift Valley (Somalia-Nubia rotations to chron C1no
-[0.78 Ma] from~\cite{D17}, to chron C2A.2no [3.22 Ma] from~\cite{H05}, and to
-closure at C7.2m [25.01 Ma] from~\cite{R16} and C34 [85 Ma; Rowley, pers.\
+[0.78 Ma] from~\citet{D17}, to chron C2A.2no [3.22 Ma] from~\citet{H05}, and to
+closure at C7.2m [25.01 Ma] from~\citet{R16} and C34 [85 Ma; Rowley, pers.\
 comm.], and finally extended to 120 Ma because there was no known relative
 motion between Somalia and Nubia from 120 Ma to 85 Ma according to the rotations
-from~\cite{M16}); and Australia via the East African Rift Valley, SW Indian
-Ridge (E Antarctica-Somalia rotations to chron C1no [0.78 Ma] from~\cite{D17},
-to chron C2A.2no [3.22 Ma] from~\cite{H05}, to chron C5n.2no [10.95 Ma]
-from~\cite{L02}, to chron C13ny [33.06 Ma] from~\cite{P08}, to chron C29no
-[64.75 Ma] from~\cite{C10}, to chron C34y [83 Ma; Rowley, pers.\ comm.], to 96
-Ma from~\cite{M01}, and to closure at M0 [120.6 Ma] from~\cite{M08}), and SE
+from~\citet{M16}); and Australia via the East African Rift Valley, SW Indian
+Ridge (E Antarctica-Somalia rotations to chron C1no [0.78 Ma] from~\citet{D17},
+to chron C2A.2no [3.22 Ma] from~\citet{H05}, to chron C5n.2no [10.95 Ma]
+from~\citet{L02}, to chron C13ny [33.06 Ma] from~\citet{P08}, to chron C29no
+[64.75 Ma] from~\citet{C10}, to chron C34y [83 Ma; Rowley, pers.\ comm.], to 96
+Ma from~\citet{M01}, and to closure at M0 [120.6 Ma] from~\citet{M08}), and SE
 Indian Ridge (Australia-East Antarctica rotations to chron C1no [0.78 Ma]
-from~\cite{D17}, to chron C6no [20.13 Ma] from~\cite{C04}, to chron C8o [26 Ma]
-from~\cite{G18}, to chron C17n.3no [38.11 Ma] from~\cite{C04}, to C34ny [83.5
-Ma] from~\cite{Wh13}, to the Quiet Zone Boundary [96 Ma] from~\cite{W07}, to
-closure at 136 Ma from~\cite{Wh13}). Above all, these kinematic models (see the
+from~\citet{D17}, to chron C6no [20.13 Ma] from~\citet{C04}, to chron C8o [26 Ma]
+from~\citet{G18}, to chron C17n.3no [38.11 Ma] from~\citet{C04}, to C34ny [83.5
+Ma] from~\citet{Wh13}, to the Quiet Zone Boundary [96 Ma] from~\citet{W07}, to
+closure at 136 Ma from~\citet{Wh13}). Above all, these kinematic models (see the
 collected rotation data for the above-mentioned plate circuits in the
 supplementary material) tied in to a hot spot absolute reference frame can
 guarantee the oldest predicted poles for the three continents back to 120 Ma.
@@ -720,16 +721,16 @@ guarantee the oldest predicted poles for the three continents back to 120 Ma.
 To reconstruct a reference APWP at the required time steps for comparison with
 the paleomagnetic APWPs, rotations and their associated uncertainties were
 interpolated between constraining finite rotation poles according to the method
-of~\cite{D08}, assuming constant rates.
+of~\citet{D08}, assuming constant rates.
 
 Neither the hotspot reference frame nor the paleomagnetic reference frame are
 truly fixed with respect to the solid Earth. In the former case, hotspots are
-not truly stationary in the mantle~\cite{S98}; in the latter, true polar wander
+not truly stationary in the mantle~\citep{S98}; in the latter, true polar wander
 (TPW) may also lead to differential movements of the solid earth with respect to
-the spin axis~\cite{E03}. In reality, it is difficult to untangle these effects.
+the spin axis~\citep{E03}. In reality, it is difficult to untangle these effects.
 Whilst there is little clear evidence for significant TPW in the past about 120
-Myr~\cite{C00,R04}, modeling suggests that the effects of hotspot drift can
-start to become significant over 80\textendash100 Myr timescales~\cite{O05}.
+Myr~\citep{C00,R04}, modeling suggests that the effects of hotspot drift can
+start to become significant over 80\textendash100 Myr timescales~\citep{O05}.
 Because paleomagnetic APWPs have large associated spatial errors, a synthetic
 APWP calculated using a fixed hotspot reference frame is unlikely to deviate
 significantly from the `true' APWP, and most comparison experiments use a fixed
@@ -737,7 +738,7 @@ hotspot model (FHM) reference path for North America (Fig.~\ref{fig-mhsPred}),
 India (Fig.~\ref{fig-mhsPred501}) and Australia (Fig.~\ref{fig-mhsPred801}).
 However, the full set of comparisons for the 28 picking methods and 6 weighting
 methods was also run for reference paths generated using the moving hotspot
-model (MHM) rotations of~\cite{O05}, which incorporate motions of the
+model (MHM) rotations of~\citet{O05}, which incorporate motions of the
 Indo-Atlantic hotspots relative to the mantle derived from mantle convection
 modeling.
 
@@ -748,11 +749,11 @@ north pole for North America at 120 Myr is still at about 75$^{\circ}$N
 axis; this is due to a large component of the North American plate's absolute
 motion in the past 120 Myr being to the east. In contrast, the rapid northward
 motion of the Indian plate in the same period, particularly prior to its
-collision with Asia at about 50\textendash55 Ma~\cite{N10}, is reflected by the
+collision with Asia at about 50\textendash55 Ma~\citep{N10}, is reflected by the
 120 Ma predicted mean north pole being located at about 20$^{\circ}$N
 (Fig.~\ref{fig-mhsPred501}). Australia represents an intermediate case, with
 north westerly plate motion from about 120\textendash60 Myr changing to more
-rapid northward motion from about 60\textendash55 Ma to the present~\cite{W07}.
+rapid northward motion from about 60\textendash55 Ma to the present~\citep{W07}.
 When comparing the FHM and MHM tracks, differences in the oldest parts (before
 about 80 Ma) are apparent for India and North America.
 
@@ -2513,5 +2514,5 @@ quality (Fig.~\ref{fig-flow}).
 \end{figure*}
 
 \section*{Acknowledgments}
-All images are produced using GMT~\cite{W13}. Thanks to Ohio Supercomputer
+All images are produced using GMT~\citep{W13}. Thanks to Ohio Supercomputer
 Center for their remote HPC resources.
