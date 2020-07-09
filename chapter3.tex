@@ -411,7 +411,7 @@ No. & Picking Algorithm \\ \midrule
 26 & AMP (comb of 22 and 24) \\
 27 & APP (comb of 23 and 25) \\ \bottomrule
 \end{tabular}
-\raggedright{Notes: SS05,~\citet{S05}}
+\raggedright{\\Notes: SS05,~\citet{S05}}
 \end{table}
 
 \subparagraph{No modification (method 0/1).}
@@ -499,13 +499,19 @@ calculation of a weighted Fisher mean:
 
 \subparagraph{No weighting (Weighting 0).} Weighting factor=1 for all
 paleopoles.
-
-\begin{table}
-\centering
+%
+\begin{longtable}{| >{\centering}p{0.2\textwidth} | p{0.5\textwidth} |}
 \caption{List of all weighting algorithms developed here.}\label{tab-weit}
-\begin{tabular}{@{}ll@{}}
-\toprule
-No. & Weighting Algorithm \\ \midrule
+\hline \multicolumn{1}{|p{1cm}|}{\textbf{No.}} & \multicolumn{1}{p{7cm}|}{\textbf{Weighting Algorithm}} \\ \hline
+\endfirsthead
+\multicolumn{3}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline\multicolumn{1}{|p{1cm}|}{\textbf{No.}} & \multicolumn{1}{p{7cm}|}{\textbf{Weighting Algorithm}} \\ \hline
+\endhead
+\hline \multicolumn{2}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+\hline \hline
+\endlastfoot
 0 & None (No weighting) \\
 1 & Larger numbers of sites (B) \& observations (N), greater $weight$ ($w$): \\
   & \vbox{\begin{equation*}w=\left\{\begin{array}{lllllllllllllll}
@@ -559,9 +565,8 @@ No. & Weighting Algorithm \\ \midrule
     1\textrm{, if LOMAGAGE$>$wla \& HIMAGAGE$<$wha}.
     \end{array}\right.\end{equation*}}
     \end{minipage} \\
-5 & Combining 3 and 4: average of the two weights from 3 and 4 \\ \bottomrule
-\end{tabular}
-\end{table}
+5 & Combining 3 and 4: average of the two weights from 3 and 4 \\
+\end{longtable}
 
 \subparagraph{Weighting by sample and site number (Weighting 1).} Paleopoles
 derived from more individually oriented samples (observations; N) collected from
