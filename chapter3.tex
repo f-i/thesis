@@ -218,36 +218,6 @@ including 6 from redbeds, and 3 (about 2.2\%) from metamorphic sequences. The
 principal features of the age distribution are a larger number of young ($<$5
 Ma) poles, and relatively fewer poles in the Late Cretaceous and Miocene.
 
-\subparagraph{For India,}
-the Indian block (ID 501) as defined by~\citet{Y18} was used, but following
-extraction 31 paleopoles associated with parts of the northern margin that
-have undergone regional rotations since the Jurassic~\citep{G15} were removed.
-The final dataset consists of 75 paleopoles (Fig.~\ref{fig-120INhist}), with
-39 of them (52\%; average age uncertainty 5.2308 Myr, average EP95
-7.7079\degree) sampled from dominantly igneous sequences and 36 (48\%; average
-age uncertainty 14.1944 Myr, average EP95 7.0222\degree) sampled from mostly
-sedimentary sequences, including 3 from redbeds. There is a high concentration
-of poles from the latest Cretaceous\textendash{}Early Cenozoic
-(c.70\textendash60 Ma), many of which are igneous; in younger and older
-intervals, there are fewer, mostly sedimentary poles.
-
-\subparagraph{For Australia,}
-the Australia (ID 801), Sumba (ID 675), and Timor (ID 684) blocks as defined
-by~\citet{Y18} were used, in combination with data from the Tasmania block (ID
-805) younger than c. 100 Ma (with a maximum age (HIMAGAGE) $\leq$100 Ma), prior
-to which it was not fixed with respect to Australia~\citep{Y18}. The final
-dataset consists of 99 paleopoles (Fig.~\ref{fig-120AUhist}), with 61 of them
-(61.6\%; average age uncertainty 23.4918 Myr, average EP95 10.9158\degree)
-sampled from dominantly igneous sequences, and 38 (38.4\%; average age
-uncertainty 23.2632 Myr, average EP95 9.4097\degree) sampled from mostly
-sedimentary sequences, including 9 from redbeds. The temporal distribution of
-poles is relatively uniform.
-
-Compared with North American (Fig.~\ref{fig-120NAhist}) and Australian
-(Fig.~\ref{fig-120AUhist}) paleopoles, Indian paleopoles are in relatively lower
-density in general except during the period of about 70\textendash60 Ma
-(Fig.~\ref{fig-120INhist}).
-
 \begin{figure*}
 \centering
 \includegraphics[width=.85\textwidth]{../../paper/tex/GeophysJInt/figures/120NAhist.pdf}
@@ -268,6 +238,19 @@ The data published before 1984 are shown as circles with a
 dot.}\label{fig-120NAhist}
 \end{figure*}
 
+\subparagraph{For India,}
+the Indian block (ID 501) as defined by~\citet{Y18} was used, but following
+extraction 31 paleopoles associated with parts of the northern margin that
+have undergone regional rotations since the Jurassic~\citep{G15} were removed.
+The final dataset consists of 75 paleopoles (Fig.~\ref{fig-120INhist}), with
+39 of them (52\%; average age uncertainty 5.2308 Myr, average EP95
+7.7079\degree) sampled from dominantly igneous sequences and 36 (48\%; average
+age uncertainty 14.1944 Myr, average EP95 7.0222\degree) sampled from mostly
+sedimentary sequences, including 3 from redbeds. There is a high concentration
+of poles from the latest Cretaceous\textendash{}Early Cenozoic
+(c.70\textendash60 Ma), many of which are igneous; in younger and older
+intervals, there are fewer, mostly sedimentary poles.
+
 \begin{figure*}
 \centering
 \includegraphics[width=.91\textwidth]{../../paper/tex/GeophysJInt/figures/120INhist.pdf}
@@ -276,6 +259,18 @@ of 120\textendash0 Ma Indian (501) paleopoles. For red bars, only one pole,
 67\textendash64 Ma (RESULTNO 8593), is from igneous and also sedimentary. See
 Fig.~\ref{fig-120NAhist} for more information.}\label{fig-120INhist}
 \end{figure*}
+
+\subparagraph{For Australia,}
+the Australia (ID 801), Sumba (ID 675), and Timor (ID 684) blocks as defined
+by~\citet{Y18} were used, in combination with data from the Tasmania block (ID
+805) younger than c. 100 Ma (with a maximum age (HIMAGAGE) $\leq$100 Ma), prior
+to which it was not fixed with respect to Australia~\citep{Y18}. The final
+dataset consists of 99 paleopoles (Fig.~\ref{fig-120AUhist}), with 61 of them
+(61.6\%; average age uncertainty 23.4918 Myr, average EP95 10.9158\degree)
+sampled from dominantly igneous sequences, and 38 (38.4\%; average age
+uncertainty 23.2632 Myr, average EP95 9.4097\degree) sampled from mostly
+sedimentary sequences, including 9 from redbeds. The temporal distribution of
+poles is relatively uniform.
 
 \begin{figure*}
 \centering
@@ -290,6 +285,11 @@ and only one pole, 1\textendash0 Ma (RESULTNO 1147), is from igneous and also
 metamorphic rocks. See Fig.~\ref{fig-120NAhist} for more
 information.}\label{fig-120AUhist}
 \end{figure*}
+
+Compared with North American (Fig.~\ref{fig-120NAhist}) and Australian
+(Fig.~\ref{fig-120AUhist}) paleopoles, Indian paleopoles are in relatively lower
+density in general except during the period of about 70\textendash60 Ma
+(Fig.~\ref{fig-120INhist}).
 
 \subsection{APWP Generation}
 
@@ -500,74 +500,77 @@ calculation of a weighted Fisher mean:
 \subparagraph{No weighting (Weighting 0).} Weighting factor=1 for all
 paleopoles.
 %
-\begin{longtable}{| >{\centering}p{0.2\textwidth} | p{0.5\textwidth} |}
+\begin{longtable}[h]{@{}c|l@{}}
 \caption{List of all weighting algorithms developed here.}\label{tab-weit}
-\hline \multicolumn{1}{|p{1cm}|}{\textbf{No.}} & \multicolumn{1}{p{7cm}|}{\textbf{Weighting Algorithm}} \\ \hline
+\\ \hline
+\multicolumn{1}{|p{.25in}|}{\textbf{No.}} & \multicolumn{1}{p{5.5in}|}{\textbf{Weighting Algorithm}} \\ \hline
 \endfirsthead
-\multicolumn{3}{c}%
-{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-\hline\multicolumn{1}{|p{1cm}|}{\textbf{No.}} & \multicolumn{1}{p{7cm}|}{\textbf{Weighting Algorithm}} \\ \hline
+%
+\multicolumn{2}{r}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\ \hline
+\multicolumn{1}{|p{.25in}|}{\textbf{No.}} & \multicolumn{1}{p{5.5in}|}{\textbf{Weighting Algorithm}} \\ \hline
 \endhead
-\hline \multicolumn{2}{|r|}{{Continued on next page}} \\ \hline
+%
+\hline\multicolumn{2}{|r|}{{\bfseries continued on next page}} \\ \hline
 \endfoot
-\hline \hline
+\hline
 \endlastfoot
-0 & None (No weighting) \\
+0 & None (No weighting) \\ \hline
 1 & Larger numbers of sites (B) \& observations (N), greater $weight$ ($w$): \\
-  & \vbox{\begin{equation*}w=\left\{\begin{array}{lllllllllllllll}
-    0.2\textrm{, if both B \& N are missing, or B$\leq1$ \& N$\leq1$;} \\
-    (1-\frac{1}{B})*0.5\textrm{, if only N is missing, or N$\leq1$ \& B$>$1;} \\
-    (1-\frac{1}{N})*0.5\textrm{, if only B is missing, or B$\leq1$ \& N$>$1;} \\
-    (1-\frac{1}{B})*(1-\frac{1}{N})\textrm{, if B$>$1 \& N$>$1.}
-\end{array}\right.\end{equation*}} \\
+  & \begin{minipage}{5.5in}\begin{equation*}w=\left\{\begin{array}{ll}
+    0.2 & \textrm{, if both B \& N are missing, or B$\leq1$ \& N$\leq1$} \\
+    (1-\frac{1}{B})*0.5 & \textrm{, if only N is missing, or N$\leq1$ \& B$>$1} \\
+    (1-\frac{1}{N})*0.5 & \textrm{, if only B is missing, or B$\leq1$ \& N$>$1} \\
+    (1-\frac{1}{B})*(1-\frac{1}{N}) & \textrm{, if B$>$1 \& N$>$1}
+\end{array}\right.\end{equation*}\end{minipage} \\ \hline
 2 & Lower age uncertainty, greater weight: \\
-  & \begin{minipage}{8cm}age\_range=HIMAGAGE-LOMAGAGE \\
+  & \begin{minipage}{5.5in}age\_range=HIMAGAGE-LOMAGAGE \\
     age\_midpoint=(HIMAGAGE+LOMAGAGE)*0.5 \\
     if age\_midpoint$<$2.58 (Ma; start of the Quaternary, according to GSA Geologic Time Scale), \\
-    \vbox{\begin{equation*}w=\left\{\begin{array}{lllllllllllllll}
-    1\textrm{, if age\_range$\leq$1.29 (from $\frac{2.58-0}{2})$} \\
-    \frac{1.29}{age\_range}\textrm{, if age\_range$>$1.29;}
+    \vbox{\begin{equation*}w=\left\{\begin{array}{ll}
+    1 & \textrm{, if age\_range$\leq$1.29 (from $\frac{2.58-0}{2})$} \\
+    \frac{1.29}{age\_range} & \textrm{, if age\_range$>$1.29}
     \end{array}\right.\end{equation*}} \\
     if 2.58$\leq$age\_midpoint$<$23.03 (Ma; Neogene), \\
-    \vbox{\begin{equation*}w=\left\{\begin{array}{lllllllllllllll}
-    1\textrm{, if age\_range$\leq$10.225 (from $\frac{23.03-2.58}{2})$} \\
-    \frac{10.225}{age\_range}\textrm{, if age\_range$>$10.225;}
+    \vbox{\begin{equation*}w=\left\{\begin{array}{ll}
+    1 & \textrm{, if age\_range$\leq$10.225 (from $\frac{23.03-2.58}{2})$} \\
+    \frac{10.225}{age\_range} & \textrm{, if age\_range$>$10.225}
     \end{array}\right.\end{equation*}} \\
-    if 23.03$\leq$age\_midpoint$<$201.3 (Ma; Paleogene,Cretaceous,Jurassic), \\
-    \vbox{\begin{equation*}w=\left\{\begin{array}{lllllllllllllll}
-    1\textrm{, if age\_range$\leq$15} \\
-    \frac{15}{age\_range}\textrm{, if age\_range$>$15.}
+    if 23.03$\leq$age\_midpoint$<$201.3 (Ma; Paleogene, Cretaceous, Jurassic), \\
+    \vbox{\begin{equation*}w=\left\{\begin{array}{ll}
+    1 & \textrm{, if age\_range$\leq$15} \\
+    \frac{15}{age\_range} & \textrm{, if age\_range$>$15}
     \end{array}\right.\end{equation*}}
-  \end{minipage} \\
+    \end{minipage} \\ \hline
 3 & Lower $\alpha$95, greater weight: \\
-  & \begin{minipage}{8cm}Positive half Normal distribution with a mean and standard deviation \\
+  & \begin{minipage}{5.5in}Positive half Normal distribution with a mean and standard deviation \\
     of 0 and 10, scaled with $10\sqrt{2\pi}$ (to make the peak reach 1) \\
     \vbox{\begin{equation*}w=e^{-\frac{\alpha_{95}^2}{200}},\end{equation*}} \\
     where \\
-    \vbox{\begin{equation*}\alpha95=\left\{\begin{array}{lllllllllllllll}
-    ED95 \\
-    DP\textrm{, if ED95 is missing} \\
-    \frac{140}{\sqrt{KD*N}}\textrm{, if ED95 \& DP are missing} \\
-    \frac{140}{\sqrt{K\_NORM*N}}\textrm{, if ED95, DP \& KD are missing} \\
-    \frac{140}{\sqrt{K\_NORM*B}}\textrm{, if ED95, DP, KD \& N are missing} \\
-    \frac{140}{\sqrt{1.7*B}}\textrm{, if ED95, DP, KD \& K\_NORM are missing,} \\
-    \qquad\qquad\textrm{using the lowest KD in GPMDB, about 1.7}
+    \vbox{\begin{equation*}\alpha95=\left\{\begin{array}{ll}
+    ED95 & \\
+    DP & \textrm{, if ED95 is missing} \\
+    \frac{140}{\sqrt{KD*N}} & \textrm{, if ED95 \& DP are missing} \\
+    \frac{140}{\sqrt{K\_NORM*N}} & \textrm{, if ED95, DP \& KD are missing} \\
+    \frac{140}{\sqrt{K\_NORM*B}} & \textrm{, if ED95, DP, KD \& N are missing} \\
+    \frac{140}{\sqrt{1.7*B}} & \textrm{, if ED95, DP, KD \& K\_NORM are missing,} \\
+    & \textrm{using the lowest KD in GPMDB, about 1.7}
     \end{array}\right.\end{equation*}}
     finally $w$=0 if this $\alpha$95 completely overlaps with another smaller
     $\alpha$95 whose paleopole is exactly derived from the same place and same
     rock.
-    \end{minipage} \\
+    \end{minipage} \\ \hline
 4 & Age error Position to bin (more overlap, greater weight): \\
-  & \begin{minipage}{8cm}wha, window high age; wla, window low age\\\vbox{\begin{equation*}w=\left\{\begin{array}{lllllllllllllll}
-    \frac{wha-LOMAGAGE}{age\_range}\textrm{, if LOMAGAGE$>$wla \& HIMAGAGE$>$wha} \\
-    \frac{HIMAGAGE-wla}{age\_range}\textrm{, if LOMAGAGE$<$wla \& HIMAGAGE$<$wha} \\
-    \frac{wha-wla}{age\_range}\textrm{, if LOMAGAGE$<$wla \& HIMAGAGE$>$wha} \\
-    1\textrm{, if LOMAGAGE$>$wla \& HIMAGAGE$<$wha}.
+  & \begin{minipage}{5.5in}wha, window high age; wla, window low age \\
+    \vbox{\begin{equation*}w=\left\{\begin{array}{ll}
+    \frac{wha-LOMAGAGE}{age\_range} & \textrm{, if LOMAGAGE$>$wla \& HIMAGAGE$>$wha} \\
+    \frac{HIMAGAGE-wla}{age\_range} & \textrm{, if LOMAGAGE$<$wla \& HIMAGAGE$<$wha} \\
+    \frac{wha-wla}{age\_range} & \textrm{, if LOMAGAGE$<$wla \& HIMAGAGE$>$wha} \\
+    1 & \textrm{, if LOMAGAGE$>$wla \& HIMAGAGE$<$wha}
     \end{array}\right.\end{equation*}}
-    \end{minipage} \\
+    \end{minipage} \\ \hline
 5 & Combining 3 and 4: average of the two weights from 3 and 4 \\
 \end{longtable}
-
+%
 \subparagraph{Weighting by sample and site number (Weighting 1).} Paleopoles
 derived from more individually oriented samples (observations; N) collected from
 more sampling levels/sites (B) are more likely to average out secular variation
@@ -747,6 +750,20 @@ model (MHM) rotations of~\citet{O05}, which incorporate motions of the
 Indo-Atlantic hotspots relative to the mantle derived from mantle convection
 modeling.
 
+\begin{figure*}
+\centering
+\includegraphics[width=1.01\textwidth]{../../paper/tex/GeophysJInt/figures/fhs_m.pdf}
+\caption[120\textendash0 Ma MHM vs FHM predicted APWP of North America]{MHM
+predicted 120\textendash0 Ma APWP (solid line) for $NAC$ through the North
+America\textendash{}Nubia\textendash{}Mantle plate circuit. The FHM predicted
+path (dashed line with shaded uncertainties) is also shown for comparison. The
+age step is 5 Myr. Compared with the 10 Ma paleomagnetic mean pole calculated by
+the AMP method (dark triangle), the coeval mean pole derived from the APP method
+is closer to both FHM and MHM predicted 10 Ma poles, which indicates more data
+diluting the effect of outliers. See also the paleopoles that the two mean poles
+are composed of in Fig.~\ref{fig-nac-maplat}.}\label{fig-mhsPred}
+\end{figure*}
+
 When comparing the synthetic APW paths for the three plates (inset,
 Fig.~\ref{fig-mhsPred801}), there are clear differences. The predicted mean
 north pole for North America at 120 Myr is still at about 75$^{\circ}$N
@@ -761,25 +778,6 @@ north westerly plate motion from about 120\textendash60 Myr changing to more
 rapid northward motion from about 60\textendash55 Ma to the present~\citep{W07}.
 When comparing the FHM and MHM tracks, differences in the oldest parts (before
 about 80 Ma) are apparent for India and North America.
-
-These differences in the reference path due to different plate kinematics is
-another variable that may affect the performance of the different weighting
-algorithm for different plates, in addition to the distribution and type of the
-contributing mean poles used to generate the paleomagnetic APWPs.
-
-\begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{../../paper/tex/GeophysJInt/figures/fhs_m.pdf}
-\caption[120\textendash0 Ma MHM vs FHM predicted APWP of North America]{MHM
-predicted 120\textendash0 Ma APWP (solid line) for $NAC$ through the North
-America\textendash{}Nubia\textendash{}Mantle plate circuit. The FHM predicted
-path (dashed line with shaded uncertainties) is also shown for comparison. The
-age step is 5 Myr. Compared with the 10 Ma paleomagnetic mean pole calculated by
-the AMP method (dark triangle), the coeval mean pole derived from the APP method
-is closer to both FHM and MHM predicted 10 Ma poles, which indicates more data
-diluting the effect of outliers. See also the paleopoles that the two mean poles
-are composed of in Fig.~\ref{fig-nac-maplat}.}\label{fig-mhsPred}
-\end{figure*}
 
 \begin{figure*}
 \centering
@@ -805,6 +803,11 @@ Fig.~\ref{fig-mhsPred501}, much slower moving North America shown in
 Fig.~\ref{fig-mhsPred}, and also relatively intermediate moving
 Australia.}\label{fig-mhsPred801}
 \end{figure*}
+
+These differences in the reference path due to different plate kinematics is
+another variable that may affect the performance of the different weighting
+algorithm for different plates, in addition to the distribution and type of the
+contributing mean poles used to generate the paleomagnetic APWPs.
 
 \subsection{Comparison Algorithm}
 
