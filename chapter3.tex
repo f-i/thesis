@@ -139,8 +139,62 @@ known information about the poles. These can be subdivided into two groups:
 
 \subparagraph{Characteristics that indicate the pole is reliable (accurate)}:
 \begin{itemize}
-  \item Lithology (particularly risk of inclination flattening in sediments)
+  \item Lithology (particularly risk of inclination flattening in sediments; see
+        section 1.1.4.3)
+  \item Risk of unidentified local rotations in deformed areas (see section
+        1.1.4.3)
+  \item Publication year \textemdash{} younger studies that use stepwise
+        demagnetisation techniques more likely to remove overprints and isolate
+        a primary remanence (see section 1.1.4.5).
+  \item Sampling strategy \textemdash{} need enough samples and sites to have a
+        good chance of averaging out secular variation (see section 1.1.4.3).
+  \item Field tests that constrain the magnetisation age (see section 1.1.4.1).
 \end{itemize}
+
+You should note that this is complicated because paleopole precision and
+accuracy are not necessarily related. A paleopole can be precise yet inaccurate
+(and we'd prefer to investigate why it occurs and do corrections if possible or
+directly filter those out), or imprecise yet accurate (so we might want to keep
+it).
+
+There is also an important trade-off that precision in a mean pole is determined
+by the number of contributing paleopoles ($\alpha$95 is proportional to
+1/$\sqrt{n}$), so an overly aggressive filter might improve accuracy at the
+expense of precision. This is particularly an issue where data density is low
+(see section 1.1.4.4).
+
+\subsubsection{Calculation Step}
+
+Normally all paleopoles are treated equally when calculating the Fisher
+mean~\citep[see how to calculate a Fisher mean using the formulas 6.12, 6.13,
+6.14 and 6.15 in][chap. 6; note that instead of direction declination and
+inclination expected in those formulas, pole longitude and latitude should be
+used]{B92}, but as an alternative or supplement to filtering paleopoles can
+potentially be weighted according to the factors that potentially influence
+their precision and/or accuracy such as the A95 uncertainty or age uncertainty,
+and a weighted Fisher mean calculated, giving the `better' poles more influence
+on the result. So, for example, each paleopole has got a weight before
+calculating for a mean. In this dissertation these weights $w_i$ are integrated
+into the $\sum\limits_{i=1}^N l_i$, $\sum\limits_{i=1}^N m_i$ and
+$\sum\limits_{i=1}^N n_i$ of the formulas 6.13 and 6.14 in~\citet[chap.~6]{B92},
+where $w$ means weight and $i$ is the same as in those two formulas. Then for a
+weighted Fisher mean, the two formulas 6.13 and 6.14 in~\citet[chap.~6]{B92}
+become
+%
+\begin{equation}
+l = \frac{\sum\limits_{i=1}^N l_iw_i}{R} \quad\quad
+m = \frac{\sum\limits_{i=1}^N m_iw_i}{R} \quad\quad
+n = \frac{\sum\limits_{i=1}^N n_iw_i}{R}
+\end{equation}
+%
+and
+%
+\begin{equation}
+  R = (\sum\limits_{i=1}^N l_iw_i)^2
+      + (\sum\limits_{i=1}^N m_iw_i)^2
+      + (\sum\limits_{i=1}^N n_iw_i)^2
+\end{equation}
+%
 
 \subsection{Existing Solutions and General Issues}
 
