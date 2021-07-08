@@ -195,24 +195,62 @@ and
       + (\sum\limits_{i=1}^N n_iw_i)^2
 \end{equation}
 %
+Note that the trade-offs and difficulties are similar for filtering, e.g.\
+giving poles with low A95 more weight presumes that they are closer to the
+actual mean, which is not necessarily the case. Therefore, weighing on different
+paleomagnetic factors is hoped to help us have some insight into these complex
+issues.
 
 \subsection{Existing Solutions and General Issues}
 
-In the end of section 1.1.4, one of the widely used methods that are used to
-weigh data, the V90 criteria~\citep{v90}, is briefly introduced. The total
-criteria satisfied (0\textendash7) is used as a measure of a paleomagnetic
-result's overall reliability, which is known as Q (quality) factor~\citep{T92}.
-Q factor is indeed a very straightforward way to get a quantitalized reliability
-score. Also it then can be conveniently used in the later calculations of
-APWPs~\citep{T92}. But at the same time this is a fairly basic filter that lumps
-together criteria that may not be equally important. Another data quality
-criteria, B02~\citep{B02} is also straightforward and convenient to use, but
-some useful data may be filtered out and wasted especially for a period where
-there are only limited number of data.
+As mentioned in the concluding paragraph of section 1.1.4, if not all paleopoles
+are created equal, the question becomes: how should paleopoles of varying
+quality be combined? For a certain set of paleopoles, how can we produce an APWP
+that is both
+\begin{enumerate}
+  \item well constrained: the mean pole for each time step has a low spatial
+  uncertainty (small 95\% confidence ellipse), and
+  \item accurate: the mean pole position is close to its actual position at each
+  time step.
+\end{enumerate}
 
-Above all, there haven't been any real attempts to study how APWP fits may be
-improved by diversely moving-averaging (combining), filtering and also weighting
-data. This chapter is presented to address these issues.
+Previous work on this question have focussed on the filtering out so-called
+``bad'' data before calculation of the mean pole. Commonly used schemes include:
+\begin{enumerate}
+  \item~\citet{v90} (V90). V90 includes seven criteria (see the details in the
+  concluding paragraph of section 1.1.4). The Q (quality) factor is the total
+  number of criteria satisfied (0\textendash7)~\citep{v88}. The Q factor is a
+  very straightforward way to get a quantitative reliability score, and is
+  widely used for filtering paleopoles prior to calculating
+  APWPs~\citep[e.g.][]{T12,Ma16,F19}. Further each paleopole can also be
+  conveniently weighted in proportion to its Q factor in the calculations of
+  APWPs~\citep{T92}. But at the same time this is a fairly basic filter that
+  lumps together criteria that may not be equally important.
+  \item~\citet{B02} (BC02). BC02 data quality criteria use only paleopoles with
+  $\alpha$95 less than 10\degree\ in the Cenozoic and 15\degree\ in the
+  Mesozoic, derived from at least 36 samples from at least 6 sampling sites (see
+  also the concluding paragraph of section 1.1.4). While straightforward and
+  convenient to apply, these stringent criteria mean some useful data may be
+  filtered out and wasted, especially for a period where there are only limited
+  number of paleopoles.
+  \item~\citet{S05} (SS05). SS05 is similar to, but less stringent than, BC02.
+  SS05 uses only paleopoles with $\alpha$95 of $\leq$15\degree\ and an age
+  uncertainty of $\leq$40 Myr, derived from at least $\geq$4 sampling sites with
+  $\geq$4 samples/site, and at least some sample demagnetisation (See also the
+  last paragraph of Section~\ref{subp:ss05}).
+\end{enumerate}
+
+Although they are often used, and effect the path and uncertainties of the
+resulting APWP, there has been limited study of how effective these filtering
+methods are at reconstructing a `true' APWP compared to unfiltered data.
+Furthermore, the focus on the filtering stage ignores the possible impact of
+binning/windowing (i.e.\ combining paleopoles through moving-averaging) and
+weighting. This study more rigorously investigates the effects of the choices
+made at every stage on the resulting APWP\@. By focussing on paleomagnetic data
+from the last $\sim$120 Myr, where plate motions are independently constrained
+by reconstructions of seafloor spreading tied into a hotspot reference frame, we
+can also verify which choices actually lead to a better-constrained and accurate
+record of past plate motions.
 
 
 \section{Methods}
@@ -273,11 +311,11 @@ the search region was defined by the North American (ID 101), Avalon/Acadia (ID
 model of~\citet{Y18}. Following extraction, 58 poles from southwestern North
 America that have been affected by regional rotations since 36 Ma~\citep{Mc06},
 were removed. The final dataset consists of 135 paleopoles
-(Fig.~\ref{fig-120NAhist}), with 76 of them (about 56.3\%; average age
+(Fig.~\ref{fig-120NAhist}), with 76 of them (${\sim}56.3$\%; average age
 uncertainty 14.1974 Myr, average EP95 9.2627\degree) sampled from dominantly
-igneous sequences, 56 (about 41.5\%; average age uncertainty 27.5179 Myr,
+igneous sequences, 56 (${\sim}41.5$\%; average age uncertainty 27.5179 Myr,
 average EP95 10.5027\degree) sampled from mostly sedimentary sequences,
-including 6 from redbeds, and 3 (about 2.2\%) from metamorphic sequences. The
+including 6 from redbeds, and 3 (${\sim}2.2$\%) from metamorphic sequences. The
 principal features of the age distribution are a larger number of young ($<$5
 Ma) poles, and relatively fewer poles in the Late Cretaceous and Miocene.
 
@@ -311,7 +349,7 @@ The final dataset consists of 75 paleopoles (Fig.~\ref{fig-120INhist}), with
 age uncertainty 14.1944 Myr, average EP95 7.0222\degree) sampled from mostly
 sedimentary sequences, including 3 from redbeds. There is a high concentration
 of poles from the latest Cretaceous\textendash{}Early Cenozoic
-(c.70\textendash60 Ma), many of which are igneous; in younger and older
+(${\sim}70$\textendash60 Ma), many of which are igneous; in younger and older
 intervals, there are fewer, mostly sedimentary poles.
 
 \begin{figure*}
@@ -326,8 +364,8 @@ Fig.~\ref{fig-120NAhist} for more information.}\label{fig-120INhist}
 \subparagraph{For Australia,}
 the Australia (ID 801), Sumba (ID 675), and Timor (ID 684) blocks as defined
 by~\citet{Y18} were used, in combination with data from the Tasmania block (ID
-805) younger than c. 100 Ma (with a maximum age (HIMAGAGE) $\leq$100 Ma), prior
-to which it was not fixed with respect to Australia~\citep{Y18}. The final
+805) younger than ${\sim}100$ Ma (with a maximum age (HIMAGAGE) $\leq$100 Ma),
+prior to which it was not fixed with respect to Australia~\citep{Y18}. The final
 dataset consists of 99 paleopoles (Fig.~\ref{fig-120AUhist}), with 61 of them
 (61.6\%; average age uncertainty 23.4918 Myr, average EP95 10.9158\degree)
 sampled from dominantly igneous sequences, and 38 (38.4\%; average age
@@ -351,7 +389,7 @@ information.}\label{fig-120AUhist}
 
 Compared with North American (Fig.~\ref{fig-120NAhist}) and Australian
 (Fig.~\ref{fig-120AUhist}) paleopoles, Indian paleopoles are in relatively lower
-density in general except during the period of about 70\textendash60 Ma
+density in general except during the period of ${\sim}70$\textendash60 Ma
 (Fig.~\ref{fig-120INhist}).
 
 \subsection{APWP Generation}
@@ -545,7 +583,8 @@ are extracted with the keyword ``econd'' contained in the COMMENTS). A subset
 them; method 20/21 retains these paleopoles after applying the suggested
 correction.
 
-\subparagraph{SS05 quality criteria (methods 22/23).} As with method 2/3,
+\subparagraph{SS05 quality criteria (methods 22/23).}\label{subp:ss05} As
+with method 2/3,
 SS05~\citep{S05} removes paleopoles with high spatial ($\alpha$95 $>15\degree$)
 and temporal (age range $>$ 40 Myr) uncertainty, but additionally remove
 paleopoles where samples had poor sampling coverage (sampling sites' quantity
@@ -713,8 +752,8 @@ directly multiplied with the Cartesian x, y and z components of each paleopole.
 However, this direct multiplying causes the decreasing of $R$, which further
 sensitively and extremely increases $\alpha$95 (Fig.~\ref{fig-alpha95}),
 especially because $R$ is always less than $N$ and $N$ is usually not that high
-(more than about 50 is rather rare, around 10 averagely). The consequence would
-be that all the $\alpha$95s of mean poles are extremely large in size and
+(more than ${\sim}50$ is rather rare, around 10 averagely). The consequence
+would be that all the $\alpha$95s of mean poles are extremely large in size and
 difficult to be spatially differentiated.
 
 \begin{figure*}
@@ -757,7 +796,7 @@ and 19 are related to the V90 criteria 7.
 \subsection{Reference Paths}
 
 A prediction of the expected APWP for any plate can be generated using a plate
-kinematic model (e.g.\ the last c. 180\textendash200 Myr plate motions
+kinematic model (e.g.\ the last ${\sim}180$\textendash200 Myr plate motions
 reconstructed from spreading ridges in ocean basins) that is tied in to an
 absolute reference frame. Here, we use the rotations of~\citet{O05}, which
 describe motion of Nubia (plate ID 701) relative to the Indo-Atlantic hotspots.
@@ -766,12 +805,12 @@ Such an absolute frame of reference based on hot spots has been extended back to
 Mid-Atlantic ridge, using North America-Nubia rotations from~\citet{D10} to
 C-Sequence chron C1no (0.78 Ma), from~\citet{S12} to chron C2An.2n (2.7 Ma),
 from~\citet{M99} to chron C5n.1ny (9.74 Ma), from~\citet{G13} to chron C5n.2o
-(10.949 Ma), from~\citet{M99} to chron C6ny (19.05 Ma), from~\citet{G13} to chron
-C6no (20.131 Ma), from~\citet{M99} to chron C34ny (83.5 Ma), from C34ny to about
-118.1 Ma~\citep{S12}, and to closure at C34no (120.6 Ma)~\citep{G13}. India is
-linked via the East African Rift Valley (Somalia-Nubia rotations to chron C1no
-[0.78 Ma] from~\citet{D17}, to chron C2A.2no [3.22 Ma] from~\citet{H05}, and to
-closure at C7.2m [25.01 Ma] from~\citet{R16} and C34 [85 Ma; Rowley, pers.\
+(10.949 Ma), from~\citet{M99} to chron C6ny (19.05 Ma), from~\citet{G13} to
+chron C6no (20.131 Ma), from~\citet{M99} to chron C34ny (83.5 Ma), from C34ny to
+${\sim}118.1$ Ma~\citep{S12}, and to closure at C34no (120.6 Ma)~\citep{G13}.
+India is linked via the East African Rift Valley (Somalia-Nubia rotations to
+chron C1no [0.78 Ma] from~\citet{D17}, to chron C2A.2no [3.22 Ma] from~\citet{H05},
+and to closure at C7.2m [25.01 Ma] from~\citet{R16} and C34 [85 Ma; Rowley, pers.\
 comm.], and finally extended to 120 Ma because there was no known relative
 motion between Somalia and Nubia from 120 Ma to 85 Ma according to the rotations
 from~\citet{M16}); and Australia via the East African Rift Valley, SW Indian
@@ -800,7 +839,7 @@ not truly stationary in the mantle~\citep{S98}; in the latter, true polar wander
 (TPW) may also lead to differential movements of the solid earth with respect to
 the spin axis~\citep{E03}. In reality, it is difficult to untangle these
 effects. Whilst there is little clear evidence for significant TPW in the past
-about 120 Myr~\citep{C00,R04}, modeling suggests that the effects of hotspot
+${\sim}120$ Myr~\citep{C00,R04}, modeling suggests that the effects of hotspot
 drift can start to become significant over 80\textendash100 Myr
 timescales~\citep{O05}. Because paleomagnetic APWPs have large associated
 spatial uncertainties, a synthetic APWP calculated using a fixed hotspot
@@ -834,13 +873,13 @@ north pole for North America at 120 Myr is still at about 75$^{\circ}$N
 axis; this is due to a large component of the North American plate's absolute
 motion in the past 120 Myr being to the east. In contrast, the rapid northward
 motion of the Indian plate in the same period, particularly prior to its
-collision with Asia at about 50\textendash55 Ma~\citep{N10}, is reflected by the
-120 Ma predicted mean north pole being located at about 20$^{\circ}$N
+collision with Asia at ${\sim}50$\textendash55 Ma~\citep{N10}, is reflected by
+the 120 Ma predicted mean north pole being located at about 20$^{\circ}$N
 (Fig.~\ref{fig-mhsPred501}). Australia represents an intermediate case, with
-north westerly plate motion from about 120\textendash60 Myr changing to more
-rapid northward motion from about 60\textendash55 Ma to the present~\citep{W07}.
+north westerly plate motion from ${\sim}120$\textendash60 Myr changing to more
+rapid northward motion from ${\sim}60$\textendash55 Ma to the present~\citep{W07}.
 When comparing the FHM and MHM tracks, differences in the oldest parts (before
-about 80 Ma) are apparent for India and North America.
+${\sim}80$ Ma) are apparent for India and North America.
 
 \begin{figure*}
 \centering
@@ -1109,14 +1148,14 @@ most consequential filters are:
 %
 \begin{enumerate}
   \item removal of sedimentary poles (methods 4/5 and 6/7), which removes about
-        40-50\% of the dataset on all 3 plates, with the highest proportion
-		being removed on the Indian plate. Although method 4/5 is more strict,
-		it does not remove many more poles than method 6/7. Especially for North
-		America and India, the numbers of the filtered paleopoles by method 4/5
-		and 6/7 are actually the same.
+        40\textendash50\% of the dataset on all 3 plates, with the highest
+		proportion being removed on the Indian plate. Although method 4/5 is
+		more strict, it does not remove many more poles than method 6/7.
+		Especially for North America and India, the numbers of the filtered
+		paleopoles by method 4/5 and 6/7 are actually the same.
   \item correction of sedimentary poles for inclination flattening (filter
-		8/9), which affects 38-48\% of the dataset, with the highest affected
-		proportion on the Indian plate.
+		8/9), which affects 38\textendash48\% of the dataset, with the highest
+		affected proportion on the Indian plate.
   \item removal of poles with large temporal and spatial uncertainty (methods
 		2/3, 22/23), particularly for the Australian plate, where the SS05
 		filtering criteria removes about 70\% of the poles. Filter 26/27
@@ -1947,19 +1986,19 @@ derived path is a slightly better choice.
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/mf101.pdf}
 		\caption{Fig.~\ref{fig-na-difm}-Fig.~\ref{fig-na-dif}; Percentage for
-		positive values: about 66.67\%}\label{fig-mf101}
+		positive values: ${\sim}66.67$\%}\label{fig-mf101}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/mf501.pdf}
 		\caption{Fig.~\ref{fig-in-difm}-Fig.~\ref{fig-in-dif}; Percentage for
-		positive values: about 34.52\%}\label{fig-mf501}
+		positive values: ${\sim}34.52$\%}\label{fig-mf501}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/mf801.pdf}
 		\caption{Fig.~\ref{fig-au-difm}-Fig.~\ref{fig-au-dif}; Percentage for
-		positive values: about 19.62\%}\label{fig-mf801}
+		positive values: ${\sim}19.62$\%}\label{fig-mf801}
 	\end{subfigure}
 	\caption[Differences between results from FHM and MHM]{Differences between
 results from two different reference paths, FHM (Fig.~\ref{fig-dif}) and MHM
