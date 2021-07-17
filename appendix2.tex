@@ -1,23 +1,25 @@
 \chapter{Supplementary Materials for Chapter 3: Constrain Paleopoles For A
-Certain Tectonic Plate}
+Certain Tectonic Plate}\label{appen4chp3}
 
 A polygon can be drawn around a set of paleomagnetic data, whose sampling sites
-we believe belong to a specific plate or rigid block. Then the {\em Spatial
-Join\/} technique~\citep{J07} helps join attributes from the polygon to the
-paleomagnetic data based on the spatial relationship allowing data within this
-polygon to be extracted from the whole raw large dataset without splitting a
-subset just for a specific plate. That allows us to quickly select subsets of
-the database based on geographic constraints just as easily as for age. Of
-course, the boundary of this polygon must be reasonably along a tectonic
-boundary. Regions like those close to the plate boundaries are usually
-tectonically active (e.g.\ local rotations), so we should also be careful when
-we deal with the paleopoles derived from this type of locations.
+we believe belong to a specific plate or rigid block. Each such plate tectonic
+polygon is assigned with an unique identification code, which is called Plate
+ID\@. Then the {\em Spatial Join\/} technique~\citep{J07} helps join attributes,
+especially Plate ID, from the polygon to the paleomagnetic data based on the
+spatial relationship allowing data within this polygon to be extracted from the
+whole raw large dataset without splitting a subset just for a specific plate.
+That allows us to quickly select subsets of the database based on geographic
+constraints just as easily as for age. Of course, the boundary of this polygon
+must be reasonably along a tectonic boundary. Regions like those close to the
+plate boundaries are usually tectonically active (e.g.\ local rotations), so we
+should also be careful when we deal with the paleopoles derived from this type
+of locations.
 
 \section{120\textendash0 Ma North America}
 
 The data-constraining polygons are from the recently published plate
-model~\citep{Y18} (Fig.~\ref{fig_NAfinal}). Plate ID 101 polygon in the
-recently published Plate Model~\citep{Y18}, including its children 108
+model~\citep{Y18} (Fig.~\ref{fig_NAfinal}). North American craton (Plate ID 101)
+polygon in the plate model~\citep{Y18}, including its children 108
 (Avalon/Acadia block) and 109 (Piedmont block) polygons for 120\textendash0 Ma,
 is used to select the sampling sites of the paleopoles for North America.
 According to the plate model rotation data~\citep{Y18}, 108 is fixed to 101
@@ -89,7 +91,7 @@ ${\sim}145$ Ma to the present.
 On the southeast of the main Australia plate (the blue polygon in
 Fig.~\ref{fig_AUfinal}), there is a triangle-shaped small polygon 850
 (Tasmania block) which is fixed to 801 since ${\sim}100$ Ma according to
-the~\citet{Y18} rotation data. With that attribute, 805 contributes more data
+the~\citet{Y18} rotation data. With that attribute, 850 contributes more data
 younger than ${\sim}100$ Ma for the later analysis. Ultimately the final 99 extracted
 datasets is shown in Fig.~\ref{fig_AUfinal}.
 

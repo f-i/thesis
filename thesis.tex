@@ -16,6 +16,7 @@
 \usepackage[xcdraw]{xcolor}  %colorful words in tables
 \usepackage[round]{natbib}  %note that when you use this package, \bibliographystyle{} needs the corresponding styles, see more at https://www.overleaf.com/learn/latex/Natbib_bibliography_styles; learn more about natbib at https://journals.aas.org/natbib/
 \usepackage{longtable}
+\usepackage[page,toc,titletoc,title]{appendix}
 
 \usepackage[normalem]{ulem}
 \useunder{\uline}{\ul}{}
@@ -65,16 +66,18 @@ Improved Methods of Reconstructing Plate Motions Using Paleomagnetic Data}   %no
 \include{chapter4}
 \include{conclusions}
 
-%now enable appendix numbering format and include any appendices
-\appendix
-\include{appendix1}
-\include{appendix2}
-
 %next line adds the Bibliography to the contents page
 \addcontentsline{toc}{chapter}{Bibliography}
 %uncomment next line to change bibliography name to references
 %\renewcommand{\bibname}{References}
 \bibliography{../../doc_template_config/tex/refs}        %use a bibtex bibliography file refs.bib
 \bibliographystyle{plainnat}  %use the plain bibliography style if we don't use natbib
+
+%now enable appendix numbering format and include any appendices
+\begin{appendices}
+\appendix
+\include{appendix1}
+\include{appendix2}
+\end{appendices}
 
 \end{document}
