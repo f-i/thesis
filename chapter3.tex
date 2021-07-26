@@ -1,4 +1,4 @@
-\chapter{Finding the Way(s) to Make a Reliable APWP}\label{chap:Reliab}  % chktex 36
+\chapter{Methods for Producing a Reliable APWP}\label{chap:Reliab}  % chktex 36
 \textit{This chapter mainly describes how to generate paleomagnetic APWPs using
 168 different methods, and then the application of the new APW path similarity
 measuring tool described in the last chapter in finding the best APWP generating
@@ -76,13 +76,14 @@ significantly different.
 \subsection{How An APWP Is Generated and Key Factors}
 
 As mentioned above, the first question to ask is that which tectonic plate the
-paleopole we are working on belongs to (see Section~\ref{sec:f1} and details about how
-it is solved in Appendix~\ref{appen4chp3}). The fact is that paleomagnetic data is not just
-about poles but multiple attributes integrated and not all data are created
-equal. So once the host tectonic plate is determined, we encounter another
-problem: the attributes, for example, uncertainties of ages and also locations,
-can vary greatly for different paleopoles (see details in
-Sections~\ref{sec:ageu} and~\ref{sec:posu}). Paleopole's attributes like age and location obviously can be
+paleopole we are working on belongs to (see Section~\ref{sec:f1} and details
+about how it is solved in Appendix~\ref{appen4chp3}). The fact is that
+paleomagnetic data is not just about poles but multiple attributes integrated
+and not all data are created equal. So once the host tectonic plate is
+determined, we encounter another problem: the attributes, for example,
+uncertainties of ages and also locations, can vary greatly for different
+paleopoles (see details in Sections~\ref{sec:ageu} and~\ref{sec:posu}).
+Paleopole's attributes like age and location obviously can be
 quantified and then used to weigh paleopoles or to omit some of them through
 setting up a range of acceptable values. In addition, the age uncertainty can
 also be used to change the way how we do moving averaging when we calculate mean
@@ -133,8 +134,8 @@ middle age.
 
 \subsubsection{Filtering Step}
 
-Filtering step filters out bad data that is likely to be unreliable, based on
-known information about the poles. These can be subdivided into two groups:
+This step filters out bad data that is likely to be unreliable, based on known
+information about the poles. These can be subdivided into two groups:
 
 \paragraph{Characteristics that indicate the pole is well-constrained
 (precise)}
@@ -142,8 +143,8 @@ known information about the poles. These can be subdivided into two groups:
 
 \paragraph{Characteristics that indicate the pole is reliable (accurate)}:
 \begin{itemize}
-  \item Lithology (particularly risk of inclination flattening in sediments; see
-        Section~\ref{sec:datcons})
+  \item Lithology, particularly the risk of inclination flattening in sediments
+        (see Section~\ref{sec:datcons})
   \item Risk of unidentified local rotations in deformed areas (see Section~\ref{sec:datcons})
   \item Publication year \textemdash{} younger studies that use stepwise
         demagnetisation techniques more likely to remove overprints and isolate
@@ -904,13 +905,13 @@ moving North America shown in Fig.~\ref{fig-mhsPred}.}\label{fig-mhsPred501}
 
 When comparing the synthetic APW paths for the three plates (inset,
 Fig.~\ref{fig-mhsPred801}), there are clear differences. The predicted mean
-north pole for North America at 120 Myr is still at about 75$^{\circ}$N
+north pole for North America at 120 Myr is still at ${\sim}75^{\circ}$N
 (Fig.~\ref{fig-mhsPred}), indicating rather slow drift with respect to the spin
 axis; this is due to a large component of the North American plate's absolute
 motion in the past 120 Myr being to the east. In contrast, the rapid northward
 motion of the Indian plate in the same period, particularly prior to its
 collision with Asia at ${\sim}50$\textendash55 Ma~\citep{N10}, is reflected by
-the 120 Ma predicted mean north pole being located at about 20$^{\circ}$N
+the 120 Ma predicted mean north pole being located at ${\sim}20^{\circ}$N
 (Fig.~\ref{fig-mhsPred501}). Australia represents an intermediate case, with
 north westerly plate motion from ${\sim}120$\textendash60 Myr changing to more
 rapid northward motion from ${\sim}60$\textendash55 Ma to the present~\citep{W07}.
@@ -962,13 +963,14 @@ validity of the similarity measuring tool in practise.
 \section{Results}
 
 \subsection{Baseline results: 10 Myr window, 5 Myr step, fixed hotspot
-reference}
+reference}\label{sec:base}
 
 Fig.~\ref{fig-dif} shows the $\mathcal{CPD}$ scores for the APWPs generated with
 all 28 picking methods (AMP and APP with one of 14 separate filters applied) and
 one of 6 weighted mean calculations then applied, compared to the FHM reference
-path for North America (Fig.~\ref{fig-na-dif}), India (Fig.~\ref{fig-in-dif})
-and Australia (Fig.~\ref{fig-au-dif}). The 27 lowest and highest of the 168
+path (squares and dashed line in Figs.~\ref{fig-mhsPred}-\ref{fig-mhsPred801})
+for North America (Fig.~\ref{fig-na-dif}), India (Fig.~\ref{fig-in-dif}) and
+Australia (Fig.~\ref{fig-au-dif}). The 27 lowest and highest of the 168
 scores for each plate (values greater than 1 standard deviation from the mean)
 are marked in green and red, respectively. Different combinations of windowing
 method, filtering and weighting clearly affect the difference score, with
@@ -1057,14 +1059,23 @@ The parenthetical remarks are Pk No and Wt No.}\label{fig-difbw}
   \item The magnitude and range of $\mathcal{CPD}$ scores for each of the three
 	plates is different, with the North American plate having the lowest
 	magnitudes and range (Fig.~\ref{fig-na-dif}), and the Indian plate having
-	the highest (Fig.~\ref{fig-in-dif}). In general, the scores of North America
-	and Australia are relatively closer (Fig.~\ref{fig-d-dif}).
+	the highest (Fig.~\ref{fig-in-dif}). The scores for the Australian plate are
+	generally closer to the equivalent scores for the North American plate than
+	to the scores for the Indian plate (Fig.~\ref{fig-d-dif}).
   \item Although there is some overlap (e.g., Pk 19, 21 [best], and
 	2, 16 [worst] for all the three plates or for both India and Australia; 1,
 	11, 13, 19, 21, 25 [best], and 2, 14, 16, 22, 26 [worst] for both North
 	America and Australia; 5, 7, 19, 21 [best], 2, 16, 18 [worst] for both North
 	America and India), the best- and worst-performing picking/filtering and
 	weighting algorithms are not exactly the same for each plate.
+  \item Relating to FQ ratings: North America's lower $\mathcal{CPD}$ scores are
+	also associated with consistently good FQ B-A grades; India's higher
+	$\mathcal{CPD}$ scores are also associated with lower FQ (mostly C-A,
+	including the no-filter methods, so there are some improvements in FQ with
+	some filters), and Australia is a mix of B-A (including the no-filter
+	methods) and C-A (which represent a reduction in FQ with some filters). In
+	general, lower $\mathcal{CPD}$ scores also appear to be associated with
+	better FQ (e.g. B-A rather than C-A).
 \end{enumerate}
 
 \subsection{Effects of windowing method}
@@ -1183,19 +1194,19 @@ expected. In terms of the numbers of poles affected, the most consequential
 filters are:
 %
 \begin{enumerate}
-  \item removal of sedimentary poles (Pk 4,5 and 6,7), which removes about
-        40\textendash50\% of the dataset on all 3 plates, with the highest
-		proportion being removed on the Indian plate. Although Pk 4,5 are
-		more strict, it does not remove many more poles than Pk 6,7.
+  \item removal of sedimentary poles (Pk 4,5 and 6,7), which removes
+		${\sim}40$\textendash50\% of the datasets on all 3 plates, with the
+		highest proportion being removed on the Indian plate. Although Pk 4,5
+		are more strict, it does not remove many more poles than Pk 6,7.
 		Especially for North America and India, the numbers of the filtered
 		paleopoles by Pk 4,5 and 6,7 are actually the same.
-  \item correction of sedimentary poles for inclination flattening (filter
+  \item correction of sedimentary paleopoles for inclination flattening (filter
 		in Pk 8,9), which affects 38\textendash48\% of the dataset, with the
 		highest affected proportion on the Indian plate.
-  \item removal of poles with large temporal and spatial uncertainty (Pk
+  \item removal of paleopoles with large temporal and spatial uncertainty (Pk
 		2,3, 22,23), particularly for the Australian plate, where the SS05
-		filtering criteria removes about 70\% of the poles. Filter in Pk 26,27
-		combines Pk 22,23 and 24,25, but no or very few (in the only case
+		filtering criteria removes ${\sim}70$\% of the paleopoles. Filter in Pk
+		26,27 combines Pk 22,23 and 24,25, but no or very few (in the only case
 		of Australia only 1 additional pole) are actually removed.
   \item filtering based on publication date (Pk 14,15 and 16,17), with the
 		ratio of pre/post 1983 poles varying from about 50/50 on the North
@@ -1204,9 +1215,9 @@ filters are:
 
 Conversely, filtering or correction for redbeds (Pk 10,11 and 12,13), local
 rotations and overprints (Pk 18,19 and 20,21 [one paleopole influenced by
-local rotation removed, and one corrected, for only India; about 2.7 per cent,
+local rotation removed, and one corrected, for only India; ${\sim}2.7$\%,
 Fig.~\ref{fig-in-dif}]), or superseded data (Pk 24,25) affected 4\% or less
-of the poles on any plate.
+of the paleopoles on any plate.
 
 \subsubsection{Filter performance}
 
@@ -1284,8 +1295,8 @@ more than 1.96-standard-deviation interval labeled in red.}\label{fig-d-dif}
 Compared to the variations resulting from different windowing methods and
 filters, Figs.~\ref{fig-difAMPvsAPP},~\ref{fig-nads},~\ref{fig-nadl}
 and~\ref{fig-nada} indicate that the effect of weighting the data prior to
-calculating a Fisher mean is generally small. Where an effect can be seen, it is
-negative, generating larger CPD scores.
+calculating a Fisher mean is generally small or diluted. Where an effect can be
+seen, it is negative, generating larger $\mathcal{CPD}$ scores.
 
 \begin{figure*}
 	\centering
@@ -1419,7 +1430,7 @@ to each segment-orientation-change's three mean path poles.}\label{fig-nada}
 \subsection{Effects of window size}
 
 Fig.~\ref{fig-dif2010} shows the $\mathcal{CPD}$ scores for the APWPs generated
-with all 28 picking and 6 weighting methods, compared to the FHM reference
+with the 28 picking and 6 weighting methods, compared to the FHM reference
 paths, with the picking time window width increased from 10 to 20 Myr, and the
 window step increased from 5 to 10 Myr.
 
@@ -1486,18 +1497,31 @@ No.}\label{fig-dif2010bw}
 
 \subsubsection{Overall change}
 
-Along with the increasing sizes of moving window and step, mean, median and
-range values of $\mathcal{CPD}$ scores shrink, except for North America the mean
-value of $\mathcal{CPD}$ scores slightly increase (Fig.~\ref{fig-dif} and
-Fig.~\ref{fig-dif2010}). For North America, most scores actually increase (i.e.
-10/5 is better; Fig.~\ref{fig-101f105d2010}) except for Pk 2, 4, 6, 16,17, 22,
-26 wherein 20/10 is better ('quality filtering' is less `bad’?). For India, most
-scores are lower (20+10 is better) except Pk (Wt) (22, 26) (1, 2), 15 (1, 3),
-19 (0, 1, 3), 21 (0, 1) and (23, 27) (4, 5). Biggest decreases are associated
-with Wt 3 (i.e., effect of weighting is being diluted). For Australia, changes
-are largely negative, which means 20+10 is better. Also negative change is large
-for Pk 3, 4, 6, 15, 23, 27. For Pk 14(0\textendash2, 4, 5), 10/5 is much
-better, whereas for Pk 15, 20/10 is much better.
+The overall effect of increased window and step size varies between plates
+(Fig.~\ref{fig-f105d2010}). 118/168 (${\sim}70$\%) of equivalent $\mathcal{CPD}$
+scores for the North American plate increase, indicating reduced similarity with
+respect to the reference path (Fig.~\ref{fig-101f105d2010}). The increased
+occurrence of A-A rather than B-A FQ ratings (Fig.~\ref{fig-na-dif2010} vs.
+Fig.\ref{fig-na-dif}) indicate that in some cases this may be due to a better
+constrained path becoming more distinguishable. Decreased scores are confined to
+particular, mostly AMP-derived picking methods: Pk 2, 22 and 26 (filtering based
+on ${\alpha}95$ and age uncertainties), 4 and 6 (removal of sedimentary
+paleopoles), and 16,17 (removal of post–1983 results). It is clearly due to the
+corresponding increase of N in each increased window for these AMP-derived
+quality filters.
+
+For the Indian and Australian plates, there is a trend towards decreased
+$\mathcal{CPD}$ scores, with 153/168 (${\sim}91$\%) and 104/168 (${\sim}62$\%)
+of equivalent $\mathcal{CPD}$ scores being lower than for the 10/5 Myr
+window/step, respectively (Fig.~\ref{fig-501f105d2010},~\ref{fig-801f105d2010}).
+Where the score increases, the actual difference is close to 0, indicating very
+little change, with the exception of Pk 14 (AMP, removal of pre–1983 results) on
+the Australian plate. The largest score decreases are associated with Wt 3 (AMP,
+${\alpha}95$ and age filtering) on the Indian plate, and Pk 15 (APP, removal of
+pre–1983 results) on the Australian plate. Most FQ ratings remain unchanged
+(Fig.~\ref{fig-in-dif2010},~\ref{fig-au-dif2010}): most obviously, ratings for
+Pk 5 and 7 (APP, removal of sedimentary poles) on the Indian plate and Pk 14 on
+the Australian plate change from B-A to C-A.
 
 \begin{figure*}
 	\centering
@@ -1527,6 +1551,49 @@ in red.}\label{fig-f105d2010}
 
 \subsubsection{Relative performance of methods}
 
+As for the baseline results (Section~\ref{sec:base}, Fig.~\ref{fig-dif}), the
+effects of windowing and filtering, particularly the windowing method (APP vs
+AMP), are much more apparent than the effects of weighting. APP-derived scores
+still outperform AMP-derived ones, but the overall degree of difference is
+reduced for the North American and Indian plates, with percentage of APP-derived
+$\mathcal{CPD}$ scores more than 3 times the equivalent AMP-derived score
+reducing to 26\% and 4\% (from 44\% and 40\%), respectively. For the Australian
+plate, this percentage increases from 58\% to 70\%.
+
+This is largely the result of larger changes in the AMP-derived $\mathcal{CPD}$
+scores compared to changes in the APP-derived ones with the wider time window.
+The scores for APP-derived methods Pk 1 (no filtering), other non-aggressive
+filters (Pk 13, 19, 21, 25), and Pk 9 (correction for inclination flattening),
+are particularly stable (Fig.~\ref{fig-f105d2010}) for all three plates.
+Filtering according to the SS05 criteria (Pk 23 and 27) also yields comparable
+scores for both time windows on the North American and Indian plates.
+
+As for the 10/5 window, the lowest AMP/APP differences are for Pk 4,5 and 6,7
+(igneous poles preferred \textendash{} low scores) and Pk 2,3 and 22,23
+(filtering for spatial and temporal uncertainty \textendash{} high scores) for
+the North American and Indian plates; and 8,9 (correction for inclination
+shallowing \textendash{} moderate scores) for the Australian plates. Likewise,
+the highest AMP/APP difference is still associated with Pk 0,1 (no filtering) on
+the North American and Australian plates, and Pk 16,17 on the Australian plate.
+
+Overall, the relative performance of the different filtering methods when using
+the 20/10 window/step remains similar to that observed for the 10/5 window/step
+(Figs.~\ref{fig-dif},~\ref{fig-dif2010}). Some of the lowest scores are still
+produced by Pk 1 (APP, no filtering). Of the aggressive filters, removing
+sedimentary paleopoles (Pk 4,5 and 6,7) still perform well, selecting only
+spatially and temporally well-constrained paleopoles (Pk 2,3 and 22,23) still
+perform relatively poorly, and correction for inclination flattening (Pk 8,9)
+has little effect.
+
+In addition, using only paleopoles published before 1983 (Pk 16,17) still
+produces relatively high $\mathcal{CPD}$ scores for the North American and
+Indian plates, although the scores for the AMP-derived Pk 16 are substantially
+reduced with the wider time window (Figs.~\ref{fig-101f105d2010},~\ref{fig-501f105d2010}).
+Likewise, for Australia, using only paleopoles published after 1983 (Pk 14,15)
+still produces higher scores than Pk 16,17: scores for the wider time window are
+even higher for the AMP-derived Pk 14, but substantially lower for the
+APP-derived Pk 15 (Fig.~\ref{fig-801f105d2010}).
+
 \begin{enumerate}
   \item Pk 19 is still among the best, and Pk 16 still one of the worst, for
 		all 3 plates.
@@ -1542,9 +1609,10 @@ in red.}\label{fig-f105d2010}
 		25, show less changes for all the three plates. Pk 23 and 27 show less
 		changes for North America and India, but more changes for Australia.
   \item APP still outperforms AMP\@. For North America and India, the percentage
-		of factor of greater than 3 (about 26.19\% and 3.57\% respectively) is
-		less than 10+5 (about 44.05\% and 40.48\% respectively), while for
-		Australia the percentage (about 70.24\%) is more than 10+5 (58.33\%).
+		of factor of greater than 3 (${\sim}26.2$\% and ${\sim}3.6$\%
+		respectively) is less than 10/5 (${\sim}44.1$\% and ${\sim}40.5$\%
+		respectively), while for Australia the percentage (${\sim}70.2$\%) is
+		more than 10/5 (${\sim}58.3$\%).
   \item Both scores and AMP/APP difference are low for Pk 4,5, 6,7 applied
 		onto North America and India.
   \item Both scores and AMP/APP difference are high for Pk 16,17.
@@ -1552,9 +1620,7 @@ in red.}\label{fig-f105d2010}
 		on North America and India.
   \item Scores are low but AMP/APP difference are high for Pk 0,1 on North
 		America and Australia.
-  \item Comparable AMP/APP (20+10 vs 10+5) appears for Pk 8,9 on Australian plate.
-  \item Pk 1 is still a good performer.
-  \item Pk 4,5, 6,7 are still `good' aggressive filters.
+  \item Comparable AMP/APP (20/10 vs 10/5) appears for Pk 8,9 on Australian plate.
   \item Pk 2,3, 22,23 (at least 2 and 22) are still `bad' aggressive
 		filters. And the scores derived from these methods have control on
 		overall range of scores.
@@ -1844,11 +1910,11 @@ in light green.}\label{tab-pk0vs1bs}
 
 \begin{figure}
 \centering
-\includegraphics[width=.49\textwidth]{../../paper/tex/GeophysJInt/figures/WinStpVsCPD.pdf}
-\caption[Sliding window and step sizes versus CPD]{Plot of the equal-weight
-  $\mathcal{CPD}$ scores collected in Table~\ref{tab-pk0vs1bs}. Note that here
-  the step size is always half of the sliding window size and the reference path
-  is the FHM derived.}\label{fig-WinStpVsCPD}
+\includegraphics[width=1\textwidth]{../../paper/tex/GeophysJInt/figures/WinStpVsCPD.pdf}
+\caption[Sliding window and step sizes versus $\mathcal{CPD}$]{Plot of the
+equal-weight $\mathcal{CPD}$ scores collected in Table~\ref{tab-pk0vs1bs}. Note
+that here the step size is always half of the sliding window size and the
+reference path is the FHM derived.}\label{fig-WinStpVsCPD}
 \end{figure}
 
 \paragraph{What to expect is}
@@ -2061,14 +2127,14 @@ North America and India. Pk 22 and 26 show large changes and Pk 17, 19, 21 and
 	39.3\% and 50\%). For 20/10 Myr bin/step, the percentage of factor of
 	greater than 3 (about 3.6\% and 46.43\% for India and Australia) is still
 	less than FHM (about 3.8\% and 71.4\%) whilst for North America the
-	percentage (about 44.05\%) is more than FHM (28.6\%).
+	percentage (${\sim}44.05$\%) is more than FHM (28.6\%).
   \item Both scores and AMP/APP difference are still low for Pk 4,5, 6,7.
   \item Both scores and AMP/APP difference are still high for Pk 16,17
 	(Pk 17 gives low scores for Australia).
   \item Still scores are high but AMP/APP difference are low for Pk 2,3.
   \item Still scores are low but AMP/APP difference are high for Pk 0,1 on
 	Australia.
-  \item Comparable AMP/APP (20+10 vs. 10+5, or FHM vs. MHM) still appears for
+  \item Comparable AMP/APP (20/10 vs. 10/5, or FHM vs. MHM) still appears for
 	Pk 8,9 on Australian plate.
   \item Pk 1 is still a good performer.
   \item Pk 4,5, 6,7 are still `good' aggressive filters.
