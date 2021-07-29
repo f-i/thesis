@@ -24,7 +24,7 @@ an APWP, an object continent or continental fragment should be picked first. And
 then the general ``boundary'' of this continent or continental fragment should
 be determined tectonically. This closed tectonic ``boundary'' is then used to
 constrain the paleomagnetic datasets through picking only those with their
-sampling sites lying inside the closed ``boundary''. See the
+sampling sites lying inside the closed ``boundary''. See
 Appendix~\ref{appen4chp3}
 for examples about how the paleopole datasets are constrained for a particular
 tectonic plate during a specific time interval. Then the paleopoles that derive
@@ -135,36 +135,27 @@ middle age.
 \subsubsection{Filtering Step}
 
 This step filters out bad data that is likely to be unreliable, based on known
-information about the poles. These can be subdivided into two groups:
+information about the paleopoles. These can be subdivided into two groups:
 
-\paragraph{Characteristics that indicate the pole is well-constrained
+\paragraph{Characteristics that indicate the paleopole is well-constrained
 (precise)}
 (e.g., has a small $\alpha$95 uncertainty ellipse, large $\kappa$)
 
-\paragraph{Characteristics that indicate the pole is reliable (accurate)}:
+\paragraph{Characteristics that indicate the paleopole is reliable (accurate)}:
 \begin{itemize}
   \item Lithology, particularly the risk of inclination flattening in sediments
         (see Section~\ref{sec:datcons})
-  \item Risk of unidentified local rotations in deformed areas (see Section~\ref{sec:datcons})
+  \item Risk of unidentified local rotations in deformed areas (see
+        Section~\ref{sec:datcons})
   \item Publication year \textemdash{} younger studies that use stepwise
         demagnetisation techniques more likely to remove overprints and isolate
         a primary remanence (see Section~\ref{sec:puby}).
-  \item Sampling strategy \textemdash{} need enough samples and sites to have a
-        good chance of averaging out secular variation (see Section~\ref{sec:datcons}).
-  \item Field tests that constrain the magnetisation age (see Section~\ref{sec:ageu}).
+  \item Sampling strategy \textemdash{} need sufficient number of contributing
+        samples and sites (N and B in Table~\ref{tab-fld}) to have a good chance
+        of averaging out secular variation (see Section~\ref{sec:datcons}).
+  \item Field tests that constrain the magnetisation age (see
+        Section~\ref{sec:ageu}).
 \end{itemize}
-
-You should note that this is complicated because paleopole precision and
-accuracy are not necessarily related. A paleopole can be precise yet inaccurate
-(and we'd prefer to investigate why it occurs and do corrections if possible or
-directly filter those out), or imprecise yet accurate (so we might want to keep
-it).
-
-There is also an important trade-off that precision in a mean pole is determined
-by the number of contributing paleopoles ($\alpha$95 is proportional to
-1/$\sqrt{n}$), so an overly aggressive filter might improve accuracy at the
-expense of precision. This is particularly an issue where data density is low
-(see Section~\ref{sec:datden}).
 
 \subsubsection{Calculation Step}
 
@@ -175,27 +166,27 @@ inclination expected in those formulas, pole longitude and latitude should be
 used]{B92}, but as an alternative or supplement to filtering paleopoles can
 potentially be weighted according to the factors that potentially influence
 their precision and/or accuracy such as the A95 uncertainty or age uncertainty,
-and a weighted Fisher mean calculated, giving the `better' poles more influence
-on the result. So, for example, each paleopole has got a weight before
-calculating for a mean. In this dissertation these weights $w_i$ are integrated
-into the $\sum\limits_{i=1}^N l_i$, $\sum\limits_{i=1}^N m_i$ and
+and a weighted Fisher mean calculated, giving the `better' paleopoles more
+influence on the result mean pole. So, for example, each paleopole has got a
+weight before calculating for a mean. In this dissertation these weights $w_i$
+are integrated into the $\sum\limits_{i=1}^N l_i$, $\sum\limits_{i=1}^N m_i$ and
 $\sum\limits_{i=1}^N n_i$ of the formulas 6.13 and 6.14 in~\citet[chap.~6]{B92},
 where $w$ means weight and $i$ is the same as in those two formulas. Then for a
 weighted Fisher mean, the two formulas 6.13 and 6.14 in~\citet[chap.~6]{B92}
 become
 %
 \begin{equation}
-l = \frac{\sum\limits_{i=1}^N l_iw_i}{R} \quad\quad
-m = \frac{\sum\limits_{i=1}^N m_iw_i}{R} \quad\quad
-n = \frac{\sum\limits_{i=1}^N n_iw_i}{R}
+  l = \frac{\sum\limits_{i=1}^N l_{i}w_i}{R} \quad\quad
+  m = \frac{\sum\limits_{i=1}^N m_{i}w_i}{R} \quad\quad
+  n = \frac{\sum\limits_{i=1}^N n_{i}w_i}{R}
 \end{equation}
 %
 and
 %
 \begin{equation}
-  R = (\sum\limits_{i=1}^N l_iw_i)^2
-      + (\sum\limits_{i=1}^N m_iw_i)^2
-      + (\sum\limits_{i=1}^N n_iw_i)^2
+  R = {\left( \sum\limits_{i=1}^N l_{i}w_i \right)}^2
+    + {\left( \sum\limits_{i=1}^N m_{i}w_i \right)}^2
+    + {\left( \sum\limits_{i=1}^N n_{i}w_i \right)}^2
 \end{equation}
 %
 Note that the trade-offs and difficulties are similar for filtering, e.g.\
@@ -280,7 +271,7 @@ referred to. They are listed in Table~\ref{tab-fld} for easy reference.
 \begin{table}
 \centering
 \caption{List of the used fields and field codes of the GPMDB.}\label{tab-fld}
-\begin{tabular}{p{0.16\linewidth} | p{0.79\linewidth}}
+\begin{tabular}{p{0.16\linewidth} p{0.79\linewidth}}
 \toprule
 Field Code & Meaning \\ \midrule
 LOMAGAGE & Lower best estimate of the magnetic age of the magnetisation component \\
@@ -298,7 +289,7 @@ ROCKTYPE & Type of sample rock \\
 STATUS & Indicates if results have been superseded \\
 COMMENTS & General information including details of the origin of LOMAGAGE and
            HIMAGAGE\@. If the result is a combined pole this field contains information on the data included in the combined result \\
-  \bottomrule
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -316,7 +307,7 @@ Appendix~\ref{appen4chp3} for details):
 \paragraph{For North America,}
 the search region was defined by the North American craton (NAC), Avalon/Acadia
 and Piedmont blocks, as defined by the recently published plate model
-of~\citet{Y18}. Following extraction, 58 poles from southwestern North America
+of~\citet{Y18}. Following extraction, 58 palepoles from southwestern North America
 that have been affected by regional rotations since 36 Ma~\citep{Mc06}, were
 removed. The final dataset consists of 135 paleopoles (Fig.~\ref{fig-120NAhist}),
 with 76 of them (${\sim}56$\%; average age uncertainty ${\sim}14$ Myr, average
@@ -330,12 +321,12 @@ poles in the Late Cretaceous and Miocene.
 \begin{figure*}
 \centering
 \includegraphics[width=.85\textwidth]{../../paper/tex/GeophysJInt/figures/120NAhist.pdf}
-\caption[Distribution of 120\textendash0 Ma North American poles]{Temporal
-distribution of 120\textendash0 Ma $NAC$ paleopoles in 10 Myr window
-length and 5 Myr step length. For distribution a, each bin only counts in the
-midpoints (circles) of pole uncertainty bars (not including those right at bin edges);
-For distribution b, as long as the bar intersects with the bin (not including
-those intersecting only at one of bin edges), it is counted in. Inside the
+\caption[Distribution of 120\textendash0 Ma North American paleopoles]{Temporal
+distribution of 120\textendash0 Ma $NAC$ paleopoles in 10 Myr window length and
+5 Myr step length. For distribution a, each bin only counts in the midpoints
+(circles) of pole uncertainty bars (not including those right at bin edges); For
+distribution b, as long as the bar intersects with the bin (not including those
+intersecting only at one of bin edges), it is counted in. Inside the
 parentheses, i means igneous rocks derived (red bars; only two poles,
 83\textendash77 Ma and 80\textendash65 Ma, from igneous and also sedimentary;
 only one pole, 72\textendash40 Ma, from igneous and also metamorphic), r means
@@ -363,10 +354,10 @@ mostly sedimentary poles.
 \begin{figure*}
 \centering
 \includegraphics[width=.91\textwidth]{../../paper/tex/GeophysJInt/figures/120INhist.pdf}
-\caption[Distribution of 120\textendash0 Ma Indian poles]{Temporal distribution
-of 120\textendash0 Ma Indian paleopoles. For red bars, only one pole,
-67\textendash64 Ma (RESULTNO 8593), is from igneous and also sedimentary. See
-Fig.~\ref{fig-120NAhist} for more information.}\label{fig-120INhist}
+\caption[Distribution of 120\textendash0 Ma Indian paleopoles]{Temporal
+distribution of 120\textendash0 Ma Indian paleopoles. For red bars, only one
+pole, 67\textendash64 Ma (RESULTNO 8593), is from igneous and also sedimentary.
+See Fig.~\ref{fig-120NAhist} for more information.}\label{fig-120INhist}
 \end{figure*}
 
 \paragraph{For Australia,}
@@ -384,7 +375,7 @@ relatively uniform.
 \begin{figure*}
 \centering
 \includegraphics[width=.91\textwidth]{../../paper/tex/GeophysJInt/figures/120AUhist.pdf}
-\caption[Distribution of 120\textendash0 Ma Australian poles]{Temporal
+\caption[Distribution of 120\textendash0 Ma Australian paleopoles]{Temporal
 distribution of 120\textendash0 Ma Australian paleopoles. For black bars,
 only four poles, 100\textendash80 Ma (RESULTNO 1106), 10\textendash2 Ma
 (RESULTNO 1208), 4\textendash2 Ma (RESULTNO 140) and 1\textendash0 Ma (RESULTNO
@@ -425,11 +416,11 @@ the remaining poles within each window, using weighting functions intended to
 increase the influence of higher quality poles relative to lower quality ones.
 
 \bigskip
-28 different picking and filtering algorithms were tested (Table~\ref{tab-pick},
-referred to hereafter as Pk), in combination with 6 different weighting
-algorithms (Table~\ref{tab-weit}, referred to hereafter as Wt), for the three
-plates. The effects of changing the time step length and width of the moving
-window, and the reference path, were also examined.
+Twenty-eight different picking and filtering algorithms were tested
+(Table~\ref{tab-pick}, referred to hereafter as Pk), in combination with 6
+different weighting algorithms (Table~\ref{tab-weit}, referred to hereafter as
+Wt), for the three plates. The effects of changing the time step length and
+width of the moving window, and the reference path, were also examined.
 
 \subsubsection{Picking/Binning}\label{sec:p}
 
@@ -455,21 +446,20 @@ Ma, and we have a 2 Myr moving window with a 1 Myr age step, then it is included
 in just the 14\textendash16 Ma window (for the mid-point age of 15 Ma) for
 AMP\@. For APP, this paleopole falls in the 9\textendash11, 10\textendash12,
 11\textendash13, 12\textendash14 \ldots 17\textendash19, 18\textendash20 and
-19\textendash21 Ma windows. So the mean poles are produced from each window, and
-each original paleopole is therefore represented in the mean poles calculated
-over its entire possible acquisition age.
+19\textendash21 Ma windows. Each original paleopole is therefore represented in
+the mean poles calculated over its entire possible acquisition age.
 
 \begin{figure}
 \centering
 \includegraphics[width=.7\textwidth]{../../paper/tex/GeophysJInt/figures/binning.pdf}
-\caption[Moving average (MA) methods]{An example of 10 Myr moving window and 5
-Myr step in the two moving average methods, AMP and APP, based on poles of the
-$NAC$. White circles are the midpoints of low and high magnetic ages. The
-vertical axis has no specific meaning here. For example, for the window of 15 Ma
-to 5 Ma (the dashed-line bin), the AMP method calculates the Fisher mean pole
-(dark triangle in Fig.~\ref{fig-mhsPred}) of only 5 paleopoles, while the APP
-method calculates the mean pole (dark circle in Fig.~\ref{fig-mhsPred}) of 9
-paleopoles.}\label{fig-nac-maplat}
+\caption[How moving average (MA) methods work]{An example of 10 Myr moving
+window and 5 Myr step in the two moving average methods, AMP and APP, based on
+poles of the $NAC$. White circles are the midpoints of low and high magnetic
+ages. The vertical axis has no specific meaning here. For example, for the
+window of 15 Ma to 5 Ma (the dashed-line bin), the AMP method calculates the
+Fisher mean pole (dark triangle in Fig.~\ref{fig-mhsPred}) of only 5 paleopoles,
+while the APP method calculates the mean pole (dark circle in
+Fig.~\ref{fig-mhsPred}) of 9 paleopoles.}\label{fig-nac-maplat}
 \end{figure}
 
 A shorter step and narrower window will potentially increase the clustering of
@@ -557,9 +547,9 @@ observed inclination, $I_f$ is the unflattened inclination, and $f$ is the
 flattening factor (also known as shallowing coefficient; 1=no flattening,
 0=completely flattened). Here $f=0.6$ is used in all cases,
 following~\citet{T12}, unless the rock type (ROCKTYPE field in the database) is
-not sedimentary dominated but contains sedimentary. In these cases, $f=0.8$ is
-used instead, following the minimum anisotropy-of-thermal-remanence determined
-f-correction~\citep{D11,Do11}.
+not sedimentary dominated but contains sedimentary rocks. In these cases,
+$f=0.8$ is used instead, following the minimum anisotropy-of-thermal-remanence
+determined f-correction~\citep{D11,Do11}.
 
 \paragraph{Remove redbeds (Pk 10,11) or correct them for inclination
 shallowing (Pk 12,13).} Bias toward shallow inclinations is also observed
@@ -592,9 +582,9 @@ removes paleopoles that were identified as such in the COMMENTS field: 66
 paleopoles affected by local rotations are identified by carefully going through
 all the COMMENTs containing information about rotation; paleopoles affected by
 secondary overprints are extracted with the keyword ``econd'' identified in the
-COMMENTS\@. A subset (19) of the 66 paleopoles have a suggested correction
-associated with them; Pk 20,21 retains these paleopoles after applying the
-suggested correction.
+COMMENTS\@. A subset (19) of the 66 paleopoles identified have a suggested
+correction associated with them; Pk 20,21 retains these paleopoles after
+applying the suggested correction.
 
 \paragraph{SS05 quality criteria (Pk 22,23).}\label{subp:ss05} As with Pk 2,3,
 SS05~\citep{S05} removes paleopoles with high spatial ($\alpha$95 $>15\degree$)
@@ -606,14 +596,13 @@ procedure code DEMAGCODE $<2$). Pk 26,27 also use these criteria, but
 further excludes superseded data.
 
 \bigskip
-Some of the picking (Table~\ref{tab-pick}) and weighting
-(Table~\ref{tab-weit}) methods developed here are also
-connected with the V90 Q factor (see Section~\ref{sec:si}). For example, Pk 2,3
-and Wt 2, 4, 5 are related to the V90 criteria 1; Pk 2,3, 22,23, 26,27 and Wt
-1, 3 are related to the V90 criteria 2; Pk 22,23 are related to the V90
-criteria 3; The data constraining described in Appendix~\ref{appen4chp3} is
-related to the V90 criteria 5; and Pk 18,19 are related to the V90 criteria
-7.
+Some of the picking (Table~\ref{tab-pick}) and weighting (Table~\ref{tab-weit})
+methods developed here are also connected with the V90 Q factor (see
+Section~\ref{sec:si}). For example, Pk 2,3 and Wt 2, 4, 5 are related to the V90
+criteria 1; Pk 2,3, 22,23, 26,27 and Wt 1, 3 are related to the V90 criteria 2;
+Pk 22,23 are related to the V90 criteria 3; The data constraining described in
+Appendix~\ref{appen4chp3} is related to the V90 criteria 5; and Pk 18,19 are
+related to the V90 criteria 7.
 
 \subsubsection{Weighting}\label{sec:w}
 
@@ -758,15 +747,14 @@ the weights generated by Wt 3 and 4.
 
 \subsubsection{Scaling of Weights}
 
-The weight values obtained from the six different weight functions
-(Table~\ref{tab-weit}) introduced above are then integrated into Fisher mean
-function~\citep{F53} to calculate a weighted Fisher mean. In fact, the weights
-are integrated into Cartesian x, y and z components of each individual moment
-directions (here each individual paleopole location). Then these individual
-moment directions are combined through Fisher resultant vector $R$
-function~\citep[see][chap.~11]{T19}. So the mean pole location, its spatial
-uncertainty $\alpha$95, and precision parameter $k$ are all weighted along with
-$R$.
+The weights obtained from the six different weighting functions
+(Table~\ref{tab-weit}) are then integrated into Fisher mean function~\citep{F53}
+to calculate a weighted Fisher mean. First, weight values are used to scale
+Cartesian x, y and z components of each individual paleopole's geographic
+coordinate. Then these individual coordinates are combined through Fisher
+resultant vector $R$ function~\citep[see][chap.~11]{T19}. Therefore the mean
+pole location, its spatial uncertainty A95, and precision parameter are all
+weighted along with $R$.
 
 Traditionally, weights are directly integrated by being multiplied with the
 variable we would like to do weighting to. For example, here weights can be
@@ -790,8 +778,8 @@ difficult to be spatially differentiated.
 	\end{subfigure}
 	\caption[Visualization of the equation that relates $\alpha$95, and R and
 N]{Visualization of Equation 11.9 of Essentials of Paleomagnetism: Fifth Web
-Edition, about the estimating of the circle of 95\% confidence ($p$=0.05) about
-the mean, $\alpha$95, from resultant vector $R$ and number of directions (or
+Edition, illustrating the relationship between the radius of the circle of 95\%
+confidence ($p$=0.05) about the mean, $\alpha$95, resultant vector $R$ and number of directions (or
 paleopoles) $N$.}\label{fig-alpha95}
 \end{figure*}
 
@@ -815,36 +803,36 @@ kinematic model (e.g.\ the last ${\sim}180$\textendash200 Myr of plate motions
 reconstructed from spreading ridges in ocean basins) that is tied in to an
 absolute reference frame. Here, we use the rotations of~\citet{O05}, which
 describe motion of Nubian Plate relative to the Indo-Atlantic hotspots back to
-120 Ma. North America is
-linked to this absolute frame of reference across the
+120 Ma. North America is linked to this absolute frame of reference across the
 Mid-Atlantic ridge, using North America-Nubia rotations from chron C1n
 (0\textendash0.78 Ma) from~\citet{D10}, to chron C2An (2.7 Ma)
-from~\citet{Sh12}, to C5n.1ny (9.74 Ma) from~\citet{M99}, to C5n.2o
-(10.949 Ma) from~\citet{G13}, to C6ny (19.05 Ma) from~\citet{M99}, to
-C6no (20.131 Ma) from~\citet{G13}, to C34ny (83.5 Ma) from~\citet{M99}, from C34ny to
+from~\citet{Sh12}, to C5n.1ny (9.74 Ma) from~\citet{M99}, to C5n.2o (10.949 Ma)
+from~\citet{G13}, to C6ny (19.05 Ma) from~\citet{M99}, to C6no (20.131 Ma)
+from~\citet{G13}, to C34ny (83.5 Ma) from~\citet{M99}, from C34ny to
 ${\sim}118.1$ Ma from~\citet{S12}, and to closure at C34no (120.6 Ma)
-from~\citet{G13}.
-India is linked via the East African Rift Valley (Somalia-Nubia rotations from
-chron C1n (0\textendash0.78 Ma) from~\citet{D17}, to C2A.2no (3.22 Ma) from~\citet{H05},
-and to closure at C7.2m (25.01 Ma) and chron C34 (85 Ma) from~\citet{R16}, and finally extended to 120 Ma because there was no known relative
-motion between Somalia and Nubia from 120 Ma to 85 Ma according to the rotations
-from~\citet{M16}). Australia is linked via the East African Rift Valley, then
-the SW Indian
-Ridge (E Antarctica-Somalia rotations from chron C1n (0\textendash0.78 Ma) from~\citet{D17},
-to C2A.2no (3.22 Ma) from~\citet{H05}, to C5n.2no (10.95 Ma)
-from~\citet{L02}, to C13ny (33.06 Ma) from~\citet{P08}, to C29no
-(64.75 Ma) from~\citet{C10}, to C34y (83 Ma) from~\citet{R16}, to 96
-Ma from~\citet{M01}, and to closure at chron M0 (120.6 Ma) from~\citet{M08}), and SE
-Indian Ridge (Australia-East Antarctica rotations from chron C1n (0\textendash0.78 Ma)
-from~\citet{D17}, to C6no (20.13 Ma) from~\citet{C04}, to C8o (26 Ma)
-from~\citet{G18}, to C17n.3no (38.11 Ma) from~\citet{C04}, to C34ny (83.5
-Ma) from~\citet{Wh13}, to the Quiet Zone Boundary (96 Ma) from~\citet{W07}, to
-full closure at 136 Ma from~\citet{Wh13}). The geomagnetic polarity timescales of~\citet{C95} for Late Cretaceous
-and Cenozoic, and of~\citet{Gr94} for Early to Late Cretaceous time are
-used to to convert from chron boundaries to absolute ages. Above all, these kinematic models (see the
-collected rotation data for the above-mentioned plate circuits in the
-supplementary material) tied in to a hot spot absolute reference frame can
-guarantee the oldest predicted poles for the three continents back to 120 Ma.
+from~\citet{G13}. India is linked via the East African Rift Valley
+(Somalia-Nubia rotations from chron C1n (0\textendash0.78 Ma) from~\citet{D17},
+to C2A.2no (3.22 Ma) from~\citet{H05}, and to closure at C7.2m (25.01 Ma) and
+chron C34 (85 Ma) from~\citet{R16}, and finally extended to 120 Ma because there
+was no known relative motion between Somalia and Nubia from 120 Ma to 85 Ma
+according to the rotations from~\citet{M16}). Australia is linked via the East
+African Rift Valley, then the SW Indian Ridge (E Antarctica-Somalia rotations
+from chron C1n (0\textendash0.78 Ma) from~\citet{D17}, to C2A.2no (3.22 Ma)
+from~\citet{H05}, to C5n.2no (10.95 Ma) from~\citet{L02}, to C13ny (33.06 Ma)
+from~\citet{P08}, to C29no (64.75 Ma) from~\citet{C10}, to C34y (83 Ma)
+from~\citet{R16}, to 96 Ma from~\citet{M01}, and to closure at chron M0 (120.6
+Ma) from~\citet{M08}), and SE Indian Ridge (Australia-East Antarctica rotations
+from chron C1n (0\textendash0.78 Ma) from~\citet{D17}, to C6no (20.13 Ma)
+from~\citet{C04}, to C8o (26 Ma) from~\citet{G18}, to C17n.3no (38.11 Ma)
+from~\citet{C04}, to C34ny (83.5 Ma) from~\citet{Wh13}, to the Quiet Zone
+Boundary (96 Ma) from~\citet{W07}, to full closure at 136 Ma from~\citet{Wh13}).
+The geomagnetic polarity timescales of~\citet{C95} for Late Cretaceous and
+Cenozoic, and of~\citet{Gr94} for Early to Late Cretaceous time are used to
+convert from chron boundaries to absolute ages. A datafile listing these
+rotation parameters with covariance uncertainties is included in
+Appendix~\ref{appen4chp3}, and the calculated rotations for the North American,
+Indian and Australian reference APWPs in the hotspot reference
+(Figs.~\ref{fig-mhsPred}-\ref{fig-mhsPred801}) are also listed in Table~\ref{}.
 
 \begin{figure*}
 \centering
@@ -915,8 +903,8 @@ the 120 Ma predicted mean north pole being located at ${\sim}20^{\circ}$N
 (Fig.~\ref{fig-mhsPred501}). Australia represents an intermediate case, with
 north westerly plate motion from ${\sim}120$\textendash60 Myr changing to more
 rapid northward motion from ${\sim}60$\textendash55 Ma to the present~\citep{W07}.
-When comparing the FHM and MHM tracks, differences in the oldest parts (before
-${\sim}80$ Ma) are apparent for India and North America.
+When comparing the FHM and MHM tracks, significant differences in the oldest
+parts (before ${\sim}80$ Ma) are apparent for India and North America.
 
 \begin{figure*}
 \centering
@@ -998,7 +986,7 @@ low difference scores are clearly much better than for those with high ones
 		\caption{Australia: minimum 0.00227 (11(0)), maximum
 		0.3934 (26(3)), mean 0.08373, median 0.05}\label{fig-au-dif} % subcaption
 	\end{subfigure}
-	\caption[Differences of each plate's paleomagnetic APWPs versus its FHM
+	\caption[$\mathcal{CPD}$ of each plate's paleomagnetic APWPs vs its FHM
 predicted APWP]{Equal-weight composite path difference ($\mathcal{CPD}$) values
 between each continent's paleomagnetic APWPs and its predicted APWP from FHM and
 related plate circuits. The paths are in 10 Myr bin and 5 Myr step. The
@@ -1007,8 +995,8 @@ values (lower 15.866 per cent) are colored in green, more than
 one-standard-deviation interval (upper 15.866 per cent) colored in red. Exactly
 the same columns are connected. The percentages of removed paleopoles are
 derived relative to Pk 1, corrected relative to each corresponding picking
-method (Pk 8,9, 12,13; 1 paleopole removed and 1 corrected by Pk 20,21 for India). Fit
-quality (FQ) for each score is color coded.}\label{fig-dif} % caption for whole figure
+method (Pk 8,9, 12,13; 1 paleopole removed and 1 corrected by Pk 20,21 for
+India). Fit quality (FQ) for each score is color coded.}\label{fig-dif} % caption for whole figure
 \end{figure*}
 
 \begin{figure*}
@@ -1102,18 +1090,18 @@ APWPs (Figs.~\ref{fig-na-difAMPvsAPP},~\ref{fig-na-boxAMPvsAPP}).
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/501_120_0APPvsAMP.pdf}
-		\caption{AMP: minimum 0.047 (4(3)), maximum 0.5137 (8(3)), mean
-		0.16881, median 0.189189; APP: minimum 0.023 (19(0)), maximum 0.1359
+		\caption{AMP\@: minimum 0.047 (4(3)), maximum 0.5137 (8(3)), mean
+		0.16881, median 0.189189; APP\@: minimum 0.023 (19(0)), maximum 0.1359
 		(3(4)), mean 0.067555, median 0.0602}\label{fig-in-difAMPvsAPP}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/801_120_0APPvsAMP.pdf}
-		\caption{AMP: minimum 0.0285868 (3(0)), maximum 0.3934 (26(3)), mean
-		0.12675, median 0.0938; APP: minimum 0.00227 (11(0)), maximum 0.11445
+		\caption{AMP\@: minimum 0.0285868 (3(0)), maximum 0.3934 (26(3)), mean
+		0.12675, median 0.0938; APP\@: minimum 0.00227 (11(0)), maximum 0.11445
 		(3(2)), mean 0.04071, median 0.025625}\label{fig-au-difAMPvsAPP}
 	\end{subfigure}
-	\caption[Differences of each plate's paleomagnetic APWPs versus its FHM
+	\caption[$\mathcal{CPD}$ of each plate's paleomagnetic APWPs vs its FHM
 predicted APWP (AMP vs APP)]{Separated results from AMP and APP in
 Fig.~\ref{fig-dif}. For each grid block (left: AMP, right: APP), the difference
 values less than one-standard-deviation interval of the whole 84 values are
@@ -1187,19 +1175,19 @@ degrades, the APWP fit to the reference path.
 \subsubsection{Filter aggression}
 
 When considering the effects of filtering, it is important to consider how many
-poles within the data set have been removed (related to Pk 2\textendash7, 10,11,
-and 14\textendash27) or corrected (Pk 8,9 and 12,13): if there is very little
-alteration of the data set, little change from no filtering (Pk 0,1) would be
-expected. In terms of the numbers of poles affected, the most consequential
-filters are:
+paleopoles within the data set have been removed (related to Pk 2\textendash7,
+10,11, and 14\textendash27) or corrected (Pk 8,9 and 12,13): if there is very
+little alteration of the data set, little change from no filtering (Pk 0,1)
+would be expected. In terms of the numbers of paleopoles affected, the most
+consequential filters are:
 %
 \begin{enumerate}
-  \item removal of sedimentary poles (Pk 4,5 and 6,7), which removes
+  \item removal of sedimentary paleopoles (Pk 4,5 and 6,7), which removes
 		${\sim}40$\textendash50\% of the datasets on all 3 plates, with the
 		highest proportion being removed on the Indian plate. Although Pk 4,5
-		are more strict, it does not remove many more poles than Pk 6,7.
-		Especially for North America and India, the numbers of the filtered
-		paleopoles by Pk 4,5 and 6,7 are actually the same.
+		are more strict, it does not remove many more paleopoles than Pk 6,7.
+		For North America and India, the numbers of filtered paleopoles for Pk
+		4,5 and 6,7 are actually the same.
   \item correction of sedimentary paleopoles for inclination flattening (filter
 		in Pk 8,9), which affects 38\textendash48\% of the dataset, with the
 		highest affected proportion on the Indian plate.
@@ -1207,17 +1195,22 @@ filters are:
 		2,3, 22,23), particularly for the Australian plate, where the SS05
 		filtering criteria removes ${\sim}70$\% of the paleopoles. Filter in Pk
 		26,27 combines Pk 22,23 and 24,25, but no or very few (in the only case
-		of Australia only 1 additional pole) are actually removed.
+		of Australia only 1 additional paleopole) are actually removed.
   \item filtering based on publication date (Pk 14,15 and 16,17), with the
 		ratio of pre/post 1983 poles varying from about 50/50 on the North
 		American plate to about 70/30 on the Australian plate.
 \end{enumerate}
 
 Conversely, filtering or correction for redbeds (Pk 10,11 and 12,13), local
-rotations and overprints (Pk 18,19 and 20,21 [one paleopole influenced by
-local rotation removed, and one corrected, for only India; ${\sim}2.7$\%,
-Fig.~\ref{fig-in-dif}]), or superseded data (Pk 24,25) affected 4\% or less
-of the paleopoles on any plate.
+rotations and overprints (Pk 18,19 and 20,21%[only 1 paleopole influenced by local rotation removed, and one corrected, for only India; ${\sim}2.7$\%, Fig.~\ref{fig-in-dif}]
+), or superseded data (Pk 24,25) affected 4\% or less of
+the paleopoles on any plate.
+
+Note that there is an important trade-off that precision in a mean pole is
+determined by the number of contributing paleopoles (A95 is proportional to
+1/$\sqrt{n}$), so an overly aggressive filter might improve accuracy at the
+expense of precision. This is particularly an issue where data density is low
+(see Section~\ref{sec:datden}).
 
 \subsubsection{Filter performance}
 
@@ -1230,26 +1223,28 @@ methods:
   \item For all 3 plates, higher $\mathcal{CPD}$ scores are commonly associated
 		with filtering based on $\alpha$95 and age range (Pk 2,3, 22,23, 26,27),
 		with the exception of AMP-derived paths for India, where Pk 22 and 26
-		produce some of the lowest scores.
+		produce some of the lowest scores, and also improve FQ\@.
   \item For North America and India, low scores are commonly associated with
 		removal of non-igneous poles (Pk 4,5 and 6,7), particularly for
 		AMP-derived paths. On the Australian plate, these filters are less
-		effective.
+		effective, and also reduce FQ\@.
   \item For North America and Australia, correction for inclination flattening
 		generates $\mathcal{CPD}$ scores very similar to scores with no
-		filtering for AMP-derived paths (Pk 8 vs.\ Pk 0), and increases
-		scores for APP-derived paths (Pk 9 vs.\ Pk 1). In contrast, for
-		India generally there is a small decrease in $\mathcal{CPD}$ scores
-		compared to no filtering for both AMP- and APP-derived paths.
+		filtering for AMP-derived paths (Pk 8 versus Pk 0; for Australia FQ
+		reduced), and increases scores for APP-derived paths (Pk 9 versus Pk 1).
+		In contrast, for India generally there is a small decrease in
+		$\mathcal{CPD}$ scores compared to no filtering for both AMP- and
+		APP-derived paths.
   \item Many of the highest difference scores for North America and India occur
 		when paleopoles published after 1983 are removed (Pk 16,17), whilst
 		removing paleopoles published before 1983 (Pk 14,15) generates
 		$\mathcal{CPD}$ scores comparable to scores with no filtering
 		(relatively much lower). In contrast, for Australia Pk 14,15
 		produces some of the highest $\mathcal{CPD}$ scores, and Pk 16,17
-		have little effect. The number of older studies (65/68;
-		Fig.~\ref{fig-au-dif}) is almost 2.5 times of the number of newer
-		studies (27/29) though.
+		have little effect on the $\mathcal{CPD}$ score, although FQ is
+		commonly reduced. It is noteworthy that the number of older studies
+		(65/68; Fig.~\ref{fig-au-dif}) is almost 2.5 times of the number of
+		newer studies (27/29) for the Australian plate.
 \end{enumerate}
 
 Whilst it is generally true that methods with low-aggression filters do not
@@ -1283,8 +1278,8 @@ exceptions:
 		\caption{Differences between Fig.~\ref{fig-in-dif} (India) and
 		Fig.~\ref{fig-au-dif} (Australia)}\label{fig-i-a-dif}
 	\end{subfigure}
-	\caption[Differences of differences of each plate's paleomagnetic
-APWPs versus its FHM predicted APWP]{Differences between grids in
+	\caption[Differences of $\mathcal{CPD}$ of each plate's paleomagnetic
+APWPs vs its FHM predicted APWP]{Differences between grids in
 Fig.~\ref{fig-dif}. The absolute difference values less than
 1.96-standard-deviation interval of the whole 168 values are labeled in green,
 more than 1.96-standard-deviation interval labeled in red.}\label{fig-d-dif}
@@ -1329,7 +1324,7 @@ seen, it is negative, generating larger $\mathcal{CPD}$ scores.
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/101npoles105w5.pdf}
 		\caption{For Wt 5}\label{fig-na-dsw5}
 	\end{subfigure}
-	\caption[ds of each pair of poles for North American 10/5 Myr APWPs]{Tested
+	\caption[$d_s$ of each pair of poles for North American 10/5 Myr APWPs]{Tested
 spatial difference ($d_s$) values (color shaded) between North American
 paleomagnetic APWPs and its predicted APWP from the FHM and related plate
 circuits. The paths are in 10 Myr bin and 5 Myr step. The number labels on the
@@ -1368,7 +1363,7 @@ contributing to make each mean path pole.}\label{fig-nads}
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/101nsegs105w5.pdf}
 		\caption{For Wt 5}\label{fig-na-dlw5}
 	\end{subfigure}
-	\caption[dl of each pair of segments for North American 10/5 Myr
+	\caption[$d_l$ of each pair of segments for North American 10/5 Myr
 APWPs]{Tested length difference ($d_l$) values (color shaded) between North
 American paleomagnetic APWPs and its predicted APWP from FHM and related plate
 circuits. The paths are in 10 Myr bin and 5 Myr step. The labeled numbers on the
@@ -1407,7 +1402,7 @@ segment's two mean path poles.}\label{fig-nadl}
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/101nocs105w5.pdf}
 		\caption{For Wt 5}\label{fig-na-daw5}
 	\end{subfigure}
-	\caption[dl of each pair of segment-oreintation-changes for North American
+	\caption[$d_a$ of each pair of segment-oreintation-changes for North American
 10/5 Myr APWPs]{Tested angular difference ($d_a$) values (color shaded) between
 North American paleomagnetic APWPs and its predicted APWP from FHM and related
 plate circuits. The paths are in 10 Myr bin and 5 Myr step. The labeled numbers
@@ -1418,13 +1413,13 @@ to each segment-orientation-change's three mean path poles.}\label{fig-nada}
 \begin{enumerate}
   \item For APP-derived paths from the North American and Australian plates,
 		Wt 0 (no weighting) and 1 (weighting by sample and site
-		number) appear to usually produce slightly better $\mathcal{CPD}$ scores
-		than other weighting methods.
+		number) usually produce slightly better $\mathcal{CPD}$ scores than
+		other weighting methods.
   \item Wt 3 (weighting by spatial uncertainty) seems most likely
-		to generate much higher $\mathcal{CPD}$ scores, particular for
+		to generate much higher $\mathcal{CPD}$ scores, particularly for
 		AMP-derived paths, and particular for the Indian plate.
-  \item Wt 0, 1 and 5 are generally producing better similarity
-		than 2, 3 and 4.
+  \item Wt 0, 1 and 5 generally produce lower similarity scores than Wt 2, 3 and
+		4.
 \end{enumerate}
 
 \subsection{Effects of window size}
@@ -1453,12 +1448,12 @@ window step increased from 5 to 10 Myr.
 		\caption{Australia: minimum 0 (11(0,1),19(3)), maximum
 		0.324438 (22(3)), mean 0.0682, median 0.036432}\label{fig-au-dif2010}
 	\end{subfigure}
-	\caption[Differences of each plate's paleomagnetic APWPs versus its FHM
-predicted APWP]{As Fig.~\ref{fig-dif}, here the paths are generated in 20 Myr
-bin and 10 Myr step. The difference values less than one-standard-deviation
-interval of the whole 168 values are colored in green, more than
-one-standard-deviation interval colored in red. Compare the numbers of picked
-paleopoles with those in Fig.~\ref{fig-dif}.}\label{fig-dif2010}
+	\caption[$\mathcal{CPD}$ of each plate's paleomagnetic APWPs vs its FHM
+predicted APWP (20/10 Myr bin/step)]{As Fig.~\ref{fig-dif}, here the paths are
+generated in 20 Myr bin and 10 Myr step. The difference values less than
+one-standard-deviation interval of the whole 168 values are colored in green,
+more than one-standard-deviation interval colored in red. Compare the numbers of
+picked paleopoles with those in Fig.~\ref{fig-dif}.}\label{fig-dif2010}
 \end{figure*}
 
 \begin{figure*}
@@ -1501,7 +1496,7 @@ The overall effect of increased window and step size varies between plates
 (Fig.~\ref{fig-f105d2010}). 118/168 (${\sim}70$\%) of equivalent $\mathcal{CPD}$
 scores for the North American plate increase, indicating reduced similarity with
 respect to the reference path (Fig.~\ref{fig-101f105d2010}). The increased
-occurrence of A-A rather than B-A FQ ratings (Fig.~\ref{fig-na-dif2010} vs.
+occurrence of A-A rather than B-A FQ ratings (Fig.~\ref{fig-na-dif2010} versus
 Fig.\ref{fig-na-dif}) indicate that in some cases this may be due to a better
 constrained path becoming more distinguishable. Decreased scores are confined to
 particular, mostly AMP-derived picking methods: Pk 2, 22 and 26 (filtering based
@@ -1552,13 +1547,14 @@ in red.}\label{fig-f105d2010}
 \subsubsection{Relative performance of methods}
 
 As for the baseline results (Section~\ref{sec:base}, Fig.~\ref{fig-dif}), the
-effects of windowing and filtering, particularly the windowing method (APP vs
-AMP), are much more apparent than the effects of weighting. APP-derived scores
-still outperform AMP-derived ones, but the overall degree of difference is
-reduced for the North American and Indian plates, with percentage of APP-derived
-$\mathcal{CPD}$ scores more than 3 times the equivalent AMP-derived score
-reducing to 26\% and 4\% (from 44\% and 40\%), respectively. For the Australian
-plate, this percentage increases from 58\% to 70\%.
+effects of windowing and filtering, particularly the windowing method (APP
+versus AMP), are much more apparent than the effects of weighting. APP-derived
+scores still outperform AMP-derived ones, but the overall degree of difference
+is reduced for the North American and Indian plates, with percentage of
+APP-derived $\mathcal{CPD}$ scores more than 3 times the equivalent AMP-derived
+score reducing to ${\sim}26$\% and ${\sim}4$\% (from ${\sim}44$\% and
+${\sim}40$\%), respectively. For the Australian plate, this percentage increases
+from ${\sim}58$\% to ${\sim}70$\%.
 
 This is largely the result of larger changes in the AMP-derived $\mathcal{CPD}$
 scores compared to changes in the APP-derived ones with the wider time window.
@@ -1608,11 +1604,6 @@ APP-derived Pk 15 (Fig.~\ref{fig-801f105d2010}).
   \item All the APP methods with kinds of corrections, Pk 1, 9, 13, 19, 21 and
 		25, show less changes for all the three plates. Pk 23 and 27 show less
 		changes for North America and India, but more changes for Australia.
-  \item APP still outperforms AMP\@. For North America and India, the percentage
-		of factor of greater than 3 (${\sim}26.2$\% and ${\sim}3.6$\%
-		respectively) is less than 10/5 (${\sim}44.1$\% and ${\sim}40.5$\%
-		respectively), while for Australia the percentage (${\sim}70.2$\%) is
-		more than 10/5 (${\sim}58.3$\%).
   \item Both scores and AMP/APP difference are low for Pk 4,5, 6,7 applied
 		onto North America and India.
   \item Both scores and AMP/APP difference are high for Pk 16,17.
@@ -1620,7 +1611,8 @@ APP-derived Pk 15 (Fig.~\ref{fig-801f105d2010}).
 		on North America and India.
   \item Scores are low but AMP/APP difference are high for Pk 0,1 on North
 		America and Australia.
-  \item Comparable AMP/APP (20/10 vs 10/5) appears for Pk 8,9 on Australian plate.
+  \item Comparable AMP/APP (20/10 versus 10/5) appears for Pk 8,9 on Australian
+        plate.
   \item Pk 2,3, 22,23 (at least 2 and 22) are still `bad' aggressive
 		filters. And the scores derived from these methods have control on
 		overall range of scores.
@@ -1639,9 +1631,9 @@ APP-derived Pk 15 (Fig.~\ref{fig-801f105d2010}).
   \multicolumn{3}{c|}{Consistency of Worst} & \multicolumn{7}{c}{If Difference
   Values for 20/10 Myr Bin/Step Are Lower (Y/N)} \\ \hline
 \multicolumn{1}{l|}{10/5} & \multicolumn{1}{l|}{20/10} &
-  \multicolumn{1}{>{\raggedleft}p{.3cm}|}{\tiny Y/N} & \multicolumn{1}{c|}{Special Case(s)} &
+  \multicolumn{1}{>{\raggedleft}p{.3cm}|}{\tiny Y/N} & \multicolumn{1}{c|}{Special Cases} &
   \multicolumn{1}{c|}{Notes} & \multicolumn{1}{>{\raggedleft}p{.3cm}|}{\tiny Y/N} &
-  \multicolumn{1}{c|}{Special Case(s)} & \multicolumn{1}{c|}{Notes} & \multicolumn{1}{c|}{\tiny Mean} & \multicolumn{1}{c|}{\tiny Median} & \multicolumn{1}{c|}{\tiny Max} & \multicolumn{1}{c|}{\tiny Min} & \multicolumn{1}{c|}{\tiny All} & \multicolumn{1}{c|}{If No, Unexpected Case (s)} & \multicolumn{1}{c}{\tiny Notes} \\ \hline
+  \multicolumn{1}{c|}{Special Cases} & \multicolumn{1}{c|}{Notes} & \multicolumn{1}{c|}{\tiny Mean} & \multicolumn{1}{c|}{\tiny Median} & \multicolumn{1}{c|}{\tiny Max} & \multicolumn{1}{c|}{\tiny Min} & \multicolumn{1}{c|}{\tiny All} & \multicolumn{1}{c|}{If No, Unexpected Cases} & \multicolumn{1}{c}{\tiny Notes} \\ \hline
 \multicolumn{15}{c}{FHM} \\ \hline
 \multirow{2}{*}{\parbox{.7cm}{Fig.{\ }\ref{fig-na-dif}}} &
   \multirow{2}{*}{\parbox{.7cm}{Fig.{\ }\ref{fig-na-dif2010}}} & Y &
@@ -1703,7 +1695,7 @@ APP-derived Pk 15 (Fig.~\ref{fig-801f105d2010}).
   \multirow{2}{*}{\parbox{.7cm}{Fig.{\ }\ref{fig-au-dif2010m}}} & Y &
   \multirow{2}{*}{\parbox{2.5cm}{3 more best: Pk 15, 23 and 27 only for 20/10 (E)}} &
   \multirow{2}{*}{\parbox{2cm}{Same: Pk 1, 11, 13, 17, 19, 21 and 25}} &
-  Y &\textendash &
+  Y &\textendash&
   \multirow{2}{*}{\parbox{2cm}{Same: Pk 2, 14, 16, 22 and 26}} &
   \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} & \multicolumn{1}{l|}{Y} &
   \multicolumn{1}{l|}{N} & \multicolumn{1}{l|}{N} &
@@ -1715,7 +1707,7 @@ APP-derived Pk 15 (Fig.~\ref{fig-801f105d2010}).
 }
 \end{sidewaystable*}
 
-\subsubsection{How time window/step size affects results}
+\subsubsection{Other window sizes and steps}
 
 Fitting curves by moving averaging change with different time window lengths and
 time increment lengths (i.e.\ steps) (e.g., the similarity of the pair in
@@ -1795,7 +1787,7 @@ in light green.}\label{tab-pk0vs1bs}
   {\ul \textbf{0.03012}}} & {\color[HTML]{009901} {\ul \textbf{0.02988}}} & 0.008736
   & 0.00902 & 0.01715 & 0.015665 & {\color[HTML]{32CB00} \textbf{0.01642}} &
   0.01453 \\ \hline
-14, 7 (119-0 Ma path) & 0.0367 & 0.03695 & 0.03498 & 0.0347 &
+14, 7 (119\textendash0 Ma path) & 0.0367 & 0.03695 & 0.03498 & 0.0347 &
   {\color[HTML]{34FF34} \textbf{0.0319}} & 0.0352 & 0.0115 & 0.01198 & 0.023922
   & 0.01477 & 0.02205 & 0.012985 \\ \hline
 16, 8 & 0.052386 & 0.04923 & 0.04964 & 0.04653 & 0.047712 & 0.048523 & 0.01138
@@ -1832,7 +1824,7 @@ in light green.}\label{tab-pk0vs1bs}
 12, 6 & 0.108924 & 0.1035 & {\color[HTML]{34FF34} \textbf{0.11205}} & 0.11831 &
   0.121497 & {\color[HTML]{34FF34} \textbf{0.10587}} & 0.059897 & 0.06068 &
   0.06993 & 0.064499 & 0.06951 & 0.062945 \\ \hline
-14, 7 (119-0 Ma path) & 0.112537 & 0.112885 & 0.126554 & 0.139516 &
+14, 7 (119\textendash0 Ma path) & 0.112537 & 0.112885 & 0.126554 & 0.139516 &
   0.132359 & 0.114195 & {\color[HTML]{32CB00} \textbf{0.04942}} & {\color[HTML]{34FF34} \textbf{0.0502588}} & 0.0579931 & 0.060018 & 0.0654112 & 0.0582519 \\ \hline
 16, 8 & {\color[HTML]{34FF34} \textbf{0.104461}} & 0.104463 & 0.121002 &
   0.110942 & 0.119599 & 0.118336 & {\color[HTML]{34FF34} \textbf{0.051735}} &
@@ -1911,7 +1903,7 @@ in light green.}\label{tab-pk0vs1bs}
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth]{../../paper/tex/GeophysJInt/figures/WinStpVsCPD.pdf}
-\caption[Sliding window and step sizes versus $\mathcal{CPD}$]{Plot of the
+\caption[Sliding window and step sizes vs $\mathcal{CPD}$]{Plot of the
 equal-weight $\mathcal{CPD}$ scores collected in Table~\ref{tab-pk0vs1bs}. Note
 that here the step size is always half of the sliding window size and the
 reference path is the FHM derived.}\label{fig-WinStpVsCPD}
@@ -1952,7 +1944,7 @@ the MHM reference paths instead, still with the same picking time window width
 
 Although the reference path is changed to MHM, mean, median and range values of
 $\mathcal{CPD}$ scores are almost unchanged and comparable (Fig.~\ref{fig-dif}
-vs. Fig.~\ref{fig-difm}, and Fig.~\ref{fig-dif2010} vs.
+versus Fig.~\ref{fig-difm}, and Fig.~\ref{fig-dif2010} versus
 Fig.~\ref{fig-dif2010m}).
 
 \begin{figure*}
@@ -1974,7 +1966,7 @@ Fig.~\ref{fig-dif2010m}).
 		\caption{Australia: minimum 0.00122074 (17(5)), maximum
 		0.367952 (26(3)), mean 0.077, median 0.03893}\label{fig-au-difm}
 	\end{subfigure}
-	\caption[Differences of each plate's paleomagnetic APWPs versus
+	\caption[$\mathcal{CPD}$ of each plate's paleomagnetic APWPs vs
 its MHM predicted APWP]{As Fig.~\ref{fig-dif}, here the reference path is
 predicted from MHM\@. See the numbers of the picked paleopoles for methods in
 Fig.~\ref{fig-dif}.}\label{fig-difm}
@@ -2033,9 +2025,9 @@ No.}\label{fig-difbwm}
 		\caption{Australia: minimum 0.00282 (23(4)), maximum
 		0.31998 (22(3)), mean 0.062766, median 0.02803}\label{fig-au-dif2010m}
 	\end{subfigure}
-	\caption[Differences of each plate's paleomagnetic APWPs versus
-its MHM predicted APWP]{As Fig.~\ref{fig-dif2010}, here the reference path is
-predicted from MHM\@. See the numbers of picked paleopoles in
+	\caption[$\mathcal{CPD}$ of each plate's paleomagnetic APWPs vs its MHM
+predicted APWP (20/10 Myr bin/step)]{As Fig.~\ref{fig-dif2010}, here the
+reference path is predicted from MHM\@. See the numbers of picked paleopoles in
 Fig.~\ref{fig-dif}.}\label{fig-dif2010m}
 \end{figure*}
 
@@ -2134,8 +2126,8 @@ North America and India. Pk 22 and 26 show large changes and Pk 17, 19, 21 and
   \item Still scores are high but AMP/APP difference are low for Pk 2,3.
   \item Still scores are low but AMP/APP difference are high for Pk 0,1 on
 	Australia.
-  \item Comparable AMP/APP (20/10 vs. 10/5, or FHM vs. MHM) still appears for
-	Pk 8,9 on Australian plate.
+  \item Comparable AMP/APP (20/10 versus 10/5, or FHM versus MHM) still appears
+        for Pk 8,9 on Australian plate.
   \item Pk 1 is still a good performer.
   \item Pk 4,5, 6,7 are still `good' aggressive filters.
   \item Pk 2,3 (at least 2) are still `bad' aggressive filters.
@@ -2236,7 +2228,7 @@ poles are), and (mean) coeval poles' GCD represents accuracy (how close
 calculated poles are to the reference path; Fig.~\ref{fig-A95GCD105F} and
 Fig.~\ref{fig-A95SGCD105F}). Compared with AMP, APP usually improves both and
 generates paths with higher accuracy and also higher precision (generally
-increasing N).
+increasing number of contributing paleopoles).
 
 \begin{figure}
 \captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
@@ -2253,7 +2245,7 @@ increasing N).
   \begin{subfigure}[htbp]{.49\textwidth}
 	\caption{}\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/a95mSld10_5F.pdf}\label{fig-A95mSld105F}
   \end{subfigure}
-\caption[APP spatially better than AMP]{Paleomagnetic APWP's mean A95 versus
+  \caption[APP spatially better than AMP (arrow)]{Paleomagnetic APWP's mean A95 versus
 (a) ``mean GCD'', (b) ``mean significant GCD'', (c) ``mean significant
 orientation difference'', and (d) ``mean significant length difference'' between
 paleomagnetic APWP and its corresponding FHM-and-plate-circuit predicted APWP\@.
@@ -2278,7 +2270,7 @@ and Table~\ref{tab-bw}).}\label{fig-A95mG105F}
   \begin{subfigure}[htbp]{.49\textwidth}
 	\caption{}\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/a95mSld10_5Fd.pdf}\label{fig-A95mSld105Fd}
   \end{subfigure}
-\caption[APP spatially better than AMP]{Differences of APP and AMP coordinates
+  \caption[APP spatially better than AMP (dot)]{Differences of APP and AMP coordinates
 shown in Fig.~\ref{fig-A95mG105F}. Crosses locates the small minority cases of
 AMP derived equal-weight $\mathcal{CPD}$s better than APP (see details in
 Fig.~\ref{fig-dif} and Table~\ref{tab-bw}).}\label{fig-A95mG105Fd}
@@ -2324,19 +2316,19 @@ from its contemporary model-predicted pole. In other words, AMP intends to give
 fairly small change in accuracy. This also could potentially bring more
 distinguishable $d_s$ for AMP\@ if the corresponding A95 is not large enough.
 For example, for Fig.~\ref{fig-na-dif}, there are only two special (of 84 APP
-vs. AMP comparisons) cases Pk (Wt) 4(3), 6(3) better than 5(3), 7(3)
+versus AMP comparisons) cases Pk (Wt) 4(3), 6(3) better than 5(3), 7(3)
 respectively. Compared with the Pk (Wt) 4(3) APWP, although most of the mean
 paleopoles are closer to the FHM predicted APWP and also the number of the
 significant pole pairs is two less for the APP derived path (i.e. 5(3)), the A95s
 are smaller and most importantly there are one more significant $d_a$
 orientation-change pair and one more significant $d_l$ segment pair
 (Table~\ref{tab-w3p4vs5}). If we observe carefully, it is because of the much
-smaller 15 Ma A95 for 5(3). The similar phenomenon occurs to the case of 6(3) vs
-7(3), a relatively much smaller paleomagnetic A95 causes more distinguishable
+smaller 15 Ma A95 for 5(3). The similar phenomenon occurs to the case of 6(3)
+versus 7(3), a relatively much smaller paleomagnetic A95 causes more distinguishable
 $d_a$ and $d_l$ for the APP results, and they offset the improvement of spatial
 similarity $d_s$ APP brings.
 
-For Pk (Wt) 2(0) vs 3(0) for 20/10 Myr window/step North America, all their $d_a$ and
+For Pk (Wt) 2(0) versus 3(0) for 20/10 Myr window/step North America, all their $d_a$ and
 $d_l$ are indistinguishable. Compared with the results from AMP, although the
 coeval pole GCDs are generally unchanged or decreased or even increased (but not
 too much) for APP, this spatial improvement is not able to offset the negative
@@ -2345,21 +2337,21 @@ much) paleomagnetic A95s, which potentially brings more statistically
 distinguishable coeval poles (e.g.\ the 20 Ma and 110 Ma poles for Pk 3 and
 Wt 0; Table~\ref{tab-w5p4vs5}). This further causes greater
 distinguishable mean $d_s$ from the APP methods. The similar phenomenon occurs
-to Fig.~\ref{fig-na-dif2010} Pk 2 vs 3 with Wt 2, 3 and 5, Pk
-4 vs 5 with Wt 1, 3 and 5, and Pk 6 vs 7 with Wt 1, 3 and 5, and
+to Fig.~\ref{fig-na-dif2010} Pk 2 versus 3 with Wt 2, 3 and 5, Pk
+4 versus 5 with Wt 1, 3 and 5, and Pk 6 versus 7 with Wt 1, 3 and 5, and
 so on.
 
 In addition, compared with AMP, APP potentially could generate more mean poles,
 because sometimes for some sliding window there is no paleopole involved at all
-for AMP\@ while there is (are) paleopole(s) involved for APP\@. For APP, the
+for AMP\@ while there are paleopoles involved for APP\@. For APP, the
 mean poles at all ages should be composed of more paleopoles than it is for
 AMP, which should generally decrease both coeval pole distance and paleomagnetic
 A95. However, sometimes a rare case (e.g.\ the 0 Ma comparison shown in
 Table~\ref{tab-501w0p22vs23}) happens. It is sometimes that an additional
 very ``bad'' paleopole gets included by APP and this increases both coeval pole
 distance and paleomagnetic A95 even though N increases. Such cases include
-Fig.~\ref{fig-in-dif} Pk 22 vs 23 (actually exactly the same as Pk 26
-vs 27) with all the six types of weightings.
+Fig.~\ref{fig-in-dif} Pk 22 versus 23 (actually exactly the same as Pk 26
+versus 27) with all the six types of weightings.
 
 So generally as we discussed in the last section APP decreases the distances
 between paleomagnetic APWPs and the hotspot and ocean-floor spreading model
@@ -2376,8 +2368,7 @@ However, this phenomenon seldom occur (Table~\ref{tab-bw}).
 \centering
 \caption{One example of the Type 1 rare cases where AMP gives better similarity
 result than APP does from North America (Window size: 10 Myr, step size:
-5 Myr). Only statistically significant values are listed here.}
-\label{tab-w3p4vs5}
+5 Myr). Only statistically significant values are listed here.}\label{tab-w3p4vs5}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|l|l|l|l|l|l|l|l|l|l|l}
 \hline
@@ -2386,14 +2377,15 @@ result than APP does from North America (Window size: 10 Myr, step size:
   + Wt 3} \\ \cline{3-12} 
 \multicolumn{2}{|c|}{} & \multicolumn{3}{c|}{ds} & \multicolumn{2}{c|}{dl} & \multicolumn{3}{c|}{ds} & \multicolumn{2}{c|}{da} \\ \hline
 Age (Ma) & \multicolumn{1}{c|}{A95 (\degree)} & \multicolumn{1}{c|}{Age (Ma)} & \multicolumn{1}{c|}{Pmag A95 (\degree)} & \multicolumn{1}{c|}{Dist (\degree)} & \multicolumn{1}{c|}{Age (Ma)} & \multicolumn{1}{c|}{Diff (\degree)} & \multicolumn{1}{c|}{Age (Ma)} & \multicolumn{1}{c|}{Pmag A95 (\degree)} & \multicolumn{1}{c|}{Dist (\degree)} & \multicolumn{1}{c|}{Age (Ma)} & \multicolumn{1}{c|}{Diff (\degree)} \\ \hline
-10 & 1.44607/0.793714 & 10 & 14.876819 & \textbf{9.937} & 105-110 & 5.91855 & & & & \textit{\textbf{10-15-20}} & \multicolumn{1}{l|}{\textbf{126.59}} \\ \hline
+10 & 1.44607/0.793714 & 10 & 14.876819 & \textbf{9.937} & 105\textendash110 & 5.91855 & & & & \textit{\textbf{10\textendash15\textendash20}} & \multicolumn{1}{l|}{\textbf{126.59}} \\ \hline
 15 & 1.2875/0.816514 & & & & & & 15 & 2.0857 & \textbf{11.805} &
   \multicolumn{2}{l|}{} \\ \cline{1-2} \cline{8-12}
 25 & 2.48031/1.10915 & & & & & & 25 & 6.3358 & \textbf{6.873} &
   \multicolumn{2}{c|}{dl} \\ \cline{1-5} \cline{8-12}
 55 & 3.58782/2.14032 & 55 & 4.6347 & \textbf{5.372} & & & & & & Age (Ma) & \multicolumn{1}{l|}{Diff (\degree)} \\ \cline{1-5} \cline{8-12}
-60 & 4.85938/3.17602 & & & & & & 60 & 6.5922 & 6.215 & \textit{\textbf{10-15}} & \multicolumn{1}{l|}{\textbf{13.52}} \\ \cline{1-2} \cline{8-12}
-65 & 3.68984/2.30014 & & & & & & 65 & 8.6632 & \textbf{7.6} & \textit{\textbf{15-20}} & \multicolumn{1}{l|}{\textbf{14.68}} \\ \cline{1-5} \cline{8-12}
+60 & 4.85938/3.17602 & & & & & & 60 & 6.5922 & 6.215 & \textit{\textbf{10\textendash15}} & \multicolumn{1}{l|}{\textbf{13.52}} \\ \cline{1-2} \cline{8-12}
+65 & 3.68984/2.30014 & & & & & & 65 & 8.6632 & \textbf{7.6} &
+  \textit{\textbf{15\textendash20}} & \multicolumn{1}{l|}{\textbf{14.68}} \\ \cline{1-5} \cline{8-12}
 75 & 2.6435/1.54052 & 75 & 9.0812 & \textbf{8.836} & & & & & &
   \multicolumn{2}{l|}{\multirow{3}{*}{}} \\ \cline{1-5}
 100 & 2.8983/2.68346 & 100 & 8.892 & \textbf{8.455} & & & & & &
@@ -2413,8 +2405,7 @@ Age (Ma) & \multicolumn{1}{c|}{A95 (\degree)} & \multicolumn{1}{c|}{Age (Ma)} & 
 \begin{table*}
 \caption{One example of the Type 2 rare cases where AMP gives better similarity
 result than APP does from North America (Window size: 20 Myr, step size:
-10 Myr). Only statistically significant values are listed here.}
-\label{tab-w5p4vs5}
+10 Myr). Only statistically significant values are listed here.}\label{tab-w5p4vs5}
 \begin{tabular}{|c|l|l|l|l|l|}
 \hline
 \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Age \\ \\ (Ma)\end{tabular}} & \multicolumn{1}{c|}{\multirow{2}{*}{FHM predicted}} & \multicolumn{4}{c|}{ds} \\ \cline{3-6} 
@@ -2438,8 +2429,7 @@ result than APP does from North America (Window size: 20 Myr, step size:
   result than APP does from India (Window size: 10 Myr, step size: 5 Myr).
   Only statistically significant values are listed here. Note that for the
   bold-number ages, there is no mean poles at all for the ``Pk 22 (AMP) +
-  Wt 2'' case.}
-\label{tab-501w0p22vs23}
+  Wt 2'' case.}\label{tab-501w0p22vs23}
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|l}
 \hline
 \multicolumn{2}{|c|}{\multirow{2}{*}{FHM predicted}} &
@@ -2448,8 +2438,9 @@ result than APP does from North America (Window size: 20 Myr, step size:
 \multicolumn{2}{|c|}{} & \multicolumn{3}{c|}{ds} & \multicolumn{3}{c|}{ds} & \multicolumn{2}{c|}{dl} \\ \hline
 \multicolumn{1}{|c|}{Age (Ma)} & \multicolumn{1}{c|}{A95 (\degree)} & \multicolumn{1}{c|}{Pmag A95 (\degree)} & Dist (\degree) & N & \multicolumn{1}{c|}{Pmag A95 (\degree)} & Dist (\degree) & N & Age (Ma) & \multicolumn{1}{l|}{Diff (\degree)} \\ \hline
 0 & 0 & \textbf{6.28} & \textbf{12.72} & \textit{\textbf{2}} & \textbf{23.54}
-  & \textbf{18.14} & \textit{\textbf{3}} & \textbf{80-85} & \multicolumn{1}{l|}{6.286} \\ \hline
-10 & 1.12124/0.673225 & 5.4/3.1 & 29.9 & 1 & 5.4/3.1 & 29.9 & 1 & \textbf{110-115} & \multicolumn{1}{l|}{16.684} \\ \hline
+  & \textbf{18.14} & \textit{\textbf{3}} & \textbf{80\textendash85} & \multicolumn{1}{l|}{6.286} \\ \hline
+10 & 1.12124/0.673225 & 5.4/3.1 & 29.9 & 1 & 5.4/3.1 & 29.9 & 1 &
+  \textbf{110\textendash115} & \multicolumn{1}{l|}{16.684} \\ \hline
 \textbf{15} & 1.1347/0.8127 & & & & 5.4/3.1 & 28.28 & 1 & \multicolumn{2}{l|}{\multirow{12}{*}{}} \\ \cline{1-2} \cline{6-8}
 \textbf{60} & 4.79687/3.07133 & \multicolumn{3}{l|}{\textbf{}} & 8.817 & 8.28 &
   20 & \multicolumn{2}{l|}{} \\ \cline{1-2} \cline{6-8}
@@ -2468,28 +2459,28 @@ result than APP does from North America (Window size: 20 Myr, step size:
 \end{table*}
 
 Other Type 1 (e.g. Table~\ref{tab-w3p4vs5}) cases: Fig.~\ref{fig-na-dif2010}
-Pk (Wt) 2(1) vs 3(1). Fig.~\ref{fig-na-difm} 4(3) vs 5(3), 6(3) vs 7(3).
+Pk (Wt) 2(1) versus 3(1). Fig.~\ref{fig-na-difm} 4(3) versus 5(3), 6(3) versus 7(3).
 
 Other Type 2 (e.g. Table~\ref{tab-w5p4vs5}) cases: Fig.~\ref{fig-na-dif2010}
-Pk (Wt) 2(0, 2, 3, 5) vs 3(0, 2, 3, 5), 4(1, 3, 5) vs 5(1, 3, 5), 6(1, 3, 5) vs
-7(1, 3, 5). Fig.~\ref{fig-in-dif2010} 4(0\textendash5) vs 5(0\textendash5),
-6(0\textendash5) vs 7(0\textendash5), 14(2, 3) vs 15(2, 3), 22(0, 2, 3) vs 23(0, 2, 3),
-26(0, 2, 3) vs 27(0, 2, 3). Fig.~\ref{fig-au-dif2010} 4(2) vs 5(2).
-Fig.~\ref{fig-au-difm} 8(5) vs 9(5). Fig.~\ref{fig-na-dif2010m} 2(0\textendash5)
-vs 3(0\textendash5), 4(2) vs 5(2), 6(2) vs 7(2), 22(0\textendash5) vs
-23(0\textendash5), 26(0\textendash5) vs 27(0\textendash5).
-Fig.~\ref{fig-in-dif2010m} 4(0\textendash5) vs 5(0\textendash5), 6(0\textendash5)
-vs 7(0\textendash5), 14(3) vs 15(3).
+Pk (Wt) 2(0, 2, 3, 5) versus 3(0, 2, 3, 5), 4(1, 3, 5) versus 5(1, 3, 5), 6(1,
+3, 5) versus 7(1, 3, 5). Fig.~\ref{fig-in-dif2010} 4(0\textendash5) versus 5(0\textendash5),
+6(0\textendash5) versus 7(0\textendash5), 14(2, 3) versus 15(2, 3), 22(0, 2, 3) versus 23(0, 2, 3),
+26(0, 2, 3) versus 27(0, 2, 3). Fig.~\ref{fig-au-dif2010} 4(2) versus 5(2).
+Fig.~\ref{fig-au-difm} 8(5) versus 9(5). Fig.~\ref{fig-na-dif2010m} 2(0\textendash5)
+versus 3(0\textendash5), 4(2) versus 5(2), 6(2) versus 7(2), 22(0\textendash5) versus
+23(0\textendash5), 26(0\textendash5) versus 27(0\textendash5).
+Fig.~\ref{fig-in-dif2010m} 4(0\textendash5) versus 5(0\textendash5), 6(0\textendash5)
+versus 7(0\textendash5), 14(3) versus 15(3).
 
 Combined Type 1 and 2 cases: Fig.~\ref{fig-na-dif2010} Pk (Wt)
-22(0\textendash5) vs 23(0\textendash5), 26(0\textendash5) vs 27(0\textendash5).
-Fig.~\ref{fig-in-dif2010} Pk (Wt) 22(1, 4, 5) vs 23(1, 4, 5), 26(1, 4, 5) vs
-27(1, 4, 5). Fig.~\ref{fig-in-dif2010m} 22(0\textendash5) vs 23(0\textendash5),
-26(0\textendash5) vs 27(0\textendash5).
+22(0\textendash5) versus 23(0\textendash5), 26(0\textendash5) versus 27(0\textendash5).
+Fig.~\ref{fig-in-dif2010} Pk (Wt) 22(1, 4, 5) versus 23(1, 4, 5), 26(1, 4, 5) versus
+27(1, 4, 5). Fig.~\ref{fig-in-dif2010m} 22(0\textendash5) versus 23(0\textendash5),
+26(0\textendash5) versus 27(0\textendash5).
 
 Other Type 3 (e.g. Table~\ref{tab-501w0p22vs23}) cases: Fig.~\ref{fig-na-difm}
-4(2\textendash5) vs 5(2\textendash5). Fig.~\ref{fig-in-difm} 22(0\textendash5)
-vs 23(0\textendash5), 26(0\textendash5) vs 27(0\textendash5).
+4(2\textendash5) versus 5(2\textendash5). Fig.~\ref{fig-in-difm} 22(0\textendash5)
+versus 23(0\textendash5), 26(0\textendash5) versus 27(0\textendash5).
 
 
 \subsubsection{Question: Why weighting is not affecting?}
@@ -2550,8 +2541,8 @@ Wt 3 is exactly performing in this form.
 \begin{figure*}
 \centering
 \includegraphics[width=1\textwidth]{../../paper/tex/GeophysJInt/figures/w.pdf}
-\caption[Paleomagnetic APWP's FQ score versus significant difference
-score]{10/5 Myr bin/step paleomagnetic APWP's FQ score (different from FQ, see
+\caption[Paleomagnetic APWP's FQ score vs significant difference score]{10/5 Myr
+bin/step paleomagnetic APWP's FQ score (different from FQ, see
 the definitions of FQ and FQ score in Chapter~\ref{chap:Metho}) versus significant
 $\mathcal{CPD}$ score (reference path: FHM predicted) for the 28 different
 picking methods. See the significant $\mathcal{CPD}$ scores and Ppath-Rpath FQ
@@ -2562,10 +2553,10 @@ are labeled.}\label{fig-w}
 \begin{figure*}
 \centering
 \includegraphics[width=1\textwidth]{../../paper/tex/GeophysJInt/figures/wu.pdf}
-\caption[Paleomagnetic APWP's FQ score versus raw difference score]{10/5 Myr
+\caption[Paleomagnetic APWP's FQ score vs raw difference score]{10/5 Myr
 bin/step paleomagnetic APWP's FQ score (different from FQ, see the definitions
 of FQ and FQ score in Chapter~\ref{chap:Metho}) versus raw difference score (reference path:
-FHM predicted) for the 28 different picking methods. See FQ vs significant
+FHM predicted) for the 28 different picking methods. See FQ versus significant
 difference score in Fig.~\ref{fig-w}. Only those results dramatically worsened
 by Wt 3 are labeled.}\label{fig-wu}
 \end{figure*}
@@ -2574,7 +2565,7 @@ by Wt 3 are labeled.}\label{fig-wu}
 \centering
 \includegraphics[width=1\textwidth]{../../paper/tex/GeophysJInt/figures/wp.pdf}
 \caption[Proportional changes of Wt 1\textendash5 to 0: Paleomagnetic
-APWP's FQ score versus significant difference score]{Proportion of Wt
+APWP's FQ score vs significant difference score]{Proportion of Wt
 1\textendash5 to 0: Proportional change in 10/5 Myr bin/step paleomagnetic
 APWP's FQ score (different from FQ, see the definitions of FQ and FQ score in
 Chapter~\ref{chap:Metho}) versus proportional change in significant $\mathcal{CPD}$ score
@@ -2588,11 +2579,11 @@ labeled.}\label{fig-wp}
 \centering
 \includegraphics[width=1\textwidth]{../../paper/tex/GeophysJInt/figures/wpu.pdf}
 \caption[Proportional changes of Wt 1\textendash5 to 0: Paleomagnetic
-APWP's FQ score versus raw difference score]{Proportion of Wt
+APWP's FQ score vs raw difference score]{Proportion of Wt
 1\textendash5 to 0: Proportional change in 10/5 Myr bin/step paleomagnetic
 APWP's FQ score (different from FQ, see the definitions of FQ and FQ score in
 Chapter~\ref{chap:Metho}) versus proportional change in raw difference score (reference path:
-FHM predicted) for the 28 different picking methods. See FQ vs significant
+FHM predicted) for the 28 different picking methods. See FQ versus significant
 difference score in Fig.~\ref{fig-wp}. Only those results dramatically worsened
 by Wt 3 are labeled.}\label{fig-wpu}
 \end{figure*}
@@ -2723,10 +2714,10 @@ which indicates that if we have fewer data, these data need to be better in
 quality (Fig.~\ref{fig-flow}).
 
 \begin{figure*}
-\centering
-\includegraphics[width=1.01\textwidth]{../../paper/tex/GeophysJInt/figures/flowchart.pdf}
-\caption[Flowchart]{Flowchart for recommended procedure of processing
-  paleomagnetic data.}\label{fig-flow}
+  \centering
+  \includegraphics[width=1.01\textwidth]{../../paper/tex/GeophysJInt/figures/flowchart.pdf}
+  \caption[Flowchart of making a reliable paleomagnetic APWP]{Flowchart for
+recommended procedure of processing paleomagnetic data.}\label{fig-flow}
 \end{figure*}
 
 \section*{Acknowledgments}
