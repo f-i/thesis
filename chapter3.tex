@@ -617,17 +617,13 @@ paleopoles.
 \caption{List of all weighting algorithms developed here.}\label{tab-weit}
 \\ \hline
 \multicolumn{1}{|p{.25in}|}{\textbf{No.}} & \multicolumn{1}{p{5.5in}|}{\textbf{Weighting Algorithm}} \\ \hline
-\endfirsthead
-%
+\endfirsthead%
 \multicolumn{2}{r}{{\bfseries \tablename\ \thetable{} --- continued from previous page}} \\ \hline
 \multicolumn{1}{|p{.25in}|}{\textbf{No.}} & \multicolumn{1}{p{5.5in}|}{\textbf{Weighting Algorithm}} \\ \hline
-\endhead
-%
+\endhead%
 \hline\multicolumn{2}{|r|}{{\bfseries continued on next page}} \\ \hline
-\endfoot
-\hline
-\endlastfoot
-0 & None (No weighting) \\ \hline
+\endfoot\hline
+\endlastfoot0 & None (No weighting) \\ \hline
 1 & Larger numbers of sites (B) \& observations (N), greater $weight$ ($w$): \\
   & \begin{minipage}{5.5in}\begin{equation*}w=\left\{\begin{array}{ll}
     0.2 & \textrm{, if both B \& N are missing, or B$\leq1$ \& N$\leq1$} \\
@@ -828,10 +824,10 @@ from~\citet{C04}, to C34ny (83.5 Ma) from~\citet{Wh13}, to the Quiet Zone
 Boundary (96 Ma) from~\citet{W07}, to full closure at 136 Ma from~\citet{Wh13}).
 The geomagnetic polarity timescales of~\citet{C95} for Late Cretaceous and
 Cenozoic, and of~\citet{Gr94} for Early to Late Cretaceous time are used to
-convert from chron boundaries to absolute ages. A datafile listing these
-rotation parameters with covariance uncertainties is included in
-Appendix~\ref{appen4chp3}, and the calculated rotations for the North American,
-Indian and Australian reference APWPs in the hotspot reference
+convert from chron boundaries to absolute ages. A long table listing these
+rotation parameters with covariance uncertainties (Table~\ref{tab:rot}) is
+included in Appendix~\ref{appen4chp3}, and the calculated rotations for the
+North American, Indian and Australian reference APWPs in the hotspot reference
 (Figs.~\ref{fig-mhsPred}-\ref{fig-mhsPred801}) are also listed in Table~\ref{}.
 
 \begin{figure*}
@@ -2650,7 +2646,7 @@ From the perspective of the general similarities between those paleomagnetic
 APWPs and the hot spot model and ocean-floor spreading model predicted APWPs,
 GAD hypothesis is proved valid for at least the last 120 Myr.
 
-\subsection{Universal Rules of Ways of Processing Paleomagnetic Data:}
+\subsection{Universal rules of ways of processing paleomagnetic data}
 %
 \begin{description}
   \item Although effects of filters (all the picking methods where number of
@@ -2679,7 +2675,7 @@ GAD hypothesis is proved valid for at least the last 120 Myr.
 	considered in APP methods.
 \end{description}
 
-\subsection{Conditional Rules of Ways of Processing Paleomagnetic Data:}
+\subsection{Conditional rules of ways of processing paleomagnetic data}
 %
 \begin{description}
   \item Pk 16 (AMP with data from old studies) and 18 (AMP

@@ -15,7 +15,7 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[xcdraw]{xcolor}  %colorful words in tables
 \usepackage[round]{natbib}  %note that when you use this package, \bibliographystyle{} needs the corresponding styles, see more at https://www.overleaf.com/learn/latex/Natbib_bibliography_styles; learn more about natbib at https://journals.aas.org/natbib/
-\usepackage{longtable}
+\usepackage{lscape,longtable}
 \usepackage[page,toc,titletoc,title]{appendix}
 
 \usepackage[normalem]{ulem}
@@ -50,21 +50,22 @@ Improved Methods of Reconstructing Plate Motions Using Paleomagnetic Data}   %no
 
 
 \maketitle                  % create a title page from the preamble info
-\include{dedication}        % include a dedication.tex file
-\include{acknowlegements}   % include an acknowledgements.tex file
-\include{abstract}          % include the abstract
+%\include{dedication}        % include a dedication.tex file
+%\include{acknowlegements}   % include an acknowledgements.tex file
+%\include{abstract}          % include the abstract
 
 \begin{romanpages}          % start roman page numbering
 \tableofcontents            % generate and include a table of contents
 \listoffigures              % generate and include a list of figures
+\listoftables
 \end{romanpages}            % end roman page numbering
 
 %now include the files of latex for each of the chapters etc
 \include{chapter1}
 \include{chapter2}
 \include{chapter3}
-\include{chapter4}
-\include{conclusions}
+%\include{chapter4}
+%\include{conclusions}
 
 %next line adds the Bibliography to the contents page
 \addcontentsline{toc}{chapter}{Bibliography}
