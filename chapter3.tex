@@ -1080,23 +1080,23 @@ APWPs (Figs.~\ref{fig-na-difAMPvsAPP},~\ref{fig-na-boxAMPvsAPP}).
 	\centering
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/101_120_0APPvsAMP.pdf}
-		\caption{AMP\@: minimum 0.02652 (4(1)), maximum 0.08601 (16(2)), mean
-		0.045092, median 0.04570025; APP\@: minimum 0.00573 (25(0)), maximum
-		0.05835 (17(5)), mean 0.019714, median 0.0149414}\label{fig-na-difAMPvsAPP}
+		\caption{AMP\@: minimum 0.0265 (4(1)), maximum 0.086 (16(2)), mean
+		0.0451, median 0.0457; APP\@: minimum 0.0057 (25(0)), maximum
+		0.05835 (17(5)), mean 0.0197, median 0.01494}\label{fig-na-difAMPvsAPP}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/501_120_0APPvsAMP.pdf}
 		\caption{AMP\@: minimum 0.047 (4(3)), maximum 0.5137 (8(3)), mean
-		0.16881, median 0.189189; APP\@: minimum 0.023 (19(0)), maximum 0.1359
-		(3(4)), mean 0.067555, median 0.0602}\label{fig-in-difAMPvsAPP}
+		0.1688, median 0.1892; APP\@: minimum 0.023 (19(0)), maximum 0.1359
+		(3(4)), mean 0.0676, median 0.0602}\label{fig-in-difAMPvsAPP}
 	\end{subfigure}
 	\vspace{.1em}
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/801_120_0APPvsAMP.pdf}
-		\caption{AMP\@: minimum 0.0285868 (3(0)), maximum 0.3934 (26(3)), mean
+		\caption{AMP\@: minimum 0.0286 (3(0)), maximum 0.3934 (26(3)), mean
 		0.12675, median 0.0938; APP\@: minimum 0.00227 (11(0)), maximum 0.11445
-		(3(2)), mean 0.04071, median 0.025625}\label{fig-au-difAMPvsAPP}
+		(3(2)), mean 0.0407, median 0.0256}\label{fig-au-difAMPvsAPP}
 	\end{subfigure}
 	\caption[$\mathcal{CPD}$ of each plate's paleomagnetic APWPs vs its FHM
 predicted APWP (AMP vs APP)]{Separated results from AMP and APP in
@@ -1718,7 +1718,7 @@ are too narrow and steps that are too short which introduces noise by having too
 few poles in each window (e.g.\ 2 Myr window 1 Myr step;
 Table~\ref{tab-pk0vs1bs} and Fig.~\ref{fig-WinStpVsCPD}). There is a dependence
 here on data density: higher density allows smaller windows/steps (this is one
-of the things we want to test with selective data removal in Chapter~\ref{chap:DatNeed}). A
+of the things we want to test with selective data removal in the future). A
 variety of ways of binning the data (here 30\textendash2 Myr window size and
 half of the size as step) are being tested to see which one produces the better
 and more appropriately smoothed fit.
@@ -1748,13 +1748,14 @@ AMP\@. Picking methods (directly related to N) are still the key influence
 factor of choosing a better sliding window size and step size of moving
 averaging, although weighting methods are also important.
 
+\begin{landscape}
 \begin{table*}
 \centering
 \caption{Equal-weight 120\textendash0 Ma $\mathcal{CPD}$s for the three
 representative continents' paleomagnetic APWPs compared with their FHM predicted
 APWPs. The best are in dark green and underlined, second best in green and third
 in light green.}\label{tab-pk0vs1bs}
-\resizebox{\textwidth}{!}{%
+\resizebox{.72\width}{!}{%
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|}
 \hline
 \multicolumn{1}{|c|}{} & \multicolumn{6}{c|}{N America Pk 0} &
@@ -1802,7 +1803,7 @@ in light green.}\label{tab-pk0vs1bs}
   \textbf{0.0341}} & 0.0206 & 0.0211 & 0.0313 & 0.0272 & 0.0293 & 0.0277 \\ \hline
 \end{tabular}%
 }
-\resizebox{\textwidth}{!}{%
+\resizebox{.7\width}{!}{%
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|}
 \hline
 \multicolumn{1}{|c|}{} & \multicolumn{6}{c|}{India Pk 0} &
@@ -1845,7 +1846,7 @@ in light green.}\label{tab-pk0vs1bs}
   {\color[HTML]{32CB00} \textbf{0.0555998}} & {\color[HTML]{32CB00} \textbf{0.0543501}} \\ \hline
 \end{tabular}%
 }
-\resizebox{\textwidth}{!}{%
+\resizebox{.7\width}{!}{%
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|}
 \hline
 \multicolumn{1}{|c|}{} & \multicolumn{6}{c|}{Australia Pk 0} &
@@ -1896,6 +1897,7 @@ in light green.}\label{tab-pk0vs1bs}
 \end{tabular}%
 }
 \end{table*}
+\end{landscape}
 
 \begin{figure}
 \centering
@@ -2134,88 +2136,34 @@ North America and India. Pk 22 and 26 show large changes and Pk 17, 19, 21 and
   \item Pk 16,17 are still `bad' for North America and India.
 \end{enumerate}
 
-\begin{table*}
+\begin{landscape}
+\setlength\tabcolsep{3pt}
+\begin{table}[]
 \centering
 \caption{Performance statistics of all the picking and weighting methods.}\label{tab-bw}
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{l|l|l|l|l|l|l|l|l|l|l|l|l|l}
-\multicolumn{2}{l|}{\multirow{2}{*}{Grid}} & \multicolumn{2}{l|}{Best No.} &
-  \multicolumn{2}{l|}{Worst No.} & \multirow{2}{*}{\parbox{1.8cm}{Proportion of
-  APP Better Than AMP}} & \multicolumn{6}{l|}{\multirow{2}{*}{\parbox{5cm}{For
-  All 28 Picking Methods, Count of Occurrences of Each Wt No. Being
-  Best}}} & \multirow{2}{*}{\parbox{2.6cm}{Pk 14,15 (Studies After 1983)
-  Better Than 16,17 (Older)}} \\ \\ \cline{3-6} \cline{8-13}
-\multicolumn{2}{l|}{} & Pk & Wt & Pk & Wt &  & 0 & 1 &
-  2 & 3 & 4 & 5 &  \\ \hline
-\multirow{12}{*}{FHM}
-& Fig.~\ref{fig-na-dif} & \multirow{2}{*}{\parbox{2cm}{1, 5, 7, 11, 13, 15,
-  \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 5}} &
-  \multirow{2}{*}{\parbox{2cm}{2, 5, 7, 14, \textbf{16}, 17, 18, 22, 26}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 41/42 & \textbf{9} & 4 & 4
-  & 7 & 0 & 5 & Y/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-in-dif} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7, 9,
-  \textbf{19}, \textbf{21}, 22, 26}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{0, 2, 8, 10, 12, \textbf{16}, 18, 20, 24}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 18/21 & \textbf{15} & 2 & 2
-  & 6 & 2 & 1 & Y/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-au-dif} & \multirow{2}{*}{\parbox{2cm}{1, 11, 13, 17,
-  \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{2, 4, 14, \textbf{16}, 22, 26}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 1 & \textbf{10} & 5 & 1 & 7
-  & 2 & 3 & N/N \\ \\ \cline{2-14}
-& Fig.~\ref{fig-na-dif2010} & \multirow{2}{*}{\parbox{2cm}{1, 4, 5, 6, 7, 9, 11, 13, 15,
-  \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{0, 8, 10, 12, 14, \textbf{16}, 18, 20, 24}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 61/84 & \textbf{14} & 2 & 0
-  & 3 & 3 & 6 & N/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-in-dif2010} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7,
-  \textbf{19}}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{0, 2, 10, 12, \textbf{16}, 18, 20, 23, 24, 27}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 29/42 & \textbf{11} & 6 & 0
-  & 9 & 1 & 1 & Y/4y2n \\ \\ \cline{2-14}
-& Fig.~\ref{fig-au-dif2010} & \multirow{2}{*}{\parbox{2cm}{1, 11, 13, 17,
-\textbf{19}, \textbf{21}, 23, 25, 27}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 3, 4, 5}} &
-  \multirow{2}{*}{\parbox{2cm}{2, 14, \textbf{16}, 22, 26}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 1 & 9 & 6 & 0 & \textbf{10}
-  & 1 & 2 & N/N \\ \\ \hline
-\multirow{12}{*}{MHM}
-& Fig.~\ref{fig-na-difm} & \multirow{2}{*}{\parbox{2cm}{1, 5, 7, 9, 11, 13, 15,
-  \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
-  \multirow{2}{*}{\parbox{2.2cm}{0, 10, 12, 14, \textbf{16}, 17, 18, 20, 24}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 41/42 & \textbf{10} & 9 & 3
-  & 4 & 0 & 2 & Y/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-in-difm} & \multirow{2}{*}{\parbox{2cm}{5, 7, \textbf{19}, \textbf{21}, 22, 26}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{0, 2, 8, 10, 12, 14, \textbf{16}, 18, 20, 24}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 6/7 & \textbf{12} & 2 & 0 &
-  7 & 4 & 3 & Y/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-au-difm} & \multirow{2}{*}{\parbox{2cm}{1, 11, 13, 17,
-  \textbf{19}, \textbf{21}, 25}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{2, 14, \textbf{16}, 22, 26}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 83/84 & 6 & 4 & 2 &
-  \textbf{10} & 4 & 2 & N/N \\ \\ \cline{2-14}
-& Fig.~\ref{fig-na-dif2010m} & \multirow{2}{*}{\parbox{2cm}{5, 7,
-  15, 22, 26}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{0, 8, 10, 12, 14, 18, 20, 24}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 16/21 & \textbf{10} & 8 & 1
-  & 4 & 1 & 4 & 5n1y/Y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-in-dif2010m} & \multirow{2}{*}{\parbox{2cm}{4, 5, 6, 7, 22, 26}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
-  \multirow{2}{*}{\parbox{2.4cm}{0, 2, 10, 12, \textbf{16}, 18, 24}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 59/84 & 6 & \textbf{7} & 0
-  & 6 & 3 & 6 & Y/3n3y \\ \\ \cline{2-14}
-& Fig.~\ref{fig-au-dif2010m} & \multirow{2}{*}{\parbox{2cm}{1, 11, 13, 15, 17,
-  \textbf{19}, \textbf{21}, 23, 25, 27}} & \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} &
-  \multirow{2}{*}{\parbox{2cm}{2, 14, \textbf{16}, 22, 26}} &
-  \multirow{2}{*}{\parbox{1cm}{0, 1, 2, 3, 4, 5}} & 1 & \textbf{12} & 1 & 0 &
-  10 & 4 & 1 & N/N
+\resizebox{0.64\width}{!}{%
+\begin{tabular}{@{}clllllclllllll@{}}
+\toprule
+\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Hotspot model\\ for ref path\end{tabular}} & \multicolumn{1}{c}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}CPD\\ grid\end{tabular}}} & \multicolumn{2}{c}{Best} & \multicolumn{2}{c}{Worst} & \multicolumn{1}{c}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Percentage of APP\\ better than AMP (\%)\end{tabular}}} & \multicolumn{6}{c}{For 28 Pk methods, count of occurrences of each Wt being best} & \multicolumn{1}{c}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Pk 14,15 (Studies after 1983)\\ better than Pk 16,17 (Older)\end{tabular}}} \\ \cmidrule(lr){3-6} \cmidrule(lr){8-13}
+ & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Pk} & \multicolumn{1}{c}{Wt} & \multicolumn{1}{c}{Pk} & \multicolumn{1}{c}{Wt} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{0} & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{} \\ \midrule
+\multirow{6}{*}{FHM} & Fig.~\ref{fig-na-dif} & 1, 5, 7, 11, 13, 15, \textbf{19}, \textbf{21}, 25 & 0, 1, 3, 5 & 2, 5, 7, 14, \textbf{16}, 17, 18, 22, 26 & 0-5 & 97.6 & \textbf{9} & 4 & 4 & 7 & 0 & 5 & Y,Y \\
+ & Fig.~\ref{fig-in-dif} & 4-7, 9, \textbf{19}, \textbf{21}, 22, 26 & 0-5 & 0, 2, 8, 10, 12, \textbf{16}, 18, 20, 24 & 0-5 & 85.7 & \textbf{15} & 2 & 2 & 6 & 2 & 1 & Y,Y \\
+ & Fig.~\ref{fig-au-dif} & 1, 11, 13, 17, \textbf{19}, \textbf{21}, 25 & 0, 1, 3, 5 & 2, 4, 14, \textbf{16}, 22, 26 & 0-5 & 100 & \textbf{10} & 5 & 1 & 7 & 2 & 3 & N,N \\
+ & Fig.~\ref{fig-na-dif2010} & 1, 4-7, 9, 11, 13, 15, \textbf{19}, \textbf{21}, 25 & 0, 1, 3, 5 & 0, 8, 10, 12, 14, \textbf{16}, 18, 20, 24 & 0-5 & 72.6 & \textbf{14} & 2 & 0 & 3 & 3 & 6 & N,Y \\
+ & Fig.~\ref{fig-in-dif2010} & 4-7, \textbf{19} & 0-5 & 0, 2, 10, 12, \textbf{16}, 18, 20, 23, 24, 27 & 0-5 & 69 & \textbf{11} & 6 & 0 & 9 & 1 & 1 & Y,4y2n \\
+ & Fig.~\ref{fig-au-dif2010} & 1, 11, 13, 17, \textbf{19}, \textbf{21}, 23, 25, 27 & 0, 1, 3-5 & 2, 14, \textbf{16}, 22, 26 & 0-5 & 100 & 9 & 6 & 0 & \textbf{10} & 1 & 2 & N,N \\ \midrule
+\multirow{6}{*}{MHM} & Fig.~\ref{fig-na-difm} & 1, 5, 7, 9, 11, 13, 15, \textbf{19}, \textbf{21}, 25 & 0-5 & 0, 10, 12, 14, \textbf{16}-18, 20, 24 & 0-5 & 97.6 & \textbf{10} & 9 & 3 & 4 & 0 & 2 & Y,Y \\
+ & Fig.~\ref{fig-in-difm} & 5, 7, \textbf{19}, \textbf{21}, 22, 26 & 0-5 & 0, 2, 8, 10, 12, 14, \textbf{16}, 18, 20, 24 & 0-5 & 85.7 & \textbf{12} & 2 & 0 & 7 & 4 & 3 & Y,Y \\
+ & Fig.~\ref{fig-au-difm} & 1, 11, 13, 17, \textbf{19}, \textbf{21}, 25 & 0-3, 5 & 2, 14, \textbf{16}, 22, 26 & 0-5 & 98.8 & 6 & 4 & 2 & \textbf{10} & 4 & 2 & N,N \\
+ & Fig.~\ref{fig-na-dif2010m} & 5, 7, 15, 22, 26 & 0-5 & 0, 8, 10, 12, 14, 18, 20, 24 & 0-5 & 76.2 & \textbf{10} & 8 & 1 & 4 & 1 & 4 & 1y5n,Y \\
+ & Fig.~\ref{fig-in-dif2010m} & 4-7, 22, 26 & 0-5 & 0, 2, 10, 12, \textbf{16}, 18, 24 & 0-5 & 70.2 & 6 & \textbf{7} & 0 & 6 & 3 & 6 & Y,3y3n \\
+ & Fig.~\ref{fig-au-dif2010m} & 1, 11, 13, 15, 17, \textbf{19}, \textbf{21}, 23, 25, 27 & 0-5 & 2, 14, \textbf{16}, 22, 26 & 0-5 & 100 & \textbf{12} & 1 & 0 & 10 & 4 & 1 & N,N \\ \bottomrule
 \end{tabular}%
 }
-\end{table*}
+\end{table}
+\end{landscape}
 
 \section{Discussion}
-
-The following discussions will be in Q\&A style.
 
 \subsubsection{Question: Why the APP methods generally produce better
 similarities than AMP methods do?}
@@ -2361,99 +2309,91 @@ from these types of rare cases is beyond the positive effect the generally
 improved mean poles contribute, the composite difference score would increase.
 However, this phenomenon seldom occur (Table~\ref{tab-bw}).
 
-\begin{table*}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+% \usepackage{graphicx}
+\begin{table}[]
 \centering
 \caption{One example of the Type 1 rare cases where AMP gives better similarity
 result than APP does from North America (Window size: 10 Myr, step size:
 5 Myr). Only statistically significant values are listed here.}\label{tab-w3p4vs5}
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{|c|l|l|l|l|l|l|l|l|l|l|l}
-\hline
-\multicolumn{2}{|c|}{\multirow{2}{*}{FHM predicted}} &
-  \multicolumn{5}{c|}{Pk 4 + Wt 3} & \multicolumn{5}{c|}{Pk 5
-  + Wt 3} \\ \cline{3-12} 
-\multicolumn{2}{|c|}{} & \multicolumn{3}{c|}{ds} & \multicolumn{2}{c|}{dl} & \multicolumn{3}{c|}{ds} & \multicolumn{2}{c|}{da} \\ \hline
-Age (Ma) & \multicolumn{1}{c|}{A95 (\degree)} & \multicolumn{1}{c|}{Age (Ma)} & \multicolumn{1}{c|}{Pmag A95 (\degree)} & \multicolumn{1}{c|}{Dist (\degree)} & \multicolumn{1}{c|}{Age (Ma)} & \multicolumn{1}{c|}{Diff (\degree)} & \multicolumn{1}{c|}{Age (Ma)} & \multicolumn{1}{c|}{Pmag A95 (\degree)} & \multicolumn{1}{c|}{Dist (\degree)} & \multicolumn{1}{c|}{Age (Ma)} & \multicolumn{1}{c|}{Diff (\degree)} \\ \hline
-10 & 1.44607/0.793714 & 10 & 14.876819 & \textbf{9.937} & 105\textendash110 & 5.91855 & & & & \textit{\textbf{10\textendash15\textendash20}} & \multicolumn{1}{l|}{\textbf{126.59}} \\ \hline
-15 & 1.2875/0.816514 & & & & & & 15 & 2.0857 & \textbf{11.805} &
-  \multicolumn{2}{l|}{} \\ \cline{1-2} \cline{8-12}
-25 & 2.48031/1.10915 & & & & & & 25 & 6.3358 & \textbf{6.873} &
-  \multicolumn{2}{c|}{dl} \\ \cline{1-5} \cline{8-12}
-55 & 3.58782/2.14032 & 55 & 4.6347 & \textbf{5.372} & & & & & & Age (Ma) & \multicolumn{1}{l|}{Diff (\degree)} \\ \cline{1-5} \cline{8-12}
-60 & 4.85938/3.17602 & & & & & & 60 & 6.5922 & 6.215 & \textit{\textbf{10\textendash15}} & \multicolumn{1}{l|}{\textbf{13.52}} \\ \cline{1-2} \cline{8-12}
-65 & 3.68984/2.30014 & & & & & & 65 & 8.6632 & \textbf{7.6} &
-  \textit{\textbf{15\textendash20}} & \multicolumn{1}{l|}{\textbf{14.68}} \\ \cline{1-5} \cline{8-12}
-75 & 2.6435/1.54052 & 75 & 9.0812 & \textbf{8.836} & & & & & &
-  \multicolumn{2}{l|}{\multirow{3}{*}{}} \\ \cline{1-5}
-100 & 2.8983/2.68346 & 100 & 8.892 & \textbf{8.455} & & & & & &
-  \multicolumn{2}{l|}{\multirow{3}{*}{}} \\ \cline{1-5}
-105 & 2.32328/1.74639 & 105 & 5.3 & \textbf{5.03} & & & & & &
-  \multicolumn{2}{l|}{\multirow{3}{*}{}} \\ \cline{1-5}
-110 & 4.13015/2.25964 & 110 & 3.8 & \textbf{9.8064} & & & & & &
-  \multicolumn{2}{l|}{\multirow{3}{*}{}} \\ \cline{1-5} \cline{8-10}
-115 & 4.63512/2.58006 & 115 & 19.6676 & \textbf{9.3345} & & & 115 & 8.5 &
-  \textbf{11.704} & \multicolumn{2}{l|}{} \\ \cline{1-5} \cline{8-10}
-120 & 7.34408/4.06043 & 120 & 3.515 & \textbf{17.35} & & & 120 & 7.728 &
-  \textbf{15.258} & \multicolumn{2}{l|}{} \\ \cline{1-5} \cline{8-10}
+\begin{tabular}{@{}llllllllll@{}}
+\toprule
+\multicolumn{2}{c}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}FHM\\ predicted\end{tabular}}} & \multicolumn{4}{c}{Pk4(Wt3)} & \multicolumn{4}{c}{Pk5(Wt3)} \\ \cmidrule(l){3-10} 
+\multicolumn{2}{c}{} & \multicolumn{2}{c}{ds} & \multicolumn{2}{c}{dl} & \multicolumn{2}{c}{ds} & \multicolumn{2}{c}{da} \\ \midrule
+Age (Ma) & DM/DP () & Pmag A95 () & Dist () & Age (Ma) & Diff () & Pmag A95 () & Dist () & Age (Ma) & Diff () \\ \midrule
+10 & 1.44607/0.793714 & 14.876819 & \textbf{9.937} & 105\textendash110 & 5.91855 & \multicolumn{2}{l}{} & \textit{\textbf{10\textendash15\textendash20}} & \textbf{126.59} \\ \cmidrule(lr){5-6}
+15 & 1.2875/0.816514 & \multicolumn{2}{l}{\multirow{2}{*}{}} & \multicolumn{2}{l}{\multirow{11}{*}{}} & 2.0857 & \textbf{11.805} & \multicolumn{2}{l}{} \\ \cmidrule(l){9-10} 
+25 & 2.48031/1.10915 & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & 6.3358 & \textbf{6.873} & \multicolumn{2}{c}{dl} \\ \cmidrule(l){9-10} 
+55 & 3.58782/2.14032 & 4.6347 & \textbf{5.372} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & Age (Ma) & Diff () \\ \cmidrule(l){9-10} 
+60 & 4.85938/3.17602 & \multicolumn{2}{l}{\multirow{2}{*}{}} & \multicolumn{2}{l}{} & 6.5922 & 6.215 & \textit{\textbf{10\textendash15}} & \textbf{13.52} \\
+65 & 3.68984/2.30014 & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & 8.6632 & \textbf{7.6} & \textit{\textbf{15\textendash20}} & \textbf{14.68} \\ \cmidrule(l){9-10} 
+75 & 2.6435/1.54052 & 9.0812 & \textbf{8.836} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{\multirow{4}{*}{}} & \multicolumn{2}{l}{\multirow{6}{*}{}} \\
+100 & 2.8983/2.68346 & 8.892 & \textbf{8.455} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} \\
+105 & 2.32328/1.74639 & 5.3 & \textbf{5.03} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} \\
+110 & 4.13015/2.25964 & 3.8 & \textbf{9.8064} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} \\
+115 & 4.63512/2.58006 & 19.6676 & \textbf{9.3345} & \multicolumn{2}{l}{} & 8.5 & \textbf{11.704} & \multicolumn{2}{l}{} \\
+120 & 7.34408/4.06043 & 3.515 & \textbf{17.35} & \multicolumn{2}{l}{} & 7.728 & \textbf{15.258} & \multicolumn{2}{l}{} \\ \cmidrule(r){1-4} \cmidrule(lr){7-8}
 \end{tabular}%
 }
-\end{table*}
+\end{table}
 
-\begin{table*}
+\begin{table}[]
+\centering
 \caption{One example of the Type 2 rare cases where AMP gives better similarity
 result than APP does from North America (Window size: 20 Myr, step size:
 10 Myr). Only statistically significant values are listed here.}\label{tab-w5p4vs5}
-\begin{tabular}{|c|l|l|l|l|l|}
-\hline
-\multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Age \\ \\ (Ma)\end{tabular}} & \multicolumn{1}{c|}{\multirow{2}{*}{FHM predicted}} & \multicolumn{4}{c|}{ds} \\ \cline{3-6} 
- & \multicolumn{1}{c|}{} & \multicolumn{2}{l|}{Pk 2 + Wt 0} &
-  \multicolumn{2}{l|}{Pk 3 + Wt 0} \\ \cline{2-6} 
- & \multicolumn{1}{c|}{A95 (\degree)} & \multicolumn{1}{c|}{Pmag A95 (\degree)} & \multicolumn{1}{c|}{Dist (\degree)} & \multicolumn{1}{c|}{Pmag A95 (\degree)} & \multicolumn{1}{c|}{Dist (\degree)} \\ \hline
-0 & 0 & 3.97 & \textbf{5.714} & 3.97 & \textbf{5.714} \\ \hline
-10 & 1.44607/0.793714 & 3.879 & \textbf{6.034} & 3.879 & \textbf{6.034} \\ \hline
-20 & 1.58039/1.10047 & & & 6.771 & \textbf{6.934} \\ \hline
-50 & 3.57782/1.61328 & 3.8644 & \textbf{7.304} & 4.03 & \textbf{8.6} \\ \hline
-60 & 4.85938/3.17602 & 5.716 & \textbf{8.457} & 5.55 & \textbf{7.367} \\ \hline
-100 & 2.8983/2.68346 & 10.769 & \textbf{7.308} & 10.769 & \textbf{7.308} \\ \hline
-110 & 4.13015/2.25964 & & & 3.29 & \textbf{8.311} \\ \hline
-120 & 7.34408/4.06043 & 3.38 & \textbf{16.41} & 3.083 & \textbf{16.728} \\ \hline
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llllll@{}}
+\toprule
+\multicolumn{1}{c}{\multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Age\\ (Ma)\end{tabular}}} & \multicolumn{1}{c}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}FHM\\ predicted\end{tabular}}} & \multicolumn{4}{c}{ds} \\ \cmidrule(l){3-6} 
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Pk2(Wt0)} & \multicolumn{2}{c}{Pk3(Wt0)} \\ \cmidrule(l){2-6} 
+\multicolumn{1}{c}{} & DM/DP (\degree) & Pmag A95 (\degree) & Dist (\degree) & Pmag A95 (\degree) & Dist (\degree) \\ \midrule
+0 & 0 & 3.97 & \textbf{5.714} & 3.97 & \textbf{5.714} \\
+10 & 1.44607/0.793714 & 3.879 & \textbf{6.034} & 3.879 & \textbf{6.034} \\
+20 & 1.58039/1.10047 & \multicolumn{2}{l}{} & 6.771 & \textbf{6.934} \\
+50 & 3.57782/1.61328 & 3.8644 & \textbf{7.304} & 4.03 & \textbf{8.6} \\
+60 & 4.85938/3.17602 & 5.716 & \textbf{8.457} & 5.55 & \textbf{7.367} \\
+100 & 2.8983/2.68346 & 10.769 & \textbf{7.308} & 10.769 & \textbf{7.308} \\
+110 & 4.13015/2.25964 & \multicolumn{2}{l}{} & 3.29 & \textbf{8.311} \\
+120 & 7.34408/4.06043 & 3.38 & \textbf{16.41} & 3.083 & \textbf{16.728} \\ \bottomrule
 \end{tabular}%
-\end{table*}
+}
+\end{table}
 
-\begin{table*}
+\begin{table}[]
 \centering
 \caption{One example of the Type 3 rare cases where AMP gives better similarity
   result than APP does from India (Window size: 10 Myr, step size: 5 Myr).
   Only statistically significant values are listed here. Note that for the
   bold-number ages, there is no mean poles at all for the ``Pk 22 (AMP) +
   Wt 2'' case.}\label{tab-501w0p22vs23}
-\begin{tabular}{|l|l|l|l|l|l|l|l|l|l}
-\hline
-\multicolumn{2}{|c|}{\multirow{2}{*}{FHM predicted}} &
-  \multicolumn{3}{c|}{Pk 22 + Wt 2} & \multicolumn{5}{c|}{Pk
-  23 + Wt 2} \\ \cline{3-10} 
-\multicolumn{2}{|c|}{} & \multicolumn{3}{c|}{ds} & \multicolumn{3}{c|}{ds} & \multicolumn{2}{c|}{dl} \\ \hline
-\multicolumn{1}{|c|}{Age (Ma)} & \multicolumn{1}{c|}{A95 (\degree)} & \multicolumn{1}{c|}{Pmag A95 (\degree)} & Dist (\degree) & N & \multicolumn{1}{c|}{Pmag A95 (\degree)} & Dist (\degree) & N & Age (Ma) & \multicolumn{1}{l|}{Diff (\degree)} \\ \hline
-0 & 0 & \textbf{6.28} & \textbf{12.72} & \textit{\textbf{2}} & \textbf{23.54}
-  & \textbf{18.14} & \textit{\textbf{3}} & \textbf{80\textendash85} & \multicolumn{1}{l|}{6.286} \\ \hline
-10 & 1.12124/0.673225 & 5.4/3.1 & 29.9 & 1 & 5.4/3.1 & 29.9 & 1 &
-  \textbf{110\textendash115} & \multicolumn{1}{l|}{16.684} \\ \hline
-\textbf{15} & 1.1347/0.8127 & & & & 5.4/3.1 & 28.28 & 1 & \multicolumn{2}{l|}{\multirow{12}{*}{}} \\ \cline{1-2} \cline{6-8}
-\textbf{60} & 4.79687/3.07133 & \multicolumn{3}{l|}{\textbf{}} & 8.817 & 8.28 &
-  20 & \multicolumn{2}{l|}{} \\ \cline{1-2} \cline{6-8}
-\textbf{70} & 4.26508/2.48783 & & & & 3.26 & 4.464 & 20 & \multicolumn{2}{l|}{} \\ \cline{1-2} \cline{6-8}
-\textbf{75} & 2.6777/1.57975 & \multicolumn{3}{l|}{\multirow{2}{*}{\textbf{}}} & 5 & 4.477 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-2} \cline{6-8}
-\textbf{80} & 4.20828/2.50294 & \multicolumn{3}{l|}{} & 5 & 3.358 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-8}
-85 & 2.50744/1.24746 & 5 & 7.632 & 1 & 5 & 7.632 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-8}
-\textbf{90} & 3.88998/1.43423 & \multicolumn{3}{l|}{\multirow{5}{*}{}} & 5 & 10.884 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-2} \cline{6-8}
-\textbf{95} & 2.23389/1.6247 & \multicolumn{3}{l|}{} & 5 & 11.099 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-2} \cline{6-8}
-\textbf{100} & 2.8062/2.59819 & \multicolumn{3}{l|}{} & 5 & 11.4155 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-2} \cline{6-8}
-\textbf{105} & 2.32328/1.74639 & \multicolumn{3}{l|}{} & 5 & 14.908 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-2} \cline{6-8}
-\textbf{110} & 4.55519/2.49218 & \multicolumn{3}{l|}{} & 6.8/4.9 & 13.962 & 1 & \multicolumn{2}{l|}{} \\ \cline{1-8}
-115 & 4.63512/2.58006 & 10.73 & 10.508 & 5 & 10.73 & 10.508 & 5 & \multicolumn{2}{l|}{} \\ \cline{1-8}
-120 & 6.02639/3.3319 & 10.73 & 10.508 & 5 & 10.73 & 10.508 & 5 & \multicolumn{2}{l|}{} \\ \cline{1-8}
-\end{tabular}
-\end{table*}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llllllllll@{}}
+\toprule
+\multicolumn{2}{c}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}FHM\\ predicted\end{tabular}}} & \multicolumn{3}{c}{Pk22(Wt 2)} & \multicolumn{5}{c}{Pk23(Wt2)} \\ \cmidrule(l){3-10} 
+\multicolumn{2}{c}{} & \multicolumn{3}{c}{ds} & \multicolumn{3}{c}{ds} & \multicolumn{2}{c}{dl} \\ \midrule
+\multicolumn{1}{c}{Age (Ma)} & DM/DP (\degree) & Pmag DM/DP (\degree) & Dist (\degree) & N & Pmag DM/DP (\degree) & Dist (\degree) & N & Age (Ma) & Diff (\degree) \\ \midrule
+0 & 0 & \textbf{6.28} & \textbf{12.72} & \textit{\textbf{2}} & \textbf{23.54} & \textbf{18.14} & \textit{\textbf{3}} & \textbf{80\textendash85} & 6.286 \\
+10 & 1.12124/0.673225 & 5.4/3.1 & 29.9 & 1 & 5.4/3.1 & 29.9 & 1 & \textbf{110\textendash115} & 16.684 \\ \cmidrule(l){9-10} 
+\textbf{15} & 1.1347/0.8127 & \multicolumn{3}{l}{\multirow{5}{*}{}} & 5.4/3.1 & 28.28 & 1 & \multicolumn{2}{l}{\multirow{13}{*}{}} \\
+\textbf{60} & 4.79687/3.07133 & \multicolumn{3}{l}{} & 8.817 & 8.28 & 20 & \multicolumn{2}{l}{} \\
+\textbf{70} & 4.26508/2.48783 & \multicolumn{3}{l}{} & 3.26 & 4.464 & 20 & \multicolumn{2}{l}{} \\
+\textbf{75} & 2.6777/1.57975 & \multicolumn{3}{l}{} & 5 & 4.477 & 1 & \multicolumn{2}{l}{} \\
+\textbf{80} & 4.20828/2.50294 & \multicolumn{3}{l}{} & 5 & 3.358 & 1 & \multicolumn{2}{l}{} \\
+85 & 2.50744/1.24746 & 5 & 7.632 & 1 & 5 & 7.632 & 1 & \multicolumn{2}{l}{} \\
+\textbf{90} & 3.88998/1.43423 & \multicolumn{3}{l}{\multirow{5}{*}{}} & 5 & 10.884 & 1 & \multicolumn{2}{l}{} \\
+\textbf{95} & 2.23389/1.6247 & \multicolumn{3}{l}{} & 5 & 11.099 & 1 & \multicolumn{2}{l}{} \\
+\textbf{100} & 2.8062/2.59819 & \multicolumn{3}{l}{} & 5 & 11.4155 & 1 & \multicolumn{2}{l}{} \\
+\textbf{105} & 2.32328/1.74639 & \multicolumn{3}{l}{} & 5 & 14.908 & 1 & \multicolumn{2}{l}{} \\
+\textbf{110} & 4.55519/2.49218 & \multicolumn{3}{l}{} & 6.8/4.9 & 13.962 & 1 & \multicolumn{2}{l}{} \\
+115 & 4.63512/2.58006 & 10.73 & 10.508 & 5 & 10.73 & 10.508 & 5 & \multicolumn{2}{l}{} \\
+120 & 6.02639/3.3319 & 10.73 & 10.508 & 5 & 10.73 & 10.508 & 5 & \multicolumn{2}{l}{} \\ \cmidrule(r){1-8}
+\end{tabular}%
+}
+\end{table}
 
 Other Type 1 (e.g. Table~\ref{tab-w3p4vs5}) cases: Fig.~\ref{fig-na-dif2010}
 Pk (Wt) 2(1) versus 3(1). Fig.~\ref{fig-na-difm} 4(3) versus 5(3), 6(3) versus 7(3).
