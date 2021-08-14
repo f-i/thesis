@@ -40,26 +40,27 @@ factors that might affect the end result.
 
 In this chapter, paleopoles' attributes are used to weigh their influence on
 mean poles (see details in Section~\ref{sec:w}), or to determine if they should
-be omitted for producing a `better' mean pole (see details in Section~\ref{sec:f}).
-Different key attributes, that can be quantified, or their combination are
-considered. In addition, when we are merging paleopoles to produce a smoothed
-mean path, we make choices not only about which data are included or excluded,
-but how data are combined. Moving averaging is used to combine data (see
-details in Section~\ref{sec:p}). With application of two moving average methods,
-where each moving window includes data with (1) only middle point of lower and
-higher age limits considered as paleopole's age and (2) whole dating uncertainty
-considered as paleopole's age range, different APWPs are produced to see which
-attribute is more important and also which moving average method performs
-better. To answer these questions, we need a reference path (see details in
-Section~\ref{sec:refpath}) and a tool to measure similarity between the paleomagnetic APWPs
-and the reference path. Then the measuring tool developed and introduced in
-Chapter~\ref{chap:Metho} is used to measure the similarity. We have two reference paths derived
-from other plate kinematics models. These reference models are thought to be
-more accurate and more precise, so that if the paleomagnetic APWPs are similar
-to the reference path, they are regarded as more `reliable'. The question is
-which model predicted reference path is a better reference or is there any
-difference between these two reference paths? In this chapter, we will also try
-to answer this question.
+be omitted for producing a `better' mean pole (see details in
+Section~\ref{sec:f}). Different key attributes, that can be quantified, or their
+combination are considered. In addition, when we are merging paleopoles to
+produce a smoothed mean path, we make choices not only about which data are
+included or excluded, but how data are combined. Moving averaging is used to
+combine data (see details in Section~\ref{sec:p}). With application of two
+moving average methods, where each moving window includes data with (1) only
+middle point of lower and higher age limits considered as paleopole's age and
+(2) whole dating uncertainty considered as paleopole's age range, different
+APWPs are produced to see which attribute is more important and also which
+moving average method performs better. To answer these questions, we need a
+reference path (see details in Section~\ref{sec:refpath}) and a tool to measure
+similarity between the paleomagnetic APWPs and the reference path. Then the
+measuring tool developed and introduced in Chapter~\ref{chap:Metho} is used to
+measure the similarity. We have two reference paths derived from other plate
+kinematics models. These reference models are thought to be more accurate and
+more precise, so that if the paleomagnetic APWPs are similar to the reference
+path, they are regarded as more `reliable'. The question is which model
+predicted reference path is a better reference or is there any difference
+between these two reference paths? In this chapter, we will also try to answer
+this question.
 
 Finally no single attribute generally works better than others for all the
 continents or continental fragments. However, the moving average method, that
@@ -449,7 +450,7 @@ the mean poles calculated over its entire possible acquisition age.
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=.7\textwidth]{../../paper/tex/GeophysJInt/figures/binning.pdf}
-\caption[How moving average (MA) methods work]{An example of 10 Myr moving
+\caption[How moving average methods work]{An example of 10 Myr moving
 window and 5 Myr step in the two moving average methods, AMP and APP, based on
 poles of the $NAC$. White circles are the midpoints of low and high magnetic
 ages. The vertical axis has no specific meaning here. For example, for the
@@ -479,7 +480,7 @@ follows:
 
 \begin{table}[!ht]
 \centering
-\caption{List of all Picking/Binning algorithms developed here.}\label{tab-pick}
+\caption{List of all picking/binning algorithms developed here.}\label{tab-pick}
 \begin{tabular}{@{}ll@{}}
 \toprule
 No. & Picking Algorithm \\ \midrule
@@ -768,7 +769,7 @@ difficult to be spatially differentiated.
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/alpha95_000094.png}
 		\caption{perspective view b}
 	\end{subfigure}
-	\caption[Visualization of the equation that relates $\alpha$95, and R and
+	\caption[Visualization of equation that relates $\alpha$95, and R and
 N]{Visualization of Equation 11.9 of Essentials of Paleomagnetism: Fifth Web
 Edition, illustrating the relationship between the radius of the circle of 95\%
 confidence ($p$=0.05) about the mean, $\alpha$95, resultant vector $R$ and number of directions (or
@@ -943,8 +944,8 @@ validity of the similarity measuring tool in practise.
 
 \section{Results}
 
-\subsection{Baseline results: 10 Myr window, 5 Myr step, fixed hotspot
-reference}\label{sec:base}
+\subsection{Baseline Results: 10/5 Myr Window/Step, Fixed Hotspot
+Reference}\label{sec:base}
 
 Fig.~\ref{fig-dif} shows the $\mathcal{CPD}$ scores for the APWPs generated with
 all 28 picking methods (AMP and APP with one of 14 separate filters applied) and
@@ -959,7 +960,7 @@ $\mathcal{CPD}$ values ranging from 0.0023 to 0.5137. The fits for paths with
 low difference scores are clearly much better than for those with high ones
 (Fig.~\ref{fig-difbw}). From Fig.~\ref{fig-dif}, it is clear that:
 
-\begin{figure*}
+\begin{figure}
   \vspace*{-1.1cm}
 	\centering
 	\begin{subfigure}{.94\textwidth}
@@ -990,9 +991,9 @@ the same columns are connected. The percentages of removed paleopoles are
 derived relative to Pk 1, corrected relative to each corresponding picking
 method (Pk 8,9, 12,13; 1 paleopole removed and 1 corrected by Pk 20,21 for
 India). Fit quality (FQ) for each score is color coded.}\label{fig-dif} % caption for whole figure
-\end{figure*}
+\end{figure}
 
-\begin{figure*}
+\begin{figure}
 	\centering
 	\begin{subfigure}{.42\textwidth} % width of left subfigure
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/ay18_101comb_10_5_25_0.pdf}
@@ -1022,10 +1023,10 @@ India). Fit quality (FQ) for each score is color coded.}\label{fig-dif} % captio
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/ay18_801comb_10_5_26_3.pdf}
 		\caption{Australia: maximum 0.3934 (26(3)), FQ C-A}\label{fig-au-105263}
 	\end{subfigure}
-	\caption[Best and worst differences (10 Myr bin, 5 Myr step)]{Path
+	\caption[Best and worst $\mathcal{CPD}$s (10/5 Myr window/step)]{Path
 comparisons with best and worst difference values shown in Fig.~\ref{fig-dif}.
 The parenthetical remarks are Pk No and Wt No.}\label{fig-difbw}
-\end{figure*}
+\end{figure}
 
 \begin{enumerate}
   \item There is much more variation in scores along the horizontal axes than
@@ -1059,7 +1060,7 @@ The parenthetical remarks are Pk No and Wt No.}\label{fig-difbw}
 	better FQ (e.g. B-A rather than C-A).
 \end{enumerate}
 
-\subsection{Effects of windowing method}
+\subsection{Effects of Windowing Method}
 
 Dividing $\mathcal{CPD}$ scores according to whether the AMP or APP windowing
 method was used (Fig.~\ref{fig-difAMPvsAPP}) confirms that whilst the lowest
@@ -1072,7 +1073,7 @@ score for the Indian and Australian plates
 and more than 1 standard deviation greater than the APP mean for North American
 APWPs (Figs.~\ref{fig-na-difAMPvsAPP},~\ref{fig-na-boxAMPvsAPP}).
 
-\begin{figure*}
+\begin{figure}
 	\centering
 	\begin{subfigure}{1.01\textwidth}
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/101_120_0APPvsAMP.pdf}
@@ -1100,7 +1101,7 @@ Fig.~\ref{fig-dif}. For each grid block (left: AMP, right: APP), the difference
 values less than one-standard-deviation interval of the whole 84 values are
 labeled in green, more than one-standard-deviation interval labeled in
 red.}\label{fig-difAMPvsAPP}
-\end{figure*}
+\end{figure}
 
 For each of the 84 possible combinations of filter method and weighting, the
 AMP-derived score is typically 3\textendash5 times higher than the equivalent
@@ -1117,7 +1118,7 @@ comparable but relatively high. For the Australian plate, only correcting for
 sedimentary inclination shallowing (Pk 8,9) produces comparable but moderate
 scores (Fig.~\ref{fig-au-difAMPvsAPP}).
 
-\begin{figure*}
+\begin{figure}
 	\centering
 	\begin{subfigure}{.9\textwidth}
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/101_10_5FHM.pdf}
@@ -1140,7 +1141,7 @@ special cases where $\mathcal{CPD}$ from AMP lower than from APP are highlighted
 using darker connecting lines. Dot symbols are semi-transparent so a darker
 color indicates a greater number of data at a given
 $\mathcal{CPD}$.}\label{fig-boxAMPvsAPP}
-\end{figure*}
+\end{figure}
 
 On the North American plate, the APP-derived $\mathcal{CPD}$ score is most
 likely to be significantly better (defined as more than 5 times higher) when
@@ -1153,7 +1154,7 @@ occurs when poles with sedimentary inclination shallowing (Pk 8,9) are
 corrected, or suspected overprints or local rotations are removed (Pk
 18,19, Fig.~\ref{fig-in-difAMPvsAPP}).
 
-\subsection{Effects of filtering and weighting}
+\subsection{Effects of Filtering and Weighting}
 
 When $\mathcal{CPD}$ scores are separated by windowing method
 (Fig.~\ref{fig-difAMPvsAPP}), the effects of particular filtering and weighting
@@ -1165,7 +1166,7 @@ paths with no filtering (Pk 0,1) and no weighting (Wt
 filtering and weighting at best slightly improves, and at worst significantly
 degrades, the APWP fit to the reference path.
 
-\subsubsection{Filter aggression}
+\subsubsection{Filter Aggression}
 
 When considering the effects of filtering, it is important to consider how many
 paleopoles within the data set have been removed (related to Pk 2\textendash7,
@@ -1205,7 +1206,7 @@ determined by the number of contributing paleopoles (A95 is proportional to
 expense of precision. This is particularly an issue where data density is low
 (see Section~\ref{sec:datden}).
 
-\subsubsection{Filter performance}
+\subsubsection{Filter Performance}
 
 Focussing on the filtering and weighting methods with aggressive filtering,
 some commonalities in the best- and worst-performing methods can be observed,
@@ -1278,7 +1279,7 @@ Fig.~\ref{fig-dif}. The absolute difference values less than
 more than 1.96-standard-deviation interval labeled in red.}\label{fig-d-dif}
 \end{figure*}
 
-\subsubsection{Weighting performance}
+\subsubsection{Weighting Performance}
 
 Compared to the variations resulting from different windowing methods and
 filters, Figs.~\ref{fig-difAMPvsAPP},~\ref{fig-nads},~\ref{fig-nadl}
@@ -1415,7 +1416,7 @@ to each segment-orientation-change's three mean path poles.}\label{fig-nada}
 		4.
 \end{enumerate}
 
-\subsection{Effects of window size}
+\subsection{Effects of Window Size}
 
 Fig.~\ref{fig-dif2010} shows the $\mathcal{CPD}$ scores for the APWPs generated
 with the 28 picking and 6 weighting methods, compared to the FHM reference
@@ -1442,8 +1443,8 @@ window step increased from 5 to 10 Myr.
 		0.324438 (22(3)), mean 0.0682, median 0.036432}\label{fig-au-dif2010}
 	\end{subfigure}
 	\caption[$\mathcal{CPD}$ of each plate's paleomagnetic APWPs vs its FHM
-predicted APWP (20/10 Myr bin/step)]{As Fig.~\ref{fig-dif}, here the paths are
-generated in 20 Myr bin and 10 Myr step. The difference values less than
+predicted APWP (20/10 Myr window/step)]{As Fig.~\ref{fig-dif}, here the paths
+are generated in 20 Myr bin and 10 Myr step. The difference values less than
 one-standard-deviation interval of the whole 168 values are colored in green,
 more than one-standard-deviation interval colored in red. Compare the numbers of
 picked paleopoles with those in Fig.~\ref{fig-dif}.}\label{fig-dif2010}
@@ -1477,13 +1478,13 @@ picked paleopoles with those in Fig.~\ref{fig-dif}.}\label{fig-dif2010}
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/ay18_801comb_20_10_22_3.pdf}
 		\caption{Australia: maximum 0.3244 (22(3)), FQ C-A}\label{fig-au-2010223}
 	\end{subfigure}
-	\caption[Best and worst differences (20 Myr bin, 10 Myr step)]{Path
+	\caption[Best and worst $\mathcal{CPD}$s (20/10 Myr window/step)]{Path
 comparisons with best and worst difference values shown in
 Fig.~\ref{fig-dif2010}. The parenthetical remarks are Pk No and Wt
 No.}\label{fig-dif2010bw}
 \end{figure*}
 
-\subsubsection{Overall change}
+\subsubsection{Overall Change}
 
 The overall effect of increased window and step size varies between plates
 (Fig.~\ref{fig-f105d2010}). 118/168 (${\sim}70$\%) of equivalent $\mathcal{CPD}$
@@ -1507,9 +1508,10 @@ little change, with the exception of Pk 14 (AMP, removal of pre–1983 results) 
 the Australian plate. The largest score decreases are associated with Wt 3 (AMP,
 ${\alpha}95$ and age filtering) on the Indian plate, and Pk 15 (APP, removal of
 pre–1983 results) on the Australian plate. Most FQ ratings remain unchanged
-(Fig.~\ref{fig-in-dif2010},~\ref{fig-au-dif2010}): most obviously, ratings for
-Pk 5 and 7 (APP, removal of sedimentary poles) on the Indian plate and Pk 14 on
-the Australian plate change from B-A to C-A.
+(Fig.~\ref{fig-in-dif2010} versus Fig.~\ref{fig-in-dif},
+Fig.~\ref{fig-au-dif2010} versus Fig.~\ref{fig-au-dif}): most obviously, ratings
+for Pk 5 and 7 (APP, removal of sedimentary poles) on the Indian plate and Pk 14
+on the Australian plate change from B-A to C-A.
 
 \begin{figure*}
 	\centering
@@ -1537,7 +1539,7 @@ values are labeled in green, more than 1.96-standard-deviation interval labeled
 in red.}\label{fig-f105d2010}
 \end{figure*}
 
-\subsubsection{Relative performance of methods}
+\subsubsection{Relative Performance of Methods}
 
 As for the baseline results (Section~\ref{sec:base}, Fig.~\ref{fig-dif}), the
 effects of windowing and filtering, particularly the windowing method (APP
@@ -1625,7 +1627,7 @@ APP-derived Pk 15 (Fig.~\ref{fig-801f105d2010}).
 \end{table}
 \end{landscape}
 
-\subsubsection{Other window sizes and steps}
+\subsubsection{Other Window Sizes and Steps}
 
 \paragraph{What to expect is}
 the difference values for larger window/step size should be generally lower than
@@ -1797,14 +1799,14 @@ narrower than 10 Myr, but are much more stable for windows wider than
 scores.
 
 
-\subsection{Moving versus fixed hotspot reference}
+\subsection{Moving versus Fixed Hotspot Reference}
 
 Fig.~\ref{fig-difm} and Fig.~\ref{fig-dif2010m} show the $\mathcal{CPD}$ scores
 for the APWPs generated with all 28 picking and 6 weighting methods, compared to
 the MHM reference paths (stars and solid line in Figs.~\ref{fig-mhsPred}-\ref{fig-mhsPred801})
 with picking time windows and steps of 10/5 Myr and 20/10 Myr.
 
-\subsubsection{Overall change}
+\subsubsection{Overall Change}
 
 Although the reference path is changed to MHM, mean, median and range values of
 $\mathcal{CPD}$ scores are almost unchanged and comparable (Fig.~\ref{fig-dif}
@@ -1864,8 +1866,8 @@ Fig.~\ref{fig-dif}.}\label{fig-difm}
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/ay18_801comb_10_5_26_3m.pdf}
 		\caption{Australia: maximum 0.368 (26(3)), FQ C-A}
 	\end{subfigure}
-	\caption[Best and worst differences (10 Myr bin, 5 Myr
-step)]{Path comparisons with best and worst difference values shown in
+	\caption[Best and worst $\mathcal{CPD}$s (10/5 Myr window/step; MHM)]{Path
+comparisons with best and worst difference values shown in
 Fig.~\ref{fig-difm}. The parenthetical remarks are Pk No with Wt
 No.}\label{fig-difbwm}
 \end{figure*}
@@ -1890,7 +1892,7 @@ No.}\label{fig-difbwm}
 		0.31998 (22(3)), mean 0.062766, median 0.02803}\label{fig-au-dif2010m}
 	\end{subfigure}
 	\caption[$\mathcal{CPD}$ of each plate's paleomagnetic APWPs vs its MHM
-predicted APWP (20/10 Myr bin/step)]{As Fig.~\ref{fig-dif2010}, here the
+predicted APWP (20/10 Myr window/step)]{As Fig.~\ref{fig-dif2010}, here the
 reference path is predicted from MHM\@. See the numbers of picked paleopoles in
 Fig.~\ref{fig-dif}.}\label{fig-dif2010m}
 \end{figure*}
@@ -1923,12 +1925,12 @@ Fig.~\ref{fig-dif}.}\label{fig-dif2010m}
 		\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/ay18_801comb_20_10_22_3m.pdf}
 		\caption{Australia: maximum 0.32 (22(3)), FQ C-A}
 	\end{subfigure}
-	\caption[Best and worst differences (20 Myr bin, 10 Myr
-step)]{Path comparisons with best and worst difference values shown in
+	\caption[Best and worst $\mathcal{CPD}$s (20/10 Myr window/step;
+MHM)]{Path comparisons with best and worst difference values shown in
 Fig.~\ref{fig-dif2010m}. The parenthetical remarks are Pk No and Wt No.}\label{fig-dif2010bwm}
 \end{figure*}
 
-For 10/5 Myr bin/step, the absolute differences (Fig.~\ref{fig-dmf}) are all
+For 10/5 Myr window/step, the absolute differences (Fig.~\ref{fig-dmf}) are all
 lower than 0.066, and actually most are less than 0.01. This indicates that for
 comparing with paleomagnetic APWPs choosing fixed or moving hotspot model for
 generating a reference path is not quite different. Therefore selecting fixed or
@@ -1970,7 +1972,7 @@ favored by Wt 5 or Pk 15 (Fig.~\ref{fig-dmf}). Pk 3 brings minor changes to both
 North America and India. Pk 22 and 26 show large changes and Pk 17, 19, 21 and
 25 show minor changes for both India and Australia.
 
-\subsubsection{Relative performance of methods}
+\subsubsection{Relative Performance of Methods}
 
 \begin{enumerate}
   \item When 10/5 Myr bin/step is applied, Pk 19 is still among the best,
@@ -2030,10 +2032,10 @@ North America and India. Pk 22 and 26 show large changes and Pk 17, 19, 21 and
 
 \section{Discussion}
 
-\subsection{Question: Why the APP methods generally produce better
-similarities than AMP methods do?}
+\subsection{Question: Why APP Methods Generally Produce Better Similarities than
+AMP Methods?}
 
-\subsubsection{Perspective of conceptual difference between AMP and APP}
+\subsubsection{Perspective of Conceptual Difference between AMP and APP}
 
 Paleomagnetic (Mean) A95 represents precision (how well constrained calculated
 poles are), and (mean) coeval poles' GCD represents accuracy (how close
@@ -2119,7 +2121,7 @@ period of its age uncertainty, and use the increased number of paleopoles (N)
 to average out the negative effect of those ``bad'' poles, including the
 paleopoles that should not be included at that age for mean pole.
 
-\subsubsection{Perspective of stability comparison between AMP and APP}
+\subsubsection{Perspective of Stability Comparison between AMP and APP}
 
 Fitting curves by moving averaging change with different time window lengths and
 time increment lengths (i.e.\ steps) (e.g., the similarity of the pair in
@@ -2147,7 +2149,9 @@ the contrary, the less paleopoles the window contains, the weaker the effect of
 averaging out ``bad'' poles' influence would be. So is there a threshold number
 of paleopoles for making an paleomagnetic APWP\@? For example, for making a
 120\textendash0 Ma APWP, do the results indicate the best number of paleopoles
-we need should be some value between 99 and 135? Here a test is implemented as
+we need should be some value between 99 and 135? Or is there a threshold number
+of average paleopoles per window for making a reliable paleomagnetic APWP\@?
+Here a test is implemented as
 follows. With the results from the 10/5 and 20/10 bin/step together, 2/1, 4/2,
 6/3, 8/4, 12/6, 14/7, 16/8, 20/10, 24/12 and 30/15 Myr bin/step are also used to
 generate paleomagnetic APWPs for North America, India and Australia to see which
@@ -2177,8 +2181,8 @@ those from AMP (Fig.~\ref{fig-WinStpVsCPD}). This means we actually do not need
 to worry about what sizes should be chosen for the sliding window and step when
 we use APP method.
 
-\subsection{Question: Why the AMP methods sometimes unexceptionally produce
-better similarities than APP methods do?}
+\subsection{Question: Why AMP Methods Sometimes Unexceptionally Produce Better
+Similarities than APP Methods?}
 
 Because of small number of paleopoles (not necessarily ``bad'') involved in
 each sliding window, the produced mean poles by AMP should be relatively far
@@ -2237,8 +2241,8 @@ However, this phenomenon seldom occur (Table~\ref{tab-bw}).
 \begin{table}[!ht]
 \centering
 \caption{One example of the Type 1 rare cases where AMP gives better similarity
-result than APP does from North America (Window size: 10 Myr, step size:
-5 Myr). Only statistically significant values are listed here.}\label{tab-w3p4vs5}
+result than APP does from North America (10/5 Myr window/step). Only
+statistically significant values are listed here.}\label{tab-w3p4vs5}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}llllllllll@{}}
 \toprule
@@ -2264,8 +2268,8 @@ Age (Ma) & DM/DP () & Pmag A95 () & Dist () & Age (Ma) & Diff () & Pmag A95 () &
 \begin{table}[!ht]
 \centering
 \caption{One example of the Type 2 rare cases where AMP gives better similarity
-result than APP does from North America (Window size: 20 Myr, step size:
-10 Myr). Only statistically significant values are listed here.}\label{tab-w5p4vs5}
+result than APP does from North America (20/10 Myr window/step). Only
+statistically significant values are listed here.}\label{tab-w5p4vs5}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}llllll@{}}
 \toprule
@@ -2287,10 +2291,9 @@ result than APP does from North America (Window size: 20 Myr, step size:
 \begin{table}[!ht]
 \centering
 \caption{One example of the Type 3 rare cases where AMP gives better similarity
-  result than APP does from India (Window size: 10 Myr, step size: 5 Myr).
-  Only statistically significant values are listed here. Note that for the
-  bold-number ages, there is no mean poles at all for the ``Pk 22 (AMP) +
-  Wt 2'' case.}\label{tab-501w0p22vs23}
+result than APP does from India (10/5 Myr window/step). Only statistically
+significant values are listed here. Note that for the bold-number ages, there is
+no mean poles at all for the ``Pk 22 (Wt 2)'' case.}\label{tab-501w0p22vs23}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{@{}llllllllll@{}}
 \toprule
@@ -2341,7 +2344,7 @@ Other Type 3 (e.g. Table~\ref{tab-501w0p22vs23}) cases: Fig.~\ref{fig-na-difm}
 versus 23(0\textendash5), 26(0\textendash5) versus 27(0\textendash5).
 
 
-\subsection{Question: Why weighting is not affecting?}
+\subsection{Question: Why Weighting Is Not Affecting?}
 
 Generally, weighting does not affect the similarities dramatically, because the
 six results from the six weighting methods are mostly very close to each other
@@ -2399,11 +2402,11 @@ Wt 3 is exactly performing in this form.
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth]{../../paper/tex/GeophysJInt/figures/w.pdf}
-\caption[Paleomagnetic APWP's FQ score vs significant difference score]{10/5 Myr
-bin/step paleomagnetic APWP's FQ score (different from FQ, see
-the definitions of FQ and FQ score in Chapter~\ref{chap:Metho}) versus significant
-$\mathcal{CPD}$ score (reference path: FHM predicted) for the 28 different
-picking methods. See the significant $\mathcal{CPD}$ scores and Ppath-Rpath FQ
+\caption[Paleomagnetic APWP's FQ score vs significant difference score
+(i.e. $\mathcal{CPD}$)]{10/5 Myr bin/step paleomagnetic APWP's FQ score (different
+from FQ, see the definitions of FQ and FQ score in Chapter~\ref{chap:Metho})
+versus $\mathcal{CPD}$ significant score (reference path: FHM predicted) for the
+28 different picking methods. See the $\mathcal{CPD}$ scores and Ppath-Rpath FQ
 in Fig.~\ref{fig-dif}. Only those results dramatically worsened by Wt 3
 are labeled.}\label{fig-w}
 \end{figure}
@@ -2411,7 +2414,7 @@ are labeled.}\label{fig-w}
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth]{../../paper/tex/GeophysJInt/figures/wu.pdf}
-\caption[Paleomagnetic APWP's FQ score vs raw difference score]{10/5 Myr
+\caption[Paleomagnetic APWP's FQ score vs raw difference score (no statistical testing)]{10/5 Myr
 bin/step paleomagnetic APWP's FQ score (different from FQ, see the definitions
 of FQ and FQ score in Chapter~\ref{chap:Metho}) versus raw difference score (reference path:
 FHM predicted) for the 28 different picking methods. See FQ versus significant
@@ -2423,12 +2426,12 @@ by Wt 3 are labeled.}\label{fig-wu}
 \centering
 \includegraphics[width=1\textwidth]{../../paper/tex/GeophysJInt/figures/wp.pdf}
 \caption[Proportional changes of Wt 1\textendash5 to 0: Paleomagnetic
-APWP's FQ score vs significant difference score]{Proportion of Wt
+APWP's FQ score vs $\mathcal{CPD}$]{Proportion of Wt
 1\textendash5 to 0: Proportional change in 10/5 Myr bin/step paleomagnetic
 APWP's FQ score (different from FQ, see the definitions of FQ and FQ score in
-Chapter~\ref{chap:Metho}) versus proportional change in significant $\mathcal{CPD}$ score
+Chapter~\ref{chap:Metho}) versus proportional change in $\mathcal{CPD}$ significant score
 (reference path: FHM predicted) for the 28 different picking methods. See the
-significant $\mathcal{CPD}$ scores and Ppath-Rpath FQ in Fig.~\ref{fig-dif}.
+$\mathcal{CPD}$ scores and Ppath-Rpath FQ in Fig.~\ref{fig-dif}.
 Only those results dramatically worsened by Wt 3 are
 labeled.}\label{fig-wp}
 \end{figure}
@@ -2465,7 +2468,7 @@ some specific picking methods. For example, Wt 3 works generally fine with
 Australian data (Table~\ref{tab-bw}). However, Wt 3 is not recommended for North
 America and India.
 
-\subsection{Question: Why best and worst methods are not consistent?}
+\subsection{Question: Why Best and Worst Methods Sometimes Are Not Consistent?}
 
 For all the three continents, North America, India and Australia, Pk
 19 (APP with local rotation or secondary print excluded) and 21 (APP
@@ -2492,8 +2495,8 @@ In summary, the reason why some best and worst methods are not consistent is
 generally that different continents have their unique data sets and get their
 own paleomagnetic studies in varying degrees.
 
-\subsection{Question: Are there particular parts of the path that are more
-variable? Do different methods affect different parts of the path differently?}
+\subsection{Question: Are There Particular Parts of the Path That Are More
+Variable? Do Different Methods Affect Different Parts of the Path Differently?}
 
 The results may highlight the trade-off between more data diluting the effect of
 outliers, and fewer but `better' data being more easily affected by a bad point
@@ -2508,7 +2511,7 @@ From the perspective of the general similarities between those paleomagnetic
 APWPs and the hot spot model and ocean-floor spreading model predicted APWPs,
 GAD hypothesis is proved valid for at least the last 120 Myr.
 
-\subsection{Universal rules of ways of processing paleomagnetic data}
+\subsection{Universal Rules of Ways of Processing Paleomagnetic Data}
 %
 \begin{description}
   \item Although effects of filters (all the picking methods where number of
@@ -2537,7 +2540,7 @@ GAD hypothesis is proved valid for at least the last 120 Myr.
 	considered in APP methods.
 \end{description}
 
-\subsection{Conditional rules of ways of processing paleomagnetic data}
+\subsection{Conditional Rules of Ways of Processing Paleomagnetic Data}
 %
 \begin{description}
   \item Pk 16 (AMP with data from old studies) and 18 (AMP
@@ -2577,6 +2580,3 @@ quality (Fig.~\ref{fig-flow}).
   \caption[Flowchart of making a reliable paleomagnetic APWP]{Flowchart for
 recommended procedure of processing paleomagnetic data.}\label{fig-flow}
 \end{figure}
-
-\section*{Acknowledgments}
-Thanks to Ohio Supercomputer Center for their remote HPC resources.
