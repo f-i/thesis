@@ -1,41 +1,32 @@
 \chapter{Methodologies}\label{chap:Metho}
 \textit{This chapter mainly describes the development of a new APW path
-similarity measuring tool used throughout the dissertation.
-Apparent polar wander paths (APWPs) based on paleomagnetic data are the
-principal means of describing plate motions through most of Earth history.
-Comparing the spatio-temporal patterns and trends of APWPs between different
-tectonic plates is important for testing proposed paleogeographic
-reconstructions of past supercontinents. However, thus far there is no clearly
-defined quantitative approach to determine the degree of similarity between
-APWPs. This paper proposes a new method of determining the degree of similarity
-between two APWPs that combines three separate difference metrics that assess
-both spatial separation of coeval poles, and similarities in the bearing and
-length of coeval segments using a weighted linear summation. Bootstrap tests are
-used to determine whether the differences between coeval poles and segments are
-significant for the given spatial uncertainties in pole positions. The Fit
-Quality is used to discriminate between low significance scores caused by
-comparing poorly constrained paths with large spatial uncertainties from those
-caused by a close fit between well-constrained paths. The individual and
-combined metrics are demonstrated using tests on synthetic pairs of APWPs with
-varying degrees of spatial and geometric difference. In a test on real
-paleomagnetic data, we show that these metrics can quantify the effects of
-correction for inclination shallowing in sedimentary rocks on Gondwana and
-Laurussia's 320\textendash0 Ma APWPs. For an APWP pair, when one APWP's three
-individual metrics are all greater than or equal to, or less than or equal to
-the other one's, weighting is dispensable because the similarity ranking order
-becomes straightforward; otherwise assigning equal weights is recommended,
-although then decision makers are allowed to arbitrarily change weights
-according to their preferences.}
+similarity measuring tool used throughout the thesis. Apparent polar wander
+paths (APWPs) based on paleomagnetic data are the principal means of describing
+plate motions through most of Earth history. Comparing the spatio-temporal
+patterns and trends of APWPs between different tectonic plates is important for
+testing proposed paleogeographic reconstructions of past supercontinents.
+However, thus far there is no clearly defined quantitative approach to determine
+the degree of similarity between APWPs. This chapter proposes a new method of
+determining the degree of similarity between two APWPs that combines three
+separate difference metrics that assess both spatial separation of coeval poles,
+and similarities in the bearing and length of coeval segments using a weighted
+linear summation. Bootstrap tests are used to determine whether the differences
+between coeval poles and segments are significant for the given spatial
+uncertainties in pole positions. The Fit Quality is used to discriminate between
+low significance scores caused by comparing poorly constrained paths with large
+spatial uncertainties from those caused by a close fit between well-constrained
+paths. The individual and combined metrics are demonstrated using tests on
+synthetic pairs of APWPs with varying degrees of spatial and geometric
+difference. In a test on real paleomagnetic data, we show that these metrics can
+quantify the effects of correction for inclination shallowing in sedimentary
+rocks on Gondwana and Laurussia's 320\textendash0 Ma APWPs. For an APWP pair,
+when one APWP's three individual metrics are all greater than or equal to, or
+less than or equal to the other one's, weighting is dispensable because the
+similarity ranking order becomes straightforward; otherwise assigning equal
+weights is recommended, although then decision makers are allowed to arbitrarily
+change weights according to their preferences.}
 \vfill
 \minitoc\newpage
-
-(This chapter is also openly accessible from
-\emph{https://github.com/f-i/APWP\_similarity}. Text:
-\emph{https://github.com/f-i/APWP\_similarity/blob/master/2.pdf}; Figures:
-\emph{https://github.com/f-i/APWP\_similarity/blob/master/2\_figures.pdf};
-Supplementary:
-\emph{https://github.com/f-i/APWP\_similarity/blob/master/2Supp.pdf})
-
 
 \section{Introduction}
 
@@ -100,7 +91,7 @@ dark center), respectively. General Perspective projection. APWPs and rotation
 parameters from~\citet{To16}.}\label{fig:nambal_same_geometry}
 \end{figure*}
 
-\begin{figure*}[tbp]
+\begin{figure*}[!ht]
   \captionsetup[subfigure]{labelformat=empty,aboveskip=-6pt,belowskip=-6pt}
   \centering
   \begin{subfigure}[htbp]{1.01\textwidth}
@@ -113,7 +104,8 @@ parameters from~\citet{To16}.}\label{fig:nambal_same_geometry}
     \includegraphics[width=1.01\linewidth]{../../paper/tex/ComputGeosci/figures/GCDlargeButIndistinguishable.pdf}
     \caption{}\label{fig:GCDlargeButIndistinguishable}
   \end{subfigure}
-  \caption[Examples showing GCD is a bad index of similarity]{(a) How the
+  \caption[Examples showing great circle distance is a bad index of
+  similarity]{(a) How the
   average GCD similarity metric ignores path geometry: \emph{Pair}\textbf{1}
   (circles and squares, left) is clearly more similar than \emph{Pair}\textbf{2}
   (circles and triangles, right), but for both pairs each GCD remains constant.
@@ -143,7 +135,7 @@ similarity between APWPs from different continents.
 
 \section{Methods}
 
-\subsection{Comparing Apparent Polar Wander Paths}
+\subsection{Comparing Apparent Polar Wander Paths (APWPs)}
 
 An APWP consists of a sequence of ($\mathbf{n}$) mean poles,
 $\mathbf{P_1,P_2,\ldots,P_n}$, which average the published paleopoles from a
@@ -153,7 +145,7 @@ Spatial uncertainty is represented by a 95\% confidence ellipse described by
 semi-major axis $\mathbf{dm}$ with azimuth $\beta$ (angle east of north) and
 perpendicular semi-minor axis $\mathbf{dp}$ (e.g. Fig.~\ref{fig:2traj}).
 
-\begin{figure*}[tbp]
+\begin{figure*}[!ht]
   \captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
   \centering
   \begin{subfigure}[htbp]{.495\textwidth}
@@ -274,7 +266,7 @@ separation of two APWPs is defined by the average GCD distance between their
 coeval poles, but we add a filter for spatial uncertainty based on the bootstrap
 approach~\citep{T91}. 1000 bootstrapped mean directions for each pole in a
 coeval pair were generated (the exact sampling method is dependent on the
-available information for the pole\textemdash{}see Supplementary Information for
+available information for the pole\textemdash{}see Appendix~\ref{appen4chp2} for
 a full description) and their cumulative distributions in Cartesian coordinates
 were compared~\citep{T91}. Pairs that could not be distinguished at the
 95\% confidence interval had their GCD separation set to 0 prior to calculation
@@ -295,7 +287,7 @@ by comparing (i) the bearings, and (ii) the lengths of their coeval segments
 (Fig.~\ref{fig:direcdiff}), with the assumption that similar geometries are
 generated by a common set of stage rotations.
 
-\begin{figure}[tbp]
+\begin{figure}[!ht]
 \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/dg1.pdf}
 \caption[Geometric difference definition between two APWPs]{Geometric
 differences between coeval sections of two different APWPs ({\bf
@@ -384,7 +376,7 @@ possible scores for the other, two APWPs may not in fact be significantly
 different from each other. Significance testing for the shape difference scores
 is performed on each coeval segment pair as follows (Fig.~\ref{fig:Fig5b}):
 
-\begin{figure*}[tbp]
+\begin{figure*}[!ht]
   \captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
   \centering
   \begin{subfigure}[htbp]{.495\textwidth}
@@ -397,7 +389,7 @@ is performed on each coeval segment pair as follows (Fig.~\ref{fig:Fig5b}):
     \caption{}\label{fig:Fig5b}
     \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/Fig5b.pdf}
   \end{subfigure}
-\caption[Testing on Geometry]{Significance testing for the geometric metrics,
+\caption[Testing on geometry]{Significance testing for the geometric metrics,
 $d_l$ and $d_a$. (a) Illustration of how paths traj$^I$ and traj$^{II}$ can be
 re-sampled within their uncertainty ellipses, with B being a possible
 trajectory of traj$^I$ and C being a possible trajectory of traj$^{II}$. (b)
@@ -415,8 +407,8 @@ distinguishable.}\label{fig:Fig5}
 \begin{itemize}
 \item A bootstrapped distribution of possible geometries for each segment in a
   path can be created by resampling the two mean poles that define the original
-  segment, in the same manner as described in Section~\ref{sec:sigDs} and the
-  Supplementary Information.
+  segment, in the same manner as described in Section~\ref{sec:sigDs} and
+  Appendix~\ref{appen4chp2}.
 \item A histogram of statistically indistinguishable length and/or angular
   difference scores (HIST1, Fig.~\ref{fig:Fig5b}) is created by comparing the
   resampled paths with the original for each $traj^I$ segment.
@@ -435,7 +427,7 @@ $d_l$ metrics: prior to summation and normalisation, the difference score is set
 to zero for the coeval segments of $traj^I$ and $traj^{II}$ that are
 statistically indistinguishable.
 
-\subsection{Composite Path Difference}
+\subsection{Composite Path Difference ($\mathcal{CPD}$)}
 
 The three difference measures described above can be combined into a composite
 path difference ($\mathcal{CPD}$) by means of a simple linear weighting rule,
@@ -450,7 +442,7 @@ coefficients that sum to 1. Different weighting values allow the relative
 influences of spatial and geometric (length and angular) similarity to be
 varied (Section~\ref{sec:wDis}).
 
-\subsection{Fit Quality}\label{sec:FQ}
+\subsection{Fit Quality (FQ)}\label{sec:FQ}
 
 The three metrics are all tested to be significant based on the spatial
 uncertainties. However, the larger the uncertainties are, the less trustworthy
@@ -575,7 +567,7 @@ metric alone cannot discriminate these pairs from each other. The comparison of
 indicates that well-constrained mean poles with lower uncertainties make it
 relatively harder to have an indistinguishable APWP and a low difference score.
 
-\begin{figure*}[tbp]
+\begin{figure*}[!ht]
   \captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
   \centering
   \begin{subfigure}[htbp]{.495\textwidth}
@@ -624,7 +616,7 @@ sub-path, its beginning segment is the 200\textendash210 Ma
 one.}\label{fig:ssperc}
 \end{figure*}
 
-\begin{figure*}[tbp]
+\begin{figure*}[!ht]
   \captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
   \centering
   \begin{subfigure}[htbp]{.495\textwidth}
@@ -675,9 +667,10 @@ compensates for the deficiency of the algorithm without statistical test
 \emph{Pair}~\textbf{\subref{fig:2traj6}} and
 \emph{Pair}~\textbf{\subref{fig:2traj7}}. Although our algorithm also works for
 APWPs with interpolations (e.g., Fig.~\ref{fig:ssperc}; see how we do
-significance testing on the interpolated mean poles in the Supplementary
-Information), a meaningful and valid analysis should be based on the results
-with uninterpolated paleomagnetic APWPs (e.g., Fig.~\ref{fig:sspercni}).
+significance testing on the interpolated mean poles in
+Appendix~\ref{appen4chp2}), a meaningful and valid analysis should be based on
+the results with uninterpolated paleomagnetic APWPs (e.g.,
+Fig.~\ref{fig:sspercni}).
 
 \subsubsection{$d_l$}
 
@@ -903,7 +896,7 @@ or \emph{Pair}~\textbf{\subref{fig:2traj4}} and
 \emph{Pair}~\textbf{\subref{fig:2traj5}} has multiple possibilities, because
 their differences can be positive, negative or zero (Fig.~\ref{fig:pair-cmp}).
 For this situation, assigning equal weights is recommended (giving centroid of
-all possible $D$s, Fig.~\ref{fig:pair-cmp}; see also Supplementary Information
+all possible $D$s, Fig.~\ref{fig:pair-cmp}; see also Appendix~\ref{appen4chp2}
 for testing equally likely random weights) for deciding the rank order. With
 equal weights used, the order from most similar pair to least similar pair is
 \textbf{\subref{fig:2traj1}} $<$ \textbf{\subref{fig:2traj2}} $<$
@@ -957,7 +950,8 @@ corrected for inclination shallowing (f=0.6; Fig.~\ref{fig:T12Fig13a}b).
 
 \begin{figure}[tbp]
 \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/not_rot_yet3.pdf}
-\caption[Reproducing Torsvik et al. 2012 Fig.13a]{(a) 320\textendash0 Ma APWPs
+\caption[Reproducing Torsvik et al. 2012 Earth Sci Rev Fig.13a]{(a)
+320\textendash0 Ma APWPs
 (10 Myr step) for Gondwana and Laurussia~\cite[rotated to Southern Africa frame
 using the rotations from]{T12}; (b) as (a), but both paths corrected for
 inclination shallowing; (c) and (d) as (a), but only Laurussia path and only
@@ -1051,13 +1045,13 @@ correction is sometimes positive and sometimes negative for different time
 periods, supporting arguments that flattening corrections need to be more
 judiciously applied~\cite[for example]{B10,B16}. A more detailed study might
 further constrain the regions, continents and/or time periods where a correction
-is appropriate, and those where it is not. But for the purposes of this paper,
+is appropriate, and those where it is not. But for the purposes of this chapter,
 this overview is sufficient to demonstrate the potential usefulness of our
 difference metrics when considering the effect of different techniques and
 corrections used to generate an APWP\@.
 
 \section{Conclusions}
-A new synthetic evaluation method is proposed in this paper to serve as a
+A new synthetic evaluation method is proposed in this chapter to serve as a
 numerical tool for the purpose of quantitatively matching paleomagnetic APWPs.
 Multidimensional information tested by bootstrapping, such as overlap of coeval
 poles and shape of paths, are taken into account in the algorithm. This method
@@ -1068,13 +1062,6 @@ blanket correction for inclination shallowing in sedimentary rocks does
 significantly improve the fit between Carboniferous to Recent APWPs for Gondwana
 and Laurussia. However a more detailed analysis also indicates that such blanket
 inclination corrections are unlikely to produce the best possible fit.
-
-
-\section*{Acknowledgments}
-The similarity measuring tool depends on the open-source softwares
-PmagPy~\citep{T16} and GMT~\citep{W13}. All images are produced using
-GMT~\citep{W13}. We thank 3 anonymous reviewers for suggestions that greatly
-improved a previous version of this manuscript.
 
 \section*{Computer Code Availability}
 \paragraph{Name of Code} Spherical Path Comparison (spComparison)
@@ -1089,8 +1076,8 @@ improved a previous version of this manuscript.
 or higher; Linux as the best platform, macOS also fine, for Windows further
 setup needed
 \paragraph{Program Language} Python 3 and Shell Scripting (Bash)
-\paragraph{Program Size} 75 KB
+\paragraph{Program Size} 75 KB (1500 lines)
 \paragraph{Details on How to Access the Source Code} The source code can be
 accessed from \url{https://github.com/f-i/Spherical_Path_Comparison}. Please use
 the provided Jupyter Notebook file ``demo.ipynb'' to reproduce some calculations
-shown in the paper.
+shown in this chapter.
