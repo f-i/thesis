@@ -229,7 +229,7 @@ which is later updated to 4.6b by Ivar Giaever Geomagnetic Laboratory
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=1\textwidth]{../../pps/poster/fig/na.pdf}
-  \captionsetup{width=.95\textwidth}
+  \captionsetup{width=1\textwidth}
   \caption[All published paleomagnetic data from North America]{Much
 paleomagnetic data has been collected from the North American Craton. For
 younger geologic times, do we really need so much data to reconstruct accurately
@@ -448,43 +448,51 @@ plate motion.
 
 How has plate tectonics evolved over geologic history, in terms of average plate
 velocities, numbers of plates and so on? The only quantitative data we have
-prior to ${\sim}170$ Ma are paleomagnetic data. We know there are limitations,
-because we can't constrain the longitudes of paleo-plates very well. When we
-look back through geologic history, how much good paleomagnetic data do we have,
-and how well does it reconstruct `true' plate motions? We don't know well the
-effects of data quality and density, which generally degrades further back in
-geologic history, on producing reliable APWPs. For the past ${\sim}130$\textendash200
-Myr we have the highest density of paleomagnetic data and also independent plate
-motion data from reconstructions of ocean spreading combined with hotspot
-reference frames. These independent data sources can help constrain plate
-motions in more accurate ways. This allows us to ask the question: How much
-paleomagnetic data do we need actually to reconstruct accurately known
-modern-day plate motions? If we can handle that, we can go back in time. For a
-certain density of paleomagnetic data that we have, how reliably can we talk
-about what's going on in the past given the much lower data distribution? It
-might turn out we don't need very much data to say something reasonably and
-reliably. We can test this by looking at the last 0\textendash120 Ma where we
-can compare paleomagnetically derived plate motions with other methods of
-paleogeographic reconstruction. This does not only include the work of
-developing tools and algorithms to generate those paleomagnetically derived
-plate motions (to use paleomagnetic data to reconstruct APWP parameters that are
-known from other sources like ocean basins and hotspots), but also need us to
-know how good these tools are or which one is the best algorithm (to compare
-paleomagnetic APWPs with the known data sources predicted APWP). This can give
-insights into how well we can `know' plate motions back in the past, and what
-data quality and density are necessary to reliably reconstruct a `true' APWP\@.
+prior to ${\sim}170$ Ma are paleomagnetic data. We know there are limitations to
+paleomagnetic data, because we can't constrain the longitudes of paleo-plates
+very well. When we look back through geologic history, how much good
+paleomagnetic data do we have, and how well does it reconstruct `true' plate
+motions? We don't know well the effects of data quality and density, which
+generally degrades further back in geologic history, on producing reliable
+APWPs. For the past ${\sim}130$\textendash200 Myr we have the highest density of
+paleomagnetic data and also independent plate motion data from reconstructions
+of ocean spreading combined with hotspot reference frames. These independent
+data sources can help constrain plate motions in more accurate ways. This allows
+us to ask the question: What path-generating method and how much paleomagnetic
+data do we need actually to reconstruct accurately known modern-day plate
+motions? If we can handle that, we can go back
+in time. For a certain density of paleomagnetic data that we have, how reliably
+can we talk about what's going on in the past given the much lower data
+distribution? It might turn out we don't need very much data to say something
+reasonably and reliably. We can test this by looking at the last 0\textendash120
+Ma where we can compare paleomagnetically derived plate motions with other more
+accurate methods of paleogeographic reconstruction. This does not only include
+the work of developing tools and algorithms to generate those paleomagnetically
+derived plate motions (to use paleomagnetic data to reconstruct APWP parameters
+that are known from other sources like ocean basins and hotspots), but also need
+us to know how good these tools are or which one is the best algorithm (to
+compare paleomagnetic APWPs with the known data sources predicted APWP). This
+can give insights into how well we can `know' plate motions back in the past,
+and what path-generating method, data quality and density are necessary to
+reliably reconstruct a `true' APWP\@.
 
 As a preliminary analysis, some algorithms were made to separate/calculate out
 so-called good paleomagnetic data (at any particular time period for a
-particular craton, like here from 100 Ma to the present day for NAC). We are
-interested in what makes `good' data, how we can identify it and filter it from
-the database, and how sometimes `bad' data is only bad in the sense that it is
-poorly constrained in age or position or any other parameter, in which cases it
-might be possible to include it by e.g., weighting. A weighted mean pole can be
-calculated for a time interval with `better' (more likely to be reliable) poles
-counting more than `worse'. For example, a pole with small $\alpha$95 and very
-well constrained age is more likely to reflect APWP position at the selected age
-point than a pole with large $\alpha$95 and very broad age range.
+particular craton, like here from ${\sim}120$ Ma to the present day for the
+NAC, India and Australia). We are interested in what makes `good' data, how we
+can identify it and
+filter it from the database, and how sometimes `bad' data is only bad in the
+sense that it is poorly constrained in age or position or any other parameter,
+in which cases it might be possible to include it by e.g., weighting. A weighted
+mean pole can be calculated for a time interval with `better' (more likely to be
+reliable) paleopoles counting more than `worse'. For example, a paleopole with
+small $\alpha$95 and very well constrained age is more likely to reflect APWP
+position at the selected age point than a paleopole with large $\alpha$95 and
+very broad age range. Then an algorithm that compares similarity between
+paleomagnetic APWP and known-data-predicted APWP and also gives scores should be
+developed. So that best path-generating method and data quality are used to
+make a reliable paleomagnetic APWP\@. The validity of this algorithm should also
+be tested.
 
 \subsection{Research Questions or Hypotheses}
 
@@ -541,5 +549,5 @@ incorporated to improve these estimates?)
 
 \bigskip
 In summary, this thesis will not be able to help answer all the above questions.
-However, in the end the completion of this thesis and solving the first three
+However, in the end the completion of this thesis and solving the first two
 questions are hoped to be helpful solving the later questions in the future.
