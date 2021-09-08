@@ -90,7 +90,7 @@ considering the mid-point of the uncertainty range in the traditional way (this
 is also how we get two different moving average methods). Besides age and
 position uncertainties of paleopoles, the data consistency is also needed to be
 investigated carefully (see details in Section~\ref{sec:datcons}), because some
-paleopoles' polarity given in the GPMDB4.6b~\cite[updated in 2016 by the Ivar
+paleopoles' polarity given in the GPMDB 4.6b~\cite[updated in 2016 by the Ivar
 Giaever Geomagnetic Laboratory team, in collaboration with Pisarevsky]{M96,P05}
 could be wrong although most are correct. Data density is also vital (see
 details in Section~\ref{sec:datden}) because paleomagnetism is basically built
@@ -249,7 +249,7 @@ record of past plate motions.
 
 \subsection{General Approach}
 
-In this study, we use paleopoles extracted from the GPMDB4.6b~\citep{M96,P05} to
+In this study, we use paleopoles extracted from the GPMDB 4.6b~\citep{M96,P05} to
 generate APWPs for the period 120\textendash0 Ma. A range of possible APW paths
 for North America, India and Australia can be generated from the extracted sets
 of paleopoles using various binning, filtering and weighting methods
@@ -563,13 +563,13 @@ studies.} Advancements in equipment (e.g., cryogenic magnetometers) and
 analytical techniques (e.g., stepwise demagnetisation) mean that more recently
 published paleopoles are potentially more reliable than older ones. Pk 14,15
 removes any paleopoles published prior to 1983 (YEAR $>$ 1983), the mean
-publication date for paleopoles in the GPMDB\@. Pk 24,25 takes a similar but
+publication date for paleopoles in the GPMDB 4.6b. Pk 24,25 takes a similar but
 less aggressive approach by excluding paleopoles that have been superseded (99
 paleopoles) by later studies from the same sequence, which are presumed to
 represent a more accurate determination of the paleopole position. The
-``STATTUS'' field of the GPMDB4.6b indicates if a paleopole has been superseded.
-Conversely, removing paleopoles published after 1983 (Pk 16,17; YEAR $\leq$
-1983) should have a negative effect.
+``STATTUS'' field of the GPMDB 4.6b indicates if a paleopole has been
+superseded. Conversely, removing paleopoles published after 1983 (Pk 16,17;
+YEAR $\leq$ 1983) should have a negative effect.
 
 \paragraph{Exclude suspected local rotations and secondary overprints (Pk
 18,19), or correct for them where possible (Pk 20,21).} Secondary remanence
@@ -659,7 +659,7 @@ paleopoles.
     \frac{140}{\sqrt{K\_NORM\times{}N}} & \textrm{, if ED95, DP \& KD are missing} \\
     \frac{140}{\sqrt{K\_NORM\times{}B}} & \textrm{, if ED95, DP, KD \& N are missing} \\
     \frac{140}{\sqrt{1.7\times{}B}} & \textrm{, if ED95, DP, KD \& K\_NORM are missing,} \\
-    & \textrm{using the lowest KD value ${\sim}1.7$ in GPMDB4.6b,}
+    & \textrm{using the lowest KD value ${\sim}1.7$ in GPMDB 4.6b,}
     \end{array}\right.\end{equation*}}
     finally $w$=0 if this $\alpha$95 completely overlaps with another smaller
     $\alpha$95 whose paleopole is exactly derived from the same place and same
@@ -680,7 +680,7 @@ paleopoles.
 \paragraph{Weighting by sample and site number (Wt 1).} Paleopoles derived
 from more individually oriented samples (observations; N) collected from more
 sampling levels/sites (B) are more likely to average out secular variation and
-accurately sample the GAD field~\citep{T19,B02,v90}, and are given a weighting
+accurately sample the GAD field~\citep{v90,B02,T20}, and are given a weighting
 closer to 1. Unfortunately, in the GPMDB, a paleopole's B or N is not always
 given. As shown in (Table~\ref{tab-weit} no. 1), in such cases the calculated
 weights were modified to give lower weights overall whilst still accounting for
@@ -698,7 +698,7 @@ found in North America, India and Australia.
 that represents a well-constrained age, defined as half of each geological
 period in the Phanerozoic Eon (e.g., Quaternary, Neogene; here the geological
 period that the middle point of the paleopole's age range falls within is
-assigned)~\citep{v90,T19} or 15 Myr (the halves of the Paleogene, Cretaceous,
+assigned)~\citep{v90,T20} or 15 Myr (the halves of the Paleogene, Cretaceous,
 and Jurassic periods are all at least 20 Myr, which is large for these
 relatively young geologic periods), whichever is smaller, paleopoles are given
 an increasingly small weight as the age uncertainty (the high magnetic age $-$
@@ -745,9 +745,9 @@ The weights obtained from the six different weighting functions
 to calculate a weighted Fisher mean. First, weight values are used to scale
 Cartesian x, y and z components of each individual paleopole's geographic
 coordinate. Then these individual coordinates are combined through Fisher
-resultant vector $R$ function~\citep[see][chap.~11]{T19}. Therefore the mean
-pole location, its spatial uncertainty A95, and precision parameter are all
-weighted along with $R$.
+resultant vector $R$ function~\citep[see][chap.~11]{T20}. Therefore the mean
+pole location, its spatial uncertainty A95, and Fisher precision parameter are
+all weighted along with $R$.
 
 Traditionally, weights are directly integrated by being multiplied with the
 variable we would like to do weighting to. For example, here weights can be
@@ -773,7 +773,8 @@ size and difficult to be spatially differentiated.
 N]{Visualization of Equation 11.9 of Essentials of Paleomagnetism: Fifth Web
 Edition, illustrating the relationship between the radius of the circle of 95\%
 confidence ($p$=0.05) about the mean, $\alpha$95, resultant vector $R$ and
-number of directions (or paleopoles) $N$. Note that R$<$N.}\label{fig-alpha95}
+number of directions (or paleopoles) $N$. Note that R$<$N and
+N$\geq$2.}\label{fig-alpha95}
 \end{figure*}
 
 Therefore, here weights are scaled before being multiplied with the Cartesian x,
@@ -1025,7 +1026,7 @@ India). Fit quality (FQ) for each score is color coded.}\label{fig-dif} % captio
     \caption{Australia: maximum 0.3934 (26(3)), FQ C-A}\label{fig-au-105263}
   \end{subfigure}
   \caption[Best and worst $\mathcal{CPD}$s (10/5 Myr window/step)]{Path
-comparisons with best and worst difference values shown in Fig.~\ref{fig-dif}.
+comparisons with best and worst $\mathcal{CPD}$ values shown in Fig.~\ref{fig-dif}.
 The parenthetical remarks are Pk No and Wt No.}\label{fig-difbw}
 \end{figure}
 
@@ -1480,7 +1481,7 @@ picked paleopoles with those in Fig.~\ref{fig-dif}.}\label{fig-dif2010}
 		\caption{Australia: maximum 0.3244 (22(3)), FQ C-A}\label{fig-au-2010223}
 	\end{subfigure}
 	\caption[Best and worst $\mathcal{CPD}$s (20/10 Myr window/step)]{Path
-comparisons with best and worst difference values shown in
+comparisons with best and worst $\mathcal{CPD}$ values shown in
 Fig.~\ref{fig-dif2010}. The parenthetical remarks are Pk No and Wt
 No.}\label{fig-dif2010bw}
 \end{figure*}
@@ -1608,7 +1609,7 @@ APP-derived Pk 15 (Fig.~\ref{fig-801f105d2010}).
  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
  &  &  &  &  &  &  &  &  &  &  &  &  &  \\ \midrule
 \multicolumn{14}{c}{MHM} \\ \midrule
-\multirow{5}{*}{\begin{tabular}[c]{@{}c@{}}Fig.\\\ref{fig-na-difm}\end{tabular}} & \multirow{5}{*}{\begin{tabular}[c]{@{}c@{}}Fig.\\\ref{fig-na-dif2010m}\end{tabular}} & \multirow{5}{*}{N} & \multirow{5}{*}{\begin{tabular}[c]{@{}l@{}}Pk 1, 9, 11,\\ 13, 19, 21,\\ 25 for 10/5\\ (UE); 22, 26\\ for 20/10 (E)\end{tabular}} & \multirow{5}{*}{\begin{tabular}[c]{@{}l@{}}5,\\ 7,\\ 15\end{tabular}} & \multirow{5}{*}{N} & \multirow{5}{*}{\begin{tabular}[c]{@{}l@{}}Pk 16,17\\ only for 10/5\\ (E); 8 only\\ for 20/10\\ (UE)\end{tabular}} & \multirow{5}{*}{\begin{tabular}[c]{@{}l@{}}0, 10\\ 12, 14,\\ 18,\\ 20,\\ 24\end{tabular}} & \multirow{5}{*}{N} & \multirow{5}{*}{Y} & \multirow{5}{*}{N} & \multirow{5}{*}{N} & \multirow{5}{*}{N} & \multirow{5}{*}{\begin{tabular}[c]{@{}l@{}}(0,8,10,11,12,14,18,20,24,25)(0\textendash5)\\ (1,13,19,21)(0,1,5)  3(0,3,5)\\ (5,7)(0\textendash2,4,5)  15(0\textendash4)\\ (9,23,27)(0,1,3,5)\\ account for 60.71\%\end{tabular}} \\
+\multirow{5}{*}{\begin{tabular}[c]{@{}c@{}}Fig.\\\ref{fig-na-difm}\end{tabular}} & \multirow{5}{*}{\begin{tabular}[c]{@{}c@{}}Fig.\\\ref{fig-na-dif2010m}\end{tabular}} & \multirow{5}{*}{N} & \multirow{5}{*}{\begin{tabular}[c]{@{}l@{}}Pk 1, 9, 11,\\ 13, 19, 21,\\ 25 for 10/5\\ (UE); 22, 26\\ for 20/10 (E)\end{tabular}} & \multirow{5}{*}{\begin{tabular}[c]{@{}l@{}}5,\\ 7,\\ 15\end{tabular}} & \multirow{5}{*}{N} & \multirow{5}{*}{\begin{tabular}[c]{@{}l@{}}Pk 16,17\\ only for 10/5\\ (E); 8 only\\ for 20/10\\ (UE)\end{tabular}} & \multirow{5}{*}{\begin{tabular}[c]{@{}l@{}}0, 10\\ 12, 14,\\ 18,\\ 20,\\ 24\end{tabular}} & \multirow{5}{*}{N} & \multirow{5}{*}{Y} & \multirow{5}{*}{N} & \multirow{5}{*}{N} & \multirow{5}{*}{N} & \multirow{5}{*}{\begin{tabular}[c]{@{}l@{}}$(0,8,10,11,12,14,18,20,24,25)(0\textendash5)$\\ $(1,13,19,21)(0,1,5)$  3(0,3,5)\\ $(5,7)(0\textendash2,4,5)$  15(0\textendash4)\\ $(9,23,27)(0,1,3,5)$\\ account for 60.71\%\end{tabular}} \\
  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
@@ -1776,7 +1777,7 @@ Fig.~\ref{fig-dif}.}\label{fig-difm}
 		\caption{Australia: maximum 0.368 (26(3)), FQ C-A}
 	\end{subfigure}
 	\caption[Best and worst $\mathcal{CPD}$s (10/5 Myr window/step; MHM)]{Path
-comparisons with best and worst difference values shown in
+comparisons with best and worst $\mathcal{CPD}$ values shown in
 Fig.~\ref{fig-difm}. The parenthetical remarks are Pk No with Wt
 No.}\label{fig-difbwm}
 \end{figure*}
@@ -1835,7 +1836,7 @@ Fig.~\ref{fig-dif}.}\label{fig-dif2010m}
 		\caption{Australia: maximum 0.32 (22(3)), FQ C-A}
 	\end{subfigure}
 	\caption[Best and worst $\mathcal{CPD}$s (20/10 Myr window/step;
-MHM)]{Path comparisons with best and worst difference values shown in
+MHM)]{Path comparisons with best and worst $\mathcal{CPD}$ values shown in
 Fig.~\ref{fig-dif2010m}. The parenthetical remarks are Pk No and Wt No.}\label{fig-dif2010bwm}
 \end{figure*}
 
@@ -2170,7 +2171,7 @@ statistically significant values are listed here.}\label{tab-w3p4vs5}
 \toprule
 \multicolumn{2}{c}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}FHM\\ predicted\end{tabular}}} & \multicolumn{4}{c}{Pk4(Wt3)} & \multicolumn{4}{c}{Pk5(Wt3)} \\ \cmidrule(l){3-10} 
 \multicolumn{2}{c}{} & \multicolumn{2}{c}{ds} & \multicolumn{2}{c}{dl} & \multicolumn{2}{c}{ds} & \multicolumn{2}{c}{da} \\ \midrule
-Age (Ma) & DM/DP () & Pmag A95 () & Dist () & Age (Ma) & Diff () & Pmag A95 () & Dist () & Age (Ma) & Diff () \\ \midrule
+Age (Ma) & $\mathbf{dm}/\mathbf{dp}$ (\degree) & Pmag A95 (\degree) & Dist (\degree) & Age (Ma) & Diff (\degree) & Pmag A95 (\degree) & Dist (\degree) & Age (Ma) & Diff (\degree) \\ \midrule
 10 & 1.44607/0.793714 & 14.876819 & \textbf{9.937} & 105\textendash110 & 5.91855 & \multicolumn{2}{l}{} & \textit{\textbf{10\textendash15\textendash20}} & \textbf{126.59} \\ \cmidrule(lr){5-6}
 15 & 1.2875/0.816514 & \multicolumn{2}{l}{\multirow{2}{*}{}} & \multicolumn{2}{l}{\multirow{11}{*}{}} & 2.0857 & \textbf{11.805} & \multicolumn{2}{l}{} \\ \cmidrule(l){9-10} 
 25 & 2.48031/1.10915 & \multicolumn{2}{l}{} & \multicolumn{2}{l}{} & 6.3358 & \textbf{6.873} & \multicolumn{2}{c}{dl} \\ \cmidrule(l){9-10} 
@@ -2192,12 +2193,12 @@ Age (Ma) & DM/DP () & Pmag A95 () & Dist () & Age (Ma) & Diff () & Pmag A95 () &
 \caption{One example of the Type 2 rare cases where AMP gives better similarity
 result than APP does from North America (20/10 Myr window/step). Only
 statistically significant values are listed here.}\label{tab-w5p4vs5}
-\resizebox{\textwidth}{!}{%
+\resizebox{.7\textwidth}{!}{%
 \begin{tabular}{@{}llllll@{}}
 \toprule
 \multicolumn{1}{c}{\multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}Age\\ (Ma)\end{tabular}}} & \multicolumn{1}{c}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}FHM\\ predicted\end{tabular}}} & \multicolumn{4}{c}{ds} \\ \cmidrule(l){3-6} 
 \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{2}{c}{Pk2(Wt0)} & \multicolumn{2}{c}{Pk3(Wt0)} \\ \cmidrule(l){2-6} 
-\multicolumn{1}{c}{} & DM/DP (\degree) & Pmag A95 (\degree) & Dist (\degree) & Pmag A95 (\degree) & Dist (\degree) \\ \midrule
+\multicolumn{1}{c}{} & $\mathbf{dm}/\mathbf{dp}$ (\degree) & Pmag A95 (\degree) & Dist (\degree) & Pmag A95 (\degree) & Dist (\degree) \\ \midrule
 0 & 0 & 3.97 & \textbf{5.714} & 3.97 & \textbf{5.714} \\
 10 & 1.44607/0.793714 & 3.879 & \textbf{6.034} & 3.879 & \textbf{6.034} \\
 20 & 1.58039/1.10047 & \multicolumn{2}{l}{} & 6.771 & \textbf{6.934} \\
@@ -2221,7 +2222,7 @@ no mean poles at all for the ``Pk 22 (Wt 2)'' case.}\label{tab-501w0p22vs23}
 \toprule
 \multicolumn{2}{c}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}FHM\\ predicted\end{tabular}}} & \multicolumn{3}{c}{Pk22(Wt 2)} & \multicolumn{5}{c}{Pk23(Wt2)} \\ \cmidrule(l){3-10} 
 \multicolumn{2}{c}{} & \multicolumn{3}{c}{ds} & \multicolumn{3}{c}{ds} & \multicolumn{2}{c}{dl} \\ \midrule
-\multicolumn{1}{c}{Age (Ma)} & DM/DP (\degree) & Pmag DM/DP (\degree) & Dist (\degree) & N & Pmag DM/DP (\degree) & Dist (\degree) & N & Age (Ma) & Diff (\degree) \\ \midrule
+\multicolumn{1}{c}{Age (Ma)} & $\mathbf{dm}/\mathbf{dp}$ (\degree) & Pmag $\mathbf{dm}/\mathbf{dp}$ (\degree) & Dist (\degree) & N & Pmag $\mathbf{dm}/\mathbf{dp}$ (\degree) & Dist (\degree) & N & Age (Ma) & Diff (\degree) \\ \midrule
 0 & 0 & \textbf{6.28} & \textbf{12.72} & \textit{\textbf{2}} & \textbf{23.54} & \textbf{18.14} & \textit{\textbf{3}} & \textbf{80\textendash85} & 6.286 \\
 10 & 1.12124/0.673225 & 5.4/3.1 & 29.9 & 1 & 5.4/3.1 & 29.9 & 1 & \textbf{110\textendash115} & 16.684 \\ \cmidrule(l){9-10} 
 \textbf{15} & 1.1347/0.8127 & \multicolumn{3}{l}{\multirow{5}{*}{}} & 5.4/3.1 & 28.28 & 1 & \multicolumn{2}{l}{\multirow{13}{*}{}} \\
