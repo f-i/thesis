@@ -1,7 +1,7 @@
 \chapter{Methods for Manipulating Paleomagnetic Data on A Globe in Chapter
 2}\label{appen4chp2}
 
-\section{Test if a coeval pole pair is distinguishable with the Bootstrap}
+\section{Test if A Coeval Pole Pair Is Distinguishable with the Bootstrap}
 Whether a pair of coeval mean poles are statistically distinguishable from each
 other is investigated, as it can be determined by checking if the confidence
 intervals of their bootstrap means (based on two poles' uncertainty attributes)
@@ -19,12 +19,13 @@ pseudo-mean pole from $\mathbf{N}$ directions drawn randomly from the original
 set of paleopoles. 1000 such simple Bootstraps are implemented here.
 \item when $1<\mathbf{N}\leq25$ a parametric bootstrap~\citep{T91} generates a
 pseudo-mean from $\mathbf{N}$ directions drawn from a Fisher distribution with
-the same $\mathbf{K}$ and $\mathbf{N}$ as the mean pole. 1000 such parametric
-Bootstraps are implemented here.
+the same precision parameter $\kappa$ and $\mathbf{N}$ as the mean pole. 1000
+such parametric Bootstraps are implemented here.
 \item when $\mathbf{N}=1$, a pseudo-mean is drawn from a bivariate normal
 distribution, defined by the properties of the associated A95 uncertainty
-circle or dm/dp ellipse (see the following Section~\ref{sec:biv}). Here 1000
-samples are drawn from such a normal distribution.
+circle or $\mathbf{dm}/\mathbf{dp}$ ellipse (see the following
+Section~\ref{sec:biv}). Here 1000 samples are drawn from such a normal
+distribution.
 \item if $\mathbf{N}$ is not given, because for example sometimes the pole could
 be an interpolated result, a negligible A95 like 0.1\degree\ or 0\degree\ is
 assigned and the same sampling way as used for the $\mathbf{N}=1$ case is
@@ -34,29 +35,30 @@ coeval poles are both interpolated, we suggest directly removing this pair of
 poles.
 \end{itemize}
 
-\paragraph{Special cases} Sometimes, like in the cases in Fig. 3 and Fig. 10, we
-have complete access to the parameters of the mean poles, e.g.\ $\mathbf{N}$ and
-precision parameter $\mathbf{K}$, and also the paleopoles. However this is not
-necessarily true. If, for instance, we only have access to the path with only
-its mean poles and spatial uncertainties, we can keep the way of doing bootstrap
-sampling consistent for all the mean poles, and just draw bootstrapped means
-from a bivariate normal distribution based on each spatial uncertainty's
-geometry. This is implemented through arbitrarily setting $\mathbf{N}$=1. The
-consistency of bootstrap sampling makes it independent of the state of knowledge
-of the underlying dataset and even the underlying method used to calculate the
-uncertainty. This means the method can be more generalisable beyond APWPs,
-because the metrics and the significance testing procedure are more broadly
-applicable to comparison of other trajectories with associated spatial
-uncertainties, such as hurricane tracks and bird migration routes.
+\paragraph{Special cases} Sometimes, like in those cases in Fig.~\ref{fig:2traj}
+and Fig.~\ref{fig:T12Fig13a}, we have complete access to the parameters of the
+mean poles, e.g.\ $\mathbf{N}$ and Fisher precision parameter $\kappa$, and also
+the paleopoles. However this is not necessarily true. If, for instance, we only
+have access to the path with only its mean poles and spatial uncertainties, we
+can keep the way of doing bootstrap sampling consistent for all the mean poles,
+and just draw bootstrapped means from a bivariate normal distribution based on
+each spatial uncertainty's geometry. This is implemented through arbitrarily
+setting $\mathbf{N}$=1. The consistency of bootstrap sampling makes it
+independent of the state of knowledge of the underlying dataset and even the
+underlying method used to calculate the uncertainty. This means the method can
+be more generalisable beyond APWPs, because the metrics and the significance
+testing procedure are more broadly applicable to comparison of other
+trajectories with associated spatial uncertainties, such as hurricane tracks and
+bird migration routes.
 
-The final results for each coeval pole pair of all the seven APWP pairs (Fig. 3),
-are given in the sub-folder ``0.result\_tables'', which is contained in the main
-``data'' folder. The results for length and angular differences are listed
-starting from the rows for the second and third poles respectively, simply
-because one pole can not compose a APWP segment and at least three poles could
-constitute an APWP orientation change.
+The final results for each coeval pole pair of all the seven APWP pairs
+(Fig.~\ref{fig:2traj}), are given in the sub-folder ``0.result\_tables'', which
+is contained in the main ``data'' folder. The results for length and angular
+differences are listed starting from the rows for the second and third poles
+respectively, simply because one pole can not compose a APWP segment and at
+least three poles could constitute an APWP orientation change.
 
-\section{Bivariate sampling}\label{sec:biv}
+\section{Bivariate Sampling}\label{sec:biv}
 For some specific poles of the APWP, e.g., only one paleomagnetic pole makes up
 that ``mean'', i.e., $N=1$, or even there is no paleomagnetic pole in that
 specific bin (i.e., $N=0$) but an interpolated pole that might be given by
@@ -96,7 +98,7 @@ vectors beforehand and directly generates random pole vectors, which saves the
 transformation from declination and inclination to pole and further helps keep
 us away from the distortion.
 
-\begin{figure}[tbp]
+\begin{figure}[!ht]
 \includegraphics[width=1.0\linewidth]{../../paper/tex/ComputGeosci/figures/rd.pdf}
 \caption[How N$<=$1 uncertainty ellipse is simulated]{Example of modeling random
 points for an ellipse uncertainty on the Earth's surface. Sample points (blue)
@@ -117,7 +119,7 @@ but it is not recommended for a valid analysis. For example, for paleomagnetic
 APWPs, sometimes there are no paleopoles for a given time window ($N=0$);
 sometimes a mean pole is an interpolated result.
 
-\subsection{Equally treated random weights}
+\subsection{Equally Treated Random Weights}
 Assigning equally likely (not necessarily equal in value) random values to
 $W_s,W_a,W_l$ is also tested. Three uniformly distributed random numbers with a
 given sum 1 are generated for, for example, 10 000 times here, and then are
@@ -125,7 +127,7 @@ substituted into the $\mathcal{CPD}$ formula for deriving the seven APWP
 pairs' $D_{full},D_{0-100Ma}$ etc.\ to check the possibility that ``one pair is
 superior to the other pair'' (Fig.~\ref{fig:rall}).
 
-\begin{figure}[tbp]
+\begin{figure}[!ht]
 \centering
 \includegraphics[width=.9\linewidth]{../../paper/tex/ComputGeosci/figures/rAll.png}
 \caption[Comparisons of Pairs a-g with random weights involved]{Differences of
@@ -140,14 +142,15 @@ subtrahend pair owns higher similarity.}\label{fig:rall}
 \end{figure}
 
 The full-path results (Fig.~\ref{fig:rall}) again re-verify Order (4) and
-the results shown in Fig. 8. Although the possibility that
+the results shown in Fig.~\ref{fig:sspercni}. Although the possibility that
 \emph{Pair}~\textbf{d} is more similar than \emph{Pair}~\textbf{e} is not
 significant (around 50\%), the possibility that
 \emph{Pairs}~\textbf{f},\textbf{g} are more similar than
 \emph{Pairs}~\textbf{c},\textbf{d},\textbf{e} is significant (more than 95\%),
 
 All the sub-path results (Fig.~\ref{fig:rall}) are explicable using the results
-shown in Fig. 8. For example, for 0\textendash100 Ma, both
+shown in Fig.~\ref{fig:sspercni}. For example, for 0\textendash100 Ma, both
 \emph{Pair}~\textbf{a} and \emph{Pair}~\textbf{b} are assigned values of zero
 for all the three metrics $d_s^{0-100Ma}$, $d_l^{0-100Ma}$ and $d_a^{0-100Ma}$
-(Figures 8b, 8d and 8f), which means they are always undifferentiated.
+(Figs.~\ref{fig:sd2ni},~\ref{fig:ld2ni} and~\ref{fig:ad2ni}), which means they
+are always undifferentiated.
