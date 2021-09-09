@@ -1945,23 +1945,23 @@ generates paths with higher accuracy and also higher precision (generally
 increasing number of contributing paleopoles).
 
 \begin{figure}[!ht]
-\captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
-\centering
+  \captionsetup[subfigure]{singlelinecheck=off,justification=raggedright,aboveskip=-6pt,belowskip=-6pt}
+  \centering
   \begin{subfigure}[htbp]{.49\textwidth}
-	\caption{}\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/a95gcd_10_5F.pdf}\label{fig-A95GCD105F}
+    \caption{}\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/a95gcd_10_5F.pdf}\label{fig-A95GCD105F}
   \end{subfigure}
   \begin{subfigure}[htbp]{.49\textwidth}
-	\caption{}\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/a95Sgcd_10_5F.pdf}\label{fig-A95SGCD105F}
+    \caption{}\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/a95Sgcd_10_5F.pdf}\label{fig-A95SGCD105F}
   \end{subfigure}
   \begin{subfigure}[htbp]{.49\textwidth}
-	\caption{}\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/a95mSad10_5F.pdf}\label{fig-A95mSad105F}
+    \caption{}\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/a95mSad10_5F.pdf}\label{fig-A95mSad105F}
   \end{subfigure}
   \begin{subfigure}[htbp]{.49\textwidth}
-	\caption{}\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/a95mSld10_5F.pdf}\label{fig-A95mSld105F}
+    \caption{}\includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/a95mSld10_5F.pdf}\label{fig-A95mSld105F}
   \end{subfigure}
-  \caption[APP spatially better than AMP (arrow)]{Paleomagnetic APWP's mean A95 versus
-(a) ``mean GCD'', (b) ``mean significant GCD'', (c) ``mean significant
-orientation difference'', and (d) ``mean significant length difference'' between
+  \caption[APP spatially better than AMP (arrow)]{Paleomagnetic APWP's mean A95
+versus (a) mean GCD, (b) significant spatial difference $d_s$, (c) significant
+angular difference $d_a$, and (d) significant length difference $d_l$ between
 paleomagnetic APWP and its corresponding FHM-and-plate-circuit predicted APWP\@.
 Arrowtails are the results from AMP, while arrowheads are from APP\@. Black
 color filled arrowheads are the small number of special cases of AMP derived
@@ -2094,8 +2094,8 @@ versus AMP comparisons) cases Pk (Wt) 4(3), 6(3) better than 5(3), 7(3)
 respectively. Compared with the Pk (Wt) 4(3) APWP, although most of the mean
 paleopoles are closer to the FHM predicted APWP and also the number of the
 significant pole pairs is two less for the APP derived path (i.e. 5(3)), the A95s
-are smaller and most importantly there are one more significant $d_a$
-orientation-change pair and one more significant $d_l$ segment pair
+are smaller and most importantly there are one more $d_a$ significant
+orientation-change pair and one more $d_l$ significant segment pair
 (Table~\ref{tab-w3p4vs5}). If we observe carefully, it is because of the much
 smaller 15 Ma A95 for 5(3). The similar phenomenon occurs to the case of 6(3)
 versus 7(3), a relatively much smaller paleomagnetic A95 causes more distinguishable
@@ -2305,10 +2305,10 @@ Wt 3 is exactly performing in this form.
 \caption[Paleomagnetic APWP's FQ score vs significant difference score
 (i.e. $\mathcal{CPD}$)]{10/5 Myr bin/step paleomagnetic APWP's FQ score (different
 from FQ, see the definitions of FQ and FQ score in Chapter~\ref{chap:Metho})
-versus $\mathcal{CPD}$ significant score (reference path: FHM predicted) for the
-28 different picking methods. See the $\mathcal{CPD}$ scores and Ppath-Rpath FQ
-in Fig.~\ref{fig-dif}. Only those results dramatically worsened by Wt 3
-are labeled.}\label{fig-w}
+versus $\mathcal{CPD}$ score (reference path: FHM predicted) for the 28
+different picking methods. See the $\mathcal{CPD}$ scores and Ppath-Rpath FQ in
+Fig.~\ref{fig-dif}. Only those results dramatically worsened by Wt 3 are
+labeled.}\label{fig-w}
 \end{figure}
 
 \begin{figure}
@@ -2317,9 +2317,10 @@ are labeled.}\label{fig-w}
 \caption[Paleomagnetic APWP's FQ score vs raw difference score (i.e., no
 statistical testing)]{10/5 Myr bin/step paleomagnetic APWP's FQ score (different
 from FQ, see the definitions of FQ and FQ score in Chapter~\ref{chap:Metho})
-versus raw difference score (reference path: FHM predicted) for the 28 different
-picking methods. See FQ versus significant difference score in Fig.~\ref{fig-w}.
-Only those results dramatically worsened by Wt 3 are labeled.}\label{fig-wu}
+versus raw difference score ($\frac{\Delta_s+\Delta_l+\Delta_a}{3}$; reference
+path: FHM predicted) for the 28 different picking methods. See FQ versus
+$\mathcal{CPD}$ score in Fig.~\ref{fig-w}. Only those results dramatically
+worsened by Wt 3 are labeled.}\label{fig-wu}
 \end{figure}
 
 \begin{figure}
@@ -2329,7 +2330,7 @@ Only those results dramatically worsened by Wt 3 are labeled.}\label{fig-wu}
 APWP's FQ score vs $\mathcal{CPD}$]{Proportion of Wt
 1\textendash5 to 0: Proportional change in 10/5 Myr bin/step paleomagnetic
 APWP's FQ score (different from FQ, see the definitions of FQ and FQ score in
-Chapter~\ref{chap:Metho}) versus proportional change in $\mathcal{CPD}$ significant score
+Chapter~\ref{chap:Metho}) versus proportional change in $\mathcal{CPD}$ score
 (reference path: FHM predicted) for the 28 different picking methods. See the
 $\mathcal{CPD}$ scores and Ppath-Rpath FQ in Fig.~\ref{fig-dif}.
 Only those results dramatically worsened by Wt 3 are
@@ -2343,10 +2344,11 @@ labeled.}\label{fig-wp}
 APWP's FQ score vs raw difference score]{Proportion of Wt
 1\textendash5 to 0: Proportional change in 10/5 Myr bin/step paleomagnetic
 APWP's FQ score (different from FQ, see the definitions of FQ and FQ score in
-Chapter~\ref{chap:Metho}) versus proportional change in raw difference score (reference path:
-FHM predicted) for the 28 different picking methods. See FQ versus significant
-difference score in Fig.~\ref{fig-wp}. Only those results dramatically worsened
-by Wt 3 are labeled.}\label{fig-wpu}
+Chapter~\ref{chap:Metho}) versus proportional change in raw difference score
+($\frac{\Delta_s+\Delta_l+\Delta_a}{3}$; reference path: FHM predicted) for the
+28 different picking methods. See FQ versus $\mathcal{CPD}$ score in
+Fig.~\ref{fig-wp}. Only those results dramatically worsened by Wt 3 are
+labeled.}\label{fig-wpu}
 \end{figure}
 
 In addition, for Wt 3, a small size of $\alpha$95 (high precision) could be
