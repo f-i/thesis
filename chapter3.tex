@@ -1132,17 +1132,17 @@ scores (Fig.~\ref{fig-au-difAMPvsAPP}).
 
 \begin{figure}
   \centering
-  \begin{subfigure}{.9\textwidth}
+  \begin{subfigure}{1\textwidth}
     \includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/101_10_5FHM.pdf}
     \caption{}\label{fig-na-boxAMPvsAPP}
   \end{subfigure}
   \vspace{.1em}
-  \begin{subfigure}{.9\textwidth}
+  \begin{subfigure}{1\textwidth}
     \includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/501_10_5FHM.pdf}
     \caption{}\label{fig-in-boxAMPvsAPP}
   \end{subfigure}
   \vspace{.1em}
-  \begin{subfigure}{.9\textwidth}
+  \begin{subfigure}{1\textwidth}
     \includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/801_10_5FHM.pdf}
     \caption{}\label{fig-au-boxAMPvsAPP}
   \end{subfigure}
@@ -1559,12 +1559,40 @@ is reduced for the North American and Indian plates, with percentage of
 APP-derived $\mathcal{CPD}$ scores more than 3 times the equivalent AMP-derived
 score reducing to ${\sim}26$\% and ${\sim}4$\% (from ${\sim}44$\% and
 ${\sim}40$\%), respectively. For the Australian plate, this percentage increases
-from ${\sim}58$\% to ${\sim}70$\% (Fig.~\ref{fig-dif2010}). In addition,
-APP-generated paths yield a lower $\mathcal{CPD}$ score and also a same or
-better FQ than the equivalent AMP-generated path for 43 (51.2\%) (reduced from
-78 (92.9\%)) of the North America scores, 52 (61.9\%) (reduced from 67 (79.8\%))
-of the India scores, and 83 (98.8\%) (increased from 76 (90.5\%)) of the
-Australia scores.
+from ${\sim}58$\% to ${\sim}70$\% (Fig.~\ref{fig-dif2010}). AMP-derived
+$\mathcal{CPD}$ scores seem more sensitive to change of moving window/step size
+than APP-derived ones because both range and mean of AMP-derived scores are
+apparently decreased along with the increase of moving window/step size. The
+mean AMP-derived still exceeds the max APP-derived for the Indian and Australian
+plates though (Fig.~\ref{fig-boxAMPvsAPP2010} versus
+Fig.~\ref{fig-boxAMPvsAPP}). In addition, APP-generated paths yield a lower
+$\mathcal{CPD}$ score and also a same or better FQ than the equivalent
+AMP-generated path for 43 (51.2\%) (reduced from 78 (92.9\%)) of the North
+America scores, 52 (61.9\%) (reduced from 67 (79.8\%)) of the India scores, and
+83 (98.8\%) (increased from 76 (90.5\%)) of the Australia scores.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}{1\textwidth}
+    \includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/101_20_10FHM.pdf}
+    \caption{}\label{fig-na-boxAMPvsAPP2010}
+  \end{subfigure}
+  \vspace{.1em}
+  \begin{subfigure}{1\textwidth}
+    \includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/501_20_10FHM.pdf}
+    \caption{}\label{fig-in-boxAMPvsAPP2010}
+  \end{subfigure}
+  \vspace{.1em}
+  \begin{subfigure}{1\textwidth}
+    \includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/801_20_10FHM.pdf}
+    \caption{}\label{fig-au-boxAMPvsAPP2010}
+  \end{subfigure}
+  \caption[]{Box-and-whisker and cross (inset) plots of Fig.~\ref{fig-dif2010}.
+The $\mathcal{CPD}$s from same filter and weighting method (red and blue dots
+plotted with box-and-whisker) are connected. Dot symbols are semi-transparent so
+a darker color indicates a greater number of data at a given
+$\mathcal{CPD}$.}\label{fig-boxAMPvsAPP2010}
+\end{figure}
 
 This is largely the result of larger changes in the AMP-derived $\mathcal{CPD}$
 scores compared to changes in the APP-derived ones with the wider time window.
