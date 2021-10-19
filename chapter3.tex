@@ -2097,7 +2097,7 @@ we miss actual details in the APWP (e.g.\ those 20/10 Myr window/step
 paleomagnetic paths in Fig.~\ref{fig-dif2010bw} and even 30/15 Myr window and
 step; Table~\ref{tab-pk0vs1bs} and Fig.~\ref{fig-WinStpVsCPD}) and windows that
 are too narrow and steps that are too short which introduces noise by having too
-few poles in each window (e.g.\ 2 Myr window 1 Myr step;
+few paleopoles in each window (e.g.\ 2 Myr window 1 Myr step;
 Table~\ref{tab-pk0vs1bs} and Fig.~\ref{fig-WinStpVsCPD}). There is a dependence
 here on data density: higher density allows smaller windows/steps (this is one
 of the things we want to test with selective data removal in future work). A
@@ -2108,14 +2108,16 @@ and more appropriately smoothed fit.
 Note that there are 135, 75 and 99 paleopoles that compose of 120\textendash0 Ma
 APWPs of North America, India and Australia respectively. Only for North
 America, does the reason of 10/5 Myr unexpectedly generally better than 20/10
-could be its relatively larger number of paleopoles, compared with India and
-Australia? Since theoretically for each sliding window, the more ``bad''
-paleopoles it contains, the worse similarity we should obtain. In the contrary,
-the less paleopoles the window contains, the weaker the effect of averaging out
-``bad'' poles' influence would be. So is there a threshold number of paleopoles
-for making an paleomagnetic APWP\@? For example, for making a 120\textendash0 Ma
-APWP, do the results indicate the best number of paleopoles we need should be
-some value between 99 and 135? Or is there a threshold number of average
+could be its relatively larger average number of paleopoles per window, compared
+with India and Australia? Since theoretically for each sliding window, the more
+``bad'' paleopoles it contains, the worse similarity we should obtain. In the
+contrary, the less paleopoles the window contains, the weaker the effect of
+averaging out ``bad'' poles' influence would be. So is there a threshold average
+number of paleopoles per window for making an paleomagnetic APWP\@? For example,
+for making a 120\textendash0 Ma APWP, do the results indicate the best average
+number of paleopoles per window we need should be some value between 21 (N.
+America Pk 1 Wt 0 10/5 Myr) and 30 (N. America Pk 1 Wt 0 20/10 Myr)? Or is there
+a threshold number of average
 paleopoles per window for making a reliable paleomagnetic APWP\@? Here a test is
 implemented as follows. With the results from the 10/5 and 20/10 bin/step
 together, 2/1, 4/2, 6/3, 8/4, 12/6, 14/7, 16/8, 20/10, 24/12 and 30/15 Myr
