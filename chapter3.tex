@@ -2105,6 +2105,18 @@ variety of ways of binning the data (here 30\textendash2 Myr window size and
 half of the size as step) are being tested to see which one produces the better
 and more appropriately smoothed fit.
 
+\begin{figure}
+  \centering
+  \includegraphics[width=1\textwidth]{../../paper/tex/GeophysJInt/figures/draper.pdf}
+  \caption[Regression of $\mathcal{CPD}$ on average number of paleopoles per
+    window for Wt 0]{Regression of equal-weight $\mathcal{CPD}$ on average
+    number of paleopoles per window for Wt 0. Plotted data include all the
+    bin/step 10/5 and 20/10 Myr calculations on the 28 picking methods for North
+    America, India and Australia. See plots for Wt 1\textendash5 in
+    Figs.~\ref{fig-regr1},~\ref{fig-regr2},~\ref{fig-regr3},~\ref{fig-regr4}
+    and~\ref{fig-regr5} of Appendix~\ref{appen4chp3}.}\label{fig-regr}
+\end{figure}
+
 Note that there are 135, 75 and 99 paleopoles that compose of 120\textendash0 Ma
 APWPs of North America, India and Australia respectively. Only for North
 America, does the reason of 10/5 Myr unexpectedly generally better than 20/10
@@ -2113,22 +2125,21 @@ with India and Australia? Since theoretically for each sliding window, the more
 ``bad'' paleopoles it contains, the worse similarity we should obtain. In the
 contrary, the less paleopoles the window contains, the weaker the effect of
 averaging out ``bad'' poles' influence would be. So is there a threshold average
-number of paleopoles per window for making an paleomagnetic APWP\@? For example,
-for making a 120\textendash0 Ma APWP, do the results indicate the best average
-number of paleopoles per window we need should be some value between 21 (N.
-America Pk 1 Wt 0 10/5 Myr) and 30 (N. America Pk 1 Wt 0 20/10 Myr)? Or is there
-a threshold number of average
-paleopoles per window for making a reliable paleomagnetic APWP\@? Here a test is
-implemented as follows. With the results from the 10/5 and 20/10 bin/step
-together, 2/1, 4/2, 6/3, 8/4, 12/6, 14/7, 16/8, 20/10, 24/12 and 30/15 Myr
-bin/step are also used to generate paleomagnetic APWPs for North America, India
-and Australia to see which bin/step size would make paleomagnetic APWP closest
-to reference path. Will the similarities they generate be generally worse than
-those the 10/5 Myr bin/step generates? Or will they be better first and then
-worse than those the 10/5 Myr bin/step generates when the bin/step sizes
-increase up to 20/10 Myr? For the best results (Table~\ref{tab-pk0vs1bs}), as
-expected, AMP needs wider sliding window and step to get closer to the reference
-path while APP does not
+number of paleopoles per window for making a reliable paleomagnetic APWP\@? For
+example, for making a 120\textendash0 Ma APWP, do the regression results
+(Fig.~\ref{fig-regr}) indicate the best average number of paleopoles per window
+we need should be some value between 19 and 28? APP definitely improves both
+average number of paleopoles per window and $\mathcal{CPD}$
+(Fig.~\ref{fig-regr}). Here another test is implemented as follows. With the
+results from the 10/5 and 20/10 bin/step together, 2/1, 4/2, 6/3, 8/4, 12/6,
+14/7, 16/8, 20/10, 24/12 and 30/15 Myr bin/step are also used to generate
+paleomagnetic APWPs for North America, India and Australia to see which bin/step
+size would make paleomagnetic APWP closest to reference path. Will the
+similarities they generate be generally worse than those the 10/5 Myr bin/step
+generates? Or will they be better first and then worse than those the 10/5 Myr
+bin/step generates when the bin/step sizes increase up to 20/10 Myr? For the
+best results (Table~\ref{tab-pk0vs1bs}), as expected, AMP needs wider sliding
+window and step to get closer to the reference path while APP does not
 (Fig.~\ref{fig-WinStpVsCPD}). Even the best sizes of sliding window and step are
 assigned for AMP, the results from APP are still much better than those from
 AMP\@. Picking methods (directly related to N) are still the key influence
