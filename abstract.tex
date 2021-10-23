@@ -1,36 +1,48 @@
 \begin{abstract}
 
-Paleomagnetism is the only accepted quantitative method for reconstructing plate
-motions and past paleogeographies for most of Earth history, concretely for
-times before ${\sim}170$ Ma, the age of the oldest identification of marine
-magnetic anomalies. However, there are limitations to paleomagnetic data. The
-effects of paleomagnetic data quality and density, which generally degrades
-further back in geologic history, and data processing methodology on producing
-reliable APWPs are not well known. Luckily, for the past
-${\sim}130$\textendash200 Myr we have independent plate motion data from
-reconstructions of ocean spreading combined with hotspot reference frames. These
-independent data sources can help constrain plate motions in more accurate ways.
-For this period of geological time, paleomagnetic data also reaches the highest
-density. Then such questions can be asked: when we look back on the past
-${\sim}130$\textendash200 Myr, how much good paleomagnetic data do we have, and
-how well does it reconstruct `true' plate motions derived from other independent
-plate motion data?
+Paleomagnetic Apparent Polar Wander Paths (APWPs) are the principal means of
+describing plate motions through most of Earth history. However, there are
+limitations to paleomagnetic data such as the not-well-constrained longitudes of
+paleo-plates and the degrading quality and density of paleomagnetic data with
+increasing age. Yet comparing the spatio-temporal patterns and trends of APWPs
+between different tectonic plates is important for testing proposed
+paleogeographic reconstructions of past supercontinents. Similarity between
+paleomagnetic APWPs of different tectonic plates could indicate the plates were
+once part of a supercontinent. However, there is no clearly defined quantitative
+approach to determine the degree of similarity between APWPs.
 
-In this thesis, 168 methods based on different qualities and densities of
-paleomagnetic data are developed to generate 168 different apparent polar wander
-paths (APWPs), which are the principal means of describing plate motions. Then
-these APWPs are compared to the reference paths derived from two plate
-kinematics models. A new quantitative method of determining the degree of
-similarity between paleomagnetic APWPs and the reference paths is then created
-and publicly accessible as a Python package on GitHub.
+A new similarity measuring algorithm between two APWPs, that combines three
+separate difference metrics that assess both spatial separation of coeval poles,
+and similarities in the bearing and length of coeval segments using a weighted
+linear summation, is proposed. Bootstrap tests are used to determine whether the
+differences between coeval poles and segments are significant for the given
+spatial uncertainties in pole positions. The Fit Quality is used to discriminate
+between low significance scores caused by comparing poorly constrained paths
+with large spatial uncertainties from those caused by a close fit between
+well-constrained paths. The individual and combined metrics are demonstrated
+using tests on synthetic pairs of APWPs with varying degrees of spatial and
+geometric difference. In a test on real paleomagnetic data, these metrics can
+quantify the effects of correction for inclination shallowing in sedimentary
+rocks on Gondwana and Laurussia's 320–0 Ma APWPs. A Python package on GitHub is
+provided online as an open-source software to allow automatically calculating
+similarity scores.
 
-The final results indicate that the newly developed data processing methodology
-is suppressing the necessity of considering data quality and density when
-paleomagnetic data needs to be processed. The new proposed Age Position Picking
-method (considering the whole age ranges of paleopoles) is recommended to
-supercede the old Age Mean Picking one (considering only middle points of age
-ranges) for making a paleomagnetic APWP, when moving average is the core
-technique of the methodology. Weighting paleopoles, a traditional processing
-step for making a paleomagnetic APWP, is actually unnecessary.
+APWPs using 168 different methods are generated, and then the new APW path
+similarity measuring tool is applied to find the best APWP generating methods.
+Paleopole attributes are used to weigh their influence on mean poles, or to
+determine if they should be omitted for producing a `better' mean pole.
+Different key attributes, that can be quantified, or their combination, are
+considered. In addition, when merging paleopoles to produce a smoothed mean
+path, choices are made not only about which data are included or excluded, but
+how data are combined. Moving averaging is used to combine data. The results
+indicate that our new Age Position Picking (APP) method (considering the whole
+age ranges of paleopoles) generates more reliable APWPs than the traditional Age
+Mean Picking (AMP) method (considering only middle points of age ranges) for
+making an APWP, when moving average is the core technique of the methodology.
+Additionally, weighting paleopoles, a traditional processing step for making a
+paleomagnetic APWP, is actually unnecessary. The APP method (without weighting
+paleopoles), which performs significantly better with modern ($\sim$120–0 Ma)
+paleomagnetic data than other methods, should be applied to older `deep-time'
+datasets.
 
 \end{abstract}
