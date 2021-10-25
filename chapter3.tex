@@ -760,15 +760,15 @@ resultant vector $R$ function~\citep[see][chap.~11]{T20}. Therefore the mean
 pole location, its spatial uncertainty A95, and Fisher precision parameter are
 all weighted along with $R$.
 
-Traditionally, weights are directly integrated by being multiplied with the
-variable we would like to do weighting to. For example, here weights can be
-directly multiplied with the Cartesian x, y and z components of each paleopole.
-However, this direct multiplying causes the decreasing of $R$, which further
-sensitively and extremely increases $\alpha$95 (Fig.~\ref{fig-alpha95}),
-especially because $R$ is always less than $N$ and $N$ is usually not that high
+Weights are integrated by being multiplied with the variable we would like to do
+weighting to. For example, here the weights can be directly multiplied with the
+Cartesian x, y and z components of each paleopole. However, this sort of direct
+multiplying causes the decreasing of $R$, which further sensitively and
+extremely increases $\alpha$95 (Fig.~\ref{fig-alpha95}), especially because $R$
+is always less and usually much less than $N$ and $N$ is usually not that high
 (more than ${\sim}50$ is rather rare, around 10 averagely). The consequence
 would be that all the $\alpha$95 ellipses of mean poles are extremely large in
-size and difficult to be spatially differentiated.
+size and difficult to be spatially differentiated.  % see example Mar 15 2019 in f-i/making_of_reliable_APWPs
 
 \begin{figure*}
   \centering
@@ -780,26 +780,27 @@ size and difficult to be spatially differentiated.
     \includegraphics[width=\textwidth]{../../paper/tex/GeophysJInt/figures/alpha95_000094.png}
     \caption{perspective view b}
   \end{subfigure}
-  \caption[Visualization of equation that relates $\alpha$95, and R and
-N]{Visualization of Equation 11.9 of Essentials of Paleomagnetism: Fifth Web
-Edition, illustrating the relationship between the radius of the circle of 95\%
-confidence ($p$=0.05) about the mean, $\alpha$95, resultant vector $R$ and
-number of directions (or paleopoles) $N$. Note that R$<$N and
-N$\geq$2.}\label{fig-alpha95}
+  \caption[Visualization of the equation used to estimate $\alpha$95 from R and
+    N]{Visualization of Equation 11.9 of ``Essentials of Paleomagnetism: Fifth
+    Web Edition'', illustrating the relationship between the radius of the
+    circle of 95\% confidence ($p$=0.05) about the mean, $\alpha$95, resultant
+    vector $R$ and number of directions (or paleopoles) $N$. Note that R$<$N and
+    N$\geq$2.}\label{fig-alpha95}
 \end{figure*}
 
-Therefore, here weights are scaled before being multiplied with the Cartesian x,
-y and z components by
+Therefore, in this thesis the weights are scaled before being multiplied with
+the Cartesian x, y and z components by
 %
 \begin{equation*}
   ScaledW_i=\frac{N \times W_i}{\sum\limits_{i=1}^{N} W_i},
 \end{equation*}
 %
 where $N$ is number of paleopoles for making a mean pole. So the scaled weight
-$ScaledW_i$ could be greater than 1 because it is actually scaled through being
-divided by the mean of the weights. This scaling does not only keep the effect
-of weighting but also avoid dramatically changing $R$ and indirectly and
-extremely changing $\alpha$95.
+$ScaledW_i$ could be greater than 1 because each weight $W_i$ is actually scaled
+through being divided by the mean of the weights ($\frac{\sum\limits_{i=1}^{N}
+W_i}{N}$). This scaling does not only keep the effect of weighting but also
+avoid dramatically changing $R$ and indirectly and extremely changing
+$\alpha$95.
 
 \subsection{Reference Paths}\label{sec:refpath}
 
@@ -1784,7 +1785,7 @@ methods and less worst methods.
   representative continents' paleomagnetic APWPs compared with their FHM
   predicted APWPs. The best are in dark green and underlined, second best in
   green and third in light green. FQ is shown in cell background color: blue,
-  A-A; no color, B-A; orange, C-A; red, D-A.}\label{tab-pk0vs1bs}
+  A-A\@; no color, B-A\@; orange, C-A\@; red, D-A.}\label{tab-pk0vs1bs}
 \resizebox{.78\width}{!}{%
 \begin{tabular}{@{}lllllllllllll@{}}
 \toprule
