@@ -2,7 +2,7 @@
 
 Paleomagnetic Apparent Polar Wander Paths (APWPs) are the principal means of
 describing plate motions through most of Earth history. However, there are
-limitations to paleomagnetic data such as the not-well-constrained longitudes of
+limitations to paleomagnetic data such as the poorly-constrained longitudes of
 paleo-plates and the degrading quality and density of paleomagnetic data with
 increasing age. Yet comparing the spatio-temporal patterns and trends of APWPs
 between different tectonic plates is important for testing proposed
@@ -13,19 +13,19 @@ approach to determine the degree of similarity between APWPs.
 
 A new similarity measuring algorithm between two APWPs, that combines three
 separate difference metrics that assess both spatial separation of coeval poles,
-and similarities in the bearing and length of coeval segments using a weighted
+and similarities in the bearing and length of coeval segments, using a weighted
 linear summation, is proposed. Bootstrap tests are used to determine whether the
 differences between coeval poles and segments are significant for the given
-spatial uncertainties in pole positions. The Fit Quality is used to discriminate
-between low significance scores caused by comparing poorly constrained paths
-with large spatial uncertainties from those caused by a close fit between
-well-constrained paths. The individual and combined metrics are demonstrated
-using tests on synthetic pairs of APWPs with varying degrees of spatial and
-geometric difference. In a test on real paleomagnetic data, these metrics can
-quantify the effects of correction for inclination shallowing in sedimentary
-rocks on Gondwana and Laurussia's 320–0 Ma APWPs. A Python package on GitHub is
-provided online as an open-source software to allow automatically calculating
-similarity scores.
+spatial uncertainties in pole positions. An additional Fit Quality metric is
+used to discriminate between low difference scores caused by comparing poorly
+constrained paths with large spatial uncertainties from those caused by a close
+fit between well-constrained paths. The individual and combined metrics are
+demonstrated using tests on synthetic pairs of APWPs with varying degrees of
+spatial and geometric difference. In a test on real paleomagnetic data, these
+metrics can quantify the effects of correction for inclination shallowing in
+sedimentary rocks on Gondwana and Laurussia's 320–0 Ma APWPs. A Python package
+on GitHub is provided online as an open-source software to allow automatically
+calculating similarity scores.
 
 APWPs using 168 different methods are generated, and then the new APW path
 similarity measuring tool is applied to find the best APWP generating methods.
