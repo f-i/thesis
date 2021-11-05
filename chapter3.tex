@@ -1,10 +1,11 @@
 \chapter{Methods for Producing a Reliable APWP}\label{chap:Reliab}  % chktex 36
 \textit{This chapter mainly describes how to generate paleomagnetic APWPs using
 168 different methods, and then the application of the new APW path similarity
-measuring tool described in the last chapter in finding the best APWP generating
+measuring tool described in the last chapter to find the best APWP generating
 method(s). The final results tell us that the ``Age Position Picking (APP)''  % chktex 36
 method is better than the traditional ``Age Mean Picking (AMP)'' method for
-making a reliable paleomagnetic APWP and weighting is actually unnecessary.}
+making a reliable paleomagnetic APWP and weighting does not seem to have much
+effect.}
 \vfill
 \minitoc\newpage
 
@@ -139,16 +140,17 @@ Fig.~\ref{fig-nac-maplat}).
 This step filters out bad data that is likely to be unreliable, based on known
 information about the paleopoles. These can be subdivided into two groups:
 
-\paragraph{Characteristics that indicate the paleopole is well-constrained
-(precise)}
+\paragraph{Characteristics that indicate the paleopole is or is not
+well-constrained (precise)}
 (e.g., has a small $\alpha$95 uncertainty ellipse, large $\kappa$)
 
-\paragraph{Characteristics that indicate the paleopole is reliable (accurate)}:
+\paragraph{Characteristics that indicate the paleopole is or is not reliable
+(accurate):}
 \begin{itemize}
-  \item Lithology, particularly the risk of inclination flattening in sediments
-    (see Section~\ref{sec:datcons})
+  \item Lithology, particularly if it increases the risk of inclination
+    flattening in sediments (see Section~\ref{sec:datcons}).
   \item Risk of unidentified local rotations in deformed areas (see
-    Section~\ref{sec:datcons})
+    Section~\ref{sec:datcons}).
   \item Publication year \textemdash{} younger studies that use stepwise
     demagnetisation techniques more likely to remove overprints and isolate a
     primary remanence (see Section~\ref{sec:puby}).
@@ -161,20 +163,20 @@ information about the paleopoles. These can be subdivided into two groups:
 
 \subsubsection{Calculation Step}
 
-Normally all paleopoles are treated equally when calculating the Fisher
-mean~\citep[see how to calculate a Fisher mean using the formulas 6.12, 6.13,
+Normally all paleopoles are treated equally when calculating the \emph{Fisher}
+mean~\citep[see how to calculate a \emph{Fisher} mean using the formulas 6.12, 6.13,
 6.14 and 6.15 in][chap. 6; note that instead of direction declination and
 inclination expected in those formulas, pole longitude and latitude should be
 used]{B92}, but as an alternative or supplement to filtering paleopoles can
 potentially be weighted according to the factors that potentially influence
 their precision and/or accuracy such as the A95 uncertainty or age uncertainty,
-and a weighted Fisher mean calculated, giving the `better' paleopoles more
+and a weighted \emph{Fisher} mean calculated, giving the `better' paleopoles more
 influence on the result mean pole. So, for example, each paleopole has got a
 weight before calculating for a mean. In this thesis these weights $w_i$
 are integrated into the $\sum\limits_{i=1}^N l_i$, $\sum\limits_{i=1}^N m_i$ and
 $\sum\limits_{i=1}^N n_i$ of the formulas 6.13 and 6.14 in~\citet[chap.~6]{B92},
 where $w$ means weight and $i$ is the same as in those two formulas. Then for a
-weighted Fisher mean, the two formulas 6.13 and 6.14 in~\citet[chap.~6]{B92}
+weighted \emph{Fisher} mean, the two formulas 6.13 and 6.14 in~\citet[chap.~6]{B92}
 become
 %
 \begin{equation}
@@ -202,7 +204,7 @@ issues.
 As mentioned in the concluding paragraph of Section~\ref{sec:f2}, if not all
 paleopoles are created equal, the question becomes: how should paleopoles of
 varying quality be combined? For a certain set of paleopoles, how can we produce
-an APWP that is both
+an APWP that is both:
 \begin{enumerate}
   \item well constrained: the mean pole for each time step has a low spatial
     uncertainty (small 95\% confidence ellipse), and
@@ -236,7 +238,7 @@ Previous work on this question have focussed on the filtering out so-called
     also the last paragraph of Section~\ref{subp:ss05}).
 \end{enumerate}
 
-Although they are often used, and effect the path and uncertainties of the
+Although they are often used, and affect the path and uncertainties of the
 resulting APWP, there has been limited study of how effective these filtering
 methods are at reconstructing a `true' APWP compared to unfiltered data.
 Furthermore, the focus on the filtering stage ignores the possible impact of
@@ -282,10 +284,10 @@ referred to. They are listed in Table~\ref{tab-fld} for easy reference.
     N & Number of samples \\
     ED95 & Radius of circle of 95\% confidence about mean direction, i.e. $\alpha$95 \\
     EP95 & Radius of circle of 95\% confidence about paleopole position \\
-    KD & Fisher precision parameter for mean direction \\
+    KD & \emph{Fisher} precision parameter for mean direction \\
     DP & Half-angle of confidence on the pole in the direction of paleomeridian \\
     DM & Half-angle of confidence on the pole perpendicular to paleomeridian \\
-    K\_NORM & Fisher precision parameter for Normal directions \\
+    K\_NORM & \emph{Fisher} precision parameter for Normal directions \\
     ROCKNAME & Name of sample rock \\
     ROCKTYPE & Type of sample rock \\
     STATUS & Indicates if results have been superseded \\
@@ -415,7 +417,7 @@ with its neighbours.
 poor data quality, or lacking characteristics thought to correspond to good
 data quality, were discarded (or in some cases, corrected).
 
-\paragraph{Weighting.} Calculation of a weighted Fisher mean~\citep{F53} of
+\paragraph{Weighting.} Calculation of a weighted \emph{Fisher} mean~\citep{F53} of
 the remaining poles within each window, using weighting functions intended to
 increase the influence of higher quality poles relative to lower quality ones.
 
@@ -430,7 +432,7 @@ width of the moving window, and the reference path, were also examined.
 
 In studies where the moving window method is used to calculate an
 APWP~\citep{T99,T08}, a paleopole is generally considered to fall in the current
-window only if the midpoint of its age limits fall within that window. If
+window only if the midpoint of its age limits fall within that window. If a
 paleopole has a large age uncertainty compared to the size of the moving window,
 it will not be included in the moving windows close to the beginning and end of
 the age range, which are arguably more likely magnetisation ages than the
@@ -461,7 +463,7 @@ the mean poles calculated over its entire possible acquisition age.
     paleopoles of the $NAC$. White circles are the midpoints of low and high
     magnetic ages. The vertical axis has no specific meaning here. For example,
     for the window of 15 Ma to 5 Ma (the dashed-line bin), the AMP method
-    calculates the Fisher mean pole (dark triangle in Fig.~\ref{fig-mhsPred}) of
+    calculates the \emph{Fisher} mean pole (dark triangle in Fig.~\ref{fig-mhsPred}) of
     only 5 paleopoles, while the APP method calculates the mean pole (dark
     circle in Fig.~\ref{fig-mhsPred}) of 9 paleopoles.}\label{fig-nac-maplat}
 \end{figure}
@@ -613,7 +615,7 @@ related to the V90 criteria 7.
 
 Following filtering, weights were assigned to each of the remaining paleopoles
 using one of the following six algorithms (Table~\ref{tab-weit}), prior to
-calculation of a weighted Fisher mean:
+calculation of a weighted \emph{Fisher} mean:
 
 \paragraph{No weighting (Wt 0).} Weighting factor=1 for all
 paleopoles.
@@ -718,8 +720,8 @@ with standard deviation of 10. However, a paleopole's $\alpha$95 is not always
 given in the database. If $\alpha$95 is not given, DP (the semi-axis of the
 confidence ellipse along the great circle path from site to pole) is assigned as
 $\alpha$95. If DP is not given either, $\alpha$95 was further approximated by
-$\frac{140}{\sqrt{KD\times{}N}}$, where KD is Fisher precision parameter for
-mean direction if this parameter is given, or Fisher precision parameter for
+$\frac{140}{\sqrt{KD\times{}N}}$, where KD is \emph{Fisher} precision parameter for
+mean direction if this parameter is given, or \emph{Fisher} precision parameter for
 Normal directions (K\_NORM) if only K\_NORM is given when KD is missing. If N is
 not given, B is used as N. If even K\_NORM is also missing, the lowest KD value
 ${\sim}1.7$ in GPMDB 4.6b is used as KD\@. It is also worthwhile to mention that
@@ -752,12 +754,12 @@ of future work.
 \subsubsection{Scaling of Weights}
 
 The weights obtained from the six different weighting functions
-(Table~\ref{tab-weit}) are then integrated into Fisher mean function~\citep{F53}
-to calculate a weighted Fisher mean. First, weight values are used to scale
+(Table~\ref{tab-weit}) are then integrated into \emph{Fisher} mean function~\citep{F53}
+to calculate a weighted \emph{Fisher} mean. First, weight values are used to scale
 Cartesian x, y and z components of each individual paleopole's geographic
-coordinate. Then these individual coordinates are combined through Fisher
+coordinate. Then these individual coordinates are combined through \emph{Fisher}
 resultant vector $R$ function~\citep[see][chap.~11]{T20}. Therefore the mean
-pole location, its spatial uncertainty A95, and Fisher precision parameter are
+pole location, its spatial uncertainty A95, and \emph{Fisher} precision parameter are
 all weighted along with $R$.
 
 Weights are integrated by being multiplied with the variable we would like to do
@@ -1217,11 +1219,12 @@ consequential filters are:
 \end{enumerate}
 
 Conversely, filtering or correction for redbeds (Pk 10,11 and 12,13), local
-rotations and overprints (Pk 18,19 and 20,21%[only 1 paleopole influenced by local rotation removed, and one corrected, for only India; ${\sim}2.7$\%, Fig.~\ref{fig-in-dif}]
-), or superseded data (Pk 24,25) affected 4\% or less of
+rotations and overprints (Pk 18,19 and 20,21 [only one paleopole influenced by
+local rotation removed, and only one corrected, for just India; ${\sim}2.7$\%,
+Fig.~\ref{fig-in-dif}]), or superseded data (Pk 24,25) affected 4\% or less of
 the paleopoles on any plate.
 
-Note that there is an important trade-off that precision in a mean pole is
+Note that there is an important trade-off in that precision of a mean pole is
 determined by the number of contributing paleopoles (A95 is proportional to
 1/$\sqrt{n}$), so an overly aggressive filter might improve accuracy at the
 expense of precision. This is particularly an issue where data density is low
@@ -1235,14 +1238,14 @@ although there are usually exceptions for particular plates and/or windowing
 methods:
 %
 \begin{enumerate}
-  \item For all 3 plates, higher $\mathcal{CPD}$ scores are commonly associated
-    with aggressively filtering based on $\alpha$95 and age range (Pk 2,3,
-    22,23, 26,27), with the exception of AMP-derived paths for India, where Pk
-    22 and 26 produce some of the lowest scores, and also improve FQ\@.
+  \item For all three plates, higher $\mathcal{CPD}$ scores are commonly
+    associated with aggressively filtering based on $\alpha$95 and age range (Pk
+    2,3, 22,23, 26,27), with the exception of AMP-derived paths for India, where
+    Pk 22 and 26 produce some of the lowest scores, and also improve FQ\@.
   \item For North America and India, low scores are commonly associated with
     removal of non-igneous poles (Pk 4,5 and 6,7), particularly for AMP-derived
-    (Pk 4 and 6) paths (sill mostly higher than but very close to APP (Pk 5 and
-    7) scores). These filters also improve or remain FQ when APP replaces AMP,
+    (Pk 4 and 6) paths (still mostly higher than but very close to APP (Pk 5 and
+    7) scores). These filters also improve or sustain FQ when APP replaces AMP,
     except Wt 0,1 reduced FQ to APP's C-A from AMP's B-A for North America. On
     the Australian plate, these filters are less effective, and also reduce
     FQ\@.
@@ -1306,7 +1309,7 @@ exceptions:
 Compared to the variations resulting from different windowing methods and
 filters, Figs.~\ref{fig-difAMPvsAPP},~\ref{fig-nads},~\ref{fig-nadl}
 and~\ref{fig-nada} indicate that the effect of weighting the data prior to
-calculating a Fisher mean is generally small or diluted. The individual $d_s$,
+calculating a \emph{Fisher} mean is generally small or diluted. The individual $d_s$,
 $d_l$ and $d_a$ difference scores are not being affected too much for the
 different applied weighting schemes. Where an effect can be seen, it is
 negative, generating larger $\mathcal{CPD}$ scores but sometimes better FQ
@@ -2082,8 +2085,8 @@ priority.
 
 \section{Discussion}
 
-\subsection{Question: Why APP Methods Generally Produce Better Similarities than
-AMP Methods?}
+\subsection{Question: Why Do APP Methods Generally Produce Better Similarities
+than AMP Methods?}
 
 \subsubsection{Perspective of Conceptual Difference between AMP and APP}
 
