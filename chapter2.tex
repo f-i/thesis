@@ -235,7 +235,7 @@ that have been rotated out of the same reference frame by small (15\degree;
 (45\degree, \emph{Pair}~\textbf{\subref{fig:2traj6}}, Fig.~\ref{fig:2traj6})
 amounts around the same rotation pole represent small and large reconstruction
 errors, respectively. Random noise added to the path
-(\emph{Pair}~\textbf{\subref{fig:2traj3}}, Fig.~\ref{fig:2traj3},
+(\emph{Pair}~\textbf{\subref{fig:2traj3}}, Fig.~\ref{fig:2traj3}, and
 \emph{Pair}~\textbf{\subref{fig:2traj4}}, Fig.~\ref{fig:2traj4}) or the
 associated uncertainties (\emph{Pair}~\textbf{\subref{fig:2traj5}},
 Fig.~\ref{fig:2traj5}) represent differences in data source and/or quality. In
@@ -480,10 +480,11 @@ both coeval mean poles and successive mean poles, so it has already been
 involved in the spatial and length quality. Moreover, given the fact that
 usually the significant length and angular differences are much lower than
 the significant spatial difference (e.g.,
-Figs.~\ref{fig:sd2ni},~\ref{fig:ld2ni},~\ref{fig:ad2ni} and
-Figs.~\ref{fig:LGsS},~\ref{fig:LGlS},~\ref{fig:LGaS}), the ``Fit Quality'' is
-capable to manifest the overall quality of all the three metrics and we should
-trust the difference scores if we get a B-B grade at least.
+Fig.~\ref{fig:sspercni},~\subref{fig:sd2ni},~\subref{fig:ld2ni},~\subref{fig:ad2ni}
+and Fig.~\ref{fig:LauruG},~\subref{fig:LGsS},~\subref{fig:LGlS},~\subref{fig:LGaS}),
+the ``Fit Quality'' is capable to manifest the overall quality of all the three
+metrics and we should trust the difference scores if we get a B-B grade at
+least.
 
 \begin{figure}[tbp]
 \includegraphics[width=1\linewidth]{../../paper/tex/ComputGeosci/figures/expect.pdf}
@@ -566,9 +567,9 @@ interpolated poles, $d_s$ is always zero for
 
 Even with significance testing, $d_s$ for
 \emph{Pairs}~\textbf{\subref{fig:2traj2}}-\textbf{\subref{fig:2traj4}} are the
-same (Fig.~\ref{fig:sd1} and Fig.~\ref{fig:sd2}) despite their different
-geometries (Fig.~\ref{fig:2traj2}, Fig.~\ref{fig:2traj3} and
-Fig.~\ref{fig:2traj4}), because GCDs between coeval poles and their
+same (Fig.~\ref{fig:ssperc},~\subref{fig:sd1},~\subref{fig:sd2}) despite their different
+geometries (Fig.~\ref{fig:2traj},~\subref{fig:2traj2},~\subref{fig:2traj3}
+and~\subref{fig:2traj4}), because GCDs between coeval poles and their
 uncertainties are the same. This result emphasises that a spatial difference
 metric alone cannot discriminate these pairs from each other. The comparison of
 \emph{Pairs}~\textbf{\subref{fig:2traj3}} and \textbf{\subref{fig:2traj5}}
@@ -698,12 +699,13 @@ When ordered only according to the length similarity $d_l$ the expected order is
 Because only the path generated for \emph{Pair}~\textbf{\subref{fig:2traj4}}
 allowed the length of coeval segments to vary, it is expected that other five
 pairs of APWPs have zero $d_l$ for both the full-path and the five specified
-sub-paths even prior to significance testing (Fig.~\ref{fig:ld1ni} and
-Fig.~\ref{fig:ld2ni}), and this expected order is trivially reproduced. The
-effect of significance testing (Fig.~\ref{fig:ld2ni}) is to substantially reduce
-$d_l$. Many segment length differences do not pass the significance test because
-the angular uncertainties of the poles that define individual segments are large
-compared to the length of those segments.
+sub-paths even prior to significance testing
+(Fig.~\ref{fig:sspercni},~\subref{fig:ld1ni},~\subref{fig:ld2ni}), and this
+expected order is trivially reproduced. The effect of significance testing
+(Fig.~\ref{fig:ld2ni}) is to substantially reduce $d_l$. Many segment length
+differences do not pass the significance test because the angular uncertainties
+of the poles that define individual segments are large compared to the length of
+those segments.
 
 \subsubsection{$d_a$}
 
@@ -739,14 +741,14 @@ and sub-paths (Fig.~\ref{fig:ad1ni}). $\Delta_a$ for
 (Fig.~\ref{fig:ad1ni}), but there is no discrimination between
 \emph{Pairs}~\textbf{\subref{fig:2traj3}} and \textbf{\subref{fig:2traj5}},
 which have the same score because geometrically they are identical. When
-significance testing is applied $d_a$ is markedly reduced (Fig.~\ref{fig:ad2ni}
-versus Fig.~\ref{fig:ad1ni}), and is actually reduced to 0 for the two youngest
-and oldest sub-paths in all cases. This is somewhat expected because the segment
-lengths of the APWPs being tested are often of the same order as the angular
-uncertainty in their spatial position. As a result, a large
-range of different path geometries are possible within the specified uncertainty
-bounds, and the bearing of coeval segments has to be very large for the
-difference to be significant.
+significance testing is applied $d_a$ is markedly reduced
+(Fig.~\ref{fig:sspercni},~\subref{fig:ad2ni} versus~\subref{fig:ad1ni}), and is
+actually reduced to 0 for the two youngest and oldest sub-paths in all cases.
+This is somewhat expected because the segment lengths of the APWPs being tested
+are often of the same order as the angular uncertainty in their spatial
+position. As a result, a large range of different path geometries are possible
+within the specified uncertainty bounds, and the bearing of coeval segments has
+to be very large for the difference to be significant.
 
 For the full paths and the 200\textendash300 and 300\textendash400 Ma sub-paths
 where $d_a$ after significance testing is non-zero for
@@ -798,8 +800,9 @@ however \emph{Pairs}~\textbf{\subref{fig:2traj4}}
 and~\textbf{\subref{fig:2traj5}} have almost identical scores and are not
 discriminated. However, their fit quality (B-B for
 \emph{Pair}~\textbf{\subref{fig:2traj4}} and B-A for
-\emph{Pair}~\textbf{\subref{fig:2traj5}}; Fig.~\ref{fig:sd2ni},
-Fig.~\ref{fig:ld2ni} and Fig.~\ref{fig:ad2ni}) indicates that
+\emph{Pair}~\textbf{\subref{fig:2traj5}};
+Fig.~\ref{fig:sspercni},~\subref{fig:sd2ni},~\subref{fig:ld2ni}
+and~\subref{fig:ad2ni}) indicates that
 \emph{Pair}~\textbf{\subref{fig:2traj5}}'s $\mathcal{CPD}$ is relatively more
 trustworthy. This order might also not be preserved with different applied
 weights. The impact of weighting will be discussed in the following section.
@@ -821,8 +824,8 @@ depending on the chosen weightings.
 
 For example, for the full (i.e., 0\textendash530 Ma) path with no interpolated
 poles, the significant spatial, length and angular differences $d_s$, $d_l$ and
-$d_a$ are known (Fig.~\ref{fig:sd2ni}, Fig.~\ref{fig:ld2ni} and
-Fig.~\ref{fig:ad2ni}). Also we know $W_l=1-W_s-W_a$. Then we do subtractions of
+$d_a$ are known (Fig.~\ref{fig:sspercni},~\subref{fig:sd2ni},~\subref{fig:ld2ni}
+and~\subref{fig:ad2ni}). Also we know $W_l=1-W_s-W_a$. Then we do subtractions of
 $\mathcal{CPD}s$ from each two APWP pairs:
 %
 \setcounter{equation}{0} %reset the equation counter
@@ -1026,12 +1029,12 @@ pair (\emph{Pair}~\ref{fig:T12Fig13a}a). This difference is significant
 (lower $d_s$) in the Permian (300\textendash250 Ma) and Carboniferous to
 Triassic (320\textendash200 Ma) sections. When geometry is considered,
 $\Delta_l$ and $\Delta_a$ scores without significance testing
-(Fig.~\ref{fig:LGl} and Fig.~\ref{fig:LGa}) are actually higher for corrected
-(\emph{Pair}~\ref{fig:T12Fig13a}b) than uncorrected pair
+(Fig.~\ref{fig:LauruG},~\subref{fig:LGl},~\subref{fig:LGa}) are actually higher
+for corrected (\emph{Pair}~\ref{fig:T12Fig13a}b) than uncorrected pair
 (\emph{Pair}~\ref{fig:T12Fig13a}a), particularly in the same Permo-Triassic
 segment; however, none of these differences are statistically significant
-(Fig.~\ref{fig:LGlS} and Fig.~\ref{fig:LGaS}). Therefore, the equally weighted
-$\mathcal{CPD}$ score is actually worse for corrected pair
+(Fig.~\ref{fig:LauruG},~\subref{fig:LGlS},~\subref{fig:LGaS}). Therefore, the
+equally weighted $\mathcal{CPD}$ score is actually worse for corrected pair
 (\emph{Pair}~\ref{fig:T12Fig13a}b) (0.213 versus 0.1998 for
 \emph{Pair}~\ref{fig:T12Fig13a}a), whereas with significance testing applied the
 $\mathcal{CPD}$ of the corrected pair is a clear improvement (0.0147 versus
@@ -1046,7 +1049,7 @@ for inclination flattening with a Gondwana APWP that has not
 (\emph{Pair}~\ref{fig:T12Fig13a}d), removing the blanket correction from
 Gondwana poles has only a minor effect on the overall $d_s$, whilst removing it
 from the Laurussia poles actually improves $d_s$ after significance testing
-(Fig.~\ref{fig:LGs} and Fig.~\ref{fig:LGsS}). Comparison of the changes in
+(Fig.~\ref{fig:LauruG},~\subref{fig:LGs},~\subref{fig:LGsS}). Comparison of the changes in
 sub-path scores for \emph{Pairs}~\ref{fig:T12Fig13a}b,~\ref{fig:T12Fig13a}c
 and~\ref{fig:T12Fig13a}d suggests that the effect of the bulk flattening
 correction is sometimes positive and sometimes negative for different time

@@ -14,30 +14,30 @@ dependent on the number of paleopoles ($\mathbf{N}$) used to calculate the mean
 pole in the APWP$\colon$
 
 \begin{itemize}
-\item when $\mathbf{N}>25$ a simple bootstrap~\citep{T91} generates a
-pseudo-mean pole from $\mathbf{N}$ directions drawn randomly from the original
-set of paleopoles. 1000 such simple Bootstraps are implemented here.
-\item when $1<\mathbf{N}\leq25$ a parametric bootstrap~\citep{T91} generates a
-pseudo-mean from $\mathbf{N}$ directions drawn from a Fisher distribution with
-the same precision parameter $\kappa$ and $\mathbf{N}$ as the mean pole. 1000
-such parametric Bootstraps are implemented here.
-\item when $\mathbf{N}=1$, a pseudo-mean is drawn from a bivariate normal
-distribution, defined by the properties of the associated A95 uncertainty
-circle or $\mathbf{dm}/\mathbf{dp}$ ellipse (see the following
-Section~\ref{sec:biv}). Here 1000 samples are drawn from such a normal
-distribution.
-\item if $\mathbf{N}$ is not given, because for example sometimes the pole could
-be an interpolated result, a negligible A95 like 0.1\degree\ or 0\degree\ is
-assigned and the same sampling way as used for the $\mathbf{N}=1$ case is
-applied here. This is for the situation when only one of the coeval poles is
-interpolated, and one would like to keep this pair of poles. Note that if the
-coeval poles are both interpolated, we suggest directly removing this pair of
-poles.
+  \item when $\mathbf{N}>25$ a simple bootstrap~\citep{T91} generates a
+    pseudo-mean pole from $\mathbf{N}$ directions drawn randomly from the
+    original set of paleopoles. 1000 such simple Bootstraps are implemented here.
+  \item when $1<\mathbf{N}\leq25$ a parametric bootstrap~\citep{T91} generates a
+    pseudo-mean from $\mathbf{N}$ directions drawn from a \emph{Fisher}
+    distribution with the same precision parameter $\kappa$ and $\mathbf{N}$ as
+    the mean pole. 1000 such parametric Bootstraps are implemented here.
+  \item when $\mathbf{N}=1$, a pseudo-mean is drawn from a bivariate normal
+    distribution, defined by the properties of the associated A95 uncertainty
+    circle or $\mathbf{dm}/\mathbf{dp}$ ellipse (see the following
+    Section~\ref{sec:biv}). Here 1000 samples are drawn from such a normal
+    distribution.
+  \item if $\mathbf{N}$ is not given, because for example sometimes the pole
+    could be an interpolated result, a negligible A95 like 0.1\degree\ or
+    0\degree\ is assigned and the same sampling way as used for the
+    $\mathbf{N}=1$ case is applied here. This is for the situation when only one
+    of the coeval poles is interpolated, and one would like to keep this pair of
+    poles. Note that if the coeval poles are both interpolated, we suggest
+    directly removing this pair of poles.
 \end{itemize}
 
 \paragraph{Special cases} Sometimes, like in those cases in Fig.~\ref{fig:2traj}
 and Fig.~\ref{fig:T12Fig13a}, we have complete access to the parameters of the
-mean poles, e.g.\ $\mathbf{N}$ and Fisher precision parameter $\kappa$, and also
+mean poles, e.g.\ $\mathbf{N}$ and \emph{Fisher} precision parameter $\kappa$, and also
 the paleopoles. However this is not necessarily true. If, for instance, we only
 have access to the path with only its mean poles and spatial uncertainties, we
 can keep the way of doing bootstrap sampling consistent for all the mean poles,
@@ -152,5 +152,5 @@ All the sub-path results (Fig.~\ref{fig:rall}) are explicable using the results
 shown in Fig.~\ref{fig:sspercni}. For example, for 0\textendash100 Ma, both
 \emph{Pair}~\textbf{a} and \emph{Pair}~\textbf{b} are assigned values of zero
 for all the three metrics $d_s^{0-100Ma}$, $d_l^{0-100Ma}$ and $d_a^{0-100Ma}$
-(Figs.~\ref{fig:sd2ni},~\ref{fig:ld2ni} and~\ref{fig:ad2ni}), which means they
-are always undifferentiated.
+(Fig.~\ref{fig:sspercni},~\subref{fig:sd2ni},~\subref{fig:ld2ni}
+and~\subref{fig:ad2ni}), which means they are always undifferentiated.
