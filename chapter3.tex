@@ -54,32 +54,32 @@ middle point of lower and higher age limits considered as paleopole's age and
 APWPs are produced to see which attribute is more important and also which
 moving average method performs better. To answer these questions, we need a
 reference path (see details in Section~\ref{sec:refpath}) and a tool to measure
-similarity between the paleomagnetic APWPs and the reference path. Then the
-measuring tool developed and introduced in Chapter~\ref{chap:Metho} is used to
-measure the similarity. We have two reference paths derived from other plate
-kinematics models. These reference models are thought to be more accurate and
-more precise, so that if the paleomagnetic APWPs are similar to the reference
-path, they are regarded as more `reliable'. The question is which model
-predicted reference path is a better reference or is there any difference
-between these two reference paths? In this chapter, we will also try to answer
-this question.
+similarity between the paleomagnetic APWPs and the reference path, which was
+developed and introduced in Chapter~\ref{chap:Metho}. We have two reference
+paths derived from plate kinematics models tied to different absolute reference
+frames. These reference models are thought to be more accurate and more precise,
+so that if the paleomagnetic APWPs are similar to the reference path, they are
+regarded as more `reliable'. The question is which model predicted reference
+path is a better reference or is there any difference between these two
+reference paths? In this chapter, we will also try to answer this question.
 
-Finally no single attribute generally works better than others for all the
-continents or continental fragments. However, the moving average method, that
-considers the whole range of paleopoles' temporal uncertainty when calculating
-mean pole's age is needed, is proved that it is obviously a better way of
-generating reliable APWPs than the one that only considers the midpoint of
-temporal uncertainty as a paleopole's age. And weighting is proved to be
-actually unnecessary. The reference paths derived from other models are not
-significantly different.
+Our results indicate that no single attribute as a filter or correction
+universally works better than others for all the continents or continental
+fragments. However, the moving average method, that considers the whole range of
+paleopoles' temporal uncertainty when calculating mean pole's age is needed
+(APP), is clearly a better way of generating reliable APWPs than the one that
+only considers the midpoint of temporal uncertainty as a paleopole's age (AMP).
+Weighting of individual paleopoles is proved to be unnecessary. The two
+reference paths are not significantly different.
 
 \subsection{How An APWP Is Generated and Key Factors}
 
 As mentioned above, the first question to ask is that which tectonic plate the
 paleopole we are working on belongs to (see Section~\ref{sec:f1} and details
 about how it is solved in Appendix~\ref{appen4chp3}). The fact is that
-paleomagnetic data is not just about poles but multiple attributes integrated
-and not all data are created equal. So once the host tectonic plate is
+paleomagnetic data is not just about pole location but integration of multiple
+attributes. And that not all data are created equal is directly reflected by
+these attributes. So once paleomagnetic data's host tectonic plate is
 determined, we encounter another problem: the attributes, for example,
 uncertainties of ages and also locations, can vary greatly for different
 paleopoles (see details in Sections~\ref{sec:ageu} and~\ref{sec:posu}).
@@ -88,7 +88,7 @@ then used to weigh paleopoles or to omit some of them through setting up a range
 of acceptable values. In addition, the age uncertainty can also be used to
 change the way how we do moving averaging when we calculate mean poles through
 considering the whole uncertainty range instead of only considering the midpoint
-of the uncertainty range in the traditional way (this is also how we get two
+of the uncertainty range in the traditional way (this is how we also tested two
 different moving average methods). Besides age and position uncertainties of
 paleopoles, the data consistency is also needed to be investigated carefully
 (see details in Section~\ref{sec:datcons}), because some paleopoles' polarity
@@ -98,10 +98,10 @@ although most are correct. Data density is also vital (see details in
 Section~\ref{sec:datden}) because paleomagnetism is basically built on
 statistics. In addition, when the paleopoles were published (publication year)
 is also a key factor that potentially indicates the quality of the paleopoles
-(see details in Section~\ref{sec:puby}), simply because in old times, technology
-of magnetism measuring was not that advanced as today. In consideration of all
-these factors, we organise them in the general processing steps below in order
-to generate a paleomagnetic APWP\@.
+(see details in Section~\ref{sec:puby}), simply because in earlier times,
+paleomagnetic instrumentation and demagnetisation techniques were not as
+advanced as today. In consideration of all these factors, we organise them in
+the general processing steps below in order to generate a paleomagnetic APWP\@.
 
 \subsubsection{Picking/Binning Step}
 
@@ -117,25 +117,23 @@ time window lengths and steps. If window length is too wide and step is too
 long, final path would be so smoothed that actual details would be missed. If
 window length is too narrow and step is too short, final path would be jerky
 piecewise so that too much noise would be introduced because there are too few
-datasets in each window. So a balance needs to be achieved.
+paleopoles in each window. So a balance needs to be achieved.
 
 \paragraph{Age uncertainty in magnetisation,}
 particularly when that uncertainty is larger than the selection window. The
-midpoint is commonly used as a selection point (see an example in upper panel
-of Fig.~\ref{fig-nac-maplat}), but when the minimum age is constrained by a
-field test (common when the age range is large; see Section~\ref{sec:ageu}), the
-assumption that this is the most likely age is questionable. As it is mentioned
-in Section~\ref{sec:ageu}, if field test shows magnetisation acquired prior to,
-for example, a folding event that is tens of millions of years after initial
-rock formation, a passed field test is not actually very useful. So when age
-uncertainty is very large, the possibility of remagnetisation is certainly very
-high, which means the age is probably closer to the minimum age instead of the
-middle age. Since treating only midpoint as a paleopole's age intends to be
-subjective and true age could be anywhere within an age range, it is necessary
-and also objective to test how it performs if any part of an age range that
-falls within the moving window is taken into account when the selection window
-picks paleopoles on each moving step (see an example in lower panel of
-Fig.~\ref{fig-nac-maplat}).
+midpoint between the maximum and minimum ages is commonly used as a selection
+point (see an example in upper panel of Fig.~\ref{fig-nac-maplat}), but when the
+minimum age is constrained by a field test (common when the age range is large;
+see Section~\ref{sec:ageu}), the assumption that this is the most likely age is
+questionable. As is also discussed in Section~\ref{sec:ageu}, if field test
+shows magnetisation acquired prior to, for example, a folding event that is tens
+of millions of years after initial rock formation, a passed field test is not
+actually very useful. So if age uncertainty is very large, the possibility of
+remagnetisation is very high, which means the age is probably closer to the
+minimum age instead of the middle age. Since the paleopole's true age could be
+anywhere within the age range, an alternative picking method includes a
+paleopole if any part of its age range falls within the moving window (see an
+example in lower panel of Fig.~\ref{fig-nac-maplat}).
 
 \subsubsection{Filtering Step}
 
@@ -2455,25 +2453,24 @@ of an increase in the uncertainty of the mean poles (they become less
 distinguishable \textemdash{} decreased precision).
 
 Fig.~\ref{fig-wp} and Fig.~\ref{fig-wpu} show that the proportions of results
-from Wt 1\textendash5 to result from 0 are generally in the second quadrant of
-the coordinate plane, where proportional change in difference score is positive
-whereas proportional change in paleomagnetic FQ score is negative. This means
-the five weightings (Wt 1\textendash5) do make effects, not obviously in
-accuracy but mainly in improving precision, which could potentially expose more
-pairs of distinguishable poles/segments/angle-changes. Or even accuracy is
-improved in a small amount, improved precision intends to cancel out the effects
-from improved accuracy.
+from Wt 1\textendash5 to result from Wt 0 are generally in the second quadrant
+of the coordinate plane, where the proportional change in difference score is
+positive whereas the proportional change in paleomagnetic FQ score is negative.
+This means the five weightings (Wt 1\textendash5) do have an effect, not
+obviously in accuracy but mainly in improving precision, which could potentially
+make more pairs of poles/segments/angle-changes distinguishable. Or even if
+accuracy is improved by a small amount, the improved precision tends to cancel
+out the effects from the improved accuracy.
 
-There are a few special cases that one or two of the six weighting methods gives
-a result with a dramatically worsened difference score, e.g.\ for weighting
-method Wt 3 (Fig.~\ref{fig-dif}). From the labeled dots of Wt 3 in
+There are a few special cases where one or two of the six weighting methods
+gives a result with a dramatically worsened difference score, e.g.\ for
+weighting method Wt 3 (Fig.~\ref{fig-dif}). From the labeled dots of Wt 3 in
 Fig.~\ref{fig-w}, Fig.~\ref{fig-wu}, Fig.~\ref{fig-wp} and Fig.~\ref{fig-wpu},
-we can get a general impression that Wt 3 is indeed improving precision
-but not accuracy (at least not enough to offset the effects from improved
-precision) so that this precision improvement is also the culprit that worsens
-the final score. Highly improved precision without corresponding improved
-accuracy would potentially bring more significant differences in shape metrics.
-Wt 3 is exactly performing in this form.
+it appears that Wt 3 is indeed improving precision but not accuracy (at least
+not enough to offset the effects from improved precision) so that this precision
+improvement worsens the final score. Highly improved precision without
+corresponding improved accuracy results in more significant differences in shape
+metrics: Wt 3 is exactly performing in this way.
 
 \begin{figure}
   \centering
@@ -2527,50 +2524,53 @@ Wt 3 is exactly performing in this form.
     labeled.}\label{fig-wpu}
 \end{figure}
 
-In addition, for Wt 3, a small size of $\alpha$95 (high precision) could be
-caused by those sampled directions not covering enough long period (thought to
+In addition, for Wt 3, a very small size of $\alpha$95 (high precision) could be
+caused by those sampled directions not covering a long enough period (thought to
 be at least about $10^4$ years) to ``average out'' secular variation for giving
-a paleopole. That is to say, the smallest $\alpha$95s could get the greatest
-weights that they should not deserve.
+a paleopole. That is to say, the smallest $\alpha$95s are being weighted more
+than they deserve.
 
-Generally, weighting is affecting because different weighting functions give
-obviously different results. However, interestingly weighting does not improve
-fit and generally no weighting (Wt 0) is giving the best fit, although in most
-cases weighting does improve precision. Wt 2 or 4 is not recommended, because
-they never have generated the best similarities (Table~\ref{tab-bw}), compared
-with other weighting methods. There is no general pattern about which weighting
-(of Wt 1\textendash5) is better or worse. So weighting, for making a
-paleomagnetic APWP, is not absolutely necessary. However, there are some
-patterns about which weighting is better or worse for some specific continent or
-some specific picking methods. For example, Wt 3 works generally fine with
-Australian data (Table~\ref{tab-bw}). However, Wt 3 is not recommended for North
-America and India.
+Generally, weighting has some effect because different weighting functions give
+obviously different results. However, weighting does not improve fit and
+generally no weighting (Wt 0) generates the best fit, although in most cases
+weighting does improve precision. Wt 2 or 4 seems to rarely have generated the
+best $\mathcal{CPD}$ score (Table~\ref{tab-bw}), compared with other weighting
+methods, but they seem performs better with APP in terms of FQ
+(Table~\ref{tab-pk0vs1bs}). There is no general pattern about which weighting
+(of Wt 1\textendash5) is better or worse. So weighting when calculating mean
+poles for a paleomagnetic APWP is not absolutely necessary. However, there are
+cases where weighting is better or worse for some specific continent or some
+specific picking method. For example, Wt 3 works generally fine with Australian
+data (Table~\ref{tab-bw}). However, Wt 3 is not recommended for North America
+and India.
 
-\subsection{Question: Why Best and Worst Methods Sometimes Are Not Consistent?}
+\subsection{Question: Why Are The Best and Worst Methods Sometimes Not
+Consistent?}
 
-For all the three continents, North America, India and Australia, Pk 19 (APP
-with local rotation or secondary print excluded) and 21 (APP with local rotation
-and secondary print corrected) are consistently the best or at least the
-relatively better (for example, in Fig.~\ref{fig-in-dif2010}, Pk 21 results are
-not colored in green, but ranging from 0.0483\textendash0.0561 that is still
-much less than the mean, 0.074 and also the median, 0.072); whereas Pk 16 (AMP
-with publications before 1983) and 18 (AMP with local rotation or secondary
-print excluded) are consistently the worst or at least the relatively worse.
+For all three continents, North America, India and Australia, Pk 19 (APP with
+local rotation or secondary print excluded) and 21 (APP with local rotation and
+secondary print corrected) are consistently the best or at least relatively
+better (for example, in Fig.~\ref{fig-in-dif2010}, Pk 21 results are not colored
+in green, but ranging from 0.0483\textendash0.0561 which is still much less than
+the mean, 0.074 and the median, 0.072); whereas Pk 16 (AMP with publications
+before 1983) and 18 (AMP with local rotation or secondary print excluded) are
+consistently the worst or at least relatively worse.
 
-Nevertheless, for each single continent, they have their own consistently best
-and worst picking methods that are not the best or worst for other continents.
-For example, Pk 15 (APP with publications after 1983) works well with North
-America. We know that 70 North American paleopoles (about 53\%) have contributed
-to Pk 15 for 120\textendash0 Ma. However, only 28 Indian paleopoles (about 38\%)
-and 29 Australian paleopoles (about 30\%) have contributed to Pk 15. In
-contrast, the Pk 17 (APP with publications before 1983) works well with only
-Australia. This also tells that number of paleopoles is a key factor that
-affects the fit score. The fact that Pk 22 (AMP with SS05 criteria) doesn't work
-well with only Australia also reflects the importance of this factor.
+Nevertheless, each continent has its own consistently best and worst picking
+methods, that are not the best or worst for other continents. For example, Pk 15
+(APP with publications after 1983) works well for North America. We know that 70
+North American paleopoles (about 53\%) have contributed to Pk 15 for
+120\textendash0 Ma. However, only 28 Indian paleopoles (about 38\%) and 29
+Australian paleopoles (about 30\%) have contributed to Pk 15. In contrast, Pk 17
+(APP with publications before 1983) works well only for Australia. This also
+indicates that the number of paleopoles is a key factor that affects the fit
+score. The fact that Pk 22 (AMP with SS05 criteria) doesn't work well only for
+Australia also reflects the importance of this factor.
 
 In summary, the reason why some best and worst methods are not consistent is
-generally that different continents have their unique data sets and get their
-own paleomagnetic studies in varying degrees.
+generally that different continents have their unique data sets which can be
+affected very differently by a particular feature. In addition, different
+continents get their own paleomagnetic studies in varying degrees.
 
 
 \section{Final Conclusions}
@@ -2579,41 +2579,42 @@ From the perspective of the general similarities between those paleomagnetic
 APWPs and the hot spot model and ocean-floor spreading model predicted APWPs,
 GAD hypothesis is proved valid for at least the last 120 Myr.
 
-\subsection{Universal Rules of Ways of Processing Paleomagnetic Data}
+\subsection{Universal Rules for Processing Paleomagnetic Data}
 %
 \begin{description}
-  \item Although effects of filters (all the picking methods where number of
-    paleopoles shrinks compared to Pk 0 and Pk 1; see Fig.~\ref{fig-dif}) have a
-    marginal change in reducing N (precision potentially going down), some
-    filters do improve the similarity score, for example, Pk 25 (APP without
-    superseded data) is always giving better scores than Pk 1 for all the three
-    continents. However, Pk 0 and Pk 1 (no filtering and corrections applied)
-    still generally perform well.
+  \item Although filters (all the picking methods where number of paleopoles
+    shrinks compared to Pk 0 and Pk 1; see Fig.~\ref{fig-dif}) reduce N and
+    would therefore potentially reduce mean pole precision, some filters do
+    improve the similarity score. For example, Pk 25 (APP without superseded
+    data) always produces better scores than Pk 1 for all the three continents.
+    However, Pk 0 and Pk 1 (no filtering and corrections applied) still
+    generally perform well.
   \item APP (adding data to a time window with overlapping age selection
-    criterion) is better than AMP for making paleomagnetic APWPs, for both kinds
-    of situations when there are lots of data (APP even better, e.g.\ for North
+    criterion) is better than AMP for making paleomagnetic APWPs, in both
+    situations when there are lots of data (APP even better, e.g.\ for North
     America and Australia) and not much data (APP still a better option, e.g.\
-    for India; Table~\ref{tab-bw}). APP with most filters/corrections (Pk 3, 5,
-    7, 9, 11, \ldots, 27) are generally giving worse scores than APP without any
-    filter/correction (Pk 1).
-  \item In most cases the APP methods produce better similarities than the AMP
-    methods (Table~\ref{tab-bw}).
-  \item Actually weighting is not improving the fit but improving precision
-    generally. For quite many of the methods, no weighting is the best performer
-    (Table~\ref{tab-bw}). For example, score is likely worse for the combined
-    methods of weight Pk 3 and AMP\@.
+    for India; Table~\ref{tab-bw}). APP combined with most filters/corrections
+    (Pk 3, 5, 7, 9, 11, \ldots, 27) generally produce worse scores than APP
+    without any filter/correction (Pk 1).
+  \item In most cases the APP methods produce better $\mathcal{CPD}$ similarity
+    scores than the AMP methods (Table~\ref{tab-bw}).
+  \item Weighting does not improve the fit but usually slightly improves mean
+    pole precision. For many of the methods, no weighting is the best performer
+    (Table~\ref{tab-bw}). For example, $\mathcal{CPD}$ score is likely worse for
+    the methods of combining Wt 3 and AMP\@.
   \item APP itself helps incorporate temporal uncertainty into the algorithm.
-    With the bootstraps test helping incorporate spatial uncertainty into the
-    algorithm together, both spatial and temporal uncertainties are successfully
-    considered in APP methods.
+    With the bootstrap test that incorporates spatial uncertainty into the
+    $\mathcal{CPD}$ algorithm, both spatial and temporal uncertainties are
+    successfully considered in APP methods.
 \end{description}
 
-\subsection{Conditional Rules of Ways of Processing Paleomagnetic Data}
+\subsection{Conditional Rules for Processing Paleomagnetic Data}
 %
 \begin{description}
-  \item Pk 16 (AMP with data from old studies) and 18 (AMP without data affected
-    by rotations and secondary print) are not recommended for generating a
-    paleomagnetic APWP\@.
+  \item Pk 16 (AMP with data from old studies) is not recommended for generating
+    a paleomagnetic APWP for North America, India and Australia. Pk 18 (AMP
+    without data affected by rotations and secondary print) is not recommended
+    for generating a paleomagnetic APWP for North America and India.
 \end{description}
 
 \subsection{Summary}
@@ -2621,10 +2622,10 @@ GAD hypothesis is proved valid for at least the last 120 Myr.
 According to the results we have from the three continents, North America, India
 and Australia, using the similarity measuring tool developed in
 Chapter~\ref{chap:Metho}, it is recommended that APP should be used to select
-the input paleopoles. According to all the paleomagnetic data we have from the
+the input paleopoles. According to the paleomagnetic data analysed from the
 three continents, the results from any size for sliding window and step are
-interestingly and extremely close to each other when the APP method is used,
-compared with the results from the AMP method (Table~\ref{tab-pk0vs1bs} and
+extremely close to each other when the APP method is used, compared with the
+results from the AMP method (Table~\ref{tab-pk0vs1bs} and
 Fig.~\ref{fig-WinStpVsCPD}). So any size for binning and stepping is ok when APP
 is used. Then filtering is actually not necessary. However, some
 filtering/correction methods (e.g.\ Pk 5, 7 (igneous-derived), 11, 13

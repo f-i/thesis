@@ -10,8 +10,8 @@ future directions/work.}
 
 \begin{enumerate}
   \item The APP method (considering the whole age ranges of paleopoles) is
-  recommended to replace the old AMP one (considering only middle points of age
-  ranges) for making a paleomagnetic APWP, when moving average is the core
+  recommended to supercede the old AMP one (considering only middle points of
+  age ranges) for making a paleomagnetic APWP, when moving average is the core
   technique of the methodology.
   \item Weighting paleopoles, a traditional processing step for making a
   paleomagnetic APWP, is actually unnecessary.
@@ -20,14 +20,16 @@ future directions/work.}
 \subsection{Significance}
 
 \begin{enumerate}
-  \item Similarity between paleomagnetic APWPs of different tectonic plates
-  could indicate the plates were once part of a supercontinent. Therefore, this
-  thesis proposed a similarity measuring algorithm, and meanwhile a
-  corresponding Python package is provided online as an open-source software to
-  allow automatically calculating similarity scores.
+  \item Similarity between coeval paleomagnetic APWPs for different tectonic
+    plates could indicate the plates were once part of a supercontinent. This
+    thesis developed a similarity measuring algorithm that can more rigorously
+    identify potential matches to guide paleo-geographic reconstruction. A
+    corresponding Python package is provided online, as open-source software, to
+    allow automatic calculation of similarity scores.
   \item The APP method without weighting paleopoles performs significantly
-  better with modern ($\sim$120\textendash0 Ma) paleomagnetic data than other
-  methods, and is expected to be applied onto datasets from deeper time.
+    better with modern ($\sim$120\textendash0 Ma) paleomagnetic data than other
+    methods, and is expected to produce similar improvements when applied onto
+    datasets from deeper time.
 \end{enumerate}
 
 \section{Recommendations for Future Research}
@@ -39,37 +41,39 @@ validated an approach to make a reliable paleomagnetic APWP, there are still
 many further studies that need to be done.
 %
 \begin{enumerate}
-  \item A question that leads us into more details about the content of
-  Chapter~\ref{chap:Reliab} is: Are there particular parts of the path that are
-  more variable? And do different methods affect different parts of the path
-  differently? The results may highlight the trade-off between more data
-  diluting the effect of outliers, and fewer but `better' data being more easily
-  affected by a bad pole that gets through the filters (Fig.~\ref{fig-nads},
-  Fig.~\ref{fig-nadl} and Fig.~\ref{fig-nada}).
-  \item As mentioned in the objectives of Chapter~\ref{chap:Intro}, we have
-  investigated the limits of paleomagnetic data on reconstructing individual
-  plate motions like of North America, India and Australia in
-  Chapter~\ref{chap:Reliab}. We still need to further investigate the limits of
-  paleomagnetic data on reconstructing supercontinents, and even global tectonic
-  parameters like average rate of plate motion, number of plates and so on.
-  \item This thesis studies methodologies that apply only on
-  $\sim$120\textendash0 Ma paleomagnetic data, so there are no studies that
-  indicate how these methodologies perform on deep-time data.
+  \item A question that follows from the results of Chapter~\ref{chap:Reliab}
+    is: Are there particular parts of the path that are more variable? And do
+    different methods affect different parts of the path differently? The
+    results may highlight the trade-off between more data diluting the effect of
+    outliers, and fewer but `better' data being more easily affected by a bad
+    pole that gets through the filters (Fig.~\ref{fig-nads}, Fig.~\ref{fig-nadl}
+    and Fig.~\ref{fig-nada}).
+  \item In Chapter~\ref{chap:Reliab}, we have investigated the limits of
+    paleomagnetic data for reconstructing individual plate motions of North
+    America, India and Australia. We still need to further investigate the
+    limits of paleomagnetic data on reconstructing supercontinents, and even
+    global tectonic parameters like average rate of plate motion, number of
+    plates and so on.
+  \item This thesis studies only $\sim$120\textendash0 Ma paleomagnetic data, so
+    there are no studies that indicate how these methodologies perform on
+    deep-time data.
   \item For $\sim$120\textendash0 Ma, there are relatively more paleomagnetic
-  data published. However, when geologic time goes deeper, both quantity and
-  quality of paleomagnetic data decline. A potential question is how much
-  paleomagnetic data do we need actually to accurately reconstruct known modern
-  ($\sim$120\textendash0 Ma) known plate motions? What insights does this give
-  us into the reliability of reconstructions from earlier in geologic history?
+    data published. However, when geologic time goes deeper, both quantity and
+    quality of paleomagnetic data decline. A potential question is how much
+    paleomagnetic data do we need actually to accurately reconstruct known
+    modern ($\sim$120\textendash0 Ma) known plate motions? This is one of the
+    things we want to test with selective data removal in future work. What
+    insights does this give us into the reliability of reconstructions from
+    earlier in geologic history?
   \item Based on the analysis that have been done in this thesis and answers
-  from the above questions, can we develop algorithms that look for matching
-  segments of APWPs from different cratons, that might indicate they were part
-  of the same continent or supercontinent?
+    from the above questions, can we develop algorithms that look for matching
+    segments of APWPs from different cratons, that might indicate they were part
+    of the same continent or supercontinent?
   \item Can we develop algorithms that use APWPs from multiple continents to
-  estimate global average plate motion rates? Can we get a good sense of how
-  much information is lost due to lack of data on longitudinal motions? Can we
-  use this to draw any conclusions about long term trends (or lack thereof) in
-  the style and vigour of global plate tectonics? (Possible further question:
-  can data on relative continental motion acquired from matching APWP curves be
-  incorporated to improve these estimates?)
+    estimate global average plate motion rates? Can we get a good sense of how
+    much information is lost due to lack of data on longitudinal motions? Can we
+    use this to draw any conclusions about long term trends (or lack thereof) in
+    the style and vigour of global plate tectonics? (Possible further question:
+    can data on relative continental motion acquired from matching APWP curves
+    be incorporated to improve these estimates?)
 \end{enumerate}
