@@ -1,11 +1,11 @@
-\documentclass[12pt]{ociamthesis}  % default square logo
-%\documentclass[12pt,beltcrest]{ociamthesis} % use old belt crest logo
-%\documentclass[12pt,shieldcrest]{ociamthesis} % use older shield crest logo
+\documentclass[12pt]{ociamthesis}  % default square logo; [12pt,beltcrest] old belt crest logo; [12pt,shieldcrest] older shield crest logo
 
 %load any additional packages
+\usepackage[margin=1.0in,includefoot,heightrounded]{geometry}
 \usepackage{amssymb,booktabs,gensymb,url,textcomp,amsmath,array}
 \usepackage[nohints]{minitoc}
 \setcounter{minitocdepth}{2}
+\usepackage{float}
 \usepackage[font=small,labelfont=bf,belowskip=-1pt,aboveskip=8pt]{caption} %setup globally
 \usepackage{subcaption}  %setup locally works
 \usepackage{graphicx}
@@ -25,39 +25,47 @@
 %and uncomment the next line)
 %\include{mymacros}
 
-\title{Global Paleomagnetic Data Analysis:\\[1ex]     %your thesis title,
-Improved Methods of Reconstructing Plate Motions Using Paleomagnetic Data}   %note \\[1ex] is a line break in the title
+\title{GLOBAL PALEOMAGNETIC DATA ANALYSIS:\\[1ex]     %your thesis title,
+IMPROVED METHODS OF RECONSTRUCTING PLATE MOTIONS USING PALEOMAGNETIC DATA}   %note \\[1ex] is a line break in the title
 
-\author{Chenjian Fu}             %your name
-\college{Department of Geology}  %your college
-
-%\renewcommand{\submittedtext}{change the default text here if needed}
+\college{Kent State University}  %your college
 \degreen{Master of Science}     %the degree
-\degreedate{2021}         %the degree date
+\renewcommand{\submittedtext}{A thesis submitted\\ To Kent State University in partial\\ Fulfillment of the requirements for the\\ Degree of Master of Science}  %comment this line to use the default submittedtext defined in cls file
+\author{Chenjian Fu}             %your name
+
+\degreedate{DECEMBER 2021\\}         %the degree date
 
 \providecommand\phantomsection{}
+
+\renewcommand{\contentsname}{Table of Contents}
 
 %end the preamble and start the document
 \begin{document}
 
-%this baselineskip gives sufficient line spacing for an examiner to easily
-%markup the thesis with comments
-\baselineskip=18pt plus1pt
+%%%%% CHOOSE YOUR LINE SPACING HERE
+%this baselineskip gives double line spacing for an examiner to easily
+%markup the thesis with comments; about 1.5-spaced: 18pt plus2pt minus1pt
+\baselineskip=22pt plus2pt
 
 %set the number of sectioning levels that get number and appear in the contents
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 
 
-\maketitle                  % create a title page from the preamble info
 %\include{dedication}        % include a dedication.tex file
-\include{acknowlegements}   % include an acknowledgements.tex file
-\include{abstract}          % include the abstract
 
 \begin{romanpages}          % start roman page numbering
+\include{abstract}          % include the abstract
+\maketitle                  % create a title page from the preamble info
+\include{signature}
+  \addcontentsline{toc}{chapter}{\contentsname}
 \tableofcontents            % generate and include a table of contents
+  \cleardoublepage\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures              % generate and include a list of figures
+  \cleardoublepage\addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
+  \cleardoublepage\addcontentsline{toc}{chapter}{Acknowlegements}
+\include{acknowlegements}   % include an acknowledgements.tex file
 \end{romanpages}            % end roman page numbering
 
 %now include the files of latex for each of the chapters etc
